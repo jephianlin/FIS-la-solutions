@@ -1,0 +1,115 @@
+\section{Invertibility and Isomorphisms}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. It should be $([T]_{\alpha }^{\beta })^{-1}=[T^{-1}]_{\beta }^{\alpha }$.
+\item Yes. See Appendix B.
+\item No. $L_A$ can only map $\mathbb{F}^n$ to $\mathbb{F}^m$.
+\item No. It isomorphic to $\mathbb{F}^5$.
+\item Yes. This is because $P_n(\mathbb{F})\cong \mathbb{F}^n$.
+\item No. We have that $\left(\begin{array}{ccc}1&0&0\\0&1&0\end{array}\right) \left(\begin{array}{cc}1&0\\0&1\\0&0\end{array}\right) =I$ but $A$ and $B$ are not invertible since they are not square.
+\item Yes. Since we have both $A$ and $(A^{-1})^{-1}$ are the inverse of $A^{-1}$, by the uniqueness of inverse we can conclude that they are the same.
+\item Yes. We have that $L_{A^{-1}}$ would be the inverse of $L_A$.
+\item Yes. This is the definition.
+\end{enumerate}
+\item \begin{enumerate}
+\item No. They have different dimension $2$ and $3$.
+\item No. They have different dimension $2$ and $3$.
+\item Yes. $T^{-1}(a_1,a_2,a_3)=(-\frac{4}{3}a_2+\frac{1}{3}a_3,a_2,-\frac{1}{2}a_1-2a_2+\frac{1}{2}a_3)$.
+\item No. They have different dimension $4$ and $3$.
+\item No. They have different dimension $4$ and $3$.
+\item Yes. $T^{-1}\left(\begin{array}{cc}a&b\\c&d \end{array}\right)=\left(\begin{array}{cc}b&a-b\\c&d-c \end{array}\right) $.
+\end{enumerate}
+\item \begin{enumerate}
+\item No. They have different dimension $3$ and $4$.
+\item Yes. They have the same dimension $4$.
+\item Yes. They have the same dimension $4$.
+\item No. They have different dimension $3$ and $4$.
+\end{enumerate}
+\item This is because that $(B^{-1}A^{-1})(AB)=(AB)(B^{-1}A^{-1})=I$.
+\item This is because that $(A^{-1})^tA^t=(AA^{-1})^t=I$ and $A^t(A^{-1})^t=(A^{-1}A)^t=I$.
+\item If $A$ is invertible, then $A^{-1}$ exists. So we have $B=A^{-1}AB=A^{-1}O=O$/
+\item \begin{enumerate}
+\item With the result of the previous exercise, if $A$ is invertible we have that $A=O$. But $O$ is not invertible. So this is a contradiction.
+\item No. If $A$ is invertible then $B=O$ by the previous exercise.
+\end{enumerate}
+\item For Corollary 1 we may just pick $W=V$ and $\alpha =\beta $. For Corollary 2 we may just pick $V=\mathbb{F}^n$ and use Corollary 1.
+\item If $AB$ is invertible then $L_{AB}$ is invertible. So $L_AL_B=L_{AB}$ is surjective and injective. And thus $L_A$ is surjective and $L_B$ injective by Exercise 2.3.12. But since their domain and codomain has the same dimension, actually they are both invertible, so are $A$ and $B$.
+\item \begin{enumerate}
+\item Since $AB=I_n$ is invertible, we have $A$ and $B$ is invertible by the previous exercise.
+\item We have that $AB=I_n$ and $A$ is invertible. So we can conclude that \[A^{-1}=A^{-1}I_n=A^{-1}AB=B.\]
+item Let $T$ is a mapping from $V$ to $W$ and $U$ is a mapping from $W$ to $V$ with dim$W=$dim$V$. If $TU$ be the identity mapping, then both $T$ and $U$ are invertible. Furthermore $T^{-1}=U$.
+
+To prove this we may pick bases $\alpha $ of $V$ and $\beta $ of $W$ and set $A=[T]_{\alpha }^{\beta }$ and $B=[U]_{\beta }^{\alpha }$. Now apply the above arguments we have that $A$ and $B$ is invertible, so are $T$ and $U$ by Theorem 2.18.
+\end{enumerate}
+\item If $T(f)=0$ then we have that $f(1)=f(2)=f(3)=f(4)=0$, then we have that $f$ is zero function since it has degree at most $3$ and it's impossible to have four zeroes if $f$ is nonzero.
+\item We can check $\phi _{\beta }$ is linear first. For $x=\sum_{i=1}^n{a_iv_i}$ and $y=\sum_{i=1}^n{b_iv_i}$, where \[\beta=\{v_1,v_2,\ldots ,v_n\}\] we have that 
+\[\phi_{\beta }(x+cy)=\left(\begin{array}{c}a_1+cb_1\\a_2+cb_2\\\vdots \\a_n+cb_n\end{array}\right)=\left(\begin{array}{c}a_1\\a_2\\\vdots \\a_n\end{array}\right)+c\left(\begin{array}{c}b_1\\b_2\\\vdots \\b_n\end{array}\right)=\phi_{\beta}(x)+c\phi_{\beta}(y).\]
+And we can check whether it is injective and surjective. If $\phi_{\beta}(x)=\left(\begin{array}{c}0\\0\\\vdots \\0\end{array}\right)$ then this means $x=\sum_{i=1}^n{0v_i}=0$. And for every $\left(\begin{array}{c}a_1\\a_2\\\vdots \\a_n\end{array}\right)+c$ in $\mathbb{F}^n$, we have that $x=\sum_{i=1}^n{a_iv_i}$ will be associated to it.
+\item First we have that $V$ is isomorphic to $V$ by identity mapping. If $V$ is isomorphic to $W$ by mapping $T$, then $T^{-1}$ exist by the definition of isomorphic and $W$ is isomorphic to $V$ by $T^{-1}$. If $V$ is isomorphic to $W$ by mapping $T$ and $W$ is isomorphic to $X$ by mapping $U$, then $V$ is isomorphic to $X$ by mapping $UT$.
+\item Let 
+\[\beta =\{\left(\begin{array}{cc}1&1\\0&0\end{array}\right),\left(\begin{array}{cc}0&1\\0&0\end{array}\right),\left(\begin{array}{cc}0&0\\0&1\end{array}\right)\}\] be the basis of $V$. Then we have that $\phi_{\beta}$ in Theorem 2.21 would be the isomorphism.
+\item We have that $T$ is isomorphism if and only if that $T$ is injective and surjective. And we also have that the later statement is equivalent to $T(\beta )$ is a baiss for $W$ by Exercise 2.1.14(c).
+\item We can check that $\Phi$ is linear since 
+\[\Phi(A+cD)=B^{-1}(A+cD)B=B^{-1}(AB+cDB)\]
+\[=B^{-1}AB+cB^{-1}DB=\Phi(A)+c\Phi(D).\]
+And it's injective since if $\Phi(A)=B^{-1}AB=O$ then we have $A=BOB^{-1}=O$. It's also be surjective since for each $D$ we have that $\Phi(BDB^{-1})=D$.
+\item \begin{enumerate}
+\item If $y_1,y_2\in T(V_0)$ and $y_1=T(x_1)$, $y_2=T(x_2)$, we have that $y_1+y_2=T(x_1+x_2)\in T(V_0)$ and $cy_1=T(cx_1)=T(V_0)$. Finally since $V_0$ is a subspace and so $0=T(0)\in T(V_0)$, $T(V_0)$ is a subspace of $W$.
+\item We can consider a mapping $T'$ from $V_0$ to $T(V_0)$ by $T'(x)=T(x)$ for all $x\in V_0$. It's natural that $T'$ is surjective. And it's also injective since $T$ is injective. So by Dimension Theorem we have that 
+\[\mathrm{dim}(V_0)=\mathrm{dim}(N(T'))+\mathrm{dim}(R(T'))=\mathrm{dim}(T(V_0)).\]
+\end{enumerate}
+\item With the same notation we have that 
+\[L_A\phi_{\beta}(p(x))=\left(\begin{array}{cccc}0&1&0&0\\0&0&2&0\\0&0&0&3\end{array}\right)\left(\begin{array}{c}1\\1\\2\\1\end{array}\right)=\left(\begin{array}{c}1\\4\\3\end{array}\right)\]
+and 
+\[\phi_{\gamma}T(p(x))=\phi_{\gamma}(1+4x+3x^2)=\left(\begin{array}{c}1\\4\\3\end{array}\right).\]
+So they are the same.
+\item \begin{enumerate}
+\item It would be 
+\[\left(\begin{array}{cccc}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{array}\right).\]
+\item We may check that 
+\[L_A\phi_{\beta}\left(\begin{array}{cc}1&2\\3&4\end{array}\right)=\left(\begin{array}{cccc}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{array}\right)\left(\begin{array}{c}1\\2\\3\\4\end{array}\right)=\left(\begin{array}{c}1\\3\\2\\4\end{array}\right)\]
+and 
+\[\phi_{\beta}T\left(\begin{array}{cc}1&2\\3&4\end{array}\right)=\phi_{\beta}\left(\begin{array}{cc}1&3\\2&4\end{array}\right)=\left(\begin{array}{c}1\\3\\2\\4\end{array}\right).\]
+So they are the same.
+\end{enumerate}
+\item With the notation in Figure 2.2 we can prove first that $\phi_{\gamma}(R(T))=L_A(\mathbb{F}^n)$. Since $\phi_{\beta}$ is surjective we have that 
+\[L_A(\mathbb{F}^n)=L_A\phi_{\beta}(V)=\phi_{\gamma}T(V)=\phi_{\gamma}(R(T)).\]
+Since $R(T)$ is a subspace of $W$ and $\phi_{\gamma}$ is an isomorphism, we have that rank$(T)=$rank$(L_A)$ by Exercise 2.4.17.
+
+On the other hand, we may prove that $\phi_{\beta}(N(T))=N(L_A)$. If $y\in \phi_{\beta}(N(T))$, then we have that $y=\phi_{\beta}(x)$ for some $x\in N(T)$ and hence \[L_A(y)=L_A(\phi_{\beta}(x))=\phi_{\gamma}T(x)=\phi_{\gamma}(0)=0.\]
+Conversely, if $y\in N(L_A)$, then we have that $L_A(y)=0$. Since $\phi_{\beta}$ is surjective, we have $y=\phi_{\beta}(x)$ for some $x\in V$. But we also have that 
+\[\phi_{\gamma}(T(x))=L_A(\phi_{\beta}(x))=L_A(y)=0\]
+and $T(x)=0$ since $\phi_{\gamma}$ is injective. So similarly by Exercise 2.4.17 we can conclude that nullity$(T)=$nullity$(L_A)$.
+\item First we prove the independence of $\{T_{ij}\}$. Suppose that $\sum_{i,j}{a_{ij}T_{ij}}=0$. We have that 
+\[(\sum_{i,j}{a_{ij}T_{ij}})(v_k)=\sum_{i}{a_{ij}T_{ik}(v_k)}=\sum_{i}{a_{ik}w_i}=0.\]
+This means $a_{ik}=0$ for all proper $i$ since $\{w_i\}$ is a basis. And since $k$ is arbitrary we have that $a_{ik}=0$ for all $i$ and $k$.
+
+Second we prove that $[T_{ij}]_{\beta}^{\gamma}=M^{ij}$. But this is the instant result of 
+\[T_{ij}(v_j)=w_j\]
+and 
+\[T_{ij}(v_k)=0\]
+for $k\neq j$. Finally we can observe that $\Phi(\beta )=\gamma $ is a basis for $M_{m\times n}(\mathbb{F})$ and so $\Phi $ is a isomorphism by Exercise 2.4.15.
+\item It's linear since 
+\[T(f+cg)=((f+cg)(c_0),(f+cg)(c_1),\ldots (f+cg)(c_n))\]
+\[=(f(c_0)+cg(c_0),f(c_1)+cg(c_1),\ldots f(c_n)+cg(c_n))=T(f)+cT(g).\]
+Since $T(f)=0$ means $f$ has $n+1$ zeroes, we know that $f$ must be zero function( This fact can be proven by Lagrange polynomial basis for $P_n(\mathbb{F})$.). So $T$ is injective and it will also be surjective since domain and codomain have same finite dimension.
+\item The transformation is linear since 
+\[T(\sigma +c\tau )=\sum_{i=0}^m{(\sigma +c\tau )(i)x^i}\]
+\[=\sum_{i=0}^m{\sigma (i)x^i+c\tau (i)x^i}=T(\sigma )+cT(\tau ),\]
+where $m$ is a integer large enough such that $\sigma (k)=\tau (k)=0$ for all $k>m$.
+It would be injective by following argument. Since $T(\sigma )=\sum_{i=0}^n{\sigma (i)x^i}=0$ means $\sigma (i)=0$ for all integer $i\leq n$, with the help of the choice of $n$ we can conclude that $\sigma =0$. On the other hand, it would also be surjective since for all polynomial $\sum_{i=0}^n{a_ix^i}$ we may let $\sigma (i)=a_i$ and thus $T$ will map $\sigma $ to the polynomial.
+\item \begin{enumerate}
+\item If $v+N(T)=v'+N(T)$, we have that $v-v'\in N(T)$ and thus $T(v)-T(v')=T(v-v')=0$.
+\item We have that 
+\[\bar{T}((v+N(T))+c(u+N(T)))=\bar{T}((v+cu)+N(T))\]
+\[=T(v+cu)=T(v)+cT(u).\]
+\item Since $T$ is surjective, for all $y\in Z$ we have $y=T(x)$ for some $x$ and hence $y=\bar{T}(x+N(T))$. This means $\bar{T}$ is also surjective. On the other hand, if $\bar{T}(x+N(T))=T(x)=0$ then we have that $x\in N(T)$ and hence $x+N(T)=0+N(T)$. So $\bar{T}$ is injective. With these argument $\bar{T}$ is an isomorphism.
+\item For arbitrary $x\in V$, we have 
+\[\bar{T}_{\eta }(x)=\bar{T}(x+N(T))=T(x).\]
+\end{enumerate}
+\item The transformation $\Psi $ would be linear since 
+\[\Psi(f+cg)=\sum_{(f+cg)(s)\neq 0}{(f+cg)(s)s}=\sum_{(f+cg)(s)\neq 0}{f(s)s+cg(s)s}\]
+\[=\sum_{(f\enspace \mathrm{or} \enspace cg)(s)\neq 0}{f(s)s+cg(s)s}=\sum_{(f\enspace \mathrm{or} \enspace cg)(s)\neq 0}{f(s)}+c\sum_{(f\enspace \mathrm{or} \enspace cg)(s)\neq 0}{g(s)s}\]
+\[=\Psi(f)+c\Psi(g).\]
+It will be injective by following arguments. If $\Psi(f)=\sum_{f(s)\neq 0}{f(s)s}=0$ then we have that $f(s)=0$ on those $s$ such that $f(s)\neq 0$ since $\{s:f(s)\neq 0\}$ is finite subset of basis. But this can only be possible when $f=0$. On the other hand, we have for all element $x\in V$ we can write $x=\sum_{i}{a_is_i}$ for some finite subset $\{s_i\}$ of $S$. Thus we may pick a function $f$ sucht that $f(s_i)=a_i$ for all $i$ and vanish outside. Thus $\Psi $ will map $f$ to $x$. So $\Psi $ is surjective. And thus it's an isomorphism.
+\end{enumerate}

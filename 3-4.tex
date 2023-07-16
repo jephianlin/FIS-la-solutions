@@ -1,0 +1,111 @@
+\section{Systems of Linear Equations---Computational Aspects}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. This form could only fit for row operation. For example, $x=1$ and $x=0$ has different solution set.
+\item Yes. This is Theorem 3.13.
+\item Yes. This is the result of Theorem 3.16.
+\item Yes. This is Theorem 3.14.
+\item No. For example, the system with corresponding augmented matrix $\left(\begin{array}{c|c}0&1 \end{array}\right)$ has no solution.
+\item Yes. This is Theorem 3.15.
+\item Yes. This is Theorem 3.16.
+\end{enumerate}
+\item \begin{enumerate}
+\item The solution is $(4,-3,,-1)$.
+\item The solution set is $\{(9,4,0)+t(-5,-3,1)\}$.
+\item The solution is $(2,3,-2,1)$.
+\item The solution is $(-21,-16,14,-10)$.
+\item The solution set is $\{(4,0,1,0)+s(4,1,0,0)+t(1,0,2,1)\}$.
+\item The solution set is $\{(-3,3,1,0)+t(1,-2,0,1)\}$.
+\item The solution set is $\{(-23,0,7,9,0)+s(0,2,1,0,0)+t(-23,0,6,9,1)\}$.
+\item The solution set is $\{(-3,-8,0,0,3)+t(1,-2,1,0,0)\}$.
+\item The solution set is $\{(2,0,0,-1,0)+s(0,2,1,0,0)+t(1,-1,1,2)\}$.
+\item The solution set is $\{(1,0,1,0)+s(-1,1,0,0)+t(1,0,1,2)\}$.
+\end{enumerate}
+\item \begin{enumerate}
+\item We can check that $A'$ is also reduced echelon form. So the number of nonzero rows in $A'$ is the rank of $A$. And the number of nonzero rows in $(A'|b')$ is the rank of $(A|b)$. So if they have different rank there must contain some nonzero rows (actually only one row) in $(A'|b')$ but not in $A'$. This means the nonzero row must has nonzero entry in the last column. Conversely, if some row has its only nonzero entry in the last column, this row did not attribute the rank of $A'$. Since every nonzero row in $A'$ has its corresponding row in $(A'|b')$ also a nonzero row, we know that two matrix have different rank.
+\item By the previous exercise we know that $(A'|b')$ contains a row with only nonzero entry in the last column is equivalent to that $A'$ and $(A'|b')$ have different rank. With the help of Theorem 3.11 we get the desired conclusion.
+\end{enumerate}
+\item \begin{enumerate}
+\item The solution set is $\{(\frac{4}{3},\frac{1}{3},0,0)+t(1,-1,1,2)\}$. The basis is $\{(1,-1,1,2)\}$.
+\item The solution set is $\{(1,0,1,0)+s(-1,1,0,0)+t(1,0,1,2)\}$. The basis is $\{(-1,1,0,0),(1,0,1,2)\}$.
+\item It has no solution.
+\end{enumerate}
+\item Let $R$ be the matrix in reduced echelon form. We know that there is an invertible matrix $C$ such that $CA=R$. This means 
+\[C\begin{pmatrix}1&0&1\\-1&-1&-2\\3&1&0\end{pmatrix}=I.\]
+So we get 
+\[C^{-1}=\begin{pmatrix}1&0&1\\-1&-1&-2\\3&1&0\end{pmatrix}.\]
+And hence 
+\[A=C^{-1}R=\begin{pmatrix}1&0&2&1&4\\-1&-1&3&-2&-7\\3&1&1&0&-9\end{pmatrix}.\]
+\item Let $R$ be the matrix in reduced echelon form. We know that there is an invertible matrix $C$ such that $CA=R$. But now we cannot determine what $C$ is by the given conditions. However we know that the second column of $R$ is $-3$ times the first column of $R$. This means 
+\[0=R\begin{pmatrix}3\\1\\0\\0\\0\end{pmatrix}=CA\begin{pmatrix}3\\1\\0\\0\\0\end{pmatrix}.\]
+Since $C$ is invertible, we know that 
+\[A\begin{pmatrix}3\\1\\0\\0\\0\\0\end{pmatrix}=0.\]
+And this means the second column of $A$ is also $-3$ times the first column of $A$. And so the second column of $A$ is $(-3,6,3,-9)$. Similarly we have that 
+\[A\begin{pmatrix}-4\\0\\-3\\1\\0\\0\end{pmatrix}=0=A\begin{pmatrix}-5\\-2\\0\\0\\1\\1\end{pmatrix}\]
+and get the answer that matrix $A$ is 
+\[\begin{pmatrix}1&-3&-1&1&0&3\\-2&6&1&-5&1&-9\\-1&3&2&2&-3&2\\3&-9&-4&0&2&5\end{pmatrix}.\]
+\item See Exercise 1.6.8. Note that if we put those vector as row vectors of $M$ just like what we've done in the Exercise 1.6.8, we cannot interchange any two rows. However we can also construct a matrix the $i$-th column $u_i$. And we can do the row operation including interchanging any two rows. The set of columns containing one pivot\footnote{The position who is the first nonzero entry in one nonzero row is called a pivot. For example, the position $11$, $22$, $35$ are pivots.} forms an independent set.
+\[\begin{pmatrix}2 & 1 & -8 & 1 & -3\cr -3 & 4 & 12 & 37 & -5\cr 1 & -2 & -4 & -17 & 8\end{pmatrix}\]
+\[\rightsquigarrow \begin{pmatrix}1 & \frac{1}{2} & -4 & \frac{1}{2} & -\frac{3}{2}\cr 0 & 1 & 0 & 7 & -\frac{19}{11}\cr 0 & 0 & 0 & 0 & 1\end{pmatrix}\]
+So the set $\{u_1,u_2,u_5\}$ is a basis for $\mathbb{R}^3$.
+\item Do the same just like what we've done in the previous exercise. 
+\[\begin{pmatrix}2 & -6 & 3 & 2 & -1 & 0 & 1 & 2\cr -3 & 9 & -2 & -8 & 1 & -3 & 0 & -1\cr 4 & -12 & 7 & 2 & 2 & -18 & -2 & 1\cr -5 & 15 & -9 & -2 & 1 & 9 & 3 & -9\cr 2 & -6 & 1 & 6 & -3 & 12 & -2 & 7\end{pmatrix}\]
+\[\rightsquigarrow \begin{pmatrix}1 & -3 & \frac{3}{2} & 1 & -\frac{1}{2} & 0 & \frac{1}{2} & 1\cr 0 & 0 & 1 & -2 & -\frac{1}{5} & -\frac{6}{5} & \frac{3}{5} & \frac{4}{5}\cr 0 & 0 & 0 & 0 & 1 & -4 & -\frac{23}{21} & -\frac{19}{21}\cr 0 & 0 & 0 & 0 & 0 & 0 & 1 & -1\cr 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\end{pmatrix}\]
+We know that $\{u_1,u_3,u_5,u_7\}$ is a basis for $W$.
+\item Use the representation of those matrix with some basis (usually take the standard basis) and do the same thing like previous questions on them.
+\[\begin{pmatrix}0 & 1 & 2 & 1 & -1\cr -1 & 2 & 1 & -2 & 2\cr -1 & 2 & 1 & -2 & 2\cr 1 & 3 & 9 & 4 & -1\end{pmatrix}\]
+\[\rightsquigarrow \begin{pmatrix}1 & -2 & -1 & 2 & -2\cr 0 & 1 & 2 & 1 & -1\cr 0 & 0 & 0 & 1 & -2\cr 0 & 0 & 0 & 0 & 0\end{pmatrix}\]
+So we know that the subset containing the first, the second, and the fourth matrix forms a basis for $W$.
+\item \begin{enumerate}
+\item It's easy to check that 
+\[0-2+3-1-0+0=0.\]
+So the vector $(0,1,1,1,0)$ is an element in $V$. Since the set contains only one nonzero vector, it's linearly independent.
+\item As usual we can find a basis 
+\[\beta =\{(2,1,0,0,0),(-3,0,1,0,0),(1,0,0,1,0),(-2,0,0,0,1)\}.\] So we know that $\{(0,1,1,1,0)\}\cup \beta $ can generate the space $V$. Do the same thing to this new set and remember to put $(0,1,1,1,0)$ on the first column in order to keep it as an element when we do Gaussian elimination.
+\[\begin{pmatrix}0 & 2 & -3 & 1 & -2\cr 1 & 1 & 0 & 0 & 0\cr 1 & 0 & 1 & 0 & 0\cr 1 & 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 0 & 1\end{pmatrix}\]
+\[\rightsquigarrow \begin{pmatrix}1 & 1 & 0 & 0 & 0\cr 0 & 1 & -1 & 0 & 0\cr 0 & 0 & 1 & -1 & 0\cr 0 & 0 & 0 & 0 & 1\cr 0 & 0 & 0 & 0 & 0\end{pmatrix}\]
+Now we know that 
+\[\beta'=\{(0,1,1,1,0),(2,1,0,0,0),(-3,0,1,0,0),(-2,0,0,0,1)\}\] forms a basis for $V$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Similarly check 
+\[1-4+3+0-0=0.\]
+So the set containing only the vector $(1,2,1,0,0)$ is linearly independent by the same reason.
+\item Do the same thing to the set $\{(1,2,1,0,0)\}\cup \beta $.
+\[\begin{pmatrix}1 & 2 & -3 & 1 & -2\cr 2 & 1 & 0 & 0 & 0\cr 1 & 0 & 1 & 0 & 0\cr 0 & 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 0 & 1\end{pmatrix}\]
+\[\rightsquigarrow \begin{pmatrix}1 & \frac{1}{2} & 0 & 0 & 0\cr 0 & 1 & -2 & 0 & 0\cr 0 & 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 0 & 1\cr 0 & 0 & 0 & 0 & 0\end{pmatrix}\]
+Now we know that the set 
+\[\{(1,2,1,0,0),(2,1,0,0,0),(1,0,0,1,0),(-2,0,0,0,1)\}\] forms a basis for $V$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Set $v_1=(0,-1,0,1,1,0)$ and $v_2=(1,0,1,1,1,0)$. Check the two vectors satisfy the system of linear equation and so they are vectors in $V$. To show they are linearly independent, assume that 
+\[a(0,-1,0,1,1,0)+b(1,0,1,1,1,0)\]
+\[=(b,-a,b,a+b,a+b,0)=0.\]
+This means that $a=b=0$ and the set is independent.
+\item Similarly we find a basis 
+\[\beta=\{(1,1,1,0,0,0),(-1,1,0,1,0,0)\]
+\[,(1,-2,0,0,1,0),(-3,-2,0,0,0,1)\}\]for $V$ as what we do in the Exercise 3.4.4. Still remember that we should put $v_1$ and $v_2$ on the first and the second column. 
+\[\begin{pmatrix}0 & 1 & 1 & -1 & 1 & -3\cr -1 & 0 & 1 & 1 & -2 & -2\cr 0 & 1 & 1 & 0 & 0 & 0\cr 1 & 1 & 0 & 1 & 0 & 0\cr 1 & 1 & 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 0 & 0 & 1\end{pmatrix}\]
+\[\rightsquigarrow \begin{pmatrix}1 & 1 & 0 & 1 & 0 & 0\cr 0 & 1 & 1 & 0 & 0 & 0\cr 0 & 0 & 0 & 1 & -1 & 0\cr 0 & 0 & 0 & 0 & 0 & 1\cr 0 & 0 & 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 0 & 0\end{pmatrix}\]
+So the set 
+\[\{(0,-1,0,1,1,0),(1,0,1,1,1,0),(-1,1,0,1,0,0),(-3,-2,0,0,0,1)\}\]
+forms a basis for $V$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Set $v_1=(1,0,1,1,1,0)$ and $v_2=(0,2,1,1,0,0)$. Check the two vectors satisfy the system of linear equation and so they are vectors in $V$. To show they are linearly independent, assume that 
+\[a(1,0,1,1,1,0)+b(0,2,1,1,0,0)\]
+\[=(a,2b,a+b,a+b,a,0)=0.\]
+This means that $a=b=0$ and the set is independent.
+\item Take the same basis $\beta $ as that in the previous exercise and do Gaussian elimination.
+\[\begin{pmatrix}1 & 0 & 1 & -1 & 1 & -3\cr 0 & 2 & 1 & 1 & -2 & -2\cr 1 & 1 & 1 & 0 & 0 & 0\cr 1 & 1 & 0 & 1 & 0 & 0\cr 1 & 0 & 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 0 & 0 & 1\end{pmatrix}\]
+\[\rightsquigarrow \begin{pmatrix}1 & 0 & 0 & 0 & 1 & 0\cr 0 & 1 & 1 & 0 & -1 & 0\cr 0 & 0 & 1 & -1 & 0 & 0\cr 0 & 0 & 0 & 0 & 0 & 1\cr 0 & 0 & 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 0 & 0\end{pmatrix}\]
+So the set 
+\[\{(1,0,1,1,1,0),(0,2,1,1,0,0),(1,1,1,0,0,0),(-3,-2,0,0,0,1)\}\]
+forms a basis for $V$.
+\end{enumerate}
+\item It's enough to check that $A$ satisfies the definition of reduced echelon form on the page 185. For the first condition, a nonzero row in $A$ is a nonzero row in $(A|b)$. So it will precede all the zero rows in $(A|b)$. But there may be some zero rows in $A$ who are nonzero rows in $(A|b)$. This kind of rows will be behind those nonzero row by the third condition for $(A|b)$. The second condition for $(A|b)$ implies the second condition for $A$. The third condition for $(A|b)$ implies the third condition for $A$.
+\item We call a column whose corresponding column in one fixed reduced echelon form contains a pivot(see Exercise 3.4.7) a pivotal column. Now we induct on the number of columns of a matrix. For matrix contains only one column $u_1$, the reduced echelon form of it would be the column $e_1$ if $u_1$ is nonzero (and hence $\{u_1\}$ is independent) and that of it would be the zero column if $u_1$ is zero (and hence $\{u_1\}$ is dependent). Suppose that the reduced echelon form of a matrix with $k$ columns is unique. Now consider a matrix $A$ with $k+1$ columns, say $u_1,u_2,\ldots ,u_{k+1}$. Let $A'$ be the matrix by deleting the final column of $A$. So we can write $A=(A'|u_{k+1})$. Say $(R'|b)$ is a reduced echelon form of $A$. By the previous exercise we know that $R'$ is a reduced echelon form of $A'$. And $R'$ is unique by our induction hypothesis. So the set of pivotal columns $P'$ in $A'$ is also unique. By Theorem 3.16(c) and Theorem 3.16(d) we know that the set $P'$ in $A'$ is a maximal independent set of $\{u_1,u_2,\ldots ,u_k\}$. Now if $P'\cup\{u_k\}$ is linearly independent, this means 
+\[\mathrm{rank}(A)=\mathrm{rank}(A')+1,\]
+say the value is $r$.
+By Theorem 3.16(a) and Theorem 3.16(b), $b$ is the only column who can be $e_r$ and so we know that $b=e_r$. On the other hand, if $P'\cup\{u_k\}$ linearly dependent. The vector $u_k$ cannot be a pivotal column of $A$ since $P'\cup\{u_k\}$ is the set of pivotal column of $A$ and it must be linearly independent. Futhermore, $u_k$ has an unique representation with respect to the set $P'$. By Theorem 3.16(d), the column vector $d$ must be the representation of $u_k$. By all cases we know that $(R'|b)$ is also unique. And by induction we get the desired conclusion.
+\end{enumerate}

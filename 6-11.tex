@@ -1,0 +1,98 @@
+\section{The Geometry of Orthogonal Operators}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. It may be the compose of two or more rotations. For example, $T(x,y)=(R_{\theta}(x),R_{\theta}(y))$ is orthogonal but not a rotation or a reflection, where $x,y\in \R^2$ and $R_{\theta}$ is the rotation transformation about the angle $\theta$.
+\item Yes. See the Corollary after Theorem 6.45.
+\item Yes. See Exercise 6.11.6.
+\item No. For example, $U(x,y)=(R_{\theta}(x),y)$ and $T(x,y)=(x,R_{\theta}(y))$ are two rotations, where $x,y\in \R^2$ and $R_{\theta}$ is the rotation transformation about the angle $\theta$. But $UT$ is not a rotation.
+\item Yes. It comes from the definition of a rotation.
+\item No. In two-dimensional real space, the composite of two reflections is a rotation.
+\item No. It may contains one reflection. For example, the mapping $T(x)=-x$ could not be the composite of rotations since the only rotation in $\R$ is the identity.
+\item No. It may be the composite of some rotations and a reflection. For example, $T(x,y)=(-x,R_{\theta}(y))$ has $\det(T)=-1$ but it's not a reflection, where $x\in \R$, $y\in \R^2$, and $R_{\theta}$ is the rotation about the angle $\theta$.
+\item Yes. Let $T$ be the reflection about $W$. We have that $W\oplus W\pp=V$. So one of $W$ and $W\pp$ could not be zero. But every nonzero vector in $W$ is an eigenvector with eigenvalue $1$ while that in $W\pp$ is an eigenvector with eigenvalue $-1$. So $T$ must have eigenvalues.
+\item No. The rotation on two-dimentional space has no eigenvector unless it's the identity mapping.
+\end{enumerate}
+\item By Exercise 6.5.3 we know that the composite of two orthogonal operators should be an orthogonal operator.
+\item \begin{enumerate}
+\item Check that $A^*A=AA^*=I$. So $A$ is orthogonal. Hence it's a reflection by Theorem 6.45 since its determinant is $-1$.
+\item Find the subspace $\{x:Ax=x\}$. That is, find the null space of $A-I$. Hence the axis is 
+\[\sp\{(\sqrt{3},1)\}.\]
+\item Compute $\det(B)=-1$. Hence we have $\det(AB)=\det(BA)=1$. By Theorem 6.45, both of them are rotations.
+\end{enumerate}
+\item \begin{enumerate}
+\item Compute that 
+\[\det(A)=-\cos^2 \phi -\sin^2 \phi =-1.\]
+By Theorem 6.45, it's a reflection.
+\item Find the subspace $\{x:Ax=x\}$. That is, find the null space of $A-I$. Hence the axis is 
+\[\sp\{(\sin \phi,1-\cos\phi )=\}.\]
+\end{enumerate}
+\item Let $\alpha=\{e_1,e_2\}$ be the standard basis in $\R^2$. 
+\begin{enumerate}
+\item We may check that the rotation $T_{\phi}$ is a linear transformation. Hence it's enough to know 
+\[\left\{\begin{array}{l}T(e_1)=(\cos \phi, \sin \phi),\\T(e_2)=(-\sin \phi,\cos \phi)\end{array}\right.\]
+by directly rotate these two vectors. Hence we have $[T_{\phi}]_{\alpha}=A$.
+\item Denote that 
+\[A_{\phi}=\begin{pmatrix}\cos \phi&-\sin\phi\\\sin\phi&\cos\phi\end{pmatrix}.\]
+Directly compute that $A_{\phi}A_{\psi}=A_{\phi+\psi}$. So we have 
+\[[T_{\phi}T_{\psi}]_{\alpha}=[T_{\phi}]_{\alpha}[T_{\psi}]_{\alpha}=A_{\phi}A_{\psi}=A_{\phi+\psi}=[T_{\phi+\psi}]_{\alpha}.\]
+\item By the previous argument we kow that 
+\[T_{\phi}T_{\psi}=T_{\phi+\psi}=T_{\psi+\phi}=T_{\psi}T_{\phi}.\]
+\end{enumerate}
+\item If $U$ and $T$ are two rotations, we have $\det(UT)=\det(U)\det(T)=1$. Hence by Theorem 6.47 $UT$ contains no reflection. If $V$ could be decomposed by three one-dimensional subspaces, they all of them are identities, thus $UT$ is an identity mapping. Otherwise $V$ must be decomposed into one one-dimensional and one two-dimensional subspaces. Thus $UT$ is a rotation on the two-dimensional subspace and is an idenetiy on the one-dimensional space. Hence $UT$ must be a rotation.
+\item \begin{enumerate}
+\item We prove that if $T$ is an orthogonal operator with $\det(T)=1$ on a three-dimensional space $V$, then $T$ is a rotation. First, we know that the decomposition of $T$ contains no reflections by Theorem 6.47. According to $T$, $V$ could be decomposed into some subspaces. If $V$ is decomposed into three one-dimensional subspace, then $T$ is the identity mapping on $V$ since its an identity mapping on each subspace. Otherwise $V$ should be decomposed into one one-dimensional and one two-dimensional subspaces. Thus $T$ is a rotation on the two-dimensional subspace and is an idenetiy mapping on the one-dimensional space. Hence $T$ must be a rotation.
+
+Finally, we found  that $\det(A)=\det(B)=1$. Hence they are rotations.
+\item It comes from the fact that $\det(AB)=\det(A)\det(B)=1$.
+\item It should be the null space of $AB-I$,
+\[\sp\{((1+\cos\phi)(1-\cos\psi),(1+\cos\phi)\sin\psi,\sin\phi\sin\psi)\}.\]
+\end{enumerate}
+\item If $T$ is an orthogonal operator, we know that the determinant of $T$ should be $\pm 1$. Now pick an orthonormal basis $\beta$. If $\det(T)=1$, we have $\det([T]_{\beta})=1$ and hence $[T]_{\beta}$ is a rotation matrix by Theorem 6.23. By Exercise 6.2.15 we know that the mapping $\phi_{beta}$, who maps $x\in V$ into its coordinates with respect to $\beta$, preserve the inner product. Hence $T$ is a rotation when $[T]_{\beta}$ is a rotation. On the other hand, if $\det(T)=\det([T])=-1$, we know that $[T]_{\beta}$ is a reflection matrix by Theorem 6.23. Again, $T$ is a reflection since $[T]_ {\beta}$ is a reflection matrix.
+\item If $T$ is a rotation, its decomposition contains no reflection. Hence we have $\det(T)=1$ by Theorem 6.47. If $T$ is a reflection, then we have its decomposition could contain exactly one reflection. Hence we have $\det(T)=-1$ by Theorem 6.47. So $T$ cannot be both a rotation and a reflection.
+\item If $V$ is a two-dimensional real inner product space, we get the result by the Corollary after Theorem 6.45. If $V$ is a three-dimensional real inner product space and $U,T$ are two rotations, we have $\det(UT)=\det(U)\det(T)=1$. By the discussion in Exercise 6.11.7(a), we know that $UT$ should be a rotation.
+\item Let $T(x,y)=(R_{\theta}(x),R_{\theta}(y))$ be an orthogonal operator, where $x,y\in \R^2$ and $R_{\theta}$ is the rotation transformation about the angle $\theta$. It is neither a rotation nor a reflection.
+\item Let $\beta$ be an orthonormal basis. Then we have $[T]_{\beta}=-I_n$, where $n$ is the dimsion of $V$. Since $\det(-I_n)=(-1)^n$, we know that $T$ could decomposed into rotations if and only if $n$ is even by the Corollary after Theorem 6.47.
+\item Use the notation in that Lemma. We know that 
+\[W=\phi_{\beta}^{-1}(Z)=\sp\{\phi_{\beta}^{-1}(x_1),\phi_{\beta}^{-1}(x_2)\}.\]
+And compute that 
+\[T(\phi_{\beta}^{-1}(x_i))=\phi_{\beta}^{-1}(Ax_i)\in \phi_{\beta}^{-1}(Z)\]
+for $i=1,2$. Hence $W$ is $T$-invariant.
+\item \begin{enumerate}
+\item It comes from that 
+\[\|T_W(x)\|=\|T(x)\|=\|x\|.\]
+\item Suppose $y$ is an element in $W\pp$. Since $T_W$ is invertible by the previous argument, for each $x\in W$ we have $x=T(z)$ for some $z\in W$. This means that 
+\[\lag T(y),x\rag =\lag y,T^*T(z)\rag =\lag y,z\rag =0.\]
+\item It comes from that 
+\[\|T_{W\pp}(x)\|=\|T(x)\|=\|x\|.\]
+\end{enumerate}
+\item Let $t=0$ in the equality in Theorem 5.24.
+\item \begin{description}
+\item[(c)] As the definition of $T_i$ given in the Corollary, we know that 
+\[T_iT_j(x)=\cdots +T(x_i)+\cdots +T(x_j)+\cdots T_jT_i(x),\]
+where 
+\[x=x_1+x_2+\cdots +x_m.\]
+\item[(d)] Again, we have 
+\[T(x)=T(x_1)+T(x_2)+\cdots +T(x_m)=T_1T_2\cdots T_m(x),\]
+where 
+\[x=x_1+x_2+\cdots +x_m.\]
+\item[(e)] We know that $\det(T_{W_i})=\det(T_i)$ since $V=W_i\oplus W_i\pp$ and 
+\[\det(T_{W_i\pp})=\det(I_{W_i\pp})=1.\]
+So $T_i$ is a rotation if and only if $T_{W_i}$ is a rotation. By Theorem 6.47 we get the result.
+\end{description}
+\item I think here we won't say an identity is a rotation. Otherwise the identity mapping could be decomposed into $n$ identity mapping. Also, we need some fact. That is, if $W_i$ is a subspace with dimension one in the decomposition, then $T_{W_i}$ could not be a rotation since $T_{W_i}(x)$ sould be either $x$ or $-x$. Hence every ration has the dimension of it subspace two.
+\begin{enumerate}
+\item By the Corollary after Theorem 6.47 we know that there is at most one reflection in the decomposition. To decompose a space with dimension $n$ by rotations, there could be only $\frac{1}{2}(n-1)$ rotations.
+\item Similarly, there is at most one reflection. If there's no reflection, then there're at most $\frac{1}{2}n$ rotations. If there's one reflection, there at most 
+\[\lfloor \frac{n-1}{2}\rfloor=\frac{1}{2}(n-2)\]
+rotations.
+\end{enumerate}
+\item Let $\beta=\{x,x'\}$ be an orthonormal basis of $V$. Since $\|y\|=1$, we may write $\phi_{\beta}(y)=(\cos\phi,\sin\phi)$ for some angle $\phi$. Let 
+\[A_{\phi}=\begin{pmatrix}\cos \phi&-\sin\phi\\\sin\phi&\cos\phi\end{pmatrix}\]
+and $T$ be the transformation with $[T]_{\beta}=A$. We have that $T(x)=y$ and $T$ is a rotation.
+
+On the other hand, by the definition of a rotation, we must have 
+\[T(x)=(\cos\theta)x+(\sin\theta)x'\]
+and 
+\[T(x')=(-\sin\theta)x+(\cos\theta)x'.\]
+Thus we must have $\cos\phi=\cos\theta$ and $\sin\phi=\sin\theta$. If $0\leq \phi,\theta <2\pi$, we must have $\phi=\theta$. So the rotation is unique.
+\end{enumerate}

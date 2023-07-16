@@ -1,0 +1,109 @@
+\section{A Characterization of the Determinant}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. For example, we have $\det(2I)\neq 2\det(I)$ when $I$ is the $2\times 2$ identity matrix.
+\item Yes. This is Theorem 4.3.
+\item Yes. This is Theorem 4.10.
+\item No. Usually it should be $\delta(B)=-\delta(A)$.
+\item No. Both the determinant and the zero function, $\delta(A)=0$, are $n$-linear function.
+\item Yes. Let $v_1,u_1,u_2,\ldots ,u_n$ are row vectors and $c$ are scalar. We have 
+\[\delta\begin{pmatrix}u_1+cv_1\\u_2\\\vdots \\u_n\end{pmatrix}=0=0+c\cdot 0=\delta\begin{pmatrix}u_1\\u_2\\\vdots \\u_n\end{pmatrix}+c\delta\begin{pmatrix}v_1\\u_2\\\vdots \\u_n\end{pmatrix}.\]
+The cases for other rows are similar.
+\end{enumerate}
+\item A $1$-linear function is actually a linear function. We can deduce that 
+\[\delta\begin{pmatrix}x\end{pmatrix}=x\delta\begin{pmatrix}1\end{pmatrix}=ax,\]
+where $a$ is defined by $\begin{pmatrix}1\end{pmatrix}$. So all the functions must be in the form $\delta\begin{pmatrix}x\end{pmatrix}=ax$.
+\item It's not a $3$-linear function. We have that 
+\[\delta\begin{pmatrix}2&0&0\\0&1&0\\0&0&1\end{pmatrix}=k\neq =2\delta(I_3)=2k.\]
+\item It's not a $3$-linear function. We have that 
+\[\delta\begin{pmatrix}2&0&0\\0&1&0\\0&0&1\end{pmatrix}=1\neq =2\delta(I_3)=2.\]
+\item It's a $3$-linear function. We have that when the second and the third rows are held fixed, the function would be 
+\[\delta\begin{pmatrix}A_{11}&A_{12}&A_{13}\\A_{21}&A_{22}&A_{23}\\A_{31}&A_{32}&A_{33}\end{pmatrix}=(A_{11},A_{12},A_{13})\cdot (A_{23}A_{32},0,0),\]
+a inner product function. So $\delta $ is linear for the first row. Similarly we can write 
+\[\delta\begin{pmatrix}A_{11}&A_{12}&A_{13}\\A_{21}&A_{22}&A_{23}\\A_{31}&A_{32}&A_{33}\end{pmatrix}\]
+\[=(A_{21},A_{22},A_{23})\cdot (0,0,A_{11}A_{32})=(A_{31},A_{32},A_{33})\cdot (0,A_{11}A_{23},0).\]
+So $\delta $ is a $3$ linear function.
+\item It's not a $3$-linear function. We have that 
+\[\delta\begin{pmatrix}2&0&0\\0&1&0\\0&0&1\end{pmatrix}=4\neq =2\delta(I_3)=6.\]
+\item It's a $3$ linear function. We could write 
+\[\delta\begin{pmatrix}A_{11}&A_{12}&A_{13}\\A_{21}&A_{22}&A_{23}\\A_{31}&A_{32}&A_{33}\end{pmatrix}=(A_{11},A_{12},A_{13})\cdot (A_{21}A_{32},0,0)\]
+\[=(A_{21},A_{22},A_{23})\cdot (A_{11}A_{32},0,0)=(A_{31},A_{32},A_{33})\cdot (0,A_{11}A_{21},0)\]
+and get the result.
+\item It's not a $3$-linear function. We have that 
+\[\delta\begin{pmatrix}1&0&0\\0&2&0\\1&1&0\end{pmatrix}=1\neq =2\delta\begin{pmatrix}1&0&0\\0&1&0\\1&1&0\end{pmatrix}=2.\]
+\item It's not a $3$-linear function. We have that 
+\[\delta\begin{pmatrix}2&0&0\\0&1&0\\0&0&1\end{pmatrix}=4\neq =2\delta(I_3)=2.\]
+\item It's a $3$ linear function. We could write 
+\[\delta\begin{pmatrix}A_{11}&A_{12}&A_{13}\\A_{21}&A_{22}&A_{23}\\A_{31}&A_{32}&A_{33}\end{pmatrix}=(A_{11},A_{12},A_{13})\cdot (A_{22}A_{33}-A+{21}A_{32},0,0)\]
+\[=(A_{21},A_{22},A_{23})\cdot (-A_{11}A_{32},A_{11}A_{33},0)=(A_{31},A_{32},A_{33})\cdot (0,A_{11}A_{21},A_{11}A_{22})\]
+and get the result.
+\item \begin{description}
+\item[Corollary 2.] Since $\delta $ is $n$-linear, we must have $\delta(A)=0$ if $A$ contains one zero row. Now if $M$ has rank less than $n$, we know that the $n$ row vectors of $M$ are dependent, say $u_1,u_2,\ldots ,u_n$. So we can find some vector $u_i$ who is a linear combination of other vectors. We write 
+\[u_i=\sum{j\neq i}a_ju_j.\]
+By Corollary 1 after Theorem 4.10 we can add $-a_j$ times the $j$-th row to the $i$-th row without changing the value of $\delta$. Let $M'$ be the matrix obtained from $M$ by doing this processes. We know $M'$ has one zero row, the $i$-th row, and hence $\delta(M_\delta(M')=0$.
+\item[Corollary 3] We can obtain $E_1$ from $I$ by interchanging two rows. By Theorem 4.10(a) we know that $\delta(E_1)=-\delta(I)$. Similarly we can obtain $E_2$ from $I$ by multiplying one row by a scalar $k$. Since $\delta $ is $n$-linear we know that $\delta(E_2)=k\delta(I)$. Finally, we can obtain $E_3$ by adding $k$ times the $i$-th row to the $j$-th row. By Corollary 1 after Theorem 4.10 we know that $\delta(E_3)=\delta(I)$.
+\end{description}
+\item If $A$ is not full-rank, we have that $AB$ will be not full-rank. By Corollary 3 after Theorem 4.10 we have 
+\[\delta(AB)=0=\delta(A)\delta(B).\]
+If $A$ is full-rank and so invertible, we can write $A=E_s\cdots E_2E_1$ as product of elementary matrices. Assuming the fact, which we will prove later, that 
+\[\delta(EM)=\delta(E)\delta(M)\]
+for all elementary matrix $E$ and all matrix $M$ holds, we would have done since 
+\[\delta(AB)=\delta(E_s\cdots E_2E_1B)=\delta(E_s)\delta(E_{k-1}\cdots E_2E_1B)\]
+\[=\cdots =\delta(E_s)\cdots \delta(E_2)\delta(E_1)\delta(B)\]
+\[=\delta(E_s\cdots E_2E_1)\delta(B)=\delta(A)\delta(B).\]
+So now we prove the fact. First, if $E$ is the elementary matrix of type 1 meaning interchangine the $i$-th and the $j$-th rows, we have $EM$ is the matrix obtained from $M$ by interchanging the $i$-th and the $j$-th rows. By Theorem 4.10(a) we know that 
+\[\delta(EM)=-\delta(M)=-\delta(I)\delta(M)=\delta(E)\delta(M).\]
+Second, if $E$ is the elementary matrix of type 2 meaning multiplying the $i$-th row by a scalar $k$, we have $EM$ is the matrix obtained from $M$ by multiplying the $i$-th row by scalar $k$. Since the function $\delta$ is $n$-linear, we have 
+\[\delta(EM)=k\delta(M)=k\delta(I)\delta(M)=\delta(E)\delta(M).\]
+Finally, if $E$ is the elementary matrix of type 3 meaning adding $k$ times the $i$-th row to the $j$-th row, we have $EM$ is the matrix obtained from $M$ by adding $k$ times the $i$-th row to the $j$-th row. By Corollary 1 after Theorem 4.10, we have 
+\[\delta(EM)=\delta(M)=\delta(I)\delta(M)=\delta(E)\delta(M).\]
+This complete the proof.
+\item Since the fact $\det(A^t)=\det(A)$ and $\det $ is a $2$-linear function, the result is natural.
+\item We could write 
+\[\delta\begin{pmatrix}A_{11}&A_{12}\\A_{21}&A_{22}\end{pmatrix}=(A_{11},A_{12})\cdot (A_{22}a+A_{21}b,A_{22}c+A_{21}d)\]
+\[=(A_{21},A_{22})\cdot (A_{11}b+A_{12}d,A_{11}a+A_{12}c)\]
+and get the desired result since inner product function is linear.
+
+For the converse, fixed one $n$-linear function $\delta $ and let 
+\[a=\delta\begin{pmatrix}1&0\\0&1\end{pmatrix},b=\delta\begin{pmatrix}1&0\\1&0\end{pmatrix},\]
+\[c=\delta\begin{pmatrix}0&1\\0&1\end{pmatrix},d=\delta\begin{pmatrix}0&1\\1&0\end{pmatrix}.\]
+Now we must have 
+\[\delta\begin{pmatrix}A_{11}&A_{12}\\A_{21}&A_{22}\end{pmatrix}=A_{11}\delta\begin{pmatrix}1&0\\A_{21}&A_{22}\end{pmatrix}+A_{12}\delta\begin{pmatrix}0&1\\A_{21}&A_{22}\end{pmatrix}\]
+\[=A_{11}(A_{21}\delta\begin{pmatrix}1&0\\1&0\end{pmatrix}+A_{22}\delta\begin{pmatrix}1&0\\0&1\end{pmatrix})+A_{12}(A_{21}\delta\begin{pmatrix}0&1\\1&0\end{pmatrix}+A_{22}\delta\begin{pmatrix}0&1\\0&1\end{pmatrix})\]
+\[=A_{11}A_{22}a+A_{11}A_{21}b+A_{12}A_{22}c+A_{12}A_{21}d.\]
+\item Wait~
+\item Fixed an alternating $n$-linear function $\delta $. Let $k$ be the value of $\delta(I)$. We want to chaim that 
+\[\delta(M)=k\det(M).\]
+First we know that if $M$ has rank less than $n$, then $\delta(M)=0=\det(M)$ by Corollary 2 after Theorem 4.10. So the identity holds. Second if $M$ is full-rank, we can write $M=E_s\cdots E_2E_1I$ as product of elementary matrices and identity matrix $I$. And it's lucky now I can copy and paste the text in Exercise 4.5.12. 
+
+This time we will claim that 
+\[\delta(EA)=\det(E)\delta(A)\]
+for all elementary matrix $E$ and all matrix $A$. First, if $E$ is the elementary matrix of type 1 meaning interchangine the $i$-th and the $j$-th rows, we have $EM$ is the matrix obtained from $A$ by interchanging the $i$-th and the $j$-th rows. By Theorem 4.10(a) we know that 
+\[\delta(EM)=-\delta(A)=\det(E)\delta(A).\]
+Second, if $E$ is the elementary matrix of type 2 meaning multiplying the $i$-th row by a scalar $k$, we have $EM$ is the matrix obtained from $M$ by multiplying the $i$-th row by scalar $k$. Since the function $\delta$ is $n$-linear, we have 
+\[\delta(EM)=k\delta(A)=\det(E)\delta(A).\]
+Finally, if $E$ is the elementary matrix of type 3 meaning adding $k$ times the $i$-th row to the $j$-th row, we have $EM$ is the matrix obtained from $M$ by adding $k$ times the $i$-th row to the $j$-th row. By Corollary 1 after Theorem 4.10, we have 
+\[\delta(EM)=\delta(A)=\det(E)\delta(A).\]
+This complete the proof since 
+\[\delta(M)=\delta(E_s\cdots E_2E_1I)=\det(E_s)\cdots \det(E_2)\det(E_1)\delta(I)\]
+\[=k\det(E_s)\cdots \det(E_2)\det(E_1)=k\det(M).\]
+\item Recall the definition 
+\[(\delta_1+\delta_2)(A)=\delta_1(A)+\delta_2(A)\]
+and 
+\[(k\delta)(A)=k\delta(A)\]. For brevity, we write $\delta'$ for $\delta_1+\delta_2$ and $\delta''$ for $k\delta$. Now prove that both $\delta'$ and $\delta''$ is $n$-linear. Check that 
+\[\delta'\begin{pmatrix}u_1+cv_1\\u_2\\\vdots \\u_n\end{pmatrix}=\delta_1\begin{pmatrix}u_1+cv_1\\u_2\\\vdots \\u_n\end{pmatrix}+\delta_2\begin{pmatrix}u_1+cv_1\\u_2\\\vdots \\u_n\end{pmatrix}\]
+\[=\delta_1\begin{pmatrix}u_1\\u_2\\\vdots \\u_n\end{pmatrix}+c\delta_1\begin{pmatrix}v_1\\u_2\\\vdots \\u_n\end{pmatrix}+\delta_2\begin{pmatrix}u_1\\u_2\\\vdots \\u_n\end{pmatrix}+\delta_2\begin{pmatrix}v_1\\u_2\\\vdots \\u_n\end{pmatrix}\]
+\[=\delta'\begin{pmatrix}u_1\\u_2\\\vdots \\u_n\end{pmatrix}+c\delta'\begin{pmatrix}v_1\\u_2\\\vdots \\u_n\end{pmatrix}.\]
+Also check that 
+\[\delta''\begin{pmatrix}u_1+cv_1\\u_2\\\vdots \\u_n\end{pmatrix}=k\delta\begin{pmatrix}u_1+cv_1\\u_2\\\vdots \\u_n\end{pmatrix}\]
+\[=k\delta\begin{pmatrix}u_1\\u_2\\\vdots \\u_n\end{pmatrix}+ck\delta\begin{pmatrix}v_1\\u_2\\\vdots \\u_n\end{pmatrix}=\delta''\begin{pmatrix}u_1\\u_2\\\vdots \\u_n\end{pmatrix}+c\delta''\begin{pmatrix}v_1\\u_2\\\vdots \\u_n\end{pmatrix}.\]
+So both $\delta'$ and $\delta''$ is linear function for the first row when other rows are held fixed. For the cases on other rows are similar.
+\item Let the zero element be the zero $n$-linear function, $\delta(A)=0$. Thus it can be checked that all the properties of vector space hold by the properties of field.
+\item If $M$ has two identical rows, then the matrix $M'$ obtained from $M$ by interchanging the two rows would be the same. So we have 
+\[\delta(M)=\delta(M')=-\delta(M).\]
+When $\mathbb{F}$ does not have characteristic two, the equality above means $\delta(M)=0$.
+\item Let $\delta $ be the $2$-linear function in Exercise 4.5.15 with $a=b=c=d=1$. Thus we have that 
+\[\delta\begin{pmatrix}a&b\\c&d\end{pmatrix}=ac+ad+bc+bd=\delta\begin{pmatrix}c&d\\a&b\end{pmatrix}=-\delta\begin{pmatrix}c&d\\a&b\end{pmatrix}.\]
+The final equality holds since $\mathbb{F}$ has characteristic two. But now we have 
+\[\delta\begin{pmatrix}1&0\\1&0\end{pmatrix}=1\neq 0.\]
+\end{enumerate}

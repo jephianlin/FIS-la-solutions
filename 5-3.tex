@@ -1,0 +1,171 @@
+\section{Matrix Limits and Markov Chains}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. This is the result of Theorem 5.12.
+\item Yes. This is the result of Theorem 5.13.
+\item No. It still need the condition that each entry is nonnegative.
+\item No. It's the sum of each column. The matrix $\begin{pmatrix}1&1\\0&0\end{pmatrix}$ is a counterexample.
+\item Yes. See the Corollary after Theorem 5.15, although there's no proof.
+\item Yes. See the Corollary 1 after Theorem 5.16.
+\item Yes. Look Theorem 5.17.
+\item No. The matrix $\begin{pmatrix}0&1\\1&0\end{pmatrix}$ has eigenvector $(1,-1)$ corresponding the eigenvalue $-1$.
+\item No. The matrix $A=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ has the property that $A^2=I$. So the sequence would be $A,I,A,I,\ldots $, which does not converge.
+\item Yes. This is Theorem 5.20.
+\end{enumerate}
+\item Diagonalize those matrices and use the fact of the Corollary after Theorem 5.12. Actually the eigenvalue will not tend to zero if and only if the eigenvalue is $1$.
+\begin{enumerate}
+\item The limit is the zero matrix.
+\item The limit is $\begin{pmatrix}-0.5 & 0.5\cr -1.5 & 1.5\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}\frac{7}{13} & \frac{7}{13}\cr \frac{6}{13} & \frac{6}{13}\end{pmatrix}$.
+\item The limit is the zero matrix.
+\item The limit does not exist.
+\item The limit is $\begin{pmatrix}3 & -1\cr 6 & -2\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}-1 & 0 & -1\cr -4 & 1 & -2\cr 2 & 0 & 2\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}-2 & -3 & -1\cr 0 & 0 & 0\cr 6 & 9 & 3\end{pmatrix}$.
+\item The limit does not exist.
+\item The limit does not exist.
+\end{enumerate}
+\item We know that 
+\[\lim_{m\rightarrow \infty}(A_m)^t_{ij}=\lim_{m\rightarrow \infty}(A_m)_{ji}=L_{ji}=L^t_{ij}.\]
+\item If $A$ is diagonalizable, we may say that $Q^{-1}AQ=D$ for some invertible matrix $Q$ and for some diagonal matrix $D$ whose diagonal entries are eigenvalues. So $\lim_{m\rightarrow \infty}D^m$ exist only when all its eigenvalues are numbers in $S$, which was defined in the paragraphs before Theorem 5.13. If all the eigenvalues are $1$, then the limit $L$ would be $I_n$. If some eigenvalue $\lambda \neq 1$, then its absolute value must be less than $1$ and the limit of $\lambda^m$ would shrink to zero. This means that $L$ has rank less than $n$. 
+\item First we see three special matrices, 
+\[P=\begin{pmatrix}1&1&\\0&0\end{pmatrix}, Q=\begin{pmatrix}1&0\\1&0\end{pmatrix}, R=\begin{pmatrix}1&0\\0&0\end{pmatrix}.\]
+The limit of power of these three matrices is themselves respectly, because they has the property that their square are themselves. However, we know that 
+\[\frac{1}{\sqrt{2}}P\cdot \frac{1}{\sqrt{2}}P=R.\]
+So we pick $A=\frac{1}{\sqrt{2}}P$, $B=\frac{1}{\sqrt{2}}Q$, and $C=R$. Thus we have the limit of power of $A$ and $B$ are the zero matrix. And the limit of power of $C$ is $C$ itself.
+\item Let $x$, $y$, $z$, and $w$ denote the percentage of the healthy, ambulatory, bedridden, and dead patients. And we know that 
+\[\begin{pmatrix}x\\y\\z\\w\end{pmatrix}=\begin{pmatrix}0\\0.3\\0.7\\0\end{pmatrix}\]
+and the percentage of each type would be described by the vector 
+\[\begin{pmatrix}1 & 0.6 & 0.1 & 0\cr 0 & 0.2 & 0.2 & 0\cr 0 & 0.2 & 0.5 & 0\cr 0 & 0 & 0.2 & 1\end{pmatrix}\begin{pmatrix}0\\0.3\\0.7\\0\end{pmatrix}=\begin{pmatrix}0.25\cr 0.2\cr 0.41\cr 0.14\end{pmatrix}\]
+in the same order. So this answer the first question. For the second question we should calculate the limit of power of that transition matrix, say $A$. It would be 
+\[L=\lim_{m\rightarrow \infty}{A^m}=\begin{pmatrix}1 & \frac{8}{9} & \frac{5}{9} & 0\cr 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0\cr 0 & \frac{1}{9} & \frac{4}{9} & 1\end{pmatrix}.\]
+So the limit of percentage of each type would be described by the vector
+\[L\begin{pmatrix}0\\0.3\\0.7\\0\end{pmatrix}=\begin{pmatrix}\frac{59}{90}\cr 0\cr 0\cr \frac{31}{90}\end{pmatrix}.\]
+\item Using the language of the stochastic matrix, we direct write the stochastic matrix to be 
+\[A=\begin{pmatrix}1 & \frac{1}{3} & 0 & 0\cr 0 & 0 & \frac{1}{3} & 0\cr 0 & \frac{2}{3} & 0 & 0\cr 0 & 0 & \frac{2}{3} & 1\end{pmatrix}.\]
+I don't think there is too much difference between the process of diagonalizing and finding the eigenvectors. It's much easier to observe the sequence 
+\[e_2, Ae_2, A^2e_2, \ldots,\]
+which is 
+\[\begin{pmatrix}0\cr 1\cr 0\cr 0\end{pmatrix},\begin{pmatrix}\frac{1}{3}\cr 0\cr \frac{2}{3}\cr 0\end{pmatrix},\begin{pmatrix}\frac{1}{3}\cr \frac{2}{9}\cr 0\cr \frac{4}{9}\end{pmatrix},\begin{pmatrix}\frac{11}{27}\cr 0\cr \frac{4}{27}\cr \frac{4}{9}\end{pmatrix},\begin{pmatrix}\frac{11}{27}\cr \frac{4}{81}\cr 0\cr \frac{44}{81}\end{pmatrix},\ldots\]
+And find the limit of the first entry to be 
+\[\frac{1}{3}+\frac{2}{3}\cdot \frac{1}{9}+\frac{2}{3}\cdot\frac{2}{9}\cdot\frac{1}{9}+\frac{2}{3}\cdot(\frac{2}{9})^2\cdot\frac{1}{9}+\cdots\]
+\[\frac{1}{3}+\frac{\frac{2}{3}\cdot\frac{1}{9}}{1-\frac{2}{9}}=\frac{3}{7}.\]
+So the answer is $\frac{3}{7}$.
+\item There's no better method to check whether the matrix is regular or not. So just try it or find the evidence that the power of it will not be a positive matrix. When the matrix is nonnegative, we may just consider the matrix obtained by replacing each nonzero entry by $1$.
+\begin{enumerate}
+\item Yes. The square of it is positive.
+\item Yes. It's positive when the power is $4$.
+\item No. The second and the third column always interchange each time.
+\item No. The second column does not change each time.
+\item No. The second and the third columns do not change.
+\item No. The first column does not change.
+\item No. The third and the fourth columns do not change.
+\item No. The third and the fourth columns do not change.
+\end{enumerate}
+\item Use the same method as that in Exercise 5.3.2. Or we may use the result of 5.20 for the case of regular matrix.
+\begin{enumerate}
+\item The limit is $\begin{pmatrix}\frac{1}{3} & \frac{1}{3} & \frac{1}{3}\cr \frac{1}{3} & \frac{1}{3} & \frac{1}{3}\cr \frac{1}{3} & \frac{1}{3} & \frac{1}{3}\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}\frac{1}{2} & \frac{1}{2} & \frac{1}{2}\cr \frac{1}{4} & \frac{1}{4} & \frac{1}{4}\cr \frac{1}{4} & \frac{1}{4} & \frac{1}{4}\end{pmatrix}$.
+\item The limit does not exist since the second and the third columns interchange each time.
+\item The limit is $\begin{pmatrix}0 & 0 & 0\cr 1 & 1 & 1\cr 0 & 0 & 0\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}0 & 0 & 0\cr \frac{1}{2} & 1 & 0\cr \frac{1}{2} & 0 & 1\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}1 & 0 & 0\cr 0 & \frac{2}{5} & \frac{2}{5}\cr 0 & \frac{3}{5} & \frac{3}{5}\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0\cr \frac{1}{2} & \frac{1}{2} & 1 & 0\cr \frac{1}{2} & \frac{1}{2} & 0 & 1\end{pmatrix}$.
+\item The limit is $\begin{pmatrix}0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0\cr \frac{1}{2} & \frac{1}{2} & 1 & 0\cr \frac{1}{2} & \frac{1}{2} & 0 & 1\end{pmatrix}$.
+\end{enumerate}
+\item To calculate the vector after two stage, we could only multiply the matrix twice and multiply the vectors. To calculate the limit matrix we could just find the eigenvector corresponding to eigenvalue $1$ and use Theorem 5.20.
+\begin{enumerate}
+\item The two-stage vectors and the fixed vectors are
+\[\begin{pmatrix}0.225\cr 0.441\cr 0.334\end{pmatrix},\begin{pmatrix}0.2\cr 0.6\cr 0.2\end{pmatrix}\]
+respectly.
+\item The two-stage vectors and the fixed vectors are
+\[\begin{pmatrix}0.375\cr 0.375\cr 0.25\end{pmatrix},\begin{pmatrix}0.4\cr 0.4\cr 0.2\end{pmatrix}\]
+respectly.
+\item The two-stage vectors and the fixed vectors are
+\[\begin{pmatrix}0.372\cr 0.225\cr 0.403\end{pmatrix},\begin{pmatrix}0.5\cr 0.2\cr 0.3\end{pmatrix}\]
+respectly.
+\item The two-stage vectors and the fixed vectors are
+\[\begin{pmatrix}0.252\cr 0.334\cr 0.414\end{pmatrix},\begin{pmatrix}0.25\cr 0.35\cr 0.4\end{pmatrix}\]
+respectly.
+\item The two-stage vectors and the fixed vectors are
+\[\begin{pmatrix}0.329\cr 0.334\cr 0.337\end{pmatrix},\begin{pmatrix}\frac{1}{3}\cr \frac{1}{3}\cr \frac{1}{3}\end{pmatrix}\]
+respectly.
+\item The two-stage vectors and the fixed vectors are
+\[\begin{pmatrix}0.316\cr 0.428\cr 0.256\end{pmatrix},\begin{pmatrix}0.25\cr 0.5\cr 0.25\end{pmatrix}\]
+respectly.
+\end{enumerate}
+\item The matrix would be 
+\[A=\begin{pmatrix}0.7 & 0.2 & 0\cr 0.1 & 0.6 & 0.2\cr 0.2 & 0.2 & 0.8\end{pmatrix}.\]
+So the vector in 1950 would be 
+\[A\begin{pmatrix}0.1\cr 0.5\cr 0.4\end{pmatrix}=\begin{pmatrix}0.197\cr 0.339\cr 0.464\end{pmatrix}.\]
+Since it's regular, we may just find the fixed vector 
+\[\begin{pmatrix}0.2\cr 0.3\cr 0.5\end{pmatrix}.\]
+\item Considering the three states, new, once used, and twice used, the matrix is 
+\[A=\begin{pmatrix}\frac{1}{3} & \frac{1}{3} & 1\cr \frac{2}{3} & 0 & 0\cr 0 & \frac{2}{3} & 0\end{pmatrix}.\]
+It is regular. So we can just find the fixed vector
+\[\begin{pmatrix}\frac{9}{19}\cr \frac{6}{19}\cr \frac{4}{19}\end{pmatrix}.\]
+\item Considering the three states, large, intermediate-sized, and small car owners, the matrix is 
+\[\begin{pmatrix}0.7 & 0.1 & 0\cr 0.3 & 0.7 & 0.1\cr 0 & 0.2 & 0.9\end{pmatrix}\]
+and the initial vector is 
+\[P=\begin{pmatrix}0.4\cr 0.2\cr 0.4\end{pmatrix}.\]
+So the vector in 1995 would be 
+\[A^2P=\begin{pmatrix}0.24\cr 0.34\cr 0.42\end{pmatrix}.\]
+And the matrix $A$ is regular. So we may just find the fixed vector 
+\[\begin{pmatrix}0.1\cr 0.3\cr 0.6\end{pmatrix}.\]
+\item We prove it by induction on $m$. When $m=1$, the formula meet the matrix $A$. Suppose the formula holds for the case $m=k-1$. Then the case $m=k$ would be 
+\[A^k=A^{k-1}A=\begin{pmatrix}r_{k-1}&r_k&r_k\\r_k&r_{k-1}&r_k\\r_k&r_k&r_{k-1}\end{pmatrix}A\]
+\[=\begin{pmatrix}r_k&\frac{r_{k-1}+r_k}{2}&\frac{r_{k-1}+r_k}{2}\\\frac{r_{k-1}+r_k}{2}&r_k&\frac{r_{k-1}+r_k}{2}\\\frac{r_{k-1}+r_k}{2}&\frac{r_{k-1}+r_k}{2}&r_k\end{pmatrix}.\]
+After check that 
+\[\frac{r_{k-1}+r_k}{2}=\frac{1}{3}\cdot \frac{1+\frac{(-1)^k}{2^{k-2}}+1+\frac{(-1)^k}{2^{k-1}}}{2}=\frac{1}{3}[1+\frac{(-1)^k}{2^{k}}]=r_{k+1}\]
+we get the desired result. To deduce the second equality, just replace $A^m$ by the right hand side in the formula.
+\item Let $v$ be that nonnegative vector and say $d$ is the sum of all its entries. Thus we have $x=\frac{1}{d}v$ is a probability vector. Furthermore, if $y$ is a probability vector in $W$. They must be parallel, say $y=kx$. The sum of entries of $y$ is $k$ by the fact that $x$ is a probability vector. And the sum of entries of $y$ is $1$ since itself is a probability vector. This means $k=1$. So the vector is unique.
+\item If $A$ is a (not necessarily square) matrix with row vectors $A_1,A_2,\ldots ,A_r$, we have the fact 
+\[A^tu=A_1^t+A_2^t+\cdots +A_r^t.\]
+This vector equal to $u$ if and only if the sum of entries is $1$ for every column of $A$. Use this fact we've done the proof of Theorem 5.15.
+
+For the Corollary after it, if $M$ is a transition matrix, we have 
+\[(M^k)^tu=(M^t)^ku=(M^t)^{k-1}u=\cdots =u.\]
+And if $v$ is probability vector, 
+\[(Mv)^tu=v^tM^tu=v^tu=\begin{pmatrix}1\end{pmatrix}.\]
+By Theorem 5.15 we get the conclusion.
+\item For the first Corollary, we may apply Theorem 5.18 to the matrix $A^t$ since we have the fact that $A$ and $A^t$ have the same \charpoly{}. Thus we know that $\lambda =\nu(A)$. Also, the dimension of eigenspace of $A^t$ corresponding to $\lambda $ is $1$. But Exercise 5.2.13 tell us that $A^t$ and $A$ has the same dimension of the corresponding eigenspaces.
+
+For the second Corollary, we know that $\nu(A)=1$. So if $\lambda \neq 1$ then we have $|\lambda|<1$ by Theorem 5.18 and its first Corollary. And the eigenspace corresponding $1$ has dimension one by the first Corollary.
+\item By Theorem 5.19, all eigenvalues lies in $S$, which was defined in the paragraphs before Theorem 5.13. Thus the limit exist by Theorem 5.14.
+\item \begin{enumerate}
+\item First we check that 
+\[(cM+(1-c)N)^tu=cM^tu+(1-c)N^tu=cu+(1-c)u=u.\] 
+Thus the new matrix is a transition matrix by the Corollary after Theorem 5.15. So it's enough to show that the new matrix is regular. Now suppose that $M^k$ is positive. Then we know that $(cM+(1-c)N)^k$ is the sum of $c^kM^k$ and some lower order terms, which are nonnegative. So we know that it's a positive matrix and so the new matrix is regular.
+\item Pick a scalar $d$ such that each entry of $dM'$ is larger than that of $M$. Then we may pick $c=\frac{1}{d}$ and 
+\[N=\frac{1}{1-c}(M'-cM)\]
+and know that $N$ is nonnegative. Finally we may check that 
+\[N^tu=\frac{1}{1-c}(M'^tu-cM^tu)=\frac{1}{1-c}\cdot (1-c)u=u.\]
+So $N$ is also a transition matrix by the Corollary after Theorem 5.15.
+\item By symmetry, it's enough to prove only the one side of that statement. Also, by (b) we could write
+\[M'=cM+(1-c)N\]
+for some scalar $c$ and some transition matrix $N$. Now, if $M$ is regular, then $M'$ is also regular by (a).
+\end{enumerate}
+\item Use the notation of the Definition, when $A=O$ we can observe that $B_m$ is equal to $I$ for all $m$. So $e^O$ would be $I$. For the case $A=I$, we have $A^m=I$ for all $m$. So the matrix $e^I=eI$. That is, a matrix with all its entries $e$.
+\item We set 
+\[B_m=I+A+\frac{A^2}{2!}+\cdots +\frac{A^m}{m!}\]
+and 
+\[E_m=I+D+\frac{D^2}{2!}+\cdots +\frac{A^m}{m!}.\]
+We may observe that $B_m=PE_mP^{-1}$ for all $m$. So by the definition of exponential of matrix and Theorem 5.12, we have 
+\[e^A=\lim_{m\rightarrow \infty}{B_m}=\lim_{m\rightarrow \infty}{(PE_mP^{-1})}=P(\lim_{m\rightarrow \infty}{E_m})P^{-1}=Pe^DP^{-1}.\]
+\item With the help of previous exercise, it's enough to show that $e^D$ exist if $P^{-1}AP=D$. Since we know that 
+\[(D^m)_{ii}=(D_{ii})^m,\]
+we have that ,with the notation the same as the previous exercise,
+\[(E_m)_{ii}=1+D_{ii}+\frac{(D_{ii})^2}{2!}+\cdots +\frac{(D_{ii})^m}{m!},\]
+which tends to $e^{D_{ii}}$ as $m$ tends to infinity. So we know that $e^D$ exists.
+\item The equality is usually not true, although it's true when $A$ and $B$ are diagonal matrices. For example, we may pick $A=\begin{pmatrix}1&1\\0&0\end{pmatrix}$ and $B=\begin{pmatrix}1&0\\0&0\end{pmatrix}$. By some calculation we have 
+\[e^A=\begin{pmatrix}e & e-1\cr 0 & 1\end{pmatrix}\]
+and 
+\[e^B=\begin{pmatrix}e&0\\0&1\end{pmatrix}\]
+and 
+\[e^Ae^B=\begin{pmatrix}e^2&e-1\\0&1\end{pmatrix}.\]
+However, we may also calculate that 
+\[e^{A+B}=\begin{pmatrix}{e}^{2} & \frac{{e}^{2}}{2}-\frac{1}{2}\cr 0 & 1\end{pmatrix}.\]
+\item Use the notation in the solution to Exercise 5.2.15. And in the proof we know that the solution $x(t)=Q\bar{D}y$ for some $y\in\R^n$. Now we know that actually $\bar{D}=e^D$ by definition. With the fact that $Q$ is invertible, we may write the set of solution to be 
+\[\{Qe^DQ^{-1}v:v\in\R^n\}=\{e^Av:v\in\R^n\}\]
+by Exercise 5.3.21.
+\end{enumerate}

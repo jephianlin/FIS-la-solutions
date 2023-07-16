@@ -1,0 +1,19 @@
+\section{Maximal Linearly Independent Subsets}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. For example, the family $\{(0,n)\}_{n\geq 1}$ of open intervals has no maximal element.
+\item No. For example, the family $\{(0,n)\}_{n\geq 1}$ of open intervals in the set real numbers has no maximal element.
+\item No. For example, the two set in this family $\{{1,2},{2,3}\}$ are both maximal element.
+\item Yes. If there are two maximal elements $A$ and $B$, we have $A\subset B$ or $B\subset A$ since they are in a chain. But no matter $A\subset B$ or $B\subset A$ implies $A=B$ since they are both maximal elements.
+\item Yes. If there are some independent set containing a basis, then the vector in that independent set but not in the basis cannot be a linear combination of the basis.
+\item Yes. It's naturally independent. And if there are some vector can not be a linear combination of a maximal independent set. We can add it to the maximal independent set and have the new set independent. This is contradictory to the maximality.
+\end{enumerate}
+\item Basis described in 1.6.18 is a infinite linearly independent subset. So the set of convergent sequences is an infinite-dimensional subspace by 1.6.21.
+\item Just as the hint, the set $\{\pi, \pi^2, \ldots \}$ is infinite and independent. So $V$ is indinite-dimensional.
+\item By Theorem 1.13 we can extend the basis of $W$ to be a basis of $V$.
+\item This is almost the same as the proof of Theorem 1.8 since the definition of linear combination of a infinite subset $\beta $ is the linear combinations of finite subset of $\beta $.
+\item Let $\mathscr{F}$ be the family of all linearly independent subsets of $S_2$ that contain $S_1$. We may check there are some set containing each member of a chain for all chain of $\mathscr{F}$ just as the proof in Theorem 1.13. So by Maximal principle there is a maximal element $\beta $ in $\mathscr{F}$. By the maximality we know $\beta $ can generate $S_2$ and hence can generate $V$. With addition of it's independence we know $\beta $ is a basis.
+\item Let $\mathscr{F}$ be the family of all linearly independent subset of $\beta $ such that union of it and $S$ is independent. Then for each chain $\mathscr{C}$ of $\mathscr{F}$ we may choose $U$ as the union of all the members of $\mathscr{C}$. We should check $U$ is a member of $\mathscr{F}$. So we should check wether $S\cup U$ is independent. But this is easy since if $\sum_{i=1}^n{a_iv_i}+\sum_{j=1}^m{b_ju_j}=0$ with $v_i\in S$ and $u_j\in U$, say $u_j\in U_j$ where $\{U_j\}$ are a members of $\mathscr{C}$, then we can pick the maximal element, say $U_1$, of $\{U_j\}$. Thus we have $u_j\in U_1$ for all $j$. So $S\cup U$ is independent and hence $a_i=b_j=0$ for all $i$ and $j$.
+
+Next, by Maximal principle we can find a maximal element $S_1$ of $\mathscr{C}$. So $S\cup S_1$ is independent. Furthermore by the maximality of $S_1$ we know that $S\cup S_1$ can generate $\beta $ and hence can generate $V$. This means $S\cup S_1$ is a basis for $V$.
+\end{enumerate}

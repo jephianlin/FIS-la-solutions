@@ -1,0 +1,263 @@
+\section{Normal and Self-Adjoint Operators}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. Check $TT^*=T^2=T^*T$.
+\item No. The two matrices $\begin{pmatrix}1&1\\0&1\end{pmatrix}$ and $\begin{pmatrix}1&0\\1&1\end{pmatrix}$ have $\begin{pmatrix}1\\0\end{pmatrix}$ and $\begin{pmatrix}0\\1\end{pmatrix}$ to be their unique normalized eigenvectors respectly.
+\item No. Consider $T(a,b)=(2a,b)$ to be a mapping from $\R^2$ to $\R^2$ and $\beta $ to be the basis $\{(1,1),(1,0)\}$. We have $T$ is normal with $T^*=T$. But $[T]_{\beta}=\begin{pmatrix}1&0\\1&2\end{pmatrix}$ is not normal. Furthermore, the converse is also not true. We may let $T(a,b),=(b,b)$ be a mapping from $\R^2$ to $\R^2$ and $\beta $ be the basis $\{(1,-1),(0,1)\}$. In this time $T$ is not normal with $T^*(a,b)=(0,a+b)$. However, $[T]_{\beta}=\begin{pmatrix}0&0\\0&1\end{pmatrix}$ is a normal matrix.
+\item Yes. This comes from Theorem 6.10.
+\item Yes. See the Lemma before Theorem 6.17.
+\item Yes. We have $I^*=I$ and $O^*=O$, where $I$ and $O$ are the identity and zero operators.
+\item No. The mapping $T(a,b)=(-b,a)$ is normal since $T^*(a,b)=(a,-b)$. But it's not diagonalizable since the \charpoly{} of $T$ does not split.
+\item Yes. If it's an operator on a real inner product space, use Theorem 6.17. If it's an operator on a complex inner product space, use Theorem 6.16.
+\end{enumerate}
+\item Use one orthonormal basis $\beta $ to check $[T]_{\beta}$ is normal, self-adjoint, or neither. Ususally we'll take $\beta$ to be the standard basis. To find an orthonormal basis of eigenvectors of $T$ for $V$, just find an orthonormal basis for each eigenspace and take the union of them as the desired basis.
+\begin{enumerate}
+\item Pick $\beta$ to be the standard basis and get that 
+\[[T]_{\beta}=\begin{pmatrix}2&-2\\-2&5\end{pmatrix}.\]
+So it's self-adjoint. And the basis is 
+\[\{\frac{1}{\sqrt{5}}(1,-2),\frac{1}{\sqrt{5}}(2,1)\}.\]
+\item Pick $\beta$ to be the standard basis and get that 
+\[[T]_{\beta}=\begin{pmatrix}-1&1&0\\0&5&0\\4&-2&5\end{pmatrix}.\]
+So it's neither normal nor self-adjoint.
+\item Pick $\beta$ to be the standard basis and get that 
+\[[T]_{\beta}=\begin{pmatrix}2&i\\1&2\end{pmatrix}.\]
+So it's normal but not self-adjoint. And the basis is 
+\[\{(\frac{1}{\sqrt{2}},-\frac{1}{2}+\frac{1}{2}i),(\frac{1}{\sqrt{2}},\frac{1}{2}-\frac{1}{2}i)\}.\]
+\item Pick an orthonormal basis $\beta =\{1,\sqrt{3}(2t-1),\sqrt{6}(6t^2-6t+1)\}$ by Exercise 6.2.2(c) and get that 
+\[[T]_{\beta}=\begin{pmatrix}0 & 2\sqrt{3} & 0\cr 0 & 0 & 6\sqrt{2}\cr 0 & 0 & 0\end{pmatrix}.\]
+So it's neither normal nor self-adjoint.
+\item Pick $\beta$ to be the standard basis and get that 
+\[[T]_{\beta}=\begin{pmatrix}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{pmatrix}.\]
+So it's self-adjoint. And the basis is 
+\[\{(1,0,0,0),\frac{1}{\sqrt{2}}(0,1,1,0),(0,0,0,1),\frac{1}{\sqrt{2}}(0,1,-1,0)\}\]
+\item Pick $\beta$ to be the standard basis and get that 
+\[[T]_{\beta}=\begin{pmatrix}0&0&1&0\\0&0&0&1\\1&0&0&0\\0&1&0&0\end{pmatrix}.\]
+So it's self-adjoint. And the basis is 
+\[\{\frac{1}{\sqrt{2}}(1,0,-1,0),\frac{1}{\sqrt{2}}(0,1,0,-1),\frac{1}{\sqrt{2}}(1,0,1,0),\frac{1}{\sqrt{2}}(0,1,0,1)\}\]
+\end{enumerate}
+\item Just see Exercise 1(c).
+\item Use the fact 
+\[(TU)^*=U^*T^*=UT.\]
+\item Observe that $(T-cI)^*=T^*-\overline{c}I$ and check 
+\[(T-cI)(T-cI)^*=(T-cI)(T^*-\overline{c}I)=TT^*-\overline{c}T-cT^*+|c|^2I\]
+and 
+\[(T-cI)^*(T-cI)=(T^*-\overline{c}I)(T-cI)=T^*T-\overline{c}T-cT^*+|c|^2I.\]
+They are the same because $TT^*=T^*T$.
+\item \begin{enumerate}
+\item Observe the fact 
+\[T_1^*=(\frac{1}{2}(T+T^*))^*=\frac{1}{2}(T^*+T)=T_1\]
+and 
+\[T_2^*=(\frac{1}{2i}(T-T^*))^*=-\frac{1}{2i}(T^*-T)=T_2.\]
+\item Observe that $T^*=U_1^*-iU_2^*=U_1-iU_2$. This means that 
+\[U_1=\frac{1}{2}(T+T^*)=T_1\]
+and 
+\[U_2-\frac{1}{2}(T-T^*)=T_2.\]
+\item Calculate that 
+\[T_1T_2-T_2T_1=\frac{1}{4i}(T^2-TT^*+T^*T-(T^*)^2)-\frac{1}{4i}(T^2+TT^*-T^*T-(T^*)^2)\]
+\[=\frac{1}{2i}(T^*T-TT^*).\]
+It equals to $T_0$ if and only if $T$ is normal.
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item We check 
+\[\lag x,(T_W)^*(y)\rag =\lag T_W(x),y\rag =\lag T(x),y\rag \]
+\[=\lag T^*(x),y\rag =\lag x,T(y)\rag =\lag x,T_W(y)\rag \]
+for all $x$ and $y$ in $W$.
+\item Let $y$ be an element in $W\pp$. We check 
+\[\lag x,T^*(y)\rag =\lag T(x),y\rag =0\]
+for all $x\in W$, since $T(x)$ is also an element in $W$ by the fact that $W$ is $T$-invariant.
+\item We check 
+\[\lag x,(T_W)^*(y)\rag =\lag T_W(x),y\rag =\lag T(x),y\rag \]
+\[\lag x,T^*(y)\rag =\lag x,(T^*)_W(y)\rag .\]
+\item Since $T$ is normal, we have $TT^*=T^*T$. Also, since $W$ is both $T$- and $T^*$-invariant, we have 
+\[(T_W)^*=(T^*)_W\]
+by the previous argument. This means that 
+\[T_W(T_W)^*=T_W(T^*)_W=(T^*)_WT_W=(T_W)^*T_W.\]
+\end{enumerate}
+\item By Theorem 6.16 we know that $T$ is diagonalizable. Also, by Exercise 5.4.24 we know that $T_W$ is also diagonalizable. This means that there's a basis for $W$ consisting of eigenvectors of $T$. If $x$ is a eigenvectors of $T$, then $x$ is also a eigenvector of $T^*$ since $T$ is normal. This means that there's a basis for $W$ consisting of eigenvectors of $T^*$. So $W$ is also $T$-invariant.
+\item By Theorem 6.15(a) we know that $T(x)=0$ if and only if $T^*(x)=0$. So we get that $N(T)=N(T^*)$. Also, by Exercise 6.3.12 we know that 
+\[R(T)=N(T^*)\pp =N(T)\pp =R(T^*).\]
+\item Directly calculate that 
+\[\|T(x)\pm ix\|^2=\lag T(x)\pm ix,T(x)\pm ix\rag =\]
+\[=\|T(x)\|^2\pm \lag T(x),ix\rag \pm \lag ix,T(x)\rag +\|x\|^2\]
+\[=\|T(x)\|^2\mp i\lag T(x),x\rag \pm \lag T^*(x),x\rag +\|x\|^2=\|T(x)\|^2+\|x\|^2.\]
+Also, $T\pm iI$ is injective since $\|T(x)\pm x\|=0$ if and only if $T(x)=0$ and $x=0$. Now $T-iI$ is invertible by the fact that $V$ is finite-dimensional. Finally we may calculate that 
+\[\lag x,[(T-iI)^{-1}]^*(T+iI)(y)\rag =\lag (T-iI)^{-1}(x),(T+iI)(y)\rag \]
+\[=\lag (T-iI)^{-1}(x),(T^*+iI)(y)\rag =\lag (T-iI)^{-1}(x),(T-iI)^*(y)\rag \]
+\[=\lag (T-iI)(T-iI)^{-1}(x),y\rag =\lag x,y\rag \]
+for all $x$ and $y$. So we get the desired equality.
+\item \begin{enumerate}
+\item We prove it by showing the value is equal to its own conjugate. That is,
+\[\overline{\lag T(x),x\rag }=\lag x,T(x)\rag \]
+\[\lag x,T^*(x)\rag =\lag T(x),x\rag .\]
+\item As Hint, we compute 
+\[0=\lag T(x+y),x+y\rag \]
+\[=\lag T(x),x\rag +\lag T(x),y\rag +\lag T(y),x\rag +\lag T(y),y\rag \]
+\[=\lag T(x),y\rag +\lag T(y),x\rag .\]
+That is, we have 
+\[\lag T(x),y\rag =-\lag T(y),x\rag .\]
+Also, replace $y$ by $iy$ and get 
+\[\lag T(x),iy\rag =-\lag T(iy),x\rag \]
+and hence
+\[-i\lag T(x),y\rag =-i\lag T(y),x\rag .\]
+This can only happen when 
+\[\lag T(x),y\rag =0\]
+for all $x$ and $y$. So $T$ is the zero mapping.
+\item If $\lag T(x),x\rag $ is real, we have 
+\[\lag T(x),x\rag =\lag x,T(x)\rag =\lag T^*(x),x\rag .\]
+This means that 
+\[\lag (T-T^*)(x),x\rag =0\]
+for all $x$. By the previous argument we get the desired conclusion $T=T^*$.
+\end{enumerate}
+\item Since the \charpoly{} splits, we may apply Schur's Theorem and get an orthonormal basis $\beta $ such that $[T]_{\beta}$ is upper triangular. Denote the basis by 
+\[\beta =\{v_1,v_2,\ldots ,v_n\}.\]
+We already know that $v_1$ is an eigenvector. Pick $t$ to be the maximum integer such that $v_1,v_2,\ldots ,v_t$ are all eigenvectors with respect to eigenvalues $\lambda _i$. If $t=n$ then we've done. If not, we will find some contradiction. We say that $[T]_{\beta}=\{A_{i,j}\}$. Thus we know that 
+\[T(v_{t+1})=\sum_{i=1}^{t+1}{A_{i,t+1}v_i}.\]
+Since the basis is orthonormal, we know that 
+\[A_{i,t+1}=\lag T(v_{t+1}),v_i\rag =\lag v_{t+1},T^*(v_i)\rag \]
+\[=\lag v_{t+1},\overline{\lambda_i}v_i\rag =0\]
+by Theorem 6.15(c). This means that $v_{t+1}$ is also an eigenvector. This is a contradiction. So $\beta $ is an orthonormal basis. By Theorem 6.17 we know that $T$ is self-adjoint.
+\item If $A$ is Gramian, we have $A$ is symmetric since $A^t=(B^tB)^t=B^tB=A$. Also, let $\lambda $ be an eigenvalue with unit eigenvector $x$. Then we have $Ax=\lambda x$ and 
+\[\lambda =\lag Ax,x\rag =\lag B^tBx,x\rag =\lag Bx,Bx\rag \geq 0.\]
+
+Conversely, if $A$ is symmetric, we know that $L_A$ is a self-adjoint operator. So we may find an orthonormal basis $\beta $ such that $[L_A]_{\beta }$ is diagonal with the $ii$-entry to be $\lambda i$. Denote $D$ to be a diagonal matrix with its $ii$-entry to be $\sqrt{\lambda_i}$. So we have $D^2=[L_A]_{\beta }$ and 
+\[A=[I]_{\beta}^{\alpha}[L_A]_{\beta}[I]_{\alpha}^{\beta}=([I]_{\beta}^{\alpha}D)(D[I]_{\alpha}^{\beta}),\]
+where $\alpha $ is the standard basis. Since the basis $\beta $ is orthonormal, we have $[I]_{\beta}^{\alpha}=([I]_{\alpha}^{\beta})^t$. So we find a matrix 
+\[B=D[I]_{\alpha}^{\beta}\]
+such that $A=B^tB$.
+\item We use induction on the dimension $n$ of $V$. If $n=1$, $U$ and $T$ will be diagonalized simultaneously by any orthonormal basis. Suppose the statement is true for $n\leq k-1$. Consider the case $n=k$. Now pick one arbitrary eigenspace $W=E_{\lambda}$ of $T$ for some eigenvalue $\lambda$. Note that $W$ is $T$-invariant naturally and $U$-invariant since 
+\[TU(w)=UT(w)=\lambda U(w)\]
+for all $w\in W$. If $W=V$, then we may apply Theorem 6.17 to the operator $U$ and get an orthonormal basis $\beta $ consisting of eigenvectors of $U$. Those vectors will also be eigenvectors of $T$. If $W$ is a proper subspace of $V$, we may apply the induction hypothesis to $T_W$ and $U_W$, which are self-adjoint by Exercise 6.4.7, and get an orthonormal basis $\beta_1$ for $W$ consisting of eigenvectors of $T_W$ and $U_W$. So those vectors are also eigenvectors of $T$ and $U$. On the other hand, we know that $W\pp$ is also $T$- and $U$-invariant by Exercise 6.4.7. Again, by applying the induction hypothesis we get an orthonormal basis $\beta_2$ for $W\pp$ consisting of eigenvectors of $T$ and $U$. Since $V$ is finite dimentional, we know that $\beta =\beta_1\cup \beta_2$ is an orthonormal basis for $V$ consisting of eigenvectors of $T$ and $U$.
+\item Let $T=L_A$ and $U=L_B$. Applying the previous exercise, we find some orthonormal basis $\beta $ such that $[T]_{\beta}$ and $[U]_{\beta}$ are diagonal. Denote $\alpha $ to be the standard basis. Now we have that
+\[[T]_{\beta}=[I]_{\alpha}^{\beta}A[I]_{\beta}^{\alpha}\]
+and 
+\[[U]_{\beta}=[I]_{\alpha}^{\beta}B[I]_{\beta}^{\alpha}\]
+are diagonal. Pick $P=[I]_{\beta}^{\alpha}$ and get the desired result.
+\item By Schur's Theorem $A=P^{-1}BP$ for some upper triangular matrix $B$ and invertible matrix $P$. Now we want to say that $f(B)=O$ first. Since the \charpoly{} of $A$ and $B$ are the same, we have the \charpoly{} of $A$ would be 
+\[f(t)=\prod_{i=1}^n{(B_{ii}-t)}\]
+since $B$ is upper triangular. Let $C=f(B)$ and $\{e_i\}$ the be the standard basis. We have $Ce_1=0$ since $(B_{11}I-B)e_1=0$. Also, we have $Ce_i=0$ since $(B_{ii}I-B)e_i$ is a linear combination of $e_1,e_2,\ldots ,e_{i-1}$ and so this vector will vanish after multiplying the matrix 
+\[\prod_{j=1}^{i-1}{(B_{ii}I-B)}.\]
+So we get that $f(B)=C=O$. Finally, we have 
+\[f(A)=f(P^{-1}BP)=P^{-1}f(B)P=O.\]
+\item \begin{enumerate}
+\item By Theorem 6.16 and Theorem 6.17 we get an orthonormal basis 
+\[\alpha =\{v_1,v_2,\ldots ,v_n\},\]
+where $v_i$ is the eigenvector with respect to the eigenvalue $\lambda_i$, since $T$ is self-adjoint. For each vector $x$, we may write it as 
+\[x=\sum_{i=1}^n{a_iv_i}.\]
+Compute 
+\[\lag T(x),x\rag =\lag \sum_{i=1}^n{a_i\lambda_i v_i},\sum_{i=1}^n{a_iv_i}\rag \]
+\[=\sum_{i=1}^n{|a_i|^2\lambda_i}.\]
+The value is greater than [no less than] zero for arbitrary set of $a_i$'s if and only if $\lambda_i$ is greater than [no less than] zero for all $i$.
+\item Denote $\beta $ to be 
+\[\{e_1,e_2,\ldots ,e_n\}.\]
+For each $x\in V$, we may write it as 
+\[x=\sum_{i=1}^n{a_ie_i}.\]
+Also compute 
+\[\lag T(x),x\rag =\lag \sum_{i=1}^n{(\sum_{j=1}^n{A_{ij}a_j})e_i},\sum_{i=1}^n{a_ie_i}\rag \]
+\[=\sum_{i=1}^n{(\sum_{j=1}^n{A_{ij}a_j})\overline{a_i}}=\sum_{i,j}{A_{ij}a_j\overline{a_i}}.\]
+\item Since $T$ is self-adjoint, by Theorem 6.16 and 6.17 we have $A=P^*DP$ for some matrix $P$ and some diagonal matrix $D$. Now if $T$ is positive semidefinite, we have all eigenvalue of $T$ are nonnegative. So the $ii$-entry of $D$ is nonnegative by the previous argument. We may define a new diagonal matrix $E$ whose $ii$-entry is $\sqrt{D_{ii}}$. Thus we have $E^2=D$ and $A=(P^*E)(EP)$. Pick $B$ to be $EP$ and get the partial result.
+
+Conversely, we may use the result of the previous exercise. If $y=(a_1,a_2,\ldots ,a_n)$ is a vector in $\F^n$, then we have 
+\[y^*Ay =\sum_{i,j}{A_{ij}a_j\overline{a_i}}\]
+and 
+\[y^*Ay=y^*B^*By=(By)^*By=\|By\|^2\geq 0.\]
+\item Since $T$ is self-adjoint, there's a basis $\beta $ consisting of eigenvectors of $T$. For all $x\in \beta $, we have 
+\[U^2(x)=T^2(x)=\lambda^2 x.\]
+If $\lambda =0$, then we have $U^2(x)=0$ and so $U(x)=0=T(x)$ since 
+\[\lag U(x),U(x)\rag =\lag U^*U(x),x\rag =\lag U^2(x),x\rag =0.\]
+By the previous arguments we may assume that $\lambda >0$. And this means that 
+\[0=(U^2-\lambda^2I)(x)=(U+\lambda I)(U-\lambda I)(x).\]
+But $\det(U+\lambda I)$ cannot be zero otherwise the negative value $-\lambda $ is an eigenvalue of $U$. So we have $U+\lambda I$ is invertible and $(U-\lambda I)(x)=0$. Hence we get $U(x)=\lambda x=T(x)$. Finally since $U$ and $T$ meet on the basis $\beta $, we have $U=T$.
+\item We have $T$ and $U$ are diagonalizable since they are self-adjoint. Also, by the fact $TU=UT$ and Exercise 5.4.25, we may find a basis $\beta $ consisting of eigenvectors of $U$ and $T$. Say $x\in \beta $ is an eigenvector of $T$ and $U$ with respect to $\lambda $ and $\mu$, who are nonnegative since $T$ and $U$ are postive definite. Finally we get that all eigenvalue of $TU$ is nonnegative since $TU(x)=\lambda \mu x$. So $TU=UT$ is also positive definite since they are self-adjoint by Exercise 6.4.4.
+\item Follow the notation of Exercise 6.4.17(b) and denote $y=(a_1,a_2,\ldots ,a_n)$. We have 
+\[\lag T(\sum_{i=1}^n{a_ie_i}),\sum_{i=1}^n{a_ie_i}\rag =\lag \sum_{i=1}^n{(\sum_{j=1}^n{A_{ij}a_j})e_i},\sum_{i=1}^n{a_ie_i}\rag \]
+\[\sum_{i,j}{A_{ij}a_j\overline{a_i}}=y^*Ay=\lag L_A(y),y\rag .\]
+So the statement is true.
+\end{enumerate}
+\item \begin{enumerate}
+\item We have $T^*T$ and $TT^*$ are self-adjoint. If $\lambda $ is an eigenvalue with the eigenvector $x$, then we have $T^*T(x)=\lambda x$. Hence 
+\[\lambda =\lag T^*T(x),x\rag =\lag T(x),T(x)\rag \geq 0.\]
+We get that $T^*T$ is positive semidefinite by Exercise 6.4.17(a). By similar way we get the same result for $TT^*$.
+\item We prove that $N(T^*T)=N(T)$. If $x\in N(T^*T)$, we have 
+\[\lag T^*T(x),x\rag =\lag T(x),T(x)\rag =0\]
+and so $T(x)=0$. If $x\in N(T)$, we have $T^*T(x)=T^*(0)=0$.
+
+Now we get that $\nul(T^*T)=\nul(T)$ and $\nul(TT^*)=\nul(T^*)$ since $T^{**}=T^*$. Also, we have $\rank(T)=\rank(T^*)$ by the fact 
+\[\rank([T]_{\beta})=\rank([T]_{\beta}^*)=\rank([T^*]_{\beta})\]
+for some orthonormal basis $\beta $. Finally by Dimension Theorem we get the result
+\[\rank(T^*T)=\rank(T)=\rank(T^*)=\rank(TT^*).\]
+\end{enumerate}
+\item \begin{enumerate}
+\item It comes from that 
+\[\lag (T+U)(x),x\rag =\lag T(x),x\rag +\lag U(x),x\rag >0\]
+and $(T+U)^*=T^*+U^*=T+U$.
+\item It comes from that 
+\[\lag (cT)(x),x\rag =c\lag T(x),x\rag >0\]
+and $(cT)^*=\overline{c}T^*=cT$.
+\item It comes from that
+\[\lag T^{-1}(x),x\rag =\lag y,T(y)\rag >0,\]
+where $y=T^{-1}(x)$. Note that 
+\[(T^{-1})^*T^*=(TT^{-1})^*=I.\]
+So we have $(T^{-1})^*=(T^*)^{-1}=T^{-1}$.
+\end{enumerate}
+\item Check the condition one by one. \begin{itemize}
+\item \[\lag x+z,y\rag'=\lag T(x+z),y\rag \]
+\[=\lag T(x),y\rag +\lag T(z),y\rag =\lag x,y\rag'+\lag z,y\rag'.\]
+\item \[\lag cx,y\rag =\lag T(cx),y\rag \]
+\[=c\lag T(x),y\rag =\lag x,y\rag'.\]
+\item \[\overline{\lag x,y\rag' }=\overline{\lag T(x),y\rag }\]
+\[=\lag y,T(x)\rag =\lag T(y),x\rag =\lag y,x\rag'.\]
+\item \[\lag x,x\rag'=\lag T(x),x\rag >0\]
+if $x$ is not zero.
+\end{itemize}
+\item As Hint, we check whether $UT$ is self-adjoint with respect to the inner product $\lag x,y\rag'$ or not. Denote $F$ to be the operator $UT$ with respect to the new inner product. Compute that 
+\[\lag x,F^*(y)\rag'=\lag UT(x),y\rag' =\lag TUT(x),y\rag \]
+\[=\lag T(x),UT(y)\rag=\lag x,F(y)\rag'\]
+for all $x$ and $y$. This means that $UT$ is self-adjoint with respect to the new inner product. And so there's some orthonormal basis consisting of eigenvectors of $UT$ and all the eigenvalue is real by the Lemma before Theorem 6.17. And these two properties is independent of the choice of the inner product. On the other hand, $T^{-1}$ is positive definite by Exercie 6.4.19(c). So the function $\lag x,y\rag'':=\lag T^{-1}(x),y\rag $ is also a inner product by the previous exercise. Denote $F'$ to be the operator $TU$ with respect to this new inner product. Similarly, we have 
+\[\lag x,F'^*(y)\rag''=\lag TU(x),y\rag''=\lag U(x),y\rag \]
+\[=\lag T^{-1}(x),TU(y)\rag =\lag x,F'(y)\rag'' \]
+for all $x$ and $y$. By the same argument we get the conclusion.
+\item \begin{enumerate}
+\item For brevity, denote $V_1$ and $V_2$ to be the spaces with inner products $\lag \cdot,\cdot \rag $ and $\lag \cdot,\cdot \rag'$ respectly. Define $f_y(x)=\lag x,y\rag'$ be a function from $V_1$ to $\F$. We have that $f_y(x)$ is linear for $x$ on $V_1$. By Theorem 6.8 we have $f_y(x)=\lag T(x),y\rag $ for some unique vector $T(x)$. To see $T$ is linear, we may check that 
+\[\lag T(x+z),y\rag =\lag x+z,y\rag =\lag x,y\rag+\lag z,y\rag \]
+\[=\lag T(x),y\rag +\lag T(z),y\rag=\lag T(x)+T(z),y\rag \]
+and 
+\[\lag T(cx),y\rag =\lag cx,y\rag =c\lag x,y\rag \]
+\[c\lag T(x),y\rag =\lag cT(x),y\rag \]
+for all $x$, $y$, and $z$.
+\item First, the operator $T$ is self-adjoint since 
+\[\lag x,T^*(y)\rag =\lag T(x),y\rag =\lag x,y\rag'\]
+\[=\overline{\lag y,x\rag}=\overline{\lag T(y),x\rag }=\lag x,T(y)\rag\]
+for all $x$ and $y$. Then $T$ is positive definite on $V_1$ since 
+\[\lag T(x),x\rag =\lag x,x\rag'>0\]
+if $x$ is not zero. Now we know that $0$ cannot be an eigenvalue of $T$. So $T$ is invertible. Thus $T^{-1}$ is the unique operator such that 
+\[\lag x,y\rag =\lag T^{-1}(x),y\rag'.\]
+By the same argument, we get that $T^{-1}$ is positive definite on $V_2$. So $T$ is also positive definite by Exercise 6.4.19(c).
+\end{enumerate}
+\item As Hint, we denote $V_1$ and $V_2$ are the spaces with inner products $\lag \cdot ,\cdot \rag $ and $\lag \cdot ,\cdot \rag' $. By the definition of $\lag \cdot,\cdot \rag'$, the basis $\beta $ is orthonormal in $V_2$. So $U$ is self-adjoint on $V_2$ since it has an orthonormal basis consisting of eigenvectors. Also, we get a special positive definite, and so self-adjoint, operator $T_1$ by Exercise 6.4.22 such that 
+\[\lag x,y\rag' =\lag T(x),y\rag.\]
+We check that $U=T_1^{-1}U^*T_1$ by 
+\[\lag x, T_1^{-1}U^*T_1(y)\rag =\lag T_1UT_1^{-1}(x),y\rag \]
+\[=\lag UT_1^{-1}(x),y\rag '=\lag T_1^{-1}(x),U(y)\rag' =\lag x,U(y)\rag \]
+for all $x$ and $y$. So we have $U=T_1^{-1}U^*T_1$ and so $T_1U=U^*T_1$. Pick $T_2=T_1^{-1}U^*$ and observe that it's self-adjoint. Pick $T_1'=T_1^{-1}$ to be a positive definite operator by Exercise 6.4.19(c). Pick $T_2'=U^*T_1$ to be a self-adjoint operator. Now we have $U=T_2T_1=T_1'T_2'$.
+\item \begin{enumerate}
+\item Let 
+\[\beta =\{v_1,v_2,\ldots ,v_n\}\]
+and 
+\[\gamma=\{w_1,w_2,\ldots ,w_n\}\]
+be the two described basis. Denote $A$ to be $[T]_{\beta}$. We have 
+\[T(w_1)=T(\frac{v_1}{\|v_1\|})=\frac{A_{11}}{\|v_1\|}T(v_1)=A_{11}T(v_1).\]
+Let $t$ be the maximum integer such that $T(w_{t})$ is an element in 
+\[\sp\{w_1,w_2,\ldots ,w_{t}\}.\]
+If $t=\dim (V)$, then we've done. If not, we have that 
+\[w_{t+1}=\frac{1}{L}(v_t-\sum_{j=1}^{t}{\lag v_{t+1},w_j\rag w_j}),\]
+where 
+\[L=\|v_t-\sum_{j=1}^{t}{\lag v_{t+1},w_j\rag w_j}\|.\]
+By the definition of $w_i$'s we may define 
+\[W_i=\sp\{v_1,v_2,\ldots ,v_n\}=\sp\{w_1,w_2,\ldots,w_2\}.\]
+Now we have $T(w_t)\in W_t$ since 
+\[T(w_t)=\frac{1}{L}(T(v_t)-\sum_{j=1}^{t-1}{\lag v_t,w_j\rag T(w_j)})\]
+and $T(v_t)\in W_t$ and $T(w_j)\in W_j\subset W_t$ for all $j<t$. This is a contradiction to our choice of $i$. So $[T]_{\gamma}$ is an upper triangular matrix.
+\item If the \charpoly{} of $T$ splits, we have an ordered basis $\beta $ such that $[T]_{\beta }$ is upper triangular. Applying the previous argument, we get an orthonormal basis $\gamma $ such that $[T]_{\gamma}$ is upper triangular.
+\end{enumerate}
+\end{enumerate}

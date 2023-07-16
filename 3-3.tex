@@ -1,0 +1,60 @@
+\section{Systems of Linear Equation---Theoretical Aspects}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. The system that $0x=1$ has no solution.
+\item No. The system that $0x=0$ has lots of solutions.
+\item Yes. It has the zero solution.
+\item No. The system that $0x=0$ has no solution.
+\item No. The system that $0x=0$ has lots of solutions.
+\item No. The system $0x=1$ has no solution but the homogeneous system corresponding to it has lots of solution.
+\item Yes. If $Ax=0$ then we know $x=A^{-1}0=0$.
+\item No. The system $x=1$ has solution set $\{1\}$.
+\end{enumerate}
+\item See Example 2 in this section.\begin{enumerate}
+\item The set $\{(-3,1)\}$ is a basis and the dimension is $1$.
+\item The set $\{(\frac{1}{3},\frac{2}{3},1)\}$ is a basis and the dimension is $1$.
+\item The set $\{(-1,1,1)\}$ is a basis and the dimension is $1$.
+\item The set $\{(0,1,1)\}$ is a basis and the dimension is $1$.
+\item The set $\{(-2,1,0,0),(3,0,1,0),(-1,0,0,1)\}$ is a basis and the dimension is $3$.
+\item The set $\{(0,0)\}$ is a basis and the dimension is $0$.
+\item The set $\{(-3,1,1,0),(1,-1,0,1)\}$ is a basis and the dimension is $1$.
+\end{enumerate}
+\item See Example 3 in this section.\begin{enumerate}
+\item The solution set is $(5,0)+\mathrm{span}(\{(-3,1)\})$.
+\item The solution set is $(\frac{2}{3},\frac{1}{3},0)+\mathrm{span}(\{(\frac{1}{3},\frac{2}{3},1)\})$.
+\item The solution set is $(3,0,0)+\mathrm{span}(\{(-1,1,1)\})$.
+\item The solution set is $(2,1,0)+\mathrm{span}(\{(0,1,1)\})$.
+\item The solution set is $(1,0,0,0)+\mathrm{span}(\{(-2,1,0,0),(3,0,1,0),(-1,0,0,1)\})$.
+\item The solution set is $(1,2)+\mathrm{span}(\{(0,0)\})$.
+\item The solution set is $(-1,1,0,0)+\mathrm{span}(\{(-3,1,1,0),(1,-1,0,1)\})$.
+\end{enumerate}
+\item With the technique used before we can calculate $A^{-1}$ first and then the solution of $Ax=b$ would be $A^{-1}b$ if $A$ is invertible.\begin{enumerate}
+\item Calculate $A^{-1}=\begin{pmatrix}-5 & 3\cr 2 & -1\end{pmatrix}$ and solution is $x_1=-11$, $x_2=5$.
+\item Calculate $A^{-1}=\begin{pmatrix}\frac{1}{3} & 0 & \frac{1}{3}\cr \frac{1}{9} & \frac{1}{3} & -\frac{2}{9}\cr -\frac{4}{9} & \frac{2}{3} & -\frac{1}{9}\end{pmatrix}$ and solution is $x_1=3$, $x_2=0$, $x_3=-2$.
+\end{enumerate}
+\item Let $A$ be the $n\times n$ zero matrix. The system $Ax=0$ has infinitely many solutions.
+\item If $T(a,b,c)=(a+b,2a-c)=(1,11)$, then we get $a+b=1$ and $2a-c=11$. This means the preimage set would be 
+\[T^{-1}(1,11)=\{(a,1-a,2a-11):a\in \mathbb{R}\}.\]
+\item See Theorem 3.11 and Example 5 of this section.\begin{enumerate}
+\item It has no solution.
+\item It has a solution.
+\item It has a solution.
+\item It has a solution.
+\item It has no solution.
+\end{enumerate}
+\item \begin{enumerate}
+\item Just solve that $a+b=1$, $b-2c=3$, $a+2c=-2$ and get $a=0$, $b=1$, $c=-1$ is a solutoin. So we know $v\in R(T)$.
+\item Just solve that $a+b=2$, $b-2c=1$, $a+2c=1$ and get $a=1$, $b=1$, $c=0$ is a solution. So we know $v\in R(T)$.
+\end{enumerate}
+\item This is the definition of $L_A$ and $R(L_A)$.
+\item The answer is Yes. Say the matrix is $A$. Since the matrix has rank $m$, we have that dimension of $R(L_A)$ is $m$. But this means $R(L_A)=\mathbb{F}^m$ since the codomain of $L_A$ is $\mathbb{F}^m$ and it has dimension $m$. So it must has a solution by the previous exercise.
+\item Solve the system $Ax=x$ and we can get $x=(\frac{4}{11},\frac{3}{11},\frac{4}{11})$. And the amount of each entry is the ratio of farmer, trailor, and carpenter respectly.
+\item Set 
+\[A=\begin{pmatrix}0.6&0.3\\0.4&0.7\end{pmatrix}\]
+be the input-output matrix of this system. We want to solve that $Ax=x$, which means $(A-I)x=0$. By calculation we get $x=t(3,4)$ for arbitrary $t\in \mathbb{R}$. So the proportion is used in the production of goods would be $\frac{3}{7}$. 
+\item In this model we should solve the equation $(I-A)x=d$. And we can compute that $I-A$ is invertible and
+\[(I-A)^{-1}=\begin{pmatrix}\frac{12}{5} & \frac{3}{5}\cr 1 & \frac{3}{2}\end{pmatrix}.\]
+So we know 
+\[x=(I-A)^{-1}d=\begin{pmatrix}\frac{39}{5}\\\frac{19}{2}\end{pmatrix}.\]
+\item The input-output matrix $A$ should be $\begin{pmatrix}0.50&0.20\\0.30&0.60\end{pmatrix}$. And the demand vector $d$ should be $\begin{pmatrix}90\\20\end{pmatrix}$. So we can solve the equation $(I-A)x=d$ and get the answer $x=(\frac{2000}{7},\frac{1850}{7})$. Thus $x$ is the support vector.
+\end{enumerate}

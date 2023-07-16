@@ -1,0 +1,151 @@
+\documentclass{report}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs,MnSymbol}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage[pdftex,bookmarks=true]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note} 
+
+\def \charpoly{characteristic polynomial}
+\def \egva{eigenvalue}
+\def \egve{eigenvector}
+\def \R{\mathbb{R}}
+\def \C{\mathbb{C}}
+\def \F{\mathbb{F}}
+\def \Z{\mathbb{Z}}
+\def \tr{\operatorname{tr}}
+\def \sp{\operatorname{span}}
+\def \nul{\operatorname{null}}
+\def \rank{\operatorname{rank}}
+\def \cond{\operatorname{cond}}
+\def \Re{\operatorname{Re}}
+\def \lag{\langle}
+\def \rag{\rangle}
+\def \pp{^{\perp}}
+\def \da{^{\dagger}}
+%\def \dim{\mathrm{dim}}
+
+%\parindent=0pt
+\title{Solutions to Linear Algebra, Fourth Edition,\\ Stephen~H.~Friedberg, Arnold~J.~Insel, Lawrence~E.~Spence}
+\author{Jephian Lin, Shia Su, Zazastone Lai}
+\date{\today}
+\begin{document}
+\maketitle
+%%%% Declaration of FDL %%%%
+\begin{quote}
+    Copyright \copyright{}  2011  Chin-Hung Lin.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled ``GNU
+    Free Documentation License''.
+\end{quote}
+%%%% End %%%%
+\chapter*{Prologue}
+This is Solution to Linear Algebra written by Friedberg, Insel, and Spence. And this file is generated during the Linear Algebra courses in Fall 2010 and Spring 2011. I was a TA in these courses. Although this file will be uploaded to the course website for students, the main purpose to write the solution is to do some exercises and find some ideas about my master thesis, which is related to some topic in graph theory called the \textit{minimum rank problem}. 
+
+Here are some important things for students and other users. The first is that there must be several typoes and errors in this file. I would be very glad if someone send me an email, jlch3554@hotmail.com, and give me some comments or corrections. Second, for students, the answers here could not be the answer on any of your answer sheet of any test. The reason is the answers here are simplistic and have some error sometimes. So it will not be a good excuse that your answers is as same as answers here when your scores flied away and leave you alone.
+
+The file is made by MikTex and Notepad++ while the graphs in this file is drawn by IPE. Some answers is mostly computed by wxMaxima and little computed by WolframAlpha. The English vocabulary is taught by Google Dictionary. I appreciate those persons who ever gave me a hand including people related to those mentioned softwares, those persons who buttressed me, and of course those instructors who ever taught me. 
+
+Thanks.
+
+\begin{flushright}
+-Jephian Lin\\
+Department of Mathematrics, National Taiwan University\\
+2011, 5/1
+\end{flushright}
+
+\textit{A successful and happy life requires life long hard working.}
+\begin{flushright}
+Prof.~Peter Shiue
+\end{flushright}
+
+\chapter*{Version Info}
+\begin{itemize}
+\item 2021, 12/9---Correction to Section 6.2 Problems 19(c) and 21; thanks to Devesh Sharma.
+\item 2021, 12/9---Correction to Section 2.6 Problem 12; thanks to James Chen.
+\item 2011, 7/27---First release with GNU Free Documentation License.
+\item 2016, 7/6---Minor correction; thanks to Calvin Wu.
+\item 2017, 9/4---Correction to Section 2.1 Problem 34; thanks to Diego Ramos. 
+\item 2018, 1/27---Minor correction; thanks to Nathan Sell.
+\item 2020, 4/19---Minor correction; thanks to Michael Belhu.
+\end{itemize}
+
+\tableofcontents
+
+\chapter{Vector Spaces}
+\input{1-1}
+\input{1-2}
+\input{1-3}
+\input{1-4}
+\input{1-5}
+\input{1-6}
+\input{1-7} 
+
+\chapter{Linear Transformations and Matrices}
+\input{2-1}
+\input{2-2}
+\input{2-3}
+\input{2-4}
+\input{2-5}
+\input{2-6}
+\input{2-7}
+
+\chapter{Elementary Matrix Operations and Systems of Linear Equations}
+\input{3-1}
+\input{3-2}
+\input{3-3}
+\input{3-4}
+
+\chapter{Determinants}
+\input{4-1}
+\input{4-2}
+\input{4-3}
+\input{4-4}
+\input{4-5} 
+
+\chapter{Diagonalization}
+\input{5-1}
+\input{5-2}
+\input{5-3}
+\input{5-4}
+
+\chapter{Inner Product Spaces}
+\input{6-1}
+\input{6-2}
+\input{6-3}
+\input{6-4}
+\input{6-5}
+\input{6-6}
+\input{6-7}
+\input{6-8}
+\input{6-9}
+\input{6-10}
+\input{6-11}
+
+\chapter{Canonical Forms}
+\input{7-1}
+\input{7-2}
+\input{7-3}
+\input{7-4}
+
+\input{fdl}
+
+\input{Appendices}
+
+\end{document}
+
+%Jephian made in 100.5/1 at NTU 446
+%compile LA-solution.tex twice with pdflatex
+%add GNU Free Documentation License Version 1.3 in 100.7/27 and upload it to Google document

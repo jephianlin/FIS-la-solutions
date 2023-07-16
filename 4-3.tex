@@ -1,0 +1,164 @@
+\section{Properties of Determinants}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. The elementary of type 2 has determinant other than $1$.
+\item Yes. This is Theorem 4.7.
+\item No. A matrix is invertible if and only if its determinant is not zero.
+\item Yes. The fact that $n\times n$ matrix $A$ has rank $n$ is equivalent to the fact that $A$ is invertible and the fact that $\det(A)\neq 0$.
+\item No. We have that $\det(A^t)=\det(A)$ by Theorem 4.8.
+\item Yes. This is the instant result of Theorem 4.4 and Theorem 4.8.
+\item No. It still require the condition that the determinant cannot be zero.
+\item No. The matrix $M_k$ is the matrix obtained from $A$ by replacing column $k$ of $A$ by $b$.
+\end{enumerate}
+\item Since we have the condition $\det\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix}=a_{11}a_{22}-a_{12}a_{21}\neq 0$, we can use Cramer's rule and get the answer.
+\[\left\{\begin{array}{cc}
+x_1&=\frac{\det\begin{pmatrix}b_1&a_{12}\\b_2&a_{22}\end{pmatrix}}{\det\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix}}=\frac{b_1a_{22}-a_{12}b_2}{a_{11}a_{22}-a_{12}a_{21}},\\
+x_2&=\frac{\det\begin{pmatrix}a_{11}&b_1\\a_{21}&b_2\end{pmatrix}}{\det\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix}}=\frac{a_{11}b_1-b_2a_{21}}{a_{11}a_{22}-a_{12}a_{21}}.
+\end{array}\right.\]
+\item The answer is $(x_1,x_2,x_3)=(4,-3,0)$.
+\item The answer is $(x_1,x_2,x_3)=(-1,-\frac{6}{5},-\frac{7}{5})$.
+\item The answer is $(x_1,x_2,x_3)=(-20,-48,-8)$.
+\item The answer is $(x_1,x_2,x_3)=(-43,-109,-17)$.
+\item The answer is $(x_1,x_2,x_3)=(42,110,18)$.
+\item By Theorem 4.8 we know that $\det(A^t)=\det(A)$. So we can write Theorem 4.3 into column version by ``The determinant of an $n\times n$ matrix is a lineaer function of each column when the remaining columns are held fixed.''.
+\item By Exercise 4.2.23, the determinant of an upper triangular matrix is the product of its diagonal entries. So it's invertible if and only if all its diagonal entries are nonzero.
+\item If $M$ is nilpotent, we say $M^k=O$ for some positive integer $k$. So we have \[0=\det(O)=\det(M^k)=(\det(M))^k.\] This means that $\det(M)$ must be zero.
+\item By Exercise 4.2.25 we have $\det(-M)=(-1)^n\det(M)$. By Theorem 4.8 we have $\det(M^t)=\det(M)$. So the conclusion is that 
+\[(-1)^n\det(M)=\det(M).\]
+If $n$ is odd, we can conclude that $\det(M)=0$ and hence $M$ is not invertible\footnote{It should be remarked that ``$-a=a$ implies $a=0$'' holds only when the field has charateristic other thant $2$. In this question the field $\mathbb{C}$ has characteristic zero}. If $n$ is even, we cannot say anything. For example, the matrix $\begin{pmatrix}0&1\\1&0\end{pmatrix}$ is invertible while the matrix $2\times 2$ zero matrix $O_2$ is not invertible.
+\item This is an instant result by \[1=\det(I)=\det(QQ^t)=\det(Q)\det(Q^t)=\det(Q)^2.\]
+\item \begin{enumerate}
+\item For the case $n=1$ we have \[\det(\bar{M})=\bar{M_{11}}=\bar{\det(M)}\]. By induction, suppose that $\det(\bar{M})=\bar{\det(M)}$ for $M$ is a $k\times k$ matrix. For a $(n+1)\times (n+1)$ matrix $M$, we have 
+\[\det(\bar{M})=\sum{j=1}^n{(-1)^{i+j}\bar{M}_{1j}\det(\tilde{\bar{M}}_ij)}\]
+\[=\sum{j=1}^n{(-1)^{i+j}\bar{M}_{1j}\det(\bar{\tilde{M}}_ij)}=\bar{\det(M)}.\]
+\item This is an instant result by 
+\[1=|\det(I)|=|\det(QQ^*)|=|\det(Q)||\det(Q^*)|=|\det(Q)|^2.\]
+\end{enumerate}
+\item The set $\beta$ is a basis if and only if $\beta $ is an independent set of $n$ elements. So this is equivalent to the set of columns of $B$ is independent and hence $B$ has rank $n$. And all of them are equivalent to that $B$ is invertible and hence $\det(B)\neq 0$.
+\item Two matrix $A$ and $B$ are similar means $A=C^{-1}BC$. So we get the conclusion
+\[\det(A)=\det(C^{-1}BC)=\det(C^{-1})\det(B)\det(C)=\det(B).\]
+\item Since the fact 
+\[1=\det(I)=\det(A)\det(B)\]
+implies $\det(A)$ and $\det(B)$ cannot be zero, we know $A$ is invertible.
+\item By Exercise 4.2.25 we have 
+\[\det(AB)=(-1)^n\det(A)\det(B).\]
+This means $\det(A)$ and $\det(B)$ cannot be invertible simultaneously. So $A$ or $B$ is not invertible.
+\item For the first case, let $A$ be a matrix of type 2 meaning multiplying the $i$-th row by a scalar $c$. We have $\det(A)=c$ by Exercise 4.2.28. And since determinant is linear function of the $i$-th row when other rows are held fixed, we have 
+\[\det(AB)=c\det(B)=\det(A)\det(B).\]
+
+For the second case, let $A$ be a matrix of type 3 meaning adding $c$ times the $i$-row to the $j$-th row. We have $\det(A)=1$ by Exercise 4.2.28. And since determinant will not change when we adding some times the $i$-row to the $j$-th row, we have 
+\[\det(AB)=\det(B)=\det(A)\det(B).\]
+\item Since the transpose of a lower triangular matrix is an upper triangular matrix, we have that the determinant of a lower triangular matrix is the product of all its diagonal entries.
+\item We can expand the matrix by the $n$-th row and then by $(n-1)$-th row inductively. So we have that $\det(M)=\det(A)$. Similarly, if we expand the matrix below by the first row and the second row inductively, we get the identity 
+\[\det\begin{pmatrix}I&B\\O&D\end{pmatrix}=\det(D).\]
+\item First, if $C$ is not invertible, the set of row vectors of $C$ is not independent. This means the set of row vectors $\begin{pmatrix}O&C\end{pmatrix}$ is also not independent. So it's impossible that $M$ has $n$ independent rows and hence it's impossible that $M$ is invertible. The conclusion is that if $C$ is not invertible, we have \[\det(A)\det(C)=\det(A)0=0=\det(M).\]
+Second, if $C$ is invertible, we have the identity 
+\[\begin{pmatrix}I&O\\O&C^{-1}\end{pmatrix}\begin{pmatrix}A&B\\O&C\end{pmatrix}=\begin{pmatrix}A&B\\O&I\end{pmatrix}.\]
+So we get the identity
+\[\det(C^{-1})\det(M)=\det(A)\]
+and hence
+\[\det(M)=\det(A)\det(C).\]
+\item \begin{enumerate}
+\item We have that 
+\[\left\{\begin{array}{ccc}
+T(1)&=&1e_1+1e_2+\cdots +1e_{n+1}\\
+T(x)&=&c_0e_1+c_1e_2+\cdots +c_ne_{n+1}\\
+\vdots &=& \vdots \\
+T(x^n)&=&c_0^ne_1+c_1^ne_2+\cdots +c_n^ne_{n+1},
+\end{array}\right.\]
+where $\{e_1,e_2,\ldots ,e_{n+1}\}$ is the standard basis for $\mathbb{F}^{n+1}$. So we get the desired conclusion.
+\item By Exercise 2.4.22 $T$ is isomorphism and hence invertible. So the matrix $M$ is also invertible and hence $\det(M)\neq 0$.
+\item We induction on $n$. For $n=1$, we have $\det\begin{pmatrix}1&c_0\\1&c_1\end{pmatrix}=(c_1-c_0)$. Suppose the statement of this question holds for $n=k-1$, consider the case for $n=k$. To continue the proof, we remark a fomula first below.
+\[x^k-y^k=(x-y)(x^{k-1}+x^{k-2}y+\cdots +y^{k-1})\]
+For brevity we write 
+\[p(x,y,k)=x^{k-1}+x^{k-2}y+\cdots +y^{k-1}.\]
+Now to use the induction hypothesis we can add $-1$ time the first row to all other rows without changing the determinant.
+\[\det\begin{pmatrix}1&c_0&c_0^2&\cdots &c_0^n\\1&c_1&c_1^2&\cdots &c_1^n\\\vdots &\vdots &\vdots & &\vdots \\1&c_n&c_n^2&\cdots &c_n^n\\\end{pmatrix}\]
+\[=\det\begin{pmatrix}1&c_0&c_0^2&\cdots &c_0^n\\0&c_1-c_0&(c_1-c_0)p(c_1,c_0,2)&\cdots &(c_1-c_0)p(c_1,c_0,n)\\\vdots &\vdots &\vdots & &\vdots \\0&c_n-c_0&(c_n-c_0)p(c_n,c_0,2)&\cdots &(c_n-c_0)p(c_n,c_0,n)\\\end{pmatrix}\]
+\[=\prod_{j=1}^n{(c_j-c_0)}\det\begin{pmatrix}1&p(c_1,c_0,2)&\cdots &p(c_1,c_0,n)\\\vdots &\vdots & &\vdots \\1&p(c_n,c_0,2)&\cdots &p(c_n,c_0,n)\end{pmatrix}\]
+Now we write $e_i=(c_1^i,c_2^i,\ldots ,c_n^i)^t$ for $i=0,1,\ldots n-1$. So the determinant of the last matrix in the equality above can be written as 
+\[\det\begin{pmatrix}e_0&e_1+c_0e_0&e_2+c_0e_1+c_0^2e_1&\cdots &e_{n-1}+c_0e_{n-2}+\cdots +c_0^{n-1}e_0\end{pmatrix}\] 
+\[=\det\begin{pmatrix}e_0&e_1&e_2+c_0e_1&\cdots &e_{n-1}+c_0e_{n-2}+\cdots \end{pmatrix}\]
+\[=\det\begin{pmatrix}e_0&e_1&e_2&\cdots &e_{n-1}+c_0e_{n-2}+\cdots \end{pmatrix}\] 
+\[=\cdots =\det\begin{pmatrix}e_0&e_1&e_2&\cdots &e_{n-1}\end{pmatrix}.\]
+And by induction hypothesis, the value of it would be 
+\[\prod_{1\leq i \leq j \leq n}{(c_j-c_i)}.\]
+Combine two equalities above we get the desired conclusion.
+\end{enumerate}
+\item \begin{enumerate}
+\item We prove that rank$(A)\geq k$ first. If rank$(A)=n$, then the matrix $A$ has nonzero determinant and hence the interger $k$ should be $n$. Now if rank$(A)=r<n$, we prove by contradiction. If $k>$rank$(A)$, we can find a $k\times k$ submatrix $B$ such that the determinant of it is not zero. This means the set 
+\[S=\{v_1,v_2,\ldots v_k\}\]
+ of columns of $B$ is independent. Now consider the $k\times n$ submatrix $C$ of $A$ obtained by deleting those rows who were deleted when we construct $B$. So $S$ is a subset of the set of columns of $C$. This means 
+ \[k\geq \mathrm{rank}(C)\leq \min\{n,k\}=k\]
+ and hence rank$(C)=k$. So this also means that the set of the $k$ rows of $C$ independent. And thus the matrix $A$ contains $k$ independent rows and hence rank$(A)\geq k$, a contradiction.
+ 
+Conversely, we construct a $r\times r$ submatrix of $A$, where $r$ is rank$(A)$, to deduce that rank$(A)\leq k$. Since rank of $A$ is $r$, we have $r$ independent rows, say $u_1,u_2,\ldots ,u_r$. Let $D$ be the $r\times n$ submatrix such that the $i$-th row of $D$ is $u_i$. Since the set of rows of $D$ is independent, we have that 
+\[r\leq \mathrm{D}\leq \min\{r,n\}=r\]
+and hence rank$(D)=r$. Similarly we have $w_1,w_2,\ldots ,w_r$ to be the $r$ independent columns of $D$. And si-similarly we can construct a $r\times r$ matrix $E$ such that the $i$-th column of $E$ is $w_i$. Since $E$ is a $r\times r$ matrix with $r$ independent rows, we have rank$(E)=r$. This complete the proof.
+\item See the second part of the previous exercise.
+\end{enumerate}
+\item We use induction to claim that 
+\[\det(A+tI)=t^n+\sum_{i=n-1}^{0}{a_it^i}.\]
+For $n=1$, it's easy to see that $\det(A+tI)=t+a_0$. Suppose that the statement holds for $n=k-1$, consider the case for $n=k$. We can expand the matrix and get 
+\[\det\begin{pmatrix}t&0&0&\cdots &0&a_0\\-1&t&0&\cdots &0&a_1\\0&-1&t&\cdots &0&a_2\\\vdots &\vdots &\vdots & &\vdots &\vdots \\0&0&0&\cdots &-1&a_{k-1}+t\end{pmatrix} \]
+\[=t\det\begin{pmatrix}t&0&\cdots &0&a_1\\-1&t&\cdots &0&a_2\\\vdots &\vdots &\vdots & &\vdots &\vdots \\0&0&\cdots &-1&a_{k-1}\end{pmatrix}+(-1)^{1+k}a_0\det\begin{pmatrix}-1&t&\cdots &0\\0&t&\cdots &0\\\vdots &\vdots &\vdots &\ddots &\vdots \\0&0&\cdots &t\end{pmatrix}\]
+\[=t(t^{k-1}+\sum_{i=k-2}^{0}{a_{i+1}t^i})+(-1)^{1+k}a_0(-1)^{k-1}\]
+\[=t^n+\sum_{i=n-1}^{0}{a_it^i}.\]
+\item \begin{enumerate}
+\item Just expand along the $k$-th column.
+\item It's better not to use a great theorem, such as Cramer's rule, to kill a small problem. We check each entry one by one. First, we have that 
+\[\sum_{k=1}^n{A_{jk}c_{jk}}=\det(A)\]
+ and so the $j$-th entry of the left term is $\det(A)$. Second, for $i\neq j$, we construct a matrix $B_i$ by replacing the $j$-th row of $A$ by the $i$-th row of $A$. Since $B_i$ has two identity rows, we have that $\det(B_i)=0$ for all $i\neq j$. Now we can calculate that 
+\[\sum_{k=1}^n{A_{ik}c_{jk}}=\sum_{k=1}^n{B_{jk}c_{jk}}=\det(B)=0,\]
+ for all $i\neq j$. So we get the desired conclusion.
+\item Actually this matrix $C$ is the classical adjoint of matrix $A$ defined after this exercise. And this question is an instant result since 
+\[AC=A\begin{pmatrix}c_{11}&c_{21}&\cdots &c_{n1}\\c_{12}&c_{22}&\cdots &c_{n2}\\\vdots &\vdots & &\vdots \\c_{1n}&c_{2n}&\cdots &c_{nn}\end{pmatrix}\]
+\[=A\begin{pmatrix}\det(A)&0&\cdots &0\\0&\det(A)&\cdots &0\\\vdots &\vdots &\ddots &\vdots \\0&0&\cdots &\det(A)\end{pmatrix}\]
+ by the previous exercise.
+\item If $\det(A)\neq 0$, then we know $A$ is invertible. So we have 
+\[A^{-1}=A^{-1}A[\det(A)]^{-1}C=[\det(A)]^{-1}C.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item We have that 
+\[c_{11}=(-1)^{2}\det(\tilde(A)_{11})=A_{22},\]
+\[c_{12}=(-1)^{3}\det(\tilde(A)_{12})=-A_{21},\]
+\[c_{21}=(-1)^{3}\det(\tilde(A)_{21})=-A_{12},\]
+\[c_{22}=(-1)^{4}\det(\tilde(A)_{22})=A_{11}.\]
+So the adjoint of matrix $A$ is 
+\[\begin{pmatrix}A_{22}&-A_{12}\\-A_{21}&A_{11}\end{pmatrix}.\]
+\item The adjoint of that matrix is $$\begin{pmatrix}16 & 0 & 0\cr 0 & 16 & 0\cr 0 & 0 & 16\end{pmatrix}.$$
+\item The adjoint of that matrix is $$\begin{pmatrix}10 & 0 & 0\cr 0 & -20 & 0\cr 0 & 0 & -8\end{pmatrix}.$$
+\item The adjoint of that matrix is $$\begin{pmatrix}20 & -30 & 20\cr 0 & 15 & -24\cr 0 & 0 & 12\end{pmatrix}.$$
+\item The adjoint of that matrix is $$\begin{pmatrix}-3i & 0 & 0\cr 4 & -1+i & 0\cr 10+16i & -5-3i  & 3+3i\end{pmatrix}.$$
+\item The adjoint of that matrix is $$\begin{pmatrix}6 & 22 & 12\cr 12 & -2 & 24\cr 21 & -38 & -27\end{pmatrix}.$$
+\item The adjoint of that matrix is $$\begin{pmatrix}18 & 28 & -6\cr -20 & -21 & 37\cr 48 & 14 & -16\end{pmatrix}.$$
+\item The adjoint of that matrix is $$\begin{pmatrix}-i&-8+i&-1+2i\cr 1-5i&9-6i&-3i\cr -1+i&-3&3-i\end{pmatrix}.$$
+\end{enumerate}
+\item \begin{enumerate}
+\item If $A$ is not invertible, we have $AC=[\det(C)]I=O$. It's impossible that $C$ is invertible otherwise $A=C^{-1}O=O$. But the adjoint of the zero matrix $O$ is also the zero matrix $O$, which is not invertible. So we know that in this case $C$ is not invertible and hence $\det(C)=0=[\det(A)]^{n-1}$. Next, if $A$ is invertible, we have, by Exercise 4.3.25(c) that 
+\[\det(A)\det(C)=\det([\det(A)]I)=[\det(A)]^n\]
+So we know that 
+\[\det(C)=[\det(A)]^{n-1}\]
+since $\det(A)\neq 0$.
+\item This is because \[\det(\tilde{A^t}_{ij})=\det(\tilde{A}_{ji}^t)=\det(\tilde{A}).\]
+\item If $A$ is an invertible upper triangular matrix, we claim that $c_{ij}=0$ for all $i$, $j$ with $i>j$. For every $i$, $j$ with $i>j$, we know that 
+\[c_{ij}=(-1)^{i+j}\det(\tilde{A}_{ij}).\]
+But $\tilde{A}_{ij}$ is an upper triangular matrix with at least one zero diagonal entry if $i>j$. Since determinant of an upper triangular matrix is the product of all its diagonal entries. We know that for $i>j$ we have $\det(\tilde{A}_{ij})=0$ and hence $c_{ij}=0$. With this we know that the adjoint of $A$ is also a upper triangular matrix.
+\end{enumerate}
+\item \begin{enumerate}
+\item For brevity, we write 
+\[v(y(t))=(y(t),y'(t),\cdots ,y^{(n)}(t))^t\]
+ and 
+\[v_i(t)=(y(t),y'(t),\cdots ,y^{(n)}(t))^t.\]
+Since the defferential operator is linear, we have 
+\[v((x+cy)(t))=v(x(t))+cv(y(t)).\]
+Now we have that 
+\[[T(x+cy)](t)=\det\begin{pmatrix}v((x+cy)(t))&v_1(t)&v_2(t)&\cdots &v_n(t)\end{pmatrix}\]
+\[=\det\begin{pmatrix}v(x(t))+cv(y(t))&v_1(t)&v_2(t)&\cdots &v_n(t)\end{pmatrix}\]
+\[=[T(x)](t)+c[T(y)](t)\]
+since determinant is a linear function of the first column when all other columns are held fixed.
+\item Since $N(T)$ is a space, it enough to say that $y_i\in N(T)$ for all $i$. But this is easy since 
+\[[T(y)](t)=\det(v_i(t),v_1(t),\ldots ,v_n(t))=0.\]
+The determinant is zero since the matrix has two identity columns.
+\end{enumerate}
+\end{enumerate}

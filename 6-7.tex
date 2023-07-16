@@ -1,0 +1,260 @@
+\section{The Singular Value Decomposition and the Pseudoinverse}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. The mapping from $\R^2$ to $\R$ has no eigenvalues.
+\item No. It's the the positive square root of the eigenvalues of $A^*A$. For example, the singular value of $2I_2$ is $2,2$ but not eigenvalues of $(2I)^*(2I)$, which is $4,4$.
+\item Yes. The eigenvalue of $A^*A$ is $\sigma^2$. And the singular value of $cA$ is the positive square root of the eigenvalue of $(cA)^*(cA)=|c|^2A^*A$, which is $|c|^2\sigma ^2$. So the singular value of $cA$ is $|c|\sigma $.
+\item Yes. This is the definition.
+\item No. For example, the singular value of $2I_2$ is $2,2$ but not eigenvalues of $(2I)^*(2I)$, which is $4,4$.
+\item No. If $Ax=b$ is inconsistent, then $A^{\dagger }b$ could never be the solution.
+\item Yes. The definition is well-defined.
+\end{enumerate}
+\item For these problems, choose an orthonormal basis $\alpha $, usually the standard basis, for the inner product space. Write down $A=[T]_{\alpha}$. Pick an orthonormal basis $\beta $ such that $[T^*T]_{\beta}$ is diagonal. Here the order of $\beta$ should follow the order of the value of its eigenvalue. The positive square roots of eigenvalues of $A^*A$ is the singular values of $A$ and $T$.  Extend $T(\beta )$ to be an orthonormal basis $\gamma$ for $W$. Then we have 
+\[\beta =\{v_1,v_2,\ldots ,v_n\}\]
+and 
+\[\gamma =\{u_1,u_2,\ldots ,u_m\}.\]
+\begin{enumerate}
+\item Pick $\alpha $ to be the standard basis. We have 
+\[\beta =\{(1,0),(0,1)\},\]
+\[\gamma =\{\frac{1}{\sqrt{3}}(1,1,1),\frac{1}{\sqrt{2}}(0,1,-1),\frac{\sqrt{8}}{\sqrt{3}}(-\frac{1}{2},\frac{1}{4},\frac{1}{4})\},\]
+and the singular values are $\sqrt{3},\sqrt{2}$.
+\item Pick 
+\[\alpha =\{f_1=\frac{1}{\sqrt{2}},f_2=\sqrt{\frac{3}{2}}x,f_3=\sqrt{\frac{5}{8}}(3x^2-1)\}.\]
+We have 
+\[\beta =\{f_3,f_1,f_2\},\]
+\[\gamma =\{f_1,f_2\},\]
+and the singular values are $\sqrt{45}$.
+\item Pick 
+\[\alpha =\{f_1=\frac{1}{\sqrt{2\pi}},f_2=\frac{1}{\sqrt{\pi}}\sin x,f_3=\frac{1}{\sqrt{\pi}}\cos x\}.\]
+We have 
+\[\beta =\{f_2,f_3,f_1\},\]
+\[\gamma =\{\frac{1}{\sqrt{5}}(2f_2+f_3),\frac{1}{\sqrt{5}}(2f_3-f_2),f_1\},\]
+and the singular values are $\sqrt{5},\sqrt{5},\sqrt{4}$.
+\item Pick $\alpha $ to be he standard basis. We have  
+\[\beta =\{\frac{1}{\sqrt{3}}(1,i+1),\sqrt{\frac{2}{3}}(1,-\frac{i+1}{2})\},\]
+\[\gamma =\{\frac{1}{\sqrt{3}}(1,i+1),\sqrt{\frac{2}{3}}(1,-\frac{i+1}{2})\},\]
+and the singular values are $2,1$.
+\end{enumerate}
+\item Do the same to $L_A$ as that in Exercise 6.7.2. But the $\alpha $ here must be the standard basis. And the matrix consisting of column vectors $\beta $ and $\gamma $ is $V$ and $U$ respectly. \begin{enumerate}
+\item We have $A^*A=\begin{pmatrix}3&3\\3&3\end{pmatrix}$. So its eigenvalue is $6,0$ with eigenvectors 
+\[\beta =\{\frac{1}{\sqrt{2}}(1,1),\frac{1}{\sqrt{2}}(1,-1)\}.\]
+Extend $L_A(\beta)$ to be an orthonormal basis 
+\[\gamma =\{\frac{1}{\sqrt{3}}(1,1,-1),\frac{1}{\sqrt{2}}(1,-1,0),\frac{1}{\sqrt{6}}(1,1,2)\}.\]
+So we know that 
+\[U=\begin{pmatrix}\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{6}}\\\frac{1}{\sqrt{3}}&-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{6}}\\-\frac{1}{\sqrt{3}}&0&\frac{2}{\sqrt{6}}\end{pmatrix} ,\Sigma =\begin{pmatrix}\sqrt{6}&0\\0&0\\0&0\end{pmatrix},V=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}.\]
+\item We have 
+\[U=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix} ,\Sigma =\begin{pmatrix}\sqrt{2}&0&0\\0&\sqrt{2}&0\end{pmatrix},V=\begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix}.\]
+\item We have 
+\[U=\frac{1}{\sqrt{2}}\begin{pmatrix}\frac{2}{\sqrt{10}}&0&0&-\frac{3}{\sqrt{15}}\\\frac{1}{\sqrt{10}}&-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{15}}\\\frac{1}{\sqrt{10}}&\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{15}}\\\frac{2}{\sqrt{10}}&0&-\frac{1}{\sqrt{3}}&\frac{2}{\sqrt{15}}\end{pmatrix} ,\Sigma =\begin{pmatrix}\sqrt{5}&0\\0&1\\0&0\\0&0\end{pmatrix},V=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}.\]
+\item We have 
+\[U=\begin{pmatrix}\frac{1}{\sqrt{3}} & \frac{\sqrt{2}}{\sqrt{3}} & 0\cr \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{2}}\cr \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}}\end{pmatrix} ,\Sigma =\begin{pmatrix}\sqrt{3}&0&0\\0&\sqrt{3}&0\\0&0&1\end{pmatrix},V=\begin{pmatrix}1 & 0 & 0\cr 0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}\cr 0 & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\end{pmatrix}.\]
+\item We have 
+\[U=\frac{1}{2}\begin{pmatrix}1+i&-1+i\\1-i&1+i\end{pmatrix} ,\Sigma =\begin{pmatrix}\sqrt{6}&0\\0&0\end{pmatrix},V=\begin{pmatrix}\frac{\sqrt{2}}{\sqrt{3}} & \frac{1}{\sqrt{3}}\cr \frac{i+1}{\sqrt{6}} & \frac{-i-1}{\sqrt{3}}\end{pmatrix}.\]
+\item We have 
+\[U=\begin{pmatrix}\frac{1}{\sqrt{3}} & \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}}\cr \frac{1}{\sqrt{3}} & -\frac{2}{\sqrt{6}} & 0\cr \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{2}}\end{pmatrix} ,\Sigma =\begin{pmatrix}\sqrt{6}&0&0&0\\0&\sqrt{6}&0&0\\0&0&\sqrt{2}&0\end{pmatrix},V=\begin{pmatrix}\frac{1}{\sqrt{2}} & 0 & 0 & \frac{1}{\sqrt{2}}\cr 0 & 0 & 1 & 0\cr 0 & 1 & 0 & 0\cr \frac{1}{\sqrt{2}} & 0 & 0 & -\frac{1}{\sqrt{2}}\end{pmatrix}.\]
+\end{enumerate}
+\item Find the singular value decomposition $A=U\Sigma V^*$. Then we have $W=UV^*$ and $P=V\Sigma V^*$.
+\begin{enumerate}
+\item We have 
+\[W=\begin{pmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}\cr \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\end{pmatrix},P=\begin{pmatrix}\sqrt{2}+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}-\sqrt{2}\cr \frac{1}{\sqrt{2}}-\sqrt{2} & \sqrt{2}+\frac{1}{\sqrt{2}}\end{pmatrix}.\]
+\item We have 
+\[W=\begin{pmatrix}1 & 0 & 0\cr 0 & 0 & 1\cr 0 & 1 & 0\end{pmatrix},P=\begin{pmatrix}20 & 4 & 0\cr 4 & 20 & 0\cr 0 & 0 & 1\end{pmatrix}.\]
+\end{enumerate}
+\item Use the notation in Exercise 6.7.2. Then we have 
+\[T\da(y)=\sum_{i=1}^r{\frac{1}{\sigma_i}\lag y,u_i\rag v_i}.\]
+\begin{enumerate}
+\item 
+\[T\da(x_1,x_2,x_3)=(\frac{x_1+x_2+x_3}{3},\frac{x_2-x_3}{2}).\]
+\item 
+\[T\da(a+bx+cx^2)=a\sqrt{\frac{2}{45}}f_3.\]
+\item 
+\[T\da(a+b\sin x+c\cos x)=\frac{a}{2}+\frac{(2b+c)\sin x+(-b+2c)\cos x}{5}.\]
+\item 
+\[T\da(z_1,z_2)=\frac{1}{2}(-z_1+(1-i)z_2,(1+i)z_2).\]
+\end{enumerate}
+\item Use Theorem 6.29. So we compute $A\da=V\Sigma \da U^*$.
+\begin{enumerate}
+\item 
+\[A\da=\frac{1}{6}\begin{pmatrix}1& 1 & -1\cr 1 & 1 & -1\end{pmatrix}.\]
+\item 
+\[A\da=\begin{pmatrix}\frac{1}{2} & \frac{1}{2}\cr 0 & 0\cr \frac{1}{2} & -\frac{1}{2}\end{pmatrix}.\]
+\item 
+\[A\da=\frac{1}{5}\begin{pmatrix}1&-2&3&1\\1&3&-2&1\end{pmatrix}.\]
+\item 
+\[A\da=A^{-1}=\begin{pmatrix}\frac{1}{3} & \frac{1}{3} & \frac{1}{3}\cr \frac{1}{3} & -\frac{2}{3} & \frac{1}{3}\cr \frac{1}{3} & \frac{1}{3} & -\frac{2}{3}\end{pmatrix}.\]
+\item 
+\[A\da=\frac{1}{6}\begin{pmatrix}1-i&1+i\\1&i\end{pmatrix}.\]
+\item 
+\[A\da=\begin{pmatrix}\frac{1}{6} & \frac{1}{6} & \frac{1}{6}\cr \frac{1}{2} & 0 & -\frac{1}{2}\cr \frac{1}{6} & -\frac{1}{3} & \frac{1}{6}\cr \frac{1}{6} & \frac{1}{6} & \frac{1}{6}\end{pmatrix}.\]
+\end{enumerate}
+\item Use the Lemma before Theorem 6.30. We have $Z_1=N(T)\pp$ and $Z_2=R(T)$.
+\begin{enumerate}
+\item We have $Z_1=\sp\{v_1,v_2\}=V$ and $Z_2=\sp\{u_1,u_2\}$.
+\item We have $Z_1=\sp\{v_1\}$ and $Z_2=\sp\{u_1\}$.
+\item We have $Z_1=Z_2=V=W$.
+\item We have $Z_1=Z_2=\C^2$.
+\end{enumerate}
+\item If the equation is $Ax=b$, then the answer is $A\da b$.
+\begin{enumerate}
+\item The solution is 
+\[(x_1,x_2)=(\frac{1}{2},\frac{1}{2}).\]
+\item The solution is 
+\[(x_1,x_2,x_3,x_4)=(\frac{1}{2},0,1,\frac{1}{2}).\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Use the fact that 
+\[\lag T^*(u_i),v_j\rag =\left\{\begin{array}{lll}\lag u_i,\sigma_ju_j\rag &\mathrm{if}&j\leq r;\\\lag u_i,0\rag &\mathrm{if}&j>r,\end{array}\right.\]
+\[=\delta_{ij}\sigma_j\]
+for $i\leq r$. We know that $T^*(u_i)=\sigma_iv_i$. And so 
+\[TT^*(u_i)=T(\sigma_iv_i)=\sigma^2v_i\]
+for $j\leq r$. Similarly, we know that, for $i>r$, 
+\[\lag T^*(u_i),v_j\rag =0.\]
+Hence $TT^*(u_i)=0$ when $i>r$.
+\item Let $T=L_A$ and use the previous argument.
+\item Use Theorem 6.26 and Exercise 6.7.9(a).
+\item Replace $T$ by $A$.
+\end{enumerate}
+\item Let $\beta'$ and $\gamma'$ be the standard bases for $\F^m$ and $\F^n$ respectly. Thus we have $[L_A]_{\beta'}^{\gamma'}=A$. Also, let 
+\[\beta =\{v_1,v_2,\ldots ,v_m\}\]
+and 
+\[\gamma =\{u_1,u_2,\ldots ,u_n\}.\]
+By Theorem 6.26 we know that $[L_A]_{\beta}^{\gamma}=\Sigma$. Apply Exercise 2.5.8 we have 
+\[A=[L_A]_{\beta'}^{\gamma'}=[I]_{\gamma}^{\gamma'}[L_A]_{\beta}^{\gamma}[I]_{\beta'}^{\beta}=U\Sigma V^*.\]
+\item \begin{enumerate}
+\item Since $T$ is normal, we have that $T^*(x)=\overline{\lambda}x$ if $T(x)=\lambda x$. Hence we know that the eigenvalues of $T^*T$ are 
+\[|\lambda_1|^2,|\lambda_2|^2,\ldots ,|\lambda_n|^2.\]
+So we know the singular values are 
+\[|\lambda_1|,|\lambda_2|,\ldots ,|\lambda_n|.\]
+\item Replace $T$ by $A$.
+\end{enumerate}
+\item Let $\theta_i=\frac{\lambda_i}{|\lambda_i|}$. Now we know that 
+\[Av_i=\lambda_iv_i=\theta_i |\lambda_i|v_i.\]
+This means that $AV=U\Sigma $ and so $A=U\Sigma V^*$.
+\item If $A$ is a positive semidefinite matrix with eigenvalues $\lambda_i$'s, we know that $A^*=A$ and so $\lambda_i$ is real and nonnegative. Furthermoer, we have 
+\[A^*A(x)=A^2(x)=\lambda_i^2x.\]
+Since $\lambda_i\geq 0$, we have $\sqrt{\lambda_i^2}=\lambda_i$. Hence the eigenvalues of $A$ are the singular values of $A$.
+\item Consider 
+\[A^2=A^*A=V\Sigma U^*U\Sigma V^*=V\Sigma^2V^*=(V\Sigma V^*)^2.\]
+Both of $A$ and $V\Sigma V^*$ are positive definite, we know that $A=V\Sigma V^*$ by Exercise 6.4.17(d). So we know 
+\[V\Sigma V^*=U\Sigma V^*.\]
+Since $A$ is positive definite, we know $\Sigma $ is invertible. Also, $V$ is invertible. Hence we get $U=V$ finally.
+\item \begin{enumerate}
+\item Use the fact that 
+\[A^*A=P^*W^*WP=P^2\]
+and 
+\[AA^*=WPP^*W^*=WP^2W^*.\]
+So $A^*A=AA^*$ if and only if $P^2=WP^2W^*$, which is equivalent to $WP^2=P^2W$.
+\item By the previous argument we have $A$ is normal if and only if 
+\[P^2=WP^2W^*=(WPW^*)^2.\]
+Since $P$ and $WPW^*$ are both positive semidifinite, again by Exercise 6.4.17(d), we have the condition is equivalent to $P=WPW^*$ or $PW=WP$.
+\end{enumerate}
+\item Use the singular value decomposition $A=U\Sigma V^*$. Let $P=U\Sigma U^*$ and $W=UV^*$. Then we have $A=PW$ and $P$ is positive semidefinite and $W$ is unitary.
+\item \begin{enumerate}
+\item We calculate $(UT)\da $ and $U\da $, $T\da$ separately. First we have 
+\[UT(x_1,x_2)=U(x_1,0)=(x_1,0)=T\da.\]
+So we compute $T\da$ directly. We have $N(T)$ is the $y$-axis. So $N(T)\pp$ is the $x$-axis. Since we have 
+\[T(1,0)=(1,0),\]
+we know that 
+\[T\da(1,0)=(1,0)\] 
+and 
+\[T\da(0,1)=(0,0).\]
+Hence we have 
+\[(UT)\da(x_1,x_2)=T\da(x_1,x_2)=x_1T\da(1,0)+x_2T\da(0,1)=x_1T\da(1,0)=(x_1,0).\]
+
+On the other hand, we also have $N(U)$ is the line $\sp\{(1,-1)\}$. So $N(U)\pp$ is the line $\sp\{(1,1)\}$. Since we have 
+\[U(1,1)=(2,0),\]
+we know that 
+\[U\da(1,0)=\frac{1}{2}(1,1)\]
+and 
+\[U\da(0,1)=(0,0).\]
+Hence we have 
+\[U\da(x_1,x_2)=x_1U\da(1,0)+x_2U\da(0,1)=(\frac{x_1}{2},\frac{x_1}{2}).\]
+
+Finally we have 
+\[T\da U\da(x_1,x_2)=T\da(\frac{x_1}{2},\frac{x_1}{2})=(\frac{x_1}{2},0)\neq (UT)\da(x_1,x_2).\]
+\item Let $A=\begin{pmatrix}1&1\\0&0\end{pmatrix}$ and $B=\begin{pmatrix}1&0\\0&0\end{pmatrix}$. By the previous argument, we have $A\da=\begin{pmatrix}\frac{1}{2}&0\\\frac{1}{2}&0\end{pmatrix}$ and $B\da =B$. Also, we have $AB=B$ and so $(AB)\da=B\da=B$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Observe that if $A=U\Sigma V^*$ is a singular value decomposition of $A$, then $GA=(GU)\Sigma V^*$ is a single value decomposition of $GA$. So we have 
+\[(GA)\da =V\Sigma \da (GU)^*=A\da G^*.\]
+\item Observe that if $A=U\Sigma V^*$ is a singular value decomposition of $A$, then $AH=U\Sigma V^*H^{**}=U\Sigma (H^*V)^*$ is a single value decomposition of $AH$. So we have 
+\[(AH)\da =H^*V\Sigma \da U^*=H^*A\da.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item The nonzero singular values of $A$ are the positive square roots of the nonzero eigenvalues of $A^*A$. But the eigenvalues of $A^*A$ and that of $AA^*$ are the same by Exercise 6.7.9(c). Hence we know that the singular value decomposition of $A$ and that of $A^*$ are the same. 
+
+Also, we have 
+\[(A^t)^*A^t=\overline{A}\overline{A}^*=\overline{AA^*}.\]
+Since $AA^*$ is self-adjoint, its eigenvalues are always real. We get that if $AA^*(x)=\lambda x$, then we have 
+\[(A^t)^*A^t(\overline{x})=\overline{AA^*(x)}=\overline{\lambda }\overline{x}=\lambda\overline{x},\]
+here $\overline{A}$ means the matrix consisting of the conjugate of the entries of $A$.
+Hence the singular value of $A^t$ and that of $A^*$ are all the same.
+\item Let $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have $A^*=V\Sigma ^* U^*$. So 
+\[(A^*)\da=U(\Sigma^*)\da V^*=U(\Sigma\da )^*V^*=(A\da)^*.\]
+\item Let $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have $A^t=(V^*)^t \Sigma ^t U^t$. So 
+\[(A^t)\da=(U^t)^*(\Sigma^t)\da V^t=(U^*)^t(\Sigma\da )^tV^t=(A\da)^t.\]
+\end{enumerate}
+\item Let $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have 
+\[O=A^2=U\Sigma V^*U\Sigma V,\]
+which means 
+\[\Sigma V^*U\Sigma =O\]
+since $U$ and $V$ are invertible. Now let $\{\sigma_i\}_{i=1}^r$ is the set of those singular values of $A$. Denote $D$ to be the diagonal matrix with $D_{ii}=\frac{1}{\sigma^2}$ if $i\leq r$ while $D_{ii}=1$ if $i>r$. Then we have $\Sigma D=D\Sigma =\Sigma\da$. This means that 
+\[\Sigma\da V^*U\Sigma\da =D\Sigma V^*U\Sigma D=DOD=O.\]
+Now we have 
+\[(A\da)^2=(V\Sigma\da U^*)^2=V\Sigma\da U^*V\Sigma\da U^*\]
+\[=V(\Sigma\da V^*U\Sigma\da )^*U^*=VOU^*=O.\]
+\item Here we use the notation in 6.26. \begin{enumerate}
+\item Compute 
+\[TT\da T(v_i)=TT\da(\sigma_iu_i)=T(v_i)\]
+if $i\leq r$, while 
+\[TT\da T(v_i)=TT\da(0)=0=T(v_i)\]
+if $i>r$.
+\item Compute 
+\[T\da TT\da(u_i)=T\da T(\frac{1}{\sigma_i}v_i)=T\da (u_i)\]
+if $i\leq r$, while 
+\[T\da TT\da (u_i)=T\da T(0)=0=T\da (u_i)\]
+if $i>r$.
+\item Pick an orthonormal basis $\alpha $. Let $A$ be the matrix $[T]_{\alpha}$ and $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have 
+\[(A\da A)^*=(V\Sigma\da U^*U\Sigma V^*)^*=(V\Sigma\da \Sigma V^*)^*=A\da A\]
+and 
+\[(AA\da)^*=(U\Sigma V^*V\Sigma \da U^*)^*=(U\Sigma \Sigma\da U^*)^*=AA\da .\]
+\end{enumerate}
+\item Observe that $UT$ is the orthogonal projection on $R(UT)$ by Theorem 6.24 since it's self-adjoint and $UTUT=UT$. We have that $R(UT)=R(T^*U^*)\subset R(T^*)$. Also, since 
+\[UTT^*(x)=T^*U^*T^*(x)=T^*(x),\]
+we have $R(T^*)\subset R(UT)$ and hence $R(T^*)=R(UT)$. This means $UT$ and $T\da T$ are both orthogonal projections on $R(T^*)=R(UT)$. By the uniqueness of orthogonal projections, we have $UT=T\da T$. 
+
+Next, observe that $TU$ is the orthogonal projection on $R(TU)$ by Theorem 6.24 since it's self-adjoint and $TUTU=TU$. We have that $R(TU)\subset R(T)$. Also, since 
+\[TUT(x)=T(x),\]
+we have $R(T)\subset R(TU)$. By the same reason, we have $TU=TT\da $ and they are the orthogonal projection on $R(T)=R(TU)$.
+
+Finally, since we have $TU-TT\da =T_0$, we may write is as 
+\[T(U-T\da )=T_0.\]
+We want to claim that $R(U-T\da)\cap N(T)=\{0\}$ to deduce that $U-T\da =T_0$. Observe that $R(T\da)=N(T)\pp=R(T^*)$. Also, we have $R(U)\subset R(T^*)$ otherwise we may pick $x\in W$ such that $U(x)\in R(U)\backslash R(T^*)$ and get the contradiction that 
+\[0\neq U(x)=UTU(x)=0\]
+since $UT$ is the orthogonal projection on $R(T^*)$. Now we already have $R(U-T\da)\subset R(T^*)=N(T)$. Hence the claim 
+\[R(U-T\da)\cap N(T)=\{0\}\]
+holds. This means that $T(U-T\da)(x)=0$ only if $(U-T\da)(x)=0$. Since we have $T(U-T\da)=T_0$, now we know that actually $U-T\da=T_0$ and hence $U=T\da$.
+\item Replace $T$ by $A$.
+\item Replace $T$ by $A$.
+\item \begin{enumerate}
+\item By Exercise 6.3.13 $T^*T$ is invertible. Let $U=(T^*T)^{-1}T^*$. Check that 
+\[TU T=T(T^*T)^{-1}T^*T=T\]
+and 
+\[UTU=(T^*T)^{-1}T^*T(T^*T)^{-1}T^*=U.\]
+Also, both $TU=T(T^*T)^{-1}T^*$ and $UT=(T^*T)^{-1}T^*T=I$ are self-adjoint. Apply Exercise 6.7.21 and get the result.
+\item By Exercise 6.3.13 $TT^*$ is invertible. Let $U=T^*(TT^*)^{-1}$. Check that 
+\[TUT=TT^*(TT^*)^{-1}T=T\]
+and 
+\[UTU=T^*(TT^*)^{-1}TT^*(TT^*)^{-1}=U.\]
+Also, both $TU=TT^*(TT^*)^{-1}=I$ and $UT=T^*(TT^*)^{-1}T$ are self-adjoint. Apply Exercise 6.7.21 and get the result.
+\end{enumerate}
+\item By Theorem 6.26, we know $[T]_{\beta'}^{\gamma'}=\Sigma $ for some orthonormal bases $\beta'$ and $\gamma'$, where $\Sigma $ is the matrix in Theorem 6.27. In this case we know that 
+\[([T]_{\beta'}^{\gamma'})\da=\Sigma \da =[T\da]_{\gamma'}^{\beta'}.\]
+Now for other orthonormal bases $\beta $ and $\gamma$. We know that 
+\[[T]_{\beta}^{\gamma}=[I]_{\gamma'}^{\gamma}\Sigma [I]_{\beta}^{\beta'}\]
+is a singular value decomposition of $[T]_{\beta}^{\gamma}$ since both $[I]_{\gamma'}^{\gamma}$ and $[I]_{\beta}^{\beta'}$ are unitary by the fact that all of them are orthonormal. Hence we have 
+\[([T]_{\beta}^{\gamma})\da =[I]_{\beta'}^{\beta}\Sigma \da [I]_{\gamma}^{\gamma'}=[I]_{\beta'}^{\beta}[T\da]_{\gamma'}^{\beta'}[I]_{\gamma}^{\gamma'}=[T\da]_{\gamma}^{\beta}.\]
+\item Use the notation in Theorem 6.26. By the definition of $T\da $, we have 
+\[TT\da (x)=LL^{-1}(x)=x.\]
+Also, if $x\in R(T)\da$, again by the definition of $T\da $, we have $TT\da(x)=0$. Hence it's the orthogonal projection of $V$ on $R(T)$.
+\end{enumerate}

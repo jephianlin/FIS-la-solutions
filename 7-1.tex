@@ -1,0 +1,119 @@
+\section{The Jordan Canonical Form I}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. It comes directly from the definition.
+\item No. If $x$ is a generalized eigenvector, we can find the smallest positive integer $p$ such that $(T-\lambda I)^p(x)=0$. Thus $y=(T-\lambda I)^{p-1}\neq 0$ is an eigenvector with respect to the eigenvalue $\lambda$. Hence $\lambda $ must be an eigenvalue.
+\item No. To apply the theorems in this section, the \charpoly{} should split. For example, the matrix $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$ over $\R$ has no eigenvalues.
+\item Yes. This is a result of Theorem 7.6.
+\item No. The identity mapping $I_2$ from $\C^2$ to $\C^2$ has two cycles for the eigenvalue $1$.
+\item No. The basis $\beta_i$ may not consisting of a union of cycles. For example, the transformation $T(a,b)=(a+b,b)$ has only one eigenvalue $1$. The generalized eigenspace $K_1=\F^2$. If 
+\[\beta=\{(1,1),(1,-1)\},\]
+then the matrix representation would be 
+\[[T]_{\beta}=\frac{1}{2}\begin{pmatrix}3&-1\\1&1\end{pmatrix},\]
+which is not a Jordan form.
+\item Yes. Let $\alpha $ be the standard basis. Then $[L_J]_{\alpha}=J$ is a Jordan form.
+\item Yes. This is Theorem 7.2.
+\end{enumerate}
+\item Compute the \charpoly{} to find eigenvalues as what we did before. For each $\lambda$, find a basis for $K_{\lambda}$ consisting of a union of disjoint cycles by computing bases for the null space of $(A-\lambda I)^p$ for each $p$. Write down the matrix $S$ whose columns consist of these cycles of generalized eigenvectors. Then we will get the Jordan canonical form $J=S^{-1}AS$. When the matrix is diagonalizable, the Jordan canonical form should be the diagonal matrix sismilar to $A$. For more detail, please see the examples in the textbook. On the other hand, these results were computed by Wolfram Alpha. For example, the final question need the command below.
+\begin{verbatim}
+JordanDecomposition[{{2,1,0,0},{0,2,1,0},{0,0,3,0},{0,1,-1,3}}]
+\end{verbatim}
+\begin{enumerate}
+\item 
+\[S=\begin{pmatrix}1&-1\\1&0\end{pmatrix}, J=\begin{pmatrix}2&1\\0&2\end{pmatrix}.\]
+\item 
+\[S=\begin{pmatrix}-1&2\\1&3\end{pmatrix}, J=\begin{pmatrix}-1&0\\0&4\end{pmatrix}.\]
+\item 
+\[S=\begin{pmatrix}1&1&1\\3&1&2\\0&1&0\end{pmatrix}, J=\begin{pmatrix}-1&0&0\\0&2&1\\0&0&2\end{pmatrix}.\]
+\item 
+\[S=\begin{pmatrix}1&0&0&1\\0&1&0&1\\0&0&0&1\\0&-1&1&0\end{pmatrix}, J=\begin{pmatrix}2&1&0&0\\0&2&0&0\\0&0&3&0\\0&0&0&3\end{pmatrix}.\]
+\end{enumerate}
+\item Pick one basis $\beta $ and write down the matrix representation $[T]_{\beta}$. Then do the same thing in the previous exercises. Again, we denote the Jordan canonical form by $J$ and the matrix consisting of Jordan canonical basis by $S$. The Jordan canonical basis is the set of vector in $V$ corresponding those column vectors of $S$ in $\F^n$.
+\begin{enumerate}
+\item Pick $\beta$ to be the standard basis 
+\[\{1,x,x^2\}\]
+and get 
+\[[T]_{\beta}=\begin{pmatrix}-2&-1&0\\0&2&-2\\0&0&2\end{pmatrix}\]
+and 
+\[S=\begin{pmatrix}1&-1&\frac{1}{4}\\0&4&0\\0&0&-2\end{pmatrix}, J=\begin{pmatrix}-2&0&0\\0&2&1\\0&0&2\end{pmatrix}.\]
+\item Pick $\beta$ to be the basis 
+\[\{1,t,t^2,e^t,te^t\}\]
+and get 
+\[[T]_{\beta}=\begin{pmatrix}0&1&0&0&0\\0&0&2&0&0\\0&0&0&0&0\\0&0&0&1&1\\0&0&0&0&1\end{pmatrix}\]
+and 
+\[S=\begin{pmatrix}1&0&0&0&0\\0&1&0&0&0\\0&0&\frac{1}{2}&0&0\\0&0&0&1&0\\0&0&0&0&1\end{pmatrix}, J=\begin{pmatrix}0&1&0&0&0\\0&0&1&0&0\\0&0&0&0&0\\0&0&0&1&1\\0&0&0&0&1\end{pmatrix}.\]
+\item Pick $\beta$ to be the standard basis 
+\[\{\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}\}\]
+and get 
+\[[T]_{\beta}=\begin{pmatrix}1&0&1&0\\0&1&0&1\\0&0&1&0\\0&0&0&1\end{pmatrix}\]
+and 
+\[S=\begin{pmatrix}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{pmatrix}, J=\begin{pmatrix}1&1&0&0\\0&1&0&0\\0&0&1&1\\0&0&0&1\end{pmatrix}.\]
+\item Pick $\beta$ to be the standard basis 
+\[\{\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}\}\]
+and get 
+\[[T]_{\beta}=\begin{pmatrix}3&0&0&0\\0&2&1&0\\0&1&2&0\\0&0&0&3\end{pmatrix}\]
+and 
+\[S=\begin{pmatrix}1&0&0&0\\0&0&0&1\\0&1&1&0\\0&-1&1&0\end{pmatrix}, J=\begin{pmatrix}3&0&0&0\\0&3&0&0\\0&0&3&0\\0&0&0&1\end{pmatrix}.\]
+\end{enumerate}
+\item We may observe that $W=\sp(\gamma)$ is $(T-\lambda I)$-invariant by the definition of a cycle. Thus for all $w\in W$, we have 
+\[T(w)=(T-\lambda I)(w)+\lambda I(w)=(T-\lambda I)(w)+\lambda w\in W.\]
+\item If $x$ is an element of in two cycles, which is said to be $\gamma_1$ and $\gamma_2$ without lose of generality, we may find the smallest ingeter $q$ such that 
+\[(T-\lambda I)^q(x)=0.\]
+This means that the initial eigenvectors of $\gamma_1$ and $\gamma_2$ are both $(T-\lambda I)^{q-1}(x)$. This is a contradiction. Hence all cycles are disjoint.
+\item \begin{enumerate}
+\item Use the fact that $T(x)=0$ if only if $(-T)(x)=-0=0$.
+\item Use the fact that $(-T)^k=(-1)^kT$.
+\item It comes from the fact 
+\[(\lambda I_V-T)^k=[-(T-\lambda I_V)]^k\] 
+and the previous argument.
+\end{enumerate}
+\item \begin{enumerate}
+\item If $U^k(x)=0$, then $U^{k+1}(x)=U^k(U(x))=0$.
+\item We know $U^{m+1}(V)=U^m(U(V))\subset U^m(V)$. With the assumption $\rank(U^m)=\rank(U^{m+1})$, we know that 
+\[U^{m+1}(V)=U^m(V).\]
+This means 
+\[U(U^m(V))=U^m(V)\]
+and so $U^k(V)=U^m(V)$ for all integer $k\geq m$.
+\item The assumption $\rank(U^m)=\rank(U^{m+1})$ implies 
+\[\nul(U^m)=\nul(U^{m+1})\]
+by Dimension Theorem. This means $N(U^m)=N(U^{m+1})$ by the previous argument. If $U^{m+2}(x)=0$, then $U(x)$ is an element in $N(U^{m+1})=N(U^m)$. Hence we have $U^m(U(x))=0$ and thus $x$ is an element in $N(U^{m+1})$. This means that $N(U^{m+2})\subset N(U^{m+1})$ and so they are actually the same. Doing this inductively, we know that $N(U^m)=N(U^k)$ for all integer $k\geq m$.
+\item By the definition of $K_{\lambda}$, we know 
+\[K_{\lambda}=\cup_{p\geq 1}N((T-\lambda I)^p).\]
+But by the previous argument we know that 
+\[N((T-\lambda I)^m)=N((T-\lambda I)^k)\]
+for all integer $k\geq m$ and the set is increasing as $k$ increases. So actually $K_{\lambda}$ is $N((T-\lambda I)^m)$.
+\item Since the \charpoly{} splits, the transformation $T$ is diagonalizable if and only if $K_{\lambda}=E_{\lambda}$. By the previous argument, we know that 
+\[K_{\lambda}=N(T-\lambda I)=E_{\lambda}.\]
+\item If $\lambda $ is an eigenvalue of $T_W$, then $\lambda $ is also an eigenvalue of $T$ by Theorem 5.21. Since $T$ is diagonalizable, we have the condition 
+\[\rank(T-\lambda I)=\rank((T-\lambda I)^2)\]
+and so 
+\[N(T-\lambda I)=N((T-\lambda I)^2)\]
+by the previous arguments. This implies 
+\[N(T_W-\lambda I_W)=N((T_W-\lambda I_W)^2).\]
+By Dimension Theorem, we get that 
+\[\rank(T_W-\lambda I_W)=\rank((T_W-\lambda I_W)^2).\]
+So $T_W$ is diagonalizable.
+\end{enumerate}
+\item Theorem 7.4 implies that 
+\[V=\oplus_{\lambda}K_{\lambda}.\]
+So the representation is uniques.
+\item \begin{enumerate}
+\item The subspace $W$ is $T$-invariant by Exercise 7.1.4. Let $\{v_i\}_i$ be the cycle with initial vector $v_1$. Then $[T_W]_{\gamma}$ is a Jordan block by the fact 
+\[T_W(v_1)=\lambda v_1\]
+and 
+\[T_W(v_i)=v_{i-1}+\lambda v_i\]
+for all $i>1$. And $\beta $ is a Jordan canonical basis since each cycle forms a block.
+\item If the $ii$-entry of $[T]_{\beta}$ is $\lambda$, then $v_i$ is an nonzero element in $K_{\lambda}$. Since $K_{\lambda}\cap K_{\mu}=\{0\}$ for distinct eigenvalues $\lambda $ and $\mu$, we know that $\beta'$ is exactly those $v_i$'s such that the $ii$-entry of $[T]_{\beta}$ is $\lambda$. Let $m$ be the number of the eigenvalue $\lambda$ in the diagonal of $[T]_{\beta}$. Since a Jordan form is upper triangular. We know that $m$ is the multiplicity of $\lambda$. By Theorem 7.4(c) we have 
+\[\dim(K_{\lambda})=m=|\beta'|.\]
+So $\beta'$ is a basis for $K_{\lambda}$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Those initial vectors of $q$ disjoint cycles forms a independent set consisting of eigenvectors in $E_{\lambda}$.
+\item Each block will correspond to one cycle. Use the previous argument and get the result.
+\end{enumerate}
+\item By Theorem 7.7 and the assumptiong that the \charpoly{} of $L_A$ splits, the transformation $L_A$ has a Jordan form $J$ and a corresponding Jordan canonical basis $\beta$. Let $\alpha$ be the standarad basis for $\F^n$. Then we have 
+\[J=[L_A]_{\beta}=[I]_{\alpha}^{\beta}A[I]_{\beta}^{\alpha}\]
+and so $A$ is similar to $J$.
+\item By Theorem 7.4(b), the space $V$ is the direct sum of each $\sp(\beta_i)=K_{\lambda_i}$, where $\beta_i$ is a basis for $K_{\lambda_i}$.
+\item Denote $K_{\lambda_i}$ by $W_i$. Let $\beta_i$ be a Jordan canonical basis for $T_{W_i}$. Apply Theorem 5.25 and get the result.
+\end{enumerate}

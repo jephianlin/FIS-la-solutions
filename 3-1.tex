@@ -1,0 +1,64 @@
+\section{Elementary Matrix Operations and Elementary Matrices}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. Since every elementary matrix comes from $I_n$, a square matrix.
+\item No. For example, $2I_1$ is an elementary matrix of type 2.
+\item Yes. It's an elementary matrix of type 2 with scalar $1$.
+\item No. For example, the product of two elementary matrices 
+\[\left(\begin{array}{cc}2&0\\0&1\end{array}\right)\left(\begin{array}{cc}0&1\\1&0\end{array}\right)=\left(\begin{array}{cc}0&2\\1&0\end{array}\right)\]
+is not an elementary matrix.
+\item Yes. This is Theorem 3.2.
+\item No. For example, the sum of two elementary matrices 
+\[\left(\begin{array}{cc}2&0\\0&1\end{array}\right)\left(\begin{array}{cc}0&1\\1&0\end{array}\right)=\left(\begin{array}{cc}2&1\\1&1\end{array}\right)\]
+is not an elementary matrix.
+\item Yes. See Exercise 3.1.5.
+\item No. For example, let $A=\left(\begin{array}{cc}1&0\\0&0\end{array}\right)$ and $B=\left(\begin{array}{cc}1&0\\1&0\end{array}\right)$. Then we can obtain $B$ by add one time the first row of $A$ to the second row of $B$. But all column operation on $A$ can not change the fact that the second row of $A$ is two zeros.
+\item Yes. If $B=EA$, we have $E^{-1}B=A$ and $E^{-1}$ is an elementary matrix of row operation.
+\end{enumerate}
+\item By adding $-2$ times the first column of $A$ to the second column, we obtain $B$. By adding $-1$ time the first row of $B$ to the second row, we obtain $C$. Finally let $E_1=\left(\begin{array}{ccc}1&0&0\\0&-\frac{1}{2}&0\\0&0&1\end{array}\right)$, $E_2=\left(\begin{array}{ccc}1&0&0\\0&1&0\\-1&0&1\end{array}\right)$, $E_3=\left(\begin{array}{ccc}1&0&0\\0&1&0\\0&3&1\end{array}\right)$, $E_4=\left(\begin{array}{ccc}1&0&-3\\0&1&0\\0&0&1\end{array}\right)$, $E_5=\left(\begin{array}{ccc}1&0&0\\0&1&-1\\0&0&1\end{array}\right)$. We have that 
+\[E_5E_4E_3E_2E_1C=I_3.\]
+The following is the process.
+\begin{align*}
+C&=\left(\begin{array}{ccc}1&0&3\\0&-2&-2\\1&-3&1\end{array}\right)\rightsquigarrow\left(\begin{array}{ccc}1&0&3\\0&1&1\\1&-3&1\end{array}\right)\\
+&\rightsquigarrow\left(\begin{array}{ccc}1&0&3\\0&1&1\\0&-3&-2\end{array}\right)\rightsquigarrow\left(\begin{array}{ccc}1&0&3\\0&1&1\\0&0&1\end{array}\right)\\
+&\rightsquigarrow\left(\begin{array}{ccc}1&0&0\\0&1&1\\0&0&1\end{array}\right)\rightsquigarrow\left(\begin{array}{ccc}1&0&0\\0&1&0\\0&0&1\end{array}\right)
+\end{align*}
+\item \begin{enumerate}
+\item This matrix interchanges the first and the third row. So the inverse matrix do the inverse step. So the inverse matrix do the same thing and it is 
+\[\left(\begin{array}{ccc}0&0&1\\0&1&0\\1&0&0\end{array}\right).\]
+\item This matrix multiplies the second row by $3$. To the inverse matrix multiplies the second row by $\frac{1}{3}$ and it is 
+\[\left(\begin{array}{ccc}1&0&0\\0&\frac{1}{3}&0\\0&0&1\end{array}\right).\]
+\item This matrix adds $-2$ times the first row to the third row. So the invers matrix adds $2$ times the first row to the third row and it is 
+\[\left(\begin{array}{ccc}1&0&0\\0&1&0\\2&0&1\end{array}\right).\]
+\end{enumerate}
+\item A matrix who interchanges the $i$-th and the $j$-th rows is also a matrix who interchanges the $i$-th and the $j$-th columns. A matrix who multiplies the $i$-th row by scalar $c$ is also a matrix who multiplies the $i$-th column by scalar $c$. A matrix who adds $c$ times the $i$-th row to the $j$-th row is also a matrix who adds $c$ times the $j$-th column to the $i$-th column.
+\item We can check that matrices of type 1 or type 2 are symmetric. And the transpose of a matrix of type 3, who adds $c$ times the $i$-th row(column) to the $j$-th row(column), is a matrix of type 3, who adds $c$ times the $j$-th row(column) to the $i$-th row(column).
+\item If $B$ can be obtained from $A$ by an elementary row operation, we could write $B=EA$. So we have $B^t=A^tE^t$ and this means $B$ can be obtained by $A$ by elementary column operation with corresponding elementary matrix $E^t$. If $B$ can be obtained from $A$ by an elementary column operation, we could write $B=AE$. So we have $B^t=E^tA^t$ and this means $B$ can be obtained by $A$ by elementary row operation with corresponding elementary matrix $E^t$.
+\item It's enough to check the following matrix multiplication is right. Let $\{u_1,u_2,\ldots ,u_n\}$ and $\{v_1,v_2,\ldots ,v_n\}$ be the row and column vectors of $A$ respectly.
+
+For row operations:
+\[\left.\begin{array}{c} \\i\mathrm{-th}\\ \\j\mathrm{-th} \\ \\\end{array}\right.\left(\begin{array}{ccccc}\ddots&&&& \\&&&1& \\&&\ddots && \\&1&&& \\&&&&\ddots \end{array}\right)A=\left(\begin{array}{ccccc}\ddots&&&& \\&-&u_j&-& \\&&\ddots && \\&-&u_i&-& \\&&&&\ddots \end{array}\right)\]
+\[\left.\begin{array}{c} \\ \\i\mathrm{-th} \\ \\ \\\end{array}\right.\left(\begin{array}{ccccc}\ddots&&&& \\&1&&& \\&&c && \\&&&1& \\&&&&\ddots \end{array}\right)A=\left(\begin{array}{ccccc}\ddots&&&& \\&\ddots&&& \\&-&cu_i &-& \\&&&\ddots& \\&&&&\ddots \end{array}\right)\]
+\[\left.\begin{array}{c} \\ i\mathrm{-th}\\ \\j\mathrm{-th} \\ \\\end{array}\right.\left(\begin{array}{ccccc}\ddots&&&& \\&1&&& \\&&\ddots && \\&c&&1& \\&&&&\ddots \end{array}\right)A=\left(\begin{array}{ccccc}\ddots&&&& \\&\ddots&&& \\&&\ddots && \\-&cu_i&+&u_j& -\\&&&&\ddots \end{array}\right)\]
+
+For column operations:
+\[A\overset{\left.\begin{array}{ccccc} & i&&j&\\&\mathrm{-th}&&\mathrm{-th} &\end{array}\right.}{\left(\begin{array}{ccccc}\ddots&&&& \\&&&1& \\&&\ddots && \\&1&&& \\&&&&\ddots \end{array}\right)}=\left(\begin{array}{ccccc}\ddots&&&& \\&|&&|& \\&v_j&\ddots &v_i& \\&|&&|& \\&&&&\ddots \end{array}\right)\]
+\[A\overset{\left.\begin{array}{ccccc} & &i&&\\&&\mathrm{-th}&&\end{array}\right.}{\left(\begin{array}{ccccc}\ddots&&&& \\&1&&& \\&&c && \\&&&1& \\&&&&\ddots \end{array}\right)}=\left(\begin{array}{ccccc}\ddots&&&& \\&&|&& \\&&cv_i && \\&&|&\ddots& \\&&&&\ddots \end{array}\right)\]
+\[A\overset{\left.\begin{array}{ccccc} & i&&j&\\&\mathrm{-th}&&\mathrm{-th} &\end{array}\right.}{\left(\begin{array}{ccccc}\ddots&&&& \\&1&&c& \\&&\ddots && \\&&&1& \\&&&&\ddots \end{array}\right)}=\left(\begin{array}{ccccc}\ddots&&&|& \\&\ddots &&cv_i& \\&&\ddots &+& \\&&&v_j& \\&&&|&\ddots \end{array}\right)\]
+
+\item By Theorem 3.2 $E^{-1}$ is an elementary matrix of the same type if $E$ is. So if $Q$ can be obtained from $P$, we can write $Q=EP$ and hence $E^{-1}Q=P$. This means $P$ can be obtained from $Q$.
+\item The operation of interchanging the $i$-th and the $j$-th row can be obtained by the following steps:\begin{itemize}
+\item multiplying the $i$-th row by $-1$;
+\item adding $-1$ time the $i$-th row to the $j$-th row;
+\item adding $1$ time the $j$-th row to the $i$-th row;
+\item adding $-1$ time the $i$-th row to the $j$-th row.
+\end{itemize}
+\item The operation of multiplying one row by a scalar $c$ means dividing the same row by a scalar $\frac{1}{c}$.
+\item The operation of adding $c$ times of the $i$-th row to the $j$-th row means substracting $c$ times of the $i$-th row to the $j$-th row.
+\item Assuming $k=\min\{m,n\}$. Set $j$ be a integer variable and do repeatly the following process:\begin{itemize}
+\item If $A_{ij}=0$ for all $j$, take $i=i+1$ and omit following steps and repeat process directly.
+\item If $A_{ij}\neq 0$ for some $j$, interchange the $i$-th and the $j$-th row.
+\item Adding $-\frac{A_{ij}}{A_{ii}}$ times the $i$-th row to the $j$-th row for all $j>i$.
+\item Set $i=i+1$ and repeat the process.
+\end{itemize}
+\end{enumerate}

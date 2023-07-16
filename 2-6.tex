@@ -1,0 +1,150 @@
+\section{Dual Spaces}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. Every linear functional is a linear transformation.
+\item Yes. It's domain and codomain has dimension $1$.
+\item Yes. They have the same dimension.
+\item Yes. It's isomorphic to the dual space of its dual space. But if the ``is'' here in this question means ``equal'', then it may not be true since dual space must has that its codomain should be $\mathbb{F}$.
+\item No. For an easy example we may let $T$ be the linear transformation such that $T(x_i)=2f_i$, where $\beta\{x_1,x_2,\ldots ,x_n\}$ is the basis for $V$ and $\beta^*\{f_1,f_2,\ldots ,f_n\}$ is the corresponding dual basis for $V^*$.
+\item Yes.
+\item Yes. They have the same dimension.
+\item No. Codomain of a linear functional should be the field.
+\end{enumerate}
+\item In these question we should check whether it's linear and whether its domain and codomain are $V$ and $F$ respectly. \begin{enumerate}
+\item Yes. We may check that \[f(p(x)+cq(x))=2p'(0)+2cp'(0)+p''(1)+cq''(1)\]
+\[2p'(0)+p''(1)+c(2p'(0)+q''(1))=f(p(x))+cf(q(x)).\]
+\item No. It's codomain should be the field.
+\item Yes. We may check that \[\mathrm{tr}(A+cB)=\sum_{i=1}^n{(A+cB)_{ii}}\]
+\[=\sum_{i=1}^n{A_{ii}+cB_{ii}}=\mathrm{tr}(A)+c\mathrm{tr}(B).\]
+\item No. It's not linear.
+\item Yes. We may check that \[f(p(x)+cq(x))=\int_0^1(p(t)+cq(t))dt\]
+\[=\int_0^1p(t)dt+c\int_0^1q(t)dt=f(p(x))+cf(q(x)).\]
+\item Yes. We may check that \[f(A+cB)=(A+cB)_{11}=A_{11}+cB_{11}=f(A)+cf(B).\]
+\end{enumerate}
+\item \begin{enumerate}
+\item We may find out that for all vector $(x,y,z)\in \mathbb{R}^3$ we can express it as 
+\[(x,y,z)=(x-\frac{y}{2})(1,0,1)+\frac{y}{2}(1,2,1)+(z-x)(0,0,1).\]
+So we can write 
+\[\left\{\begin{array}{l}f_1(x,y,z)=x-\frac{y}{2};\\f_2(x,y,z)=\frac{y}{2};\\f_3(x,y,z)=z-x.\end{array}\right.\]
+\item This is much easier and we have that 
+\[\left\{\begin{array}{l}f_1(a_0+a_1x+a_2x^2)=a_0;\\f_2(a_0+a_1x+a_2x^2)=a_1;\\f_3(a_0+a_1x+a_2x^2)=a_2.\end{array}\right.\]
+\end{enumerate}
+\item We may returen the representation such that 
+\[(x,y,z)=(x-2y)(\frac{2}{5},-\frac{3}{10},-\frac{1}{10})+(x+y+z)(\frac{3}{5},\frac{3}{10},\frac{1}{10})+(y-3z)(\frac{1}{5},\frac{1}{10},-\frac{3}{10}).\]
+We may check that the set $\{(\frac{2}{5},-\frac{3}{10},-\frac{1}{10}),(\frac{3}{5},\frac{3}{10},\frac{1}{10}),(\frac{1}{5},\frac{1}{10},-\frac{3}{10})\}$ is a basis and hence the desired set. By Theorem 2.24 $\{f_1,f_2,f_3\}$ is a basis for $V^*$.
+\item Assume that $p(t)=a+bx$. We have $\int_0^1{(a+bt)}dt=a+\frac{b}{2}$ and $\int_0^2{(a+bt)}dt=2a+2b$. So we may returen the representation such that 
+\[a+bx=(a+\frac{b}{2})(2-2x)+(2a+2b)(-\frac{1}{2}+x).\]
+We may check that the set $\{2-2x,-\frac{1}{2}+x\}$ is a basis and hence the desired set. By Theorem 2.24 $\{f_1,f_2,f_3\}$ is a basis for $V^*$.
+\item \begin{enumerate}
+\item Calculate directly that 
+\[T^t(f)(x,y)=fT(x,y)=f(3x+2y,x)=7x+4y.\]
+\item Since $\beta=\{(1,0),(0,1)\}$ and $(x,y)=x(1,0)+y(0,1)$, we have that $f_1(x,y)=x$ and $f_2(x,y)=y$. So we can find out that 
+\[T^t(f_1)(x,y)=f_1T(x,y)=f_1(3x+2y,x)=3x+2y=3f_1(x,y)+2f_2(x,y);\]
+\[T^t(f_2)(x,y)=f_2T(x,y)=f_2(3x+2y,x)=x=1f_1(x,y)+0f_2(x,y).\]
+And we have the matrix $[T^t]_{\beta^*}=\left(\begin{array}{cc}3&1\\2&0\end{array}\right).$
+\item Since $T(x,y)=(3x+2y,x)$, we can calculate that 
+\[[T]_{\beta}=\left(\begin{array}{cc}3&2\\1&0\end{array}\right)\]
+and 
+\[([T]_{\beta})^t=\left(\begin{array}{cc}3&1\\2&0\end{array}\right).\]
+So we have that $[T^t]_{\beta^*}=([T]_{\beta})^t$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Calculate directly that 
+\[T^t(f)(a+bx)=fT(a+bx)=f(-a-2b,a+b)=-3a-4b.\]
+\item Since $\beta=\{1,x\}$ and $a+bx=a\times 1+b\times x$, we have that $f_1(a+bx)=a$ and $f_2(a+bx)=b$. And since $\gamma=\{(1,0),(0,1)\}$ and $(a,b)=a(1,0)+b(0,1)$, we have that $g_1(a,b)=a$ and $g_2(a,b)=b$. So we can find out that 
+\[T^t(g_1)(a+bx)=g_1T(a+bx)=g_1(-a-2b,a+b)=-a-2b\]
+\[=-1\times g_1(a,b)+(-2)\times g_2(a,b);\]
+\[T^t(g_2)(a+bx)=g_2T(a+bx)=g_2(-a-2b,a+b)=a+b\]
+\[=1\times g_1(a,b)+1\times g_2(a,b).\]
+And we have the matrix $[T^t]_{\gamma^*}^{\beta^*}=\left(\begin{array}{cc}-1&1\\-2&1\end{array}\right).$
+\item Since $T(a+bx)=(-a-2b,a+b)$, we can calculate that 
+\[[T]_{\beta}^{\gamma}=\left(\begin{array}{cc}-1&-2\\1&1\end{array}\right)\]
+and 
+\[([T]_{\beta}^{\gamma})^t=\left(\begin{array}{cc}-1&1\\-2&1\end{array}\right).\]
+So we have that $[T^t]_{\gamma^*}^{\beta^*}=([T]_{\beta}^{\gamma})^t$.
+\end{enumerate}
+\item Every plane could be written in the form $P=\{(x,y,z):ax+by+cz=0\}$ for some scalar $a$, $b$ and $c$. Consider a transformation $T(x,y,z)=ax+by+cz$. It can be shown that $T$ is an element in $(\mathbb{R}^3)^*$ and $P=N(T)$. For the case in $\mathbb{R}^2$, actually every line has the form $L=\{(x,y):ax+by=0\}$ and hence is the null space of a vector in $(\mathbb{R}^2)^*$.
+\item If $T$ is linear, we can set $f_i$ be $g_iT$ as the Hint. Since it's conposition of two linear function, it's linear. So we have 
+\[T(x)=(g_1(T(x)),g_2(T(x)),\ldots ,g_m(T(x)))\]
+\[=(f_1(x),f_2(x),\ldots ,f_m(x)).\]
+
+For the converse, let $\{e_i\}_{i=1,2,\ldots ,m}$ be the standard basis of $\mathbb{F}^m$. So if we have that $T(x)=\sum_{i=1}^m{f_i(x)e_i}$ with $f_i$ linear, we can define $T_i(x)=f_i(x)e_i$ and it would be a linear transformation in $\mathscr{L}(\mathbb{F}^n,\mathbb{F}^m)$. Thus we know $T$ is linear since $T$ is summation of all $T_i$.
+\item \begin{enumerate}
+\item Since we can check that $f_i(p(x)+cq(x))=p(c_i)+cq(c_i)=f_i(p(x))+cf_i(q(x))$, $f_i$ is linear and hence in $V^*$. And we know that $\mathrm{dim}(V^*)=\mathrm{dim}(V)=\mathrm{dim}(P_n(\mathbb{F}))=n+1$. So now it's enough to show that $\{f_0,f_1,\ldots ,f_n\}$ is independent. So assume that $\sum_{i=1}^n{a_if_i}=0$ for some $a_i$. We may define polynomials $p_i(x)=\prod_{j\neq i}{(x-c_j)}$ such that we know $p_i(c_i)\neq 0$ but $p_i(c_j)=0$ for all $j\neq i$. So now we have that 
+\[\sum_{i=1}^n{a_if_i(p_1)}=a_1f_1(p_1)=0\]
+implies $a_1=0$. Similarly we have $a_i=0$ for all proper $i$.
+\item By the Corollary after Theorem 2.26 we have an ordered basis 
+\[\beta =\{p_0,p_1,\ldots ,p_n\}\] for $V$ such that $\{f_1,f_2,\ldots ,f_n\}$ defined in the previous exercise is its dual basis. So we know that $p_i(c_j)=\delta_{ij}$. Since $\beta $ is a basis, every polynomial in $V$ is linear combination of $\beta $. If a polynomial $q$ has the property that $q(c_j)=\delta_{0j}$, we can assume that $q=\sum_{i=0}^n{a_ip_i}$. Then we have 
+\[1=q(c_0)=\sum_{i=0}^n{a_ip_i(c_0)}=a_1\]
+and 
+\[0=q(c_j)=\sum_{i=0}^n{a_ip_i(c_j)}=a_j\]
+for all $j$ other than $1$. So actually we know $q=p_0$. This means $p_0$ is unique. And similarly we know all $p_i$ is unique. Since the Lagrange polynomials,say $\{r_i\}_{i=1,2,\ldots n}$, defined in Section 1.6 satisfy the property $r_i(c_j)=\delta_{ij}$, by uniqueness we have $r_i=p_i$ for all $i$.
+\item Let $\beta =\{p_0,p_1,\ldots ,p_n\}$ be those polynomials defined above. We may check that 
+\[q(x)=\sum_{i=0}^n{a_ip_i(x)}\]
+has the property $q(c_i)=a_i$ for all $i$, since we know that $p_i(c_j)=\delta_{ij}$. Next if $r(x)\in V$ also has the property, we may assume that 
+\[r(x)=\sum_{i=0}^n{b_ip_i(x)}\]
+since $\beta $ is a basis for $V$. Similarly we have that 
+\[a_i=r(c_i)=\sum_{i=0}^n{b_ip_i(c_i)=b_i}.\]
+So we know $r=q$ and $q$ is unique.
+\item This is the instant result of 2.6.10(a) and 2.6.10(b) by setting $a_i=p(c_i)$.
+\item Since there are only finite term in that summation, we have that the order of integration and summation can be changed. So we know 
+\[\int_a^b{p(t)dt}=\int_a^b{(\sum_{i=0}^n{p(c_i)p_i(t)})dt}\]
+\[=\sum_{i=0}^n{\int_a^b{p(c_i)p_i(t)dt}}.\]
+\end{enumerate}
+\item It will be more clearer that we confirm that the domain and codomain of both $\psi_2T$ and $T^{tt}\psi_2$ are $V$ and $W^{**}$ respectly first.
+So for all $x\in V$ we have 
+\[\psi_2T(x)=\psi(T(x))=\hat{T(x)}\in W^{**}\]
+and 
+\[T^{tt}\psi_1(x)=T^{tt}(\hat{x})\]
+\[=(T^t)^t(\hat{x})=\hat{x}T^t\in W^{**}.\]
+But to determine whether two elements $f$ and $g$ in $W^{**}$ are the same is to check whether the value of $f(h)$ and $g(h)$ are the same for all $h\in W^*$. So let $h$ be an element in $W*$. Let's check that 
+\[\hat{T(x)}(h)=h(T(x))\]
+and 
+\[\hat{x}T^t(h)=\hat{x}(hT)=h(T(x)).\]
+So we know they are the same.
+\item Let $\beta =\{x_1,x_2,\ldots ,x_n\}$ be a basis for $V$. Then we know the functional $\hat{x_i}\in V^{**}$ means $\hat{x_i}(f)=f(x_i)$ for all funtional $f$ in $V^*$. On the other hand, we have the dual basis $\beta^*=\{f_1,f_2,\ldots, f_n\}$ is defined by $f_i(x_j)=\delta_{ij}$ for all $i=1,2,\ldots ,n$ and $j=1,2,\ldots ,n$ such that $f_i$ is lineaer. And we can further ferret what elements are in $\beta^{**}$. By definition of $\beta ^{**}$ we know $\beta^{**}=\{F_1,F_2,\ldots, F_n\}$ and $F_i(f_j)=\delta_{ij}$ and $F_i$ is linear. So we may check that whether $F_i=\hat{x_i}$ by 
+\[\hat{x_i}(f_j)=f_j(x_i)=\delta_{ij}=F_i(f_j).\]
+Since they are all linear functionals and the values of them meet at basis $\beta^*$, they are actually equal by the Corollary after Theorem 2.6.
+\item \begin{enumerate}
+\item We can check that $f+g$ and $cf$ are elements in $S^0$ if $f$ and $g$ are elements in $S^0$ since $(f+g)(x)=f(x)+g(x)=0$ and $(cf)(x)=cf(x)=0$. And the zero function is an element in $S^0$.
+\item Let $\{v_1,v_2,\ldots ,v_k\}$ be the basis of $W$. Since $x\notin W$ we know that $\{v_1,v_2,\ldots ,v_{k+1}=x\}$ is an independent set and hence we can extend it to a basis $\{v_1,v_2,\ldots ,v_n\}$ for $V$. So we can define a linear transformation $T$ such that $f(v_i)=\delta_{i(k+1)}$. And thus $f$ is the desired functional.
+\item Let $W$ be the subspace span$(S)$. We first prove that $W^0=S^0$. Since every function who is zero at $W$ must be a function who is zero at $S$. we know $W^0\subset S^0$. On the other hand, if a linear function has the property that $f(x)=0$ for all $x\in S$, we can deduce that $f(y)=0$ for all $y\in W=$span$(S)$. Hence we know that $W^0\supset S^0$ and $W^0=S^0$. Since $(W^0)^0=(S^0)^0$ and span$(\psi(S))=\psi(W)$ by the fact $\psi$ is an isomorphism, we can just prove that $(W^0)^0=\psi(W)$.
+
+Next, by Theorem 2.26 we may assume every element in $(W^0)^0\subset V^{**}$ has the form $\hat{x}$ for some $x$. Let $\hat{x}$ is an element in $(W^0)^0$. We have that $\hat{x}(f)=f(x)=0$ if $f\in W^0$. Now if $x$ is not an element in $W$, by the previous exercise there exist some functional $f\in W^0$ such that $f(x)\neq 0$. But this is a contradiction. So we know that $\hat{x}$ is an element in $\psi(W)$ and $(W^0)^0\subset \psi(W)$.
+
+For the converse, we may assume that $\hat{x}$ is an element in $\psi(W)$. Thus for all $f\in W^0$ we have that $\hat{x}(f)=f(x)=0$ since $x$ is an element in $W$. So we know that $(W^0)^0\supset \psi(W)$ and get the desired conclusion.
+\item It's natural that if $W_1=W_2$ then we have $W_1^0=W_2^0$. For the converse, if $W_1^0=W_2^0$ then we have 
+\[\psi(W_1)=(W_1^0)^0=(W_2^0)^0=\psi(W_2)\]
+and hence 
+\[W_1=\psi^{-1}\psi(W_1)=\psi^{-1}\psi(W_2)=W_2\]
+by the fact that $\psi$ is an isomorphism.
+\item If $f$ is an element in $(W_1+W_2)^0$, we have that $f(w_1+w_2)=0$ for all $w_1\in W_1$ and $w_2\in W_2$. So we know that $f(w_1+0)=0$ and $f(0+w_2)=0$ for all proper $w_1$ and $w_2$. This means $f$ is an element in $W_1^0\cap W_2^0$. For the converse, if $f$ is an element in $W_1^0\cap W_2^0$, we have that $f(w_1+w_2)=f(w_1)+f(w_2)=0$ for all $w_1\in W_1$ and $w_2\in W_2$. Hence we have that $f$ is an element in $(W_1+W_2)^0$.
+\end{enumerate}
+\item We use the notation in the Hint. To prove that $\alpha=\{f_{k+1},f_{k+2},\ldots ,f_n\}$ is a basis for $W^0$, we should only need to prove that span$(\alpha )=W^0$ since by $\alpha \subset \beta^*$ we already know that $\alpha $ is an independent set. Since $W^0\subset V^*$, every element $f\in W^0$ we could write $f=\sum_{i=1}^n{a_if_i}$. Next since for $1\leq i \leq k$ $x_i$ is an element in $W$, we know that 
+\[0=f(x_i)=\sum_{i=1}^n{a_if_i(x_i)}=a_i.\] 
+So actually we have $f=\sum_{i=k+1}^n{a_if_i}$ is an element in span$(\alpha )$. And finally we get the conclusion by 
+\[\mathrm{dim}(W)+\mathrm{dim}(W_0)=k+(n-k)=n=\mathrm{dim}(V).\]
+\item If $T^t(f)=fT=0$, this means $f(y)=0$ for all $y\in R(T)$ and hence $f\in (R(T))^0$. If $f\in (R(T))^0$, this means $f(y)=0$ for all $y\in R(T)$ and hence $T^t(f)(x)=f(T(x))=0$ for all $x$. This means $f$ is an element in $N(T^t)$.
+\item We have that 
+\[\mathrm{rank}(L_A)=\mathrm{dim}(R(L_A))=m-\mathrm{dim}(R(L_A)^0)=m-\mathrm{dim}(N((L_A)^t))\]
+\[=\mathrm{dim}((\mathbb{F}^m)^*)-\mathrm{dim}(N((L_A)^t))=\mathrm{dim}(R((L_A)^t)).\]
+Next, let $\alpha $, $\beta $ be the standard basis for $\mathbb{F}^n$ and $\mathbb{F}^m$. Let $\alpha^* $, $\beta^* $ be their dual basis. So we have that $[L_A)^t]_{\beta^*}^{\alpha^*}=([L_A]_{\alpha}^{\beta})^t=A^t$ by Theorem 2.25. Let $\phi_{\beta^*}$ be the isomorphism defined in Theorem 2.21. We get 
+\[\mathrm{dim}(R((L_A)^t))=\mathrm{dim}(\phi_{\beta^*}(R((L_A)^t)))=\mathrm{dim}(R(L_{A^t}))=\mathrm{rank}(L_{A^t}).\]
+\item If $W$ is $T$-invariant, we have that $T(W)\subset W$. Let $f$ be a functional in $W^0$. We can check $T^t(f)=fT$ is an element in $W^0$ since $T(w)\in W$ by the fact that $T$-invariant and thus $f(T(w))=0$.
+
+For the converse, if $W^0$ is $T^t$-invariant, we know $T^t(W^0)\subset W^0$. Fix one $w$ in $W$, if $T(w)$ is not an element in $W$, by Exercise 2.6.13(b) there exist a functional $f\in W^0$ such that $f(T(w))\neq 0$. But this means $T^t(f)(w)=fT(w)\neq 0$ and hence $T^t(f)\notin W^0$. This is a contradiction. So we know that $T(w)$ is an element in $W$ for all $w$ in $W$.
+\item First check that $\Phi $ is a linear transformation by 
+\[\Phi(f+cg)(s)=(f+cg)_S(s)=f_S(s)+cg_S(s)=(\Phi(f)+c\Phi(g))(s).\]
+Second we know $\Phi $ is injective and surjective by Exercise 2.1.34.
+\item Let $S'$ is a basis for $W$ and we can extend it to be a basis $S$ for $V$. Since $W$ is a proper subspace of $V$, we have at least one element $t\in S$ sucht that $t\notin W$. And we can define a function $g$ in $\mathcal{F}(S,\mathbb{F})$ by $g(t)=1$ and $g(s)=0$ for all $s\in S$. By the previous exercise we know there is one unique linear functional $f\in V^*$ such that $f_S=g$. Finally since $f(s)=0$ for all $s\in S'$ we have $f(s)=0$ for all $s\in W$ but $f(t)=1$. So $f$ is the desired functional.
+\item \begin{enumerate}
+\item Assume that $T$ is surjective. We may check whether $N(T^t)=\{0\}$ or not. If $T^t(f)=fT=0$, we have that $f(y)=f(T(x))=0$ for all $y\in W$ since there exist some $x\in V$ such that $T(x)=y$. For the converse, assume that $T^t$ is injective. Suppose, by contradiction, $R(T)\neq W$. By the previous exercise we can construct a nonzero linear functional $f(y)\in W^*$ such that $f(y)=0$ for all $y\in R(T)$. Let $f_0$ be the zero functional in $W^*$. But now we have that $T^t(f)(x)=f(T(x))=0=T^t(g)(x)$, a contradiction. So $T$ must be surjective.
+\item Assume that $T^t$ is surjective. Suppose, by contradiction, $T(x)=0$ for some nonzero $x\in V$. We can construct a nonzero linear functional $g\in V^*$ such that $g(x)\neq 0$. Since $T^t$ is surjective, we get some functional $f\in W^*$ such that $T^t(f)=g$. But this means 
+\[0=f(T(x))=T^t(f)(x)=g(x)\neq 0,\]
+a contradiction.
+
+For the converse, assume that $T$ is injective and let $S$ is a basis for $V$. Since $T$ is injective, we have $T(S)$ is an independent set in $W$. So we can extend it to be a basis $S'$ for $W$. Thus for every linear functional $g\in V^*$ we can construct a functional $f\in W^*$ such that $T^t(f)=g$ by the argument below. First we can construct a function $h\in \mathcal{F}(S,\mathbb{F})$ by $h(T(s))=g(s)$ for $s\in S$ and $h(t)=0$ for all $t\in S'\backslash T(S)$. By Exercise 2.6.18 there is a lineaer functional $f\in W^*$ such that $f_{S'}=h$. So now we have for all $s\in S$
+\[g(s)=h(T(s))=f(T(s))=T^t(f)(s).\]
+By Exercise 2.1.34 we have $g=T^t(f)$ and get the desired conclusion.
+\end{enumerate}
+\end{enumerate}

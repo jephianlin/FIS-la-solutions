@@ -1,0 +1,69 @@
+\section{Determinants of Order $2$}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. We have $\det(2I_2)=4$ but not $2\det(T_2)$.
+\item Yes. Check that \[\det\begin{pmatrix}a_1+ka_2&b_1+kb_2\\c&d\end{pmatrix}=(a_1d-b_1c)+k(a_2d-b_2c)\]
+\[=\det\begin{pmatrix}a_1&b_1\\c&d\end{pmatrix}+k\det\begin{pmatrix}a_2&b_2\\c&d\end{pmatrix}\]
+and 
+\[\det\begin{pmatrix}a&b\\c_1+kc_2&d_1+kd_2\end{pmatrix}=(ad_1-bc_1)+k(ad_2-bc_2)\]
+\[=\det\begin{pmatrix}a&b\\c_1&d_1\end{pmatrix}+k\det\begin{pmatrix}a&b\\c_2&d_2\end{pmatrix}\]
+for every scalar $k$.
+\item No. $A$ is invertible if and only if $\det(A)\neq 0$.
+\item No. The value of the area cannot be negative but the value $\det\begin{pmatrix}u\\v\end{pmatrix}$ could be.
+\item Yes. See Exercise 4.1.12.
+\end{enumerate}
+\item Use the formula in Definition in page 200.\begin{enumerate}
+\item The determinant is $6\times 4-(-3)\times 2=30$.
+\item The determinant is $-17$.
+\item The determinant is $-8$.
+\end{enumerate}
+\item \begin{enumerate}
+\item The determinant is $-10+15i$.
+\item The determinant is $-8+29i$.
+\item The determinant is $-24$.
+\end{enumerate}
+\item Compute $|\det\begin{pmatrix}u\\v\end{pmatrix}|$.\begin{enumerate}
+\item The area is $|3\times 5-(-2)\times 2|=19$.
+\item The area is $10$.
+\item The area is $14$.
+\item The area is $26$.
+\end{enumerate}
+\item It's directly from the fact 
+\[\det\begin{pmatrix}c&d\\a&b\end{pmatrix}=cb-da=-(ad-bc)=-\det\begin{pmatrix}a&b\\c&d\end{pmatrix}.\]
+\item It's directly from the fact 
+\[\det\begin{pmatrix}a&b\\a&b\end{pmatrix}=ab-ba=0.\]
+\item It's directly from the fact 
+\[\det\begin{pmatrix}a&c\\b&d\end{pmatrix}=ad-cb=ad-bc=\det\begin{pmatrix}a&b\\c&d\end{pmatrix}.\]
+\item It's directly from the fact 
+\[\det\begin{pmatrix}a&b\\0&d\end{pmatrix}=ad-b0=ad.\]
+\item Directly check that 
+\[\det(\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}e&f\\g&h\end{pmatrix})=\det\begin{pmatrix}ae+bg&af+bh\\ce+dg&cf+dh\end{pmatrix}\]
+\[=(ae+bg)(cf+dh)-(af+bh)(ce+dg)=ad(eh-fg)-bc(eh-fg)=(ad-bc)(eh-fg)\]
+\[=\det\begin{pmatrix}a&b\\c&d\end{pmatrix}\times \det\begin{pmatrix}e&f\\g&h\end{pmatrix}.\]
+\item For brevity, we write $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ for some $2\times 2$ matrix and $C=\begin{pmatrix}d&-c\\-b&a\end{pmatrix}$ for the corresponding classical adjoint.\begin{enumerate}
+\item Directly check that 
+\[CA=\begin{pmatrix}ad-bc&0\\0&ad-bc\end{pmatrix}\]
+and
+\[AC=\begin{pmatrix}ad-bc&0\\0&ad-bc\end{pmatrix}.\]
+\item Calculate that 
+\[\det(C)=da-(-c)(-b)=ad-bc=\det(A).\]
+\item Since the transpose matrix $A^t$ is $\begin{pmatrix}a&c\\b&d\end{pmatrix}$, the corresponding classical adjoint would be 
+\[\begin{pmatrix}d&-b\\-c&a\end{pmatrix}=C^t.\]
+\item If $A$ is invertible, we have that $\det(A)\neq 0$ by Theorem 4.2. So we can write 
+\[[\det(A)]^{-1}CA=A[\det(A)]^{-1}C=I\]
+and get the desired result.
+\end{enumerate}
+\item By property (ii) we have the fact 
+\[\delta\begin{pmatrix}1&0\\1&0\end{pmatrix}=0=\delta\begin{pmatrix}0&1\\0&1\end{pmatrix}.\]
+Since by property (i) and (ii) we know \[0=\delta\begin{pmatrix}1&1\\1&1\end{pmatrix}=\delta\begin{pmatrix}1&0\\1&1\end{pmatrix}+\delta\begin{pmatrix}0&1\\1&1\end{pmatrix}\]
+\[=\delta\begin{pmatrix}1&0\\1&0\end{pmatrix}+\delta\begin{pmatrix}1&0\\0&1\end{pmatrix}+\delta\begin{pmatrix}0&1\\1&0\end{pmatrix}+\delta\begin{pmatrix}0&1\\0&1\end{pmatrix}\]
+\[\delta\begin{pmatrix}1&0\\0&1\end{pmatrix}+\delta\begin{pmatrix}0&1\\1&0\end{pmatrix},\]
+we get that 
+\[\delta\begin{pmatrix}0&1\\1&0\end{pmatrix}=-\delta\begin{pmatrix}1&0\\0&1\end{pmatrix}=-1\]
+by property (iii).
+Finally, by property (i) and (iii) we can deduce the general formula for $\delta $ below.
+\[\delta\begin{pmatrix}a&b\\c&d\end{pmatrix}=a\delta\begin{pmatrix}1&0\\c&d\end{pmatrix}+b\delta\begin{pmatrix}0&1\\c&d\end{pmatrix}\]
+\[=ac\delta\begin{pmatrix}1&0\\1&0\end{pmatrix}+ad\delta\begin{pmatrix}0&1\\0&1\end{pmatrix}+bc\delta\begin{pmatrix}0&1\\c&d\end{pmatrix}+bd\delta\begin{pmatrix}0&1\\c&d\end{pmatrix}\]
+\[=ad-bc=\det\delta\begin{pmatrix}a&b\\c&d\end{pmatrix}.\]
+\item A coordinate system $\{u=(a,b),v=(c,d)\}$ is right-handed means $u'\cdot v>0$ where the vector $u'=(-b,a)$ is obtained by rotating the vector $u$ in a counterclockwise direction through an angle $\frac{\pi}{2}$. With the fact $u'\cdot v=ad-bc=\det\begin{pmatrix}u\\v\end{pmatrix}$ we get the conclusion.
+\end{enumerate}

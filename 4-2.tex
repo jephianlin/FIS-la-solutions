@@ -1,0 +1,60 @@
+\section{Determinants of Order $n$}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. See Exercise 4.1.1(a).
+\item Yes. This is Theorem 4.4.
+\item Yes. This is the Corollary after Theorem 4.4.
+\item Yes. This is Theorem 4.5.
+\item No. For example, the determinant of $\begin{pmatrix}2&0\\0&1\end{pmatrix}$ is $2$ but not $\det(I)=1$.
+\item No. We have that $\begin{pmatrix}1&0\\2&1\end{pmatrix}=1\neq 2\det(I)=2$. 
+\item No. For example, the determinant of identity matrix is $1$.
+\item Yes. See Exercise 4.2.23.
+\end{enumerate}
+\item Determinant is linear when we fixed all but one row. So we have that 
+\[\det\begin{pmatrix}3a_1&3a_2&3a_3\\3b_1&3b_2&3b_3\\3c_1&3c_2&3c_3\end{pmatrix}=3\det\begin{pmatrix}a_1&a_2&a_3\\3b_1&3b_2&3b_3\\3c_1&3c_2&3c_3\end{pmatrix}\]
+\[=9\det\begin{pmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\3c_1&3c_2&3c_3\end{pmatrix}=27\det\begin{pmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{pmatrix}.\]
+Hene we know that $k=27$.
+\item We can add $-\frac{5}{7}$ times  of the third row the the second row without changing the value of determinant and do the same as the previous exercise and get the conclusion that $k=2\times 3\times 7=42$.
+\item See the following process.
+\[\det\begin{pmatrix}b_1+c_1&b_2+c_2&b_3+c_3\\a_1+c_1&a_2+c_2&a_3+c_3\\a_1+b_1&a_2+b_2&a_3+b_3\end{pmatrix}=-\det\begin{pmatrix}-(b_1+c_1)&-(b_2+c_2)&-(b_3+c_3)\\a_1+c_1&a_2+c_2&a_3+c_3\\a_1+b_1&a_2+b_2&a_3+b_3\end{pmatrix}\]
+\[=-2\det\begin{pmatrix}a_1&a_2&a_3\\a_1+c_1&a_2+c_2&a_3+c_3\\a_1+b_1&a_2+b_2&a_3+b_3\end{pmatrix}=-2\det\begin{pmatrix}a_1&a_2&a_3\\c_1&c_2&c_3\\b_1&b_2&b_3\end{pmatrix}\]
+\[=2\det\begin{pmatrix}a_1&a_2&a_3\\b_1&b_2&b_3\\c_1&c_2&c_3\end{pmatrix}\]
+The first equality comes from adding one time the second row and one time the third row to the first column and the second equality comes from adding $-1$ time the first row to the second and the third row. Finally we interchange the second and the third row and multiply the determinant by $-1$. Hence $k$ would be $2$.
+\item The determinant should be $-12$ by following processes.
+\[\det\begin{pmatrix}0&1&2\\-1&0&-3\\2&3&0\end{pmatrix}\]
+\[=0\det\begin{pmatrix}0&-3\\3&0\end{pmatrix}-1\det\begin{pmatrix}-1&-3\\2&0\end{pmatrix}+2\det\begin{pmatrix}-1&0\\2&3\end{pmatrix}\]
+\[=0\times 9-1\times 6+2\times (-3)=-12\]
+\item The determinant should be $-13$.
+\item The determinant should be $-12$.
+\item The determinant should be $-13$.
+\item The determinant should be $22$.
+\item The determinant should be $4+2i$.
+\item The determinant should be $-3$.
+\item The determinant should be $154$.
+\item The determinant should be $-8$.
+\item The determinant should be $-168$.
+\item The determinant should be $0$.
+\item The determinant should be $36$.
+\item The determinant should be $-49$.
+\item The determinant should be $10$.
+\item The determinant should be $-28-i$.
+\item The determinant should be $17-3i$.
+\item The determinant should be $95$.
+\item The determinant should be $-100$.
+\item Use induction on $n$, the size of the matrix. For $n=1$, every $1\times 1$ matrix is upper triangular and we have the fact $\det\begin{pmatrix}a\end{pmatrix}=a$. Assuming the statement of this exercise holds for $n=k$, consider any $(n+1)\times (n+1)$ upper triangular matrix $A$. We can expand $A$ along the first row with the formula
+\[\det(A)=\sum_{j=1}^{n+1}{(-1)^{1+j}A_{1j}\det(\tilde{A}_{1j})}.\]
+And the matrix $\tilde{A}_{1j}$, $j\neq 1$, contains one zero collumn and hence has rank less than $n+1$. By the Corollary after Theorem 4.6 those matrix has determinant $0$. However, we have the matrix $\tilde{A}_{11}$ is upper triangular and by induction hypothesis we have 
+\[\det(\tilde{A}_{11})=\prod_{i=2}^{n+1}{A_{ii}}.\]
+So we know the original formula would be 
+\[\det(A)=A_{11}\det(\tilde{A}_{11})=\prod_{i=1}^{n+1}{A_{ii}}.\]
+\item Let $z$ be the zero row vector. Thus we have that 
+\[\det\begin{pmatrix}a_1\\a_2\\\vdots\\a_{r-1}\\z\\a_{r+1}\\\vdots\\a_n\end{pmatrix}=\det\begin{pmatrix}a_1\\a_2\\\vdots\\a_{r-1}\\0z\\a_{r+1}\\\vdots\\a_n\end{pmatrix}=0\det\begin{pmatrix}a_1\\a_2\\\vdots\\a_{r-1}\\z\\a_{r+1}\\\vdots\\a_n\end{pmatrix}=0\]
+\item Applies Theorem 4.3 to each row. Thus we have hat 
+\[\det\begin{pmatrix}ka_1\\ka_2\\\vdots\\ka_n\end{pmatrix}=k\det\begin{pmatrix}a_1\\ka_2\\\vdots\\ka_n\end{pmatrix}=\cdots =k^n\det\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix}.\]
+\item By the previous exercise the equality holds only when $n$ is even or $\mathbb{F}$ has characteristic $2$.
+\item If $A$ has two identical columns, then the matrix $A$ is not full-rank. By Corollary after Theorem 4.6 we know the determinant of $A$ should be $0$.
+\item The matrix $E_1$ can be obtained from $I$ by interchanging two rows. So by Theorem 4.5 the determinant should be $-1$. The matrix $E_2$ is upper triangular. By Exercise 4.2.23 the determinant should be $c$, the scalar by whom some row was multiplied. The matrix $E_3$ has determinant $1$ by Theorem 4.6.
+\item The elementary matrix of type $1$ and type $2$ is symmetric. So the statement holds naturally. Let $E$ be the elementary matrix of type $3$ of adding $k$ times of the $i$-th row to the $j$-th row. We know that $E^t$ is also an elementary matrix of type $3$. By the previous exercise we know that this kind of matrix must have determinant $1$.
+\item We can interchange the $i$-th row and the $(n+1-i)$-th row for all $i=1,2,\ldots \lfloor \frac{n}{2}\rfloor$\footnote{The symbol $\lfloor x\rfloor$ means the greatest integer $m$ such that $m\leq x$.}. Each process contribute $-1$ one time. So we have that 
+\[\det(B)=(-1)^{\lfloor \frac{n}{2}\rfloor}\det(A).\]
+\end{enumerate}

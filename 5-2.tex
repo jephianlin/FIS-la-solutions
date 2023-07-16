@@ -1,0 +1,145 @@
+\section{Diagonalizability}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. The matrix 
+\[\begin{pmatrix}1&0&0\\0&0&0\\0&0&0\end{pmatrix}\]
+has only two distinct \egva s but it's diagonalizable.
+\item No. The vectors $\begin{pmatrix}1\\0\end{pmatrix}$ and $\begin{pmatrix}2\\0\end{pmatrix}$ are both the \egve s of the matrix $\begin{pmatrix}1&0\\0&0\end{pmatrix}$ corresponding the same \egva{} $1$.
+\item No. The zero vector is not.
+\item Yes. If $x\in E_{\lambda_1}\cap E_{\lambda_2}$, we have $\lambda_1x=Ax=\lambda_2x$. It's possible only when $x=0$.
+\item Yes. By the hypothesis, we know $A$ is diagonalizable. Say $A=P^{-1}DP$ for some invertible matrix $P$ and some diagonal matrix $D$. Thus we know that 
+\[Q^{-1}AQ=(PQ)^{-1}D(PQ).\]
+\item No. It need one more condition that the \charpoly{} spilts. For example, the matrix $\begin{pmatrix}2&1\\3&2\end{pmatrix}$ has no real \egva .
+\item Yes. Since it's a diagonalizable operator on nonzero vector space, it's \charpoly{} spilts with degree greater than or equal to $1$. So it has at least one zero.
+\item Yes. Because we have 
+\[W_i\cup \sum_{i\neq k}{W_k}=\{0\}\]
+and 
+\[\sum_{i\neq k}{W_k}=\{0\}\supset W_j\]
+for all $j\neq i$, we get the desired answer.
+\item No. For example, take $W_1=\sp\{(1,0)\}$, $W_2=\sp\{(0,1)\}$, and $W_3=\sp\{(1,1)\}$.
+\end{enumerate}
+\item For these question, see the direction of the subsection ``Test for Diagonalization''.
+\begin{enumerate}
+\item It's not diagonalizable since $\dim(E_1)$ is $1$ but not $2$.
+\item It's diagonalizable with $D=\begin{pmatrix}-2&0\\0&4\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1\cr -1 & 1\end{pmatrix}$.
+\item It's diagonalizable with $D=\begin{pmatrix}-2 & 0\cr 0 & 5\end{pmatrix}$ and $Q=\begin{pmatrix}4 & 1\cr -3 & 1\end{pmatrix}$.
+\item It's diagonalizable with $D=\begin{pmatrix}3 & 0 & 0\cr 0 & 3 & 0\cr 0 & 0 & -1\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 0 & 2\cr 1 & 0 & 4\cr 0 & 1 & 3\end{pmatrix}$.
+\item It's not diagonalizable since its \charpoly{} does not split.
+\item It's not diagonalizable since $\dim(E_1)$ is $1$ but not $2$.
+\item It's diagonalizable with $D=\begin{pmatrix}4 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 2\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1 & 0\cr 2 & 0 & 1\cr -1 & -1 & -1\end{pmatrix}$.
+\end{enumerate}
+\item For these question, we may choose arbitrary matrix representation, usually use the standard basis, and do the same as what we did in the previous exercises. So here we'll have $[T]_{\beta}=D$ and the set of column vectors of $Q$ is the ordered basis $\beta$.
+\begin{enumerate}
+\item It's not diagonalizable since $\dim(E_0)$ is $1$ but not $4$.
+\item It's diagonalizable with $D=\begin{pmatrix}-1 & 0 & 0\cr 0 & 1 & 0\cr 0 & 0 & 1\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1 & 0\cr 0 & 0 & 1\cr -1 & 1 & 0\end{pmatrix}$.
+\item It's not diagonalizable since its \charpoly{} does not split.
+\item It's diagonalizable with $D=\begin{pmatrix}1 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 0\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1 & 1\cr 1 & 1 & -1\cr -1 & 0 & 0\end{pmatrix}$.
+\item It's diagonalizable with $D=\begin{pmatrix}1-i & 0\cr 0 & i+1\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1\cr -1 & 1\end{pmatrix}$.
+\item It's diagonalizable with $D=\begin{pmatrix}-1 & 0 & 0 & 0\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$ and $Q=\begin{pmatrix}0 & 1 & 0 & 0\cr 1 & 0 & 1 & 0\cr -1 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$.
+\end{enumerate}
+\item It's not funny again. Replace the character $T$ by the character $A$ in that prove.
+\item It's not funny again and again. Replace the character $T$ by the character $A$ in that prove.
+\item \begin{enumerate}
+\item An operator $T$ is diagonalizable ensure that its \charpoly{} splits by Theorem 5.6. And in this situation Theorem 5.9(a) ensure that the multiplicity of each \egva{} meets the dimension of the corresponding eigenspace. Conversly, if the \charpoly{} splits and the multiplicity meets the dimension, then the operator will be diagonalizable by Theorem 5.9(a).
+\item Replace $T$ by $A$ again.
+\end{enumerate}
+\item Diagonalize the matrix $A$ by $Q^{-1}AQ=D$ with $D=\begin{pmatrix}5 & 0\cr 0 & -1\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 2\cr 1 & -1\end{pmatrix}$. So we know that 
+\[A^n=QD^nQ^{-1}=Q\begin{pmatrix}5^n & 0\cr 0 & (-1)^n\end{pmatrix}Q^{-1}.\]
+\item We know that $\dim(E_{\lambda_2})\geq 1$. So pick a nonzero vector $v\in E_{\lambda_2}$. Also pick a basis $\beta $ for $E_{\lambda_2}$. Then $\alpha=\beta\cup \{v\}$ forms a basis consisting of eigenvectors. It's a basis because the cardinality is $n$ and the help of Theorem 5.8.
+\item \begin{enumerate}
+\item Because the \charpoly{} of $T$ is independent of the choice of $\beta $, we know that the \charpoly{} 
+\[f(t)=\det([T]_{\beta}-tI)=\prod_{i=1}^n{(([T]_{\beta})_{ii}-t)}\]
+splits, where the second equality holds since it's a upper triangular matrix.
+\item The \charpoly{} of a matrix is also the same for all matrices which is similar to the original matrix.
+\end{enumerate}
+\item This is because the equality in Exercise 5.2.9(a). That is, if $[T]_{\beta }$ is an upper triangular matrix, it's diagonal entries are the set of zeroes of the \charpoly{}.
+\item \begin{enumerate}
+\item Since \egva s are the zeroes of the \charpoly{}, we may write the \charpoly{} $f(t)$ as 
+\[(\lambda_1-t)^{m_1}(\lambda_2-t)^{m_2}\cdots (\lambda_k-t)^{m_k}.\]
+Calculate the coefficient of $t^{n-1}$ and use the fact in Exercise 5.1.21(b). Thus we could get the desired conclusion.
+\item Use the equality in the previous exercise and calculate the coefficient of the constant term. Compare it to the Exercise 5.1.20.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $E_{\lambda}$ be the eigenspace of $T$ corresponding to $\lambda$ and $E_{\lambda^{-1}}$ be the eigenspace of $T^{-1}$ corresponding to $\lambda^{-1}$. We want to prove the two spaces are the same. If $v\in E_{\lambda}$, we have $T(v)=\lambda v$ and so $v=\lambda T^{-1}(v)$. This means $T^{-1}(v)=\lambda^{-1}v$ and $v\in E_{\lambda^{-1}}$. Conversely, if $v\in E_{\lambda^{-1}}$, we have $T^{-1}(v)=\lambda^{-1}v$ and so $v=\lambda^{-1} T(v)$. This means $T(v)=\lambda v$ and $v\in E_{\lambda}$.
+\item By the result of the previous exercise, if $T$ is diagonalizable and invertible, the basis consisting of \egve s of $T$ will also be the basis consisting of \egve s of $T^{-1}$.
+\end{enumerate}
+\item \begin{enumerate}
+\item For matrix $A=\begin{pmatrix}1&0\\1&0\end{pmatrix}$, corresponding to the same eigenvalue $0$ we have $E_0=\sp\{(0,1)\}$ is the eigenspace for $A$ while $E_0=\sp\{(1,-1)\}$ is the eigenspace for $A^t$.
+\item Observe that 
+\[\dim(E_\lambda)=\nul(A-\lambda I)=\nul((A-\lambda I)^t)\]
+\[=\nul(A^t-\lambda I)=\dim(E_\lambda').\]
+\item If $A$ is diagonalizable, then its \charpoly{} splits and the multiplicity meets the dimension of the corresponding eigenspace. Since $A$ and $A^t$ has the same \charpoly{}, the \charpoly{} of $A^t$ also splits. And by the precious exercise we know that the multiplicity meets the dimension of the corresponding eigenspace in the case of $A^t$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $v=(x,y)$ and $v'=(x',y')$ and $A=\begin{pmatrix}1&1\\3&-1\end{pmatrix}$. We may write the system of equation as $Av=v'$. We may also diagonalize the matrix $A$ by $Q^{-1}AQ=D$ with $D=\begin{pmatrix}-2 & 0\cr 0 & 2\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1\cr -3 & 1\end{pmatrix}$. This means $D(Q^{-1}v)=(Q^{-1}v)'$. So we know that 
+\[Q^{-1}v=\begin{pmatrix}c_1e^{-2t}\\c_2e^{2t}\end{pmatrix}\]
+and
+\[v=Q\begin{pmatrix}c_1e^{-2t}\\c_2e^{2t}\end{pmatrix},\]
+where $c_i$ is some scalar for all $i$.
+\item Calculate $D=\begin{pmatrix}3 & 0\cr 0 & -2\end{pmatrix}$ and $Q=\begin{pmatrix}2 & 1\cr -1 & -1\end{pmatrix}$. So we have 
+\[v=Q\begin{pmatrix}c_1e^{3t}\\c_2e^{-2t}\end{pmatrix},\]
+where $c_i$ is some scalar for all $i$.
+\item Calculate $D=\begin{pmatrix}1 & 0 & 0\cr 0 & 1 & 0\cr 0 & 0 & 2\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 0 & 1\cr 0 & 1 & 1\cr 0 & 0 & 1\end{pmatrix}$. So we have 
+\[v=Q\begin{pmatrix}c_1e^{t}\\c_2e^{t}\\c_3e^{2t}\end{pmatrix},\]
+where $c_i$ is some scalar for all $i$.
+\end{enumerate}
+\item Following the step of the previous exercise, we may pick a matrix $Q$ whose column vectors consist of eigenvectors and $Q$ is invertible. Let $D$ be the diagonal matrix $Q^{-1}AQ$. And we also know that finally we'll have the solution $x=Qu$ for some vector $u$ whose $i$-th entry is $c_ie^{\lambda}$ if the $i$-th column of $Q$ is an \egve{} corresponding to $\lambda$. By denoting  $\bar{D}$ to be the diagonal matrix with $\bar{D}_{ii}=e^{D_{ii}}$, we may write $x=Q\bar{D}y$. where the $i$-th entry of $y$ is $c_i$. So the solution must be of the form described in the exercise. 
+
+For the second statement, we should know first that the set 
+\[\{e^{\lambda_1t},e^{\lambda_2t},\ldots e^{\lambda_kt}\}\]
+are linearly independent in the space of real functions. Since $Q$ invertible, we know that the solution set 
+\[\{Q\bar{D}y:y\in \R^n\}\]
+is an $n$-dimensional real vector space.
+\item Directly calculate that 
+\[(CY)'_{ij}=(\sum_{k=1}^n{C_{ik}Y_{kj}})'\]
+\[=\sum_{k=1}^n{C_{ik}Y_{kj}'}=CY'.\]
+\item \begin{enumerate}
+\item We may pick one basis $\alpha $ such that both $[T]_{\alpha}$ and $[U]_{\alpha}$ are diagonal. Let $Q=[I]_{\alpha}^{\beta}$. And we will find out that 
+\[[T]_{\alpha}=Q^{-1}[T]_{\beta}Q\]
+and 
+\[[U]_{\alpha}=Q^{-1}[U]_{\beta}Q.\]
+\item Let $Q$ be the invertible matrix who makes $A$ and $B$ simultaneously diagonalizable. Say $\beta $ be the basis consisting of the column vectors of $Q$. And let $\alpha $ be the standard basis. Now we know that 
+\[[T]_{\beta}=[I]_{\alpha}^{\beta}[T]_{\alpha}[I]_{\beta}^{\alpha}=Q^{-1}AQ\]
+and 
+\[[U]_{\beta}=[I]_{\alpha}^{\beta}[U]_{\alpha}[I]_{\beta}^{\alpha}=Q^{-1}BQ.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $\beta $ be the basis makes $T$ and $U$ simultaneously diagonalizable. We know that each pair of diagonal matrices commute. So we have 
+\[[T]_{\beta}[U]_{\beta}=[U]_{\beta}[T]_{\beta}.\]
+And this means $T$ and $U$ commute.
+\item Let $Q$ be the invertible matrix who makes $A$ and $B$ simultaneously diagonalizable. Thus we have 
+\[(Q^{-1}AQ)(Q^{-1}BQ)=(Q^{-1}BQ)(Q^{-1}AQ).\]
+And this means that $A$ and $B$ commute since $Q$ is invertible.
+\end{enumerate}
+\item They have the same eigenvectors by Exercise 5.1.15.
+\item Since we can check that
+\[W_1\oplus W_2 \oplus W_3=(W_1\oplus W_2)\oplus W_3,\]
+if $V$ is direct sum of $W_1,W_2,\ldots W_k$, the dimension of $V$ would be the sum of the dimension of each $W_i$ by using Exercise 1.6.29(a) inductively. 
+
+Conversely, we first prove that if we have 
+\[\sum_{i=1}^k{W_i}=V,\]
+then we must have 
+\[\dim(V)\leq \sum_{i=1}^k{\dim(W_i)}.\]
+We induct on $k$. For $k=2$, we may use the formula in Exercise 1.6.29(a). Suppose it holds for $k=m$. We know that 
+\[(\sum_{i=1}^{m-1}{W_i})+W_m=\sum_{i=1}^m{W_i}\]
+and 
+\[\dim(\sum_{i=1}^m{W_i})\leq \dim(\sum_{i=1}^{m-1}{W_i})+\dim(W_m)\leq \sum_{i=1}^m{\dim(W_i)}\]
+by induction hypothesis and the case for $k=2$.
+
+To prove the original statement, suppoe, by contradiction, that 
+\[W_1\cap \sum{i=2}^k{W_i}\]
+has nonzero element. By the formula in Exercise 1.6.29(a) we know that 
+\[\dim(\sum{i=2}^k{W_i})>\dim(V)-\dim(W_1)=\sum_{i=2}^k{\dim(W_i)}.\]
+This is impossible, so we get the desired result.
+\item Because $\beta $ is a basis, we have 
+\[\sum_{i=1}^k{\sp(\beta_i)}=V.\]
+Second, since the dimension of $\sp(\beta_i)$ is the number of element of $\beta_i$, we know that the equality in the previous exercise about dimension holds. So $V$ is the direct sum of them.
+\item By the definition of the left hand side, it is the sum of each eigenspaces. Let $W=\sum_{i=2}^k{E_{\lambda_i}}$. If there is some nonzero vector $v_1$ in $E_{\lambda_1}\cap W$. We may write 
+\[v_1+c_2v_2+c_3v_3+\cdots +c_kv_k=0\]
+for some scalar $c_i$ and some eigenvectors $v_i\in E_{\lambda_i}$. Now we know that 
+\[0=T(0)=\lambda_1v_1+c_2\lambda_2v_2+c_3\lambda_3v_3+\cdots +c_k\lambda_kv_k=0.\]
+After substracting this equality by $\lambda_1$ times the previous equality, we get 
+\[c_2(\lambda_2-\lambda_1)v_2+\cdots +c_k(\lambda_k-\lambda_1)v_k=0.\]
+This is impossible since $\lambda_i-\lambda_1$ is nonzero for all $i$ and $c_i$ cannot be all zero. Similarly we know that $E_{\lambda_i}$ has no common element other than zero with the summation of other eigenspaces. So the left hand side is the direct sum of each eigenspaces.
+\item It's enough to check whether $K_1$ has common nonzero element with the summation of others or not. Thus we can do similarly for the other cases. Let $V_1$ be the summation of $K_2,K_3,\ldots ,K_p$. Now, if there is some nonzero vector $x\in K_1(V_1\cap W_2)$, we may assume that $x=u+v$ with $u\in V_1$ and $v\in W_2$. Since $W_1$ is the direct sum of all $K_i$'s, we know $K_1\cap V_1=\{0\}$. So $x-u=v\neq 0$ is an element in both $W_1$ and $W_2$, a contradiction. Thus we've completed the proof.
+\end{enumerate}

@@ -1,0 +1,71 @@
+\section{Subspaces}
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item No. This should make sure that the field and the operations of $V$ and $W$ are the same. Otherwise for example, $V=\mathbb{R}$ and $W=\mathbb{Q}$ respectly. Then $W$ is a vector space over $\mathbb{Q}$ but not a space over $\mathbb{R}$ and so not a subspace of $V$. 
+\item No. We should have that any subspace contains $0$.
+\item Yes. We can choose $W=0$.
+\item No. Let $V=\mathbb{R}$, $E_0=\{0\}$ and $E_1=\{1\}$. Then we have $E_0 \cap E_1=\emptyset$ is not a subspace.
+\item Yes. Only entries on diagonal could be nonzero.
+\item No. It's the summation of that.
+\item No. But it's called isomorphism. That is, they are the same in view of structure.
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item $\left(\begin{array}{cc}-4&5\\2&-1\end{array}\right)$ with tr$=-5$.
+\item $\left(\begin{array}{cc}0&3\\8&4\\-6&7\end{array}\right)$.
+\item $\left(\begin{array}{ccc}-3&0&6\\9&-2&1\end{array}\right)$.
+\item $\left(\begin{array}{ccc}10&2&-5\\0&-4&7\\-8&3&6\end{array}\right)$ with tr$=12$.
+\item $\left(\begin{array}{c}1\\-1\\3\\5\end{array}\right)$.
+\item $\left(\begin{array}{cc}-2&7\\5&0\\1&1\\4&-6\end{array}\right)$.
+\item $\left(\begin{array}{ccc}5&6&7\end{array}\right)$.
+\item $\left(\begin{array}{ccc}-4&0&6\\0&1&-3\\6&-3&5\end{array}\right)$ with tr$=2$.
+\end{enumerate}
+\item Let $M=aA+bB$ and $N=aA^t+bB^t$. Then we have $M_{ij}=aA_{ij}+bB_{ij}=N_{ji}$ and so $M^t=N$.
+\item We have $A^t_{ij}=A_{ji}$ and so $A^t_{ji}=A_{ij}$.
+\item By the previous exercises we have $(A+A^t)^t=A^t+(A^t)^t=A^t+A$ and so it's symmetric.
+\item We have that tr\((aA+bB)=\sum_{i=1}^n{aA_{ii}+bB_{ii}}=a\sum_{i=1}^n{A_{ii}}+b\sum_{i=1}^n{B_{ii}}=a$tr$(A)+b$tr$(B)\).
+\item If $A$ is a diagonal matrix, we have $A_{ij}=0=A_{ji}$ when $i\neq j$.
+\item Just check whether it's closed under addition and scalar multiplication and whether it contains $0$. And here $s$ and $t$ are in $\mathbb{R}$.
+\begin{enumerate}
+\item Yes. It's a line $t(3,1,-1)$.
+\item No. It contains no $(0,0,0)$.
+\item Yes. It's a plane with normal vector $(2,-7,1)$.
+\item Yes. It's a plane with normal vector $(1,-4,-1)$.
+\item No. It contains no $(0,0,0)$.
+\item No. We have both $(\sqrt{3},\sqrt{5},0)$ and $(0,\sqrt{6},\sqrt{3})$ are elements of $W_6$ but their sum $(\sqrt{3},\sqrt{5}+\sqrt{6},\sqrt{3})$ is not an element of $W_6$.
+\end{enumerate}
+\item We have $W_1 \cap W_3=\{0\}$, $W_1 \cap W_4=W_1$, and $W_3 \cap W_4$ is a line $t(11,3,-1)$.
+\item We have $W_1$ is a subspace since it's a plane with normal vector $(1,1,\dots ,1)$. But this should be checked carefully. And since $0\notin W_2$, $W_2$ is not a subspace.
+\item No in general but Yes when $n=1$. Since $W$ is not closed under addition. For example, when $n=2$, $(x^2+x)+(-x^2)=x$ is not in $W$.
+\item Directly check that sum of two upper triangular matrix and product of one scalar and one upper triangular matrix are again uppe triangular matrices. And of course zero matrix is upper triangular.
+\item It's closed under addition since $(f+g)(s_0)=0+0=0$. It's closed under scalar multiplication since $cf(s_0)=c 0=0$. And zero function is in the set.
+\item It's closed under addition since the number of nonzero points of $f+g$ is less than the number of union of nonzero points of $f$ and $g$. It's closed under scalar multiplication since the number of nonzero points of $cf$ equals to the number of $f$. And zero function is in the set.
+\item Yes. Since sum of two differentiable functions and product of one scalar and one differentiable function are again differentiable. The zero function is differentiable.
+\item If $f^{(n)}$ and $g^{(n)}$ are the $n$th derivative of $f$ and $g$. Then $f^{(n)}+g^{(n)}$ will be the $n$th derivative of $f+g$. And it will continuous if both $f^{(n)}$ and $g^{(n)}$ are continuous. Similarly $cf^{(n)}$ is the $n$th derivative of $cf$ and it will be continuous. This space has zero function as the zero vector.
+\item There are only one condition different from that in Theorem 1.3. If $W$ is a subspace, then $0\in W$ implies $W\neq \emptyset$. If $W$ is a subset satisfying the conditions of this question, then we can pick $x\in W$ since it't not empty and the other condition assure $0x=0$ will be a element of $W$.
+\item We may compare the conditions here with the conditions in Theorem 1.3. First let $W$ be a subspace. We have $cx$ will be contained in $W$ and so is $cx+y$ if $x$ and $y$ are elements of $W$. Second let $W$ is a subset satisfying the conditions of this question. Then by picking $a=1$ or $y=0$ we get the conditions in Theorem 1.3.
+\item It's easy to say that is sufficient since if we have $W_1\subset W_2$ or $W_2\subset W_1$ then the union of $W_1$ and $W_2$ will be $W_1$ or $W_2$, a space of course. To say it's necessary we may assume that neither $W_1\subset W_2$ nor $W_2\subset W_1$ holds and then we can find some $x\in W_1\backslash W_2$ and $y\in W_2\backslash W_1$. Thus by the condition of subspace we have $x+y$ is a vector in $W_1$ or in $W_2$, say $W_1$. But this will make $y=(x+y)-x$ should be in $W_1$. It will be contradictory to the original hypothesis that $y\in W_2\backslash W_1$.
+\item We have that $a_i w_i\in W$ for all $i$. And we can get the conclusion that $a_1w_1$, $a_1w_1+a_2w_2$, $a_1w_1+a_2w_2+a_3w_3$ are in $W$ inductively.
+\item In calculus course it will be proven that $\{a_n+b_n\}$ and $\{ca_n\}$ will converge. And zero sequence, that is sequence with all entris zero, will be the zero vector.
+\item The fact that it's closed has been proved in the previous exercise. And a zero function is either a even function or odd function.
+\item 
+\begin{enumerate}
+\item We have $(x_1+x_2)+(y_1+y_2)=(x_1+y_1)+(x_2+y_2)\in W_1+W_2$ and $c(x_1+x_2)=cx_1+cx_2\in W_1+W_2$ if $x_1,y_1\in W_1$ and $x_2,y_2\in W_2$. And we have $0=0+0\in W_1+W_2$. Finally $W_1=\{x+0:x\in W_1, 0\in W_2\}\subset W_1+W_2$ and it's similar for the case of $W_2$.
+\item If $U$ is a subspace contains both $W_1$ and $W_2$ then $x+y$ should be a vector in $U$ for all $x\in W_1$ and $y\in W_2$.
+\end{enumerate}
+\item It's natural that $W_1\cap W_2=\{0\}$. And we have $\mathbb{F}^n=\{(a_1,a_2,\dots ,a_n):a_i\in \mathbb{F}\}=\{(a_1,a_2,\dots ,a_{n-1},0)+(0,0,\dots ,a_n):a_i\in \mathbb{F}\}=W_1\oplus W_2$.
+\item This is similar to the exercise 1.3.24.
+\item This is similar to the exercise 1.3.24.
+\item This is similar to the exercise 1.3.24.
+\item By the previous exercise we have $(M_1+M_2)^t=M_1^t+M_2^t=-(M_1+M_2)$ and $(cM)^t=cM^t=-cM$. With addition that zero matrix is skew-symmetric we have the set of all skew-symmetric matrices is a space. We have $M_{n\times n}(\mathbb{F})=\{A:A \in M_{n\times n}(\mathbb{F})\}=\{(A+A^t)+(A-A^t):A \in M_{n\times n}(\mathbb{F})\}=W_1+ W_2$ and $W_1\cap W_2=\{0\}$. The final equality is because $A+A^t$ is symmetric and $A-A^t$ is skew-symmetric. If $\mathbb{F}$ is of characteristic 2, we have $W_1=W_2$.
+\item It's easy that $W_1\cap W_2=\{0\}$. And we have $M_{n\times n}(\mathbb{F})=\{A:A \in M_{n\times n}(\mathbb{F})\}=\{(A-B(A))+B(A):A \in M_{n\times n}(\mathbb{F})\}=W_1+ W_2$, where $B(A)$ is the matrix with $B_{ij}=B_{ji}=A_{ij}$ if $i\leq j$.
+\item If $V=W_1\oplus W_2$ and some vector $y\in V$ can be represented as $y=x_1+x_2=x'_1+x'_2$, where $x_1,x'_1\in W_1$ and $x_2,x'_2\in W_2$, then we have $x_1-x'_1\in W_1$ and $x_1-x'_1=x_2+x'_2 \in W_2$. But since $W_1\cap W_2=\{0\}$, we have $x_1=x'_1$ and $x_2=x'_2$. Conversely, if each vector in $V$ can be uniquely written as $x_1+x_2$, then $V=W_1+W_2$. Now if $x\in W_1\cap W_2$ and $x\neq 0$, then we have that $x=x+0$ with $x\in W_1$ and $0\in W_2$ or $x=0+x$ with $0\in W_1$ and $x\in W_2$, a contradiction.
+\item 
+\begin{enumerate}
+\item If $v+W$ is a space, we have $0=v+(-v)\in v+W$ and thus $-v\in W$ and $v\in W$. Conversely, if $v\in W$ we have actually $v+W=W$, a space. 
+\item We can proof that $v_1+W=v_2+W$ if and only if $(v_1-v_2)+W=W$. This is because $(-v_1)+(v_1+W)=\{-v+v+w:w\in W\}=W$ and $(-v_1)+(v_2+W)=\{-v_1+v_2+w:w\in W\}=(-v_1+v_2)+W$. So if $(v_1-v_2)+W=W$, a space, then we have $v_1-v_2\in W$ by the previous exercise. And if $v_1-v_2\in W$ we can conclude that $(v_1-v_2)+W=W$.
+\item We have $(v_1+W)+(v_2+W)=(v_1+v_2)+W=(v'_1+v'_2)+W=(v'_1+W)+(v'_2+W)$ since by the previous exercise we have $v_1-v'_1\in W$ and $v_2-v'_2\in W$ and thus $(v_1+v_2)-(v'_1+v'_2)\in W$. On the other hand, since $v_1-v'_1\in W$ implies $av_1-av'_1=a(v_1-v'_1)\in W$, we have $a(v_1+W)=a(v'_1+W)$.
+\item It closed because $V$ is closed. The commutativeity and associativity of addition is also because $V$ is commutative and associative. For the zero element we have $(x+W)+W=x+W$. For the inverse element we have $(x+W)+(-x+W)=W$. For the identity element of multiplication we have $1(x+W)=x+W$. The distribution law and combination law are also followed by the original propositions in $V$. But there are one more thing should be checked, that is whether it is well-defined. But this is the exercise 1.3.31.(c).
+\end{enumerate}
+\end{enumerate}

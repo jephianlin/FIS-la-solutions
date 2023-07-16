@@ -1,0 +1,218 @@
+\section{The Gram-Schmidt Orthogonalization Process and Orthogonal Complements}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. It should be at least an independent set.
+\item Yes. See Theorem 6.5.
+\item Yes. Let $W$ be a subspace. If $x$ and $y$ are elements in $W^{\perp }$ and $c$ is a scalar, we have 
+\[\lag x+y,w\rag =\lag x,w\rag +\lag y,w\rag =0\]
+and 
+\[\lag cx,w\rag =c\lag x,w\rag =0\]
+for all $w$ in $W$. 
+Furthermore, we also have $\lag 0, w\rag =0$ for all $w\in W$.
+\item No. The basis should be orthonormal.
+\item Yes. See the definition of it.
+\item No. The set $\{0\}$ is orthogonal but not independent.
+\item Yes. See the Corollary 2 after Theorem 6.3.
+\end{enumerate}
+\item The answers here might be different due to the different order of vectors chosen to be orthogonalized. \begin{enumerate}
+\item Let 
+\[S=\{w_1=(1,0,1),w_2=(0,1,1),w_3=(1,3,3)\}.\]
+Pick $v_1=w_1$. Then construct 
+\[v_2=w_2-\frac{\lag w_2,v_1\rag}{\|v_1\|^2}v_1\]
+\[=w_2-\frac{1}{2}v_1=(-\frac{1}{2},1,\frac{1}{2}).\]
+And then construct 
+\[v_3=w_3-\frac{\lag w_3,v_1\rag}{\|v_1\|^2}v_1-\frac{\lag w_3,v_2\rag}{\|v_2\|^2}v_2\]
+\[=w_3-\frac{4}{2}v_1-\frac{4}{\frac{3}{2}}v_2=(\frac{1}{3},\frac{1}{3},-\frac{1}{3}).\]
+As the demand in the exercise, we normalize $v_1$, $v_2$, and $v_3$ to be 
+\[u_1=(\frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}}),\]
+\[u_2=(-\frac{1}{\sqrt{6}},\frac{4}{\sqrt{6}},\frac{1}{\sqrt{6}}),\]
+\[u_3=(\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}}).\]
+Let $\beta =\{u_1,u_2,u_3\}$. Now we have two ways to compute the Fourier coefficients of $x$ relative to $\beta $. One is to solve the system of equations 
+\[a_1u_1+a_2u_2+a_3u_3=x\]
+and get 
+\[x=\frac{3}{\sqrt{2}}u_1+\frac{3}{\sqrt{6}}u_2+0u_3.\]
+The other is to calculate the $i$-th Fourier coefficient 
+\[a_i=\lag x,u_i\rag \]
+directly by Theorem 6.5. And the two consequences meet.
+\item Ur...don't follow the original order. Pick $w_1=(0,0,1)$, $w_2=(0,1,1)$, and $w_3=(1,1,1)$ and get the answer 
+\[\beta =\{(0,0,1),(0,1,0),(1,0,0)\}\]
+instantly. And easily we also know that the Fourier coefficients of $x$ relative to $\beta $ are $1,0,1$.
+\item The basis is 
+\[\beta=\{1,\sqrt{3}(2x-1),\sqrt{5}(6x^2-6x+1)\}.\]
+And the Fourier coefficients are $\frac{3}{2},\frac{\sqrt{3}}{6},0$.
+\item The basis is 
+\[\beta=\{\frac{1}{\sqrt{2}}(1,i,0),\frac{1}{2\sqrt{17}}(1+i,1-i,4i)\}.\]
+And the Fourier coefficients are $\frac{7+i}{\sqrt{2}},\sqrt{17}i$.
+\item The basis is 
+\[\beta=\{(\frac{2}{5},-\frac{1}{5},-\frac{2}{5},\frac{4}{5}),(-\frac{4}{\sqrt{30}},\frac{2}{\sqrt{30}},-\frac{3}{\sqrt{30}},\frac{1}{\sqrt{30}}),\]
+\[(-\frac{3}{\sqrt{155}},\frac{4}{\sqrt{155}},\frac{9}{\sqrt{155}},\frac{7}{\sqrt{155}})\}.\]
+And the Fourier coefficients are $10,3\sqrt{30},\sqrt{150}$.
+\item The basis is 
+\[\beta=\{(\frac{1}{\sqrt{15}},-\frac{2}{\sqrt{15}},-\frac{1}{\sqrt{15}},\frac{3}{\sqrt{15}}),(\frac{2}{\sqrt{10}},\frac{2}{\sqrt{10}},\frac{1}{\sqrt{10}},\frac{1}{\sqrt{10}}),\]
+\[(-\frac{4}{\sqrt{30}},\frac{2}{\sqrt{30}},\frac{1}{\sqrt{30}},\frac{3}{\sqrt{30}})\}.\]
+And the Fourier coefficients are $-\frac{3}{\sqrt{15}},\frac{4}{\sqrt{10}},\frac{12}{\sqrt{30}}$.
+\item The basis is 
+\[\beta=\{\begin{pmatrix}\frac{1}{2}&\frac{5}{6}\\-\frac{1}{6}&\frac{1}{6}\end{pmatrix},\begin{pmatrix}-\frac{\sqrt{2}}{3}&\frac{\sqrt{2}}{3}\\\frac{1}{\sqrt{2}}&-\frac{1}{3\sqrt{2}}\end{pmatrix},\begin{pmatrix}\frac{1}{\sqrt{2}}&-\frac{1}{3\sqrt{2}}\\\frac{\sqrt{2}}{3}&-\frac{\sqrt{2}}{3}\end{pmatrix}\}.\]
+And the Fourier coefficients are $24,6\sqrt{2},-9\sqrt{2}$.
+\item The basis is 
+\[\beta=\{\begin{pmatrix}\frac{2}{\sqrt{13}}&\frac{2}{\sqrt{13}}\\\frac{2}{\sqrt{13}}&\frac{1}{\sqrt{13}}\end{pmatrix},\begin{pmatrix}\frac{5}{7}&-\frac{2}{7}\\-\frac{4}{7}&\frac{2}{7}\end{pmatrix},\begin{pmatrix}\frac{8}{\sqrt{373}}&-\frac{8}{\sqrt{373}}\\\frac{7}{\sqrt{373}}&-\frac{14}{\sqrt{373}}\end{pmatrix}\}.\]
+And the Fourier coefficients are $5\sqrt{13},-14,\sqrt{373}$.
+\item The basis is
+\[\beta=\{\frac{\sqrt{2}\sin(t) }{\sqrt{\pi}},\frac{\sqrt{2}\cos(t)}{\sqrt{\pi}},\frac{\pi-4\sin(t) }{\sqrt{{\pi}^{3}-8\pi}}, \frac{8\cos(t) +2\pi t-{\pi}^{2}}{\sqrt{\frac{{\pi}^{5}}{3}-32\pi}}\}.\]
+And the Fourier coefficients are $\frac{\sqrt{2}( 2\pi+2) }{\sqrt{\pi}},-\frac{4\sqrt{2}}{\sqrt{\pi}},\frac{{\pi}^{3}+{\pi}^{2}-8\pi-8}{\sqrt{{\pi}^{3}-8\pi}},\frac{\frac{{\pi}^{4}-48}{3}-16}{\sqrt{\frac{{\pi}^{5}}{3}-32\pi}}$.
+\item The basis is 
+\[\{(\frac{1}{{2}^{\frac{3}{2}}},\frac{i}{{2}^{\frac{3}{2}}},\frac{2-i}{{2}^{\frac{3}{2}}},-\frac{1}{{2}^{\frac{3}{2}}}),(\frac{3i+1}{2\sqrt{5}},\frac{i}{\sqrt{5}},-\frac{1}{2\sqrt{5}},\frac{2i+1}{2\sqrt{5}}),\]
+\[(\frac{i-7}{2\sqrt{35}},\frac{i+3}{\sqrt{35}},\frac{5}{2\sqrt{35}},\frac{5}{2\,\sqrt{35}})\}.\]
+And the Fourier coefficients are $6\sqrt{2},4\sqrt{5},2\sqrt{35}$.
+\item The basis is 
+\[\{(-\frac{4}{\sqrt{47}},\frac{3-2i}{\sqrt{47}},\frac{i}{\sqrt{47}},\frac{1-4i}{\sqrt{47}}),(\frac{3-i}{2\sqrt{15}},-\frac{5i}{2\sqrt{15}},\frac{2i-1}{\sqrt{15}},\frac{i+2}{2\sqrt{15}}),\]
+\[(\frac{-i-17}{2\sqrt{290}},\frac{8\,i-9}{2\sqrt{290}},\frac{8i-9}{\sqrt{290}},\frac{8i-9}{2\sqrt{290}})\}.\]
+And the Fourier coefficients are $-\sqrt{47}i-\sqrt{47},4\sqrt{15}i-2\sqrt{15},2\sqrt{290}i+2\sqrt{290}$.
+\item The basis is 
+\[\{\begin{pmatrix}\frac{1-i}{2\sqrt{10}}&\frac{-3i-2}{2\sqrt{10}}\\\frac{2i+2}{2\sqrt{10}}&\frac{i+4}{2\sqrt{10}}\end{pmatrix},\begin{pmatrix}\frac{3\sqrt{2}i}{5}&\frac{-i-1}{5\sqrt{2}}\\\frac{1-3i}{5\sqrt{2}}&\frac{i+1}{5\sqrt{2}}\end{pmatrix},\begin{pmatrix}\frac{-43i-2}{5\sqrt{323}}&\frac{1-21i}{5\sqrt{323}}\\-\frac{68i}{5\sqrt{323}}&\frac{34i}{5\sqrt{323}}\end{pmatrix}\}.\]
+And the Fourier coefficients are $2\sqrt{10}-6\sqrt{10}i,10\sqrt{2},0$.
+\item The basis is 
+\[\{\begin{pmatrix}\frac{i-1}{3\sqrt{2}}&-\frac{i}{3\sqrt{2}}\\\frac{2-i}{3\sqrt{2}}&\frac{3i+1}{3\sqrt{2}}\end{pmatrix},\begin{pmatrix}-\frac{4i}{\sqrt{246}}&\frac{-9i-11}{\sqrt{246}}\\\frac{5i+1}{\sqrt{246}}&\frac{1-i}{\sqrt{246}}\end{pmatrix},\begin{pmatrix}\frac{-118i-5}{\sqrt{39063}}&\frac{-26i-7}{\sqrt{39063}}\\-\frac{145i}{\sqrt{39063}}&-\frac{58}{\sqrt{39063}}\end{pmatrix}\}.\]
+And the Fourier coefficients are $3\sqrt{2}i+6\sqrt{2},-\sqrt{246}i-\sqrt{246},0$.
+\end{enumerate}
+\item Check that $\beta $ is an orthonormal basis. So we have the coefficients of $(3,4)$ are 
+\[(3,4)\cdot (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})=\frac{7}{\sqrt{2}}\]
+and 
+\[(3,4)\cdot (\frac{1}{\sqrt{2}},-\frac{1}{\sqrt{2}})=-\frac{1}{\sqrt{2}}.\]
+\item We may find the null space for the following system of equations
+\[(a,b,c)\cdot (1,0,i)=a-ci=0,\]
+\[(a,b,c)\cdot (1,2,1)=a+2b+c=0.\]
+So the solution set is $S^{\perp}=\sp\{(i,-\frac{1}{2}(1+i),1)\}.$
+\item We may thought $x_0$ as a direction, and thus $S_0^{\perp}$ is the plane orthogonal to it. Also, we may though the span of $x_1,x_2$ is a plane, and thus $S_0^{\perp}$ is the line orthogonal to the plane.
+\item Take $X$ to be the space generated by $W$ and $\{x\}$. Thus $X$ is also a finite-dimensional subspace. Apply Theorem 6.6 to $x$ in $X$. We know that $x$ could be uniquely written as $u+v$ with $u\in W$ and $v\in V^{\perp}$. Since $x\notin W$, we have $v\neq 0$. Pick $y=v$. And we have 
+\[\lag x,y\rag =\lag v,v\rag +\lag u,v\rag =\|v\|^2>0.\]
+\item The necessity comes from the definition of orthogonal complement, since every element in $\beta $ is an element in $W$. For the sufficiency, assume that $\lag z,v\rag =0$ for all $v\in \beta $. Since $\beta $ is a basis, every element in $W$ could be written as 
+\[\sum_{i=1}^k{a_iv_i},\]
+where $a_i$ is some scalar and $v_i$ is element in $\beta$. So we have 
+\[\lag z,\sum_{i=1}^k{a_iv_i}\rag =\sum_{i=1}^k{\overline{a_i}}\lag z,v_i\rag =0.\]
+Hence $z$ is an element in $W^{\perp}$.
+\item We apply induction on $n$. When $n=1$, the Gram-Schmidt process always preserve the first vector. Suppose the statement holds for $n\leq k$. Consider the a orthogonal set of nonzero vectors 
+\[\{w_1,w_2,\ldots ,w_k\}.\]
+By induction hypothesis, we know that the vectors $v_i=w_i$ for $i=1,2,\ldots ,k-1$, where $v_i$ is the vector derived from the process. Now we apply the process the find 
+\[v_n=w_n-\sum_{i=1}^{k-1}{\frac{\lag w_n,v_i\rag }{\|v_i\|^2}v_i}\]
+\[=w_n-0=w_n.\]
+So we get the desired result.
+\item The orthonormal basis for $W$ is the set consisting of the normalized vector $(i,0,1)$, $\{\frac{1}{\sqrt{2}}(i,0,1)\}$. To find a basis for $W^{\perp}$ is to find a basis for the null space of the following system of equations
+\[(a,b,c)\cdot (i,0,1)=-ai+c=0.\]
+The basis would be $\{(1,0,i),(0,1,0)\}$. It's lucky that it's orthogonal. If it's not, we should apply the Gram-Schmidt process to it. Now we get the orthonormal basis 
+\[\{\frac{1}{\sqrt{2}}(1,0,i),(0,1,0)\}\]
+by normalizing those elements in it.
+\item By Theorem 6.6, we know that $V=W\oplus W^{\perp}$ since $W\cap W^{\perp}=\{0\}$ by definition. So there's a nature projection $T$ on $W$ along $W^{\perp}$. That is, we know tht every element $x$ in $V$ could be writen as $u+v$ such that $u\in W$ and $v\in W^{\perp}$ and we define $T(x)=u$. Naturally, the null space $N(T)$ is $W^{\perp}$. And since $u$ and $v$ is always orthogonal, we have 
+\[\|x\|^2=\|u\|^2+\|v\|^2\geq \|u\|^2=\|T(x)\|^2\]
+by Exercise 6.1.10. And so we have 
+\[\|T(x)\|\leq \|x\|.\]
+\item Use the fact 
+\[(AA^*)_{ij}=\lag v_i,v_j\rag \]
+for all $i$ and $j$, where $v_i$ is the $i$-th row vector of $A$.
+\item If $x\in (R(L_{A^*}))^{\perp}$, this means that $x$ is orthogonal to $A*y$ for all $y\in \F^m$. So we have 
+\[0=\lag x,A^*y\rag =\lag Ax,y\rag \]
+for all $y$ and hence $Ax=0$ and $x\in N(L_A)$. Conversely, if $x\in N(L_A)$, we have $Ax=0$. And 
+\[\lag x,A*y\rag =\lag Ax,y\rag =0\]
+for all $y$. So $x$ is a element in $(R(L_{A^*}))^{\perp}$.
+\item \begin{enumerate}
+\item If $x\in S^{\perp}$ then we have that $x$ is orthogonal to all elements of $S$, so are all elements of $S_0$. Hence we have $x\in S_0^{\perp}$.
+\item If $x\in S$, we have that $x$ is orthogonal to all elements of $S^{\perp}$. This means $x$ is also an element in $(S^{\perp})^{\perp}$. And 
+\[\sp(S)\subset (S^{\perp})^{\perp}\]
+is because $\sp(S)$ is the smallest subspace containing $S$ and every orthogonal complement is a subspace.
+\item By the previous argument, we already have that $W\subset (W^{\perp})^{\perp}$. For the converse, if $x\notin W$, we may find $y\in W^{\perp}$ and $\lag x,y\rag \neq 0$. This means that $W\supset (W^{\perp})^{\perp}$.
+\item By Theorem 6.6, we know that $W=W+W^{\perp}$. And if $x\in W\cap W^{\perp}$, we have 
+\[\lag x,x\rag =\|x\|^2=0.\]
+Combine these two and get the desired conclusion.
+\end{enumerate}
+\item We prove the first equality first.  If $x\in (W_1+W_2)^{\perp}$, we have $x$ is orthogonal to $u+v$ for all $u\in W_1$ and $v\in W_2$. This means that $x$ is orthogonal to $u=u+0$ for all $u$ and so $x$ is an element in $W_1^{\perp}$. Similarly, $x$ is also an element in $W_2^{\perp}$. So we have 
+\[(W_1+W_2)^{\perp}\subset W_1\pp .\]
+Conversely, if $x\in W_1^{\perp}\cap W_2^{\perp}$, then we have 
+\[\lag x,u\rag =\lag x,v\rag =0\]
+for all $u\in W_1$ and $v\in W_2$. This means 
+\[\lag x,u+v\rag =\lag x,u\rag +\lag x,v\rag =0\]
+for all element $u+v\in W_1+W_2$. And so 
+\[(W_1+W_2)^{\perp}\supset W_1\pp .\]
+
+For the second equality, we have ,by Exercise 6.2.13(c), 
+\[(W_1\cap W_2)\pp =((W_1\pp)\pp\cap (W_2\pp )\pp )\pp \]
+\[=((W_1\pp+W_2\pp)\pp )\pp=W_1\pp+W_2\pp .\]
+\item \begin{enumerate}
+\item By Theorem 6.5, we have 
+\[x=\sum_{i=1}^n{\lag x,v_i\rag v_i},y=\sum_{j=1}^n{\lag y,v_j\rag v_j}.\]
+Thus we have 
+\[\lag x,y\rag =\sum_{i,j}{\lag \lag x,v_i\rag v_i,\lag y,v_j\rag v_j \rag }\]
+\[=\sum_{i=1}^n{\lag \lag x,v_i\rag v_i,\lag y,v_i\rag v_i \rag }\]
+\[=\sum{i=1}^n{\lag x,v_i\rag \overline{\lag y,v_i\rag}}.\]
+\item The right hand side of the previous equality is the definition of the standard inner product of $\F^n$.
+\end{enumerate}
+\item \begin {enumerate}
+\item Let $W=\sp(S)$. If $u$ is an element in $W$, who is finite-dimensional, then by Exercise 6.2.15(a) we know that 
+\[\|u\|^2=\sum_{i=1}^n{|\lag u,v_i\rag |^2}.\]
+Now for a fixed $x$, we know that $W'=\sp(W\cup \{x\})$ is finite-dimensional. Applying Exercise 6.2.10, we have $T(x)\in W$ and $\|T(x)\|\leq \|x\|$. This means 
+\[\|x\|^2\geq \|T(x)\|^2=\sum_{i=1}^n{|\lag T(x),v_i\rag |^2}\]
+by our discussion above. Ultimately, by the definition of $T$, we have $x=T(x)+y$ for some $y$ who is orthogonal to all the elements in $W$. Thus we have 
+\[\lag x,v_i\rag =\lag T(x),v_i\rag +\lag y,v_i\rag =\lag T(x),v_i\rag .\]
+So the inequality holds.
+\item We've explained it.
+\end{enumerate}
+\item First, since $\lag T(x),y\rag =0$ for all $y$, we have $T(x)=0$. Applying this argument to all $x$ we get $T(x)=0$ for all $x$. For the second version, by Exercise 6.1.9 we know that $T(x)=0$ for all $x$ in some basis for $V$. And this means $T=T_0$ by Theorem 2.6.
+\item Let $f$ be an odd function. Then for every even funcion $g$ we have $fg$ is an odd function since 
+\[fg(t)=f(-t)g(-t)=-f(t)g(t).\]
+So the inner product of $f$ and $g$ is zero. This means $W_e\pp\supset W_o$. 
+
+Conversely, for every function $h$, we could write $h=f+g$, where 
+\[f(t)=\frac{1}{2}(h(t)+h(-t))\] and 
+\[g(t)=\frac{1}{2}(h(t)-h(-t)).\]
+If now $h$ is an element in $W_e\pp$, we have 
+\[0=\lag h,f\rag =\lag f,f\rag +\lag g,f\rag=\|f\|^2\]
+since $f$ is a even function. This means that $f=0$ and $h=g$, an element in $W_o$.
+\item Find an orthonormal basis for $W$ and use the formula in Theorem 6.6.
+\begin{enumerate}
+\item Pick $\{\frac{1}{\sqrt{17}}(1,4)\}$ as a basis for $W$. Thus the orthogonal projection of $u$ is 
+\[\lag u,\frac{1}{\sqrt{17}}(1,4)\rag \frac{1}{\sqrt{17}}(1,4)=\frac{26}{17}(1,4).\]
+\item Pick $\{\frac{1}{\sqrt{10}}(-3,1,0),\frac{1}{\sqrt{5}}(2,1,0)\}$ as a basis for $W$. Thus the orthogonal projection of $u$ is 
+\[\lag u,\frac{1}{\sqrt{10}}(-3,1,0)\rag \frac{1}{\sqrt{10}}(-3,1,0)+\lag,\frac{1}{\sqrt{35}}(1,3,5)\rag \frac{1}{\sqrt{35}}(1,3,5)\]
+\[=-\frac{1}{2}(-3,1,0)+\frac{4}{7}(1,3,5)=\frac{1}{14}(29,17,40).\]
+\item Pick $\{1,\frac{1}{\sqrt{3}}(2x-1)\}$ as a basis for $W$. Thus the orthogonal projection of $h$ is 
+\[\lag h,1\rag 1+\lag h,\frac{1}{\sqrt{3}}(2x-1)\rag \frac{1}{\sqrt{3}}(2x-1)\]
+\[=\frac{29}{6}+\frac{1}{18}(2x-1)=\frac{1}{9}(x+43).\]
+\end{enumerate}
+\item If $v$ is the orthogonal projection of $u$, then the distance of $u$ is the length of $u-v$.
+\begin{enumerate}
+\item The distance is 
+\[\|(2,6)-\frac{26}{17}(1,4)\|=\frac{2}{\sqrt{17}}.\]
+\item The distance is 
+\[\|(2,1,3)-\frac{1}{14}(29,17,40)\|=\frac{1}{\sqrt{14}}.\]
+\item The distance is 
+\[\|(-2x^2+3x+4)-\frac{1}{9}(x+1)\|=\sqrt{\frac{30527}{1215}}.\]
+\end{enumerate}
+\item Do this with the same method as that in Exercise 6.2.19. Let $\{u_1,u_2,u_3\}$ be the orthonormal basis given by Example 5 of this section. Then the closest second-degree polynomial approximation is the orthogonal projection 
+\[\lag e^t,u_1\rag u_1+\lag e^t,u_2\rag u_2+\lag e^t,u_3\rag u_3\]
+\[=\frac{1}{4}[(15e-105e^{-1})t^2+12e^{-1}t-3e+33e^{-1}].\]
+\item \begin{enumerate}
+\item Use the Gram-Schmidt process to find a orthogonal basis $\{t,-\frac{6t-5\sqrt{t}}{5}\}$ and normalize it to be 
+\[\{\sqrt{3}t,-\sqrt{2}(6t-5\sqrt{t})\}.\]
+\item Do it as that we've done in Exercise 6.2.19. The approximation is 
+\[-\frac{20\sqrt{t}-45t}{28}.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $x(n),y(n),z(n)$ be sequences in the condition of inner product space. Since all of them has entry not zero in only finite number of terms, we may find an integer $N$ such that 
+\[x(n)=y(n)=z(n)\]
+for all $n\geq N$. But this means that all of them are vectors in $\F^N$. So it's an inner product.
+\item It's orthogonal since 
+\[\lag e_i,e_j\rag =\sum_{n=1}^{\infty}{e_i(n)\overline{e_j(n)}}\]
+\[=e_i(i)\overline{e_j(i)}+e_i(j)\overline{e_j(j)}=0.\]
+And it's orthonormal since 
+\[\lag e_i,e_i\rag =\sum_{n=1}^{\infty}{e_i(n)\overline{e_i(n)}}=e_i(i)\overline{e_i(i)}=1.\]
+\item \begin{enumerate}
+\item If $e_1$ is an element in $W$, we may write 
+\[e_1=a_1\sigma_1+a_2\sigma_2+\cdots +a_k\sigma_k,\]
+where $a_i$ is some scalar. But we may observe that $a_i$ must be zero otherwise the $i$-th entry of $e_1$ is nonzero, which is impossible. So this means that $e_1=0$. It's also impossible. Hence $e_1$ cannot be an element in $W$.
+\item If $a$ is a sequence in $W\pp$, we have $a(1)=-a(n)$ for all $i$ since 
+\[\lag a,\sigma_n\rag =a(1)+a(n)=0\]
+for all $i$. This means that if $a$ contains one nonzero entry, then all entries of $a$ are nonzero. This is impossible by our definition of the space $V$. Hence the only element in $W\pp$ is zero.
+
+On the other hand, we have $W\pp =\{0\}\pp =V$. But by the previous argument, we know that $W\neq V=(W\pp)\pp$.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}

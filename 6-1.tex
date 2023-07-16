@@ -1,0 +1,392 @@
+\section{Inner Products and Norms}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. It's the definition.
+\item Yes. See the paragraph at the beginning of this chapter.
+\item No. It's conjugate linear in the second component. For example, in $\C$ with standard inner product function we have $\lag i,i\rag =1$ but not $i\lag i,1\rag =-1$.
+\item No. We may define the inner product function $f$ on $\R$ to be $f(u,v)=2uv$.
+\item No. Theorem 6.2 does not assume that the dimension should be finite.
+\item No. We may define the conjugate-transpose of any matrix $A$ to be the conjugate of $A^t$.
+\item No. Let $x=(1,0)$, $y=(0,1)$, and $z=(0,-1)$. Then we have $\lag x,y\rag =\lag x,z\rag =0$.
+\item Yes. This means $\|y\|=\lag y,y\rag =0$.
+\end{enumerate}
+\item Compute 
+\[\lag x,y\rag =2\cdot (2+i)+(1+i)\cdot 2+i\cdot (1-2i)=8+5i,\] 
+\[\|x\|=\lag x,x\rag ^{\frac{1}{2}}=(4+2+1)^{\frac{1}{2}}=\sqrt{7},\]
+\[\|y\|=\lag y,y\rag ^{\frac{1}{2}}=(5+4+5)^{\frac{1}{2}}=\sqrt{14},\]
+and 
+\[\|x+y\|=\|(4-i,3+i,1+3i)\|=(17+10+10)^{\frac{1}{2}}=\sqrt{37}.\]
+We have the Cauchy-Schwarz inequality and the triangle inequality hold since
+\[|8+5i|=\sqrt{89}\leq \sqrt{7}\sqrt{14}=\sqrt{119}\]
+and 
+\[\sqrt{7}+\sqrt{14}\geq \sqrt{37}.\]
+\item As definition, compute
+\[\lag f,g\rag =\int_0^1{f(t)g(t)dt}=\int{tde^t}=te^t|_0^1-\int{e^tdt}=e-(e-1)=1,\]
+\[\|f\|=\int_0^1{f^2}=\frac{1}{3},\]
+\[\|g\|=\int_0^1{g^2}=\frac{1}{2}(e^2-1),\]
+and 
+\[\|f+g\|=\|t+e^t\|=(\|f\|^2+2\lag f,g\rag +\|g\|^2)^{\frac{1}{2}}\]
+\[=\frac{1}{9}+2+\frac{1}{4}(e^4-2e^2+1)=\frac{9e^4-18e^2+85}{36}.\]
+And the two inequalities hold since
+\[1\leq\frac{1}{3}\cdot \frac{1}{2}(e^2-1)\]
+and 
+\[\frac{9e^4-18e^2+85}{36}\geq \frac{1}{3}+\frac{1}{2}(e^2-1).\]
+\item \begin{enumerate}
+\item We prove the formula 
+\[\lag A,B\rag =\tr(B^*A)=\sum_{j=1}^n{(B^*A)_{jj}}=\sum_{j=1}^n{\sum_{i=1}^n{B^*_{ji}A_{ij}}}\]
+\[=\sum_{j=1}^n{\sum_{i=1}^n{A_{ij}\overline{B}_{ij}}}=\sum_{i=1}^n{\sum_{j=1}^n{A_{ij}\overline{B}_{ij}}}=\sum_{i,j}{A_{ij}\overline{B}_{ij}}.\]
+So we may view the space $M_{n\times n}(\F)$ to be $F^{n^2}$ and the Frobenius inner product is corresponding to the standard inner product in $F^{n^2}$.
+\item Also use the formule to compute
+\[\|A\|=(1+5+9+1)^{\frac{1}{2}}=4,\]
+\[\|B\|=(2+0+1+1)^{\frac{1}{2}}=2,\]
+and 
+\[\lag A,B\rag =(1-i)+0-3i-1=-4i.\]
+\end{enumerate}
+\item We prove the condition for an inner product space one by one.
+\begin{itemize}
+\item \[\lag x+z,y\rag =(x+z)Ay^*=xAY^*+zAy^*=\lag x,y\rag +\lag z,y\rag .\]
+\item \[\lag cx,y\rag =(cx)Ay^*=c(xAy^*)=c\lag x,y\rag .\]
+\item \[\overline{\lag x,y\rag }=(xAy^*)^*=yA^*x^*=yAx^*=\lag y,x\rag .\]
+One of the equality use the fact $A=A^*$.
+\item \[\lag x,x\rag =(x_1,x_2)A(x_1,x_2)^*=\|x_1\|^2+ix_1\overline{x_2}-ix_2\overline{x_1}+2\|x_2\|^2\]
+\[=\|x_1\|^2+2\mathrm{Re}(ix_1\overline{x_2})+2\|x_2\|^2\rag 0\]
+if $x_1$ or $x_2$ is not $0$. Here the function $\Re(z)$ means the real part of a complex number $z$.
+\end{itemize}
+So it's an inner product function. Also compute that 
+\[\lag x,y\rag =1(1-i)(2-i)+i(1-i)(3+2i)+(-i)(2+3i)(2-i)+2(2+3i)(3+2i)\]
+\[=(1-i)(2i)+(2+3i)(5+2i)=6+21i.\]
+\item \begin{enumerate}
+\item \[\lag x,y+z\rag =\overline{\lag y+z,x\rag }=\overline{\lag y,x\rag }+\overline{\lag z,x\rag }=\lag x,y\rag +\lag x,z\rag .\]
+\item \[\lag x,cy\rag =\overline{\lag cy,x\rag }=\overline{c\lag y,x\rag }=\overline{c}\lag x,y\rag .\]
+\item \[\lag x,0\rag =\overline{0}\lag x,0\rag =0\]
+and 
+\[\lag 0,x\rag =\overline{\lag x,0\rag }=0.\]
+\item If $x=0$, then $\lag 0,0\rag =0$ by previous rule. If $x\neq 0$, then $\lag x,x\rag >0$.
+\item If $\lag x,y\rag =\lag x,z\rag $ for all $x\in V$, we have $\lag x,y-z\rag =0$ for all $x\in V$. So we have $\lag y-z,y-z\rag =0$ and hence $y-z=0$.
+\end{enumerate}
+\item \begin{enumerate}
+\item \[\|cx\|=\lag cx,cx\rag ^{\frac{1}{2}}=(c\overline{c}\lag x,x\rag)^{\frac{1}{2}}=|c|\|x\|.\]
+\item This is the result of $\|x\|=\lag x,x\rag^{\frac{1}{2}}$ and Theorem 6.1(d).
+\end{enumerate}
+\item \begin{enumerate}
+\item The inner product of a nonzero vector $(1,1)$ and itself is $1-1=0$.
+\item Let $A=B=I_2$. We have 
+\[\lag 2A,B\rag=3\neq 2\lag A,B\rag =4.\]
+\item The inner product of a nonzero function $f(x)=1$ and itself is 
+\[\int_0^1{0\cdot 1dx}=0.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Represent $x$ to be a linear combination of $\beta$ as 
+\[x=\sum_{i=1}^k{a_iz_i},\]
+where $z_i$'s are elements in $\beta$. Then we have 
+\[\lag x,x\rag =\lag x,\sum_{i=1}^k{a_iz_i}\rag \]
+\[=\sum_{i=1}^k{\overline{a_i}\lag x,z_i\rag}=0\]
+and so $x=0$.
+\item This means that $\lag x-y,z\rag =0$ for all $z\in \beta$. So we have $x-y=0$ and $x=y$.
+\end{enumerate}
+\item Two vectors are orthogonal means that the inner product of them is $0$. So we have 
+\[\|x+y\|^2=\lag x+y,x+y\rag \]
+\[=\|x\|^2+\lag x,y\rag +\lag y,x\rag +\|y\|^2=\|x\|^2+ +\|y\|^2.\]
+To deduce the Pythagorean Theorem in $R^2$, we may begin by a right triangle $ABC$ with the right angle $B$. Assume that $x=AB$ and $y=BC$. Thus we know the length of two leg is $\|x\|$ and $\|y\|$. Finally we know $AC=x+y$ and so the length of the hypotenuse is $\|x+y\|$. Apply the proven equality and get the desired result.
+\item Compute that 
+\[\|x+y\|^2+\|x-y\|^2\]
+\[=(\|x\|^2+\lag x,y\rag +\lag y,x\rag +\|y\|^2)+(\|x\|^2-\lag x,y\rag -\lag y,x\rag +\|y\|^2)\]
+\[=2\|x\|^2+2\|y\|^2.\]
+This means that the sum of square of the four edges of a prallelogram is the sum of square of the two diagonals.
+\item Compute that 
+\[\|\sum_{i=1}^k{a_iv_i}\|^2=\lag \sum_{i=1}^k{a_iv_i}\rag \]
+\[=\sum_{i=1}^k{\|a_iv_i\|^2}+\sum_{i,j}\lag a_iv_i,a_jv_j\rag \]
+\[=\sum_{i=1}^k{|a_i|^2\|v_i\|}.\]
+\item Check those condition.
+\begin{itemize}
+\item \[\lag x+z,y\rag =\lag x+z,y\rag_1+\lag x+z,y\rag_2\]
+\[=\lag x,y\rag_1+\lag z,y\rag_1+\lag x,y\rag_2+\lag z,y\rag_2\]
+\[=\lag x,y\rag +\lag z,y\rag .\]
+\item \[\lag cx,y\rag =\lag cx,y\rag_1+\lag cx,y\rag_2\]
+\[=c\lag x,y\rag_1+c\lag x,y\rag_2=c\lag x,y\rag .\]
+\item \[\overline{\lag x,y\rag}=\overline{\lag x,y\rag_1}+\overline{\lag x,y\rag_2}\]
+\[=\lag y,x\rag_1+\lag y,x\rag_2=\lag y,x\rag .\]
+\item \[\lag x,x\rag =\lag x,x\rag_1+\lag x,x\rag_2>0\]
+if $x\neq 0$.
+\end{itemize}
+\item Check that 
+\[(A+cB)^*_{ij}=\overline{(A+cB)_{ji}}=\overline{A_{ji}}+\overline{c}\overline{B_{ji}}=(A^*+\overline{c}B^*)_{ij}.\]
+\item \begin{enumerate}
+\item If one of $x$ or $y$ is zero, then the equality holds naturally and we have $y=0x$ or $x=0y$. So we may assume that $y$ is not zero. Now if $x=cy$, we have 
+\[|\lag x,y\rag |=|\lag cy,y\rag|=|c|\|y\|^2\]
+and 
+\[\|x\|\cdot \|y\|=\|cy\|\cdot \|y\|=|c|\|y\|^2.\]
+For the necessity, we just observe the proof of Theorem 6.2(c). If the equality holds, then we have 
+\[\|x-cy\|=0,\]
+where 
+\[c=\frac{\lag x,y\rag}{\lag y,y\rag}.\]
+And so $x=cy$.
+\item Also observe the proof of Theorem 6.2(d). The equality holds only when 
+\[\Re\lag x,y\rag =|\lag x,y\rag |=\|x\|\cdot \|y\|.\]
+The case $y=0$ is easy. Assuming $y\neq 0$, we have $x=cy$ for some scalar $c\in F$. And thus we have
+\[\Re(c)\|y\|^2=\Re\lag cy,y\rag =|\lag cy,y\rag |=|c|\cdot \|y\|^2\]
+and so 
+\[\Re(c)=|c|.\]
+This means $c$ is a nonnegative real number. Conversely, if $x=cy$ for some nonnegative real number, we may check 
+\[\|x+y\|=|c+1|\|y\|=(c+1)\|y\|\]
+and 
+\[\|x\|+\|y\|=|c|\|y\|+\|y\|=(c+1)\|y\|.\]
+
+Finally, we may generalize it to the case of $n$ vectors. That is, 
+\[\|x_1+x_2+\cdots +x_n\|=\|x_1\|+\|x_2\|+\cdots +\|x_n\|\]
+if and only if we may pick one vector from them and all other vectors are some multiple of that vector using nonnegative real number.
+\end{enumerate}
+\item \begin{enumerate}
+\item Check the condition one by one.\begin{itemize}
+\item \[\lag f+h,g\rag=\frac{1}{2\pi}\int_0^{2\pi}{(f(t)+h(t))\overline{g(t)}dt}\]
+\[=\frac{1}{2\pi}\int_0^{2\pi}{f\overline{g}dt}+\frac{1}{2\pi}\int_0^{2\pi}{(h\overline{g}dt}=\lag f,g\rag +\lag h,g\rag.\]
+\item \[\lag cf,g\rag=\frac{1}{2\pi}\int_0^{2\pi}{cf\overline{g}dt}\]
+\[=c(\frac{1}{2\pi}\int_0^{2\pi}{f\overline{g}dt})=c\lag f,g\rag .\]
+\item \[\overline{\lag f,g\rag}=\overline{\frac{1}{2\pi}\int_0^{2\pi}{f\overline{g}dt}}=\frac{1}{2\pi}\int_0^{2\pi}{\overline{f\overline{g}}dt}\]
+\[=\frac{1}{2\pi}\int_0^{2\pi}{g\overline{f}dt}=\lag g,f\rag.\]
+\item \[\lag f,f\rag =\frac{1}{2\pi}\int_0^{2\pi}{\|f\|^2dt}>0\]
+if $f$ is not zero. Ur... I think this is an exercise for the Adavanced Calculus course.
+\end{itemize}
+\item No. Let 
+\[f(t)=\left\{\begin{array}{ccc}0&\mathrm{if} &x\leq \frac{1}{2};\\x-\frac{1}{2}&\mathrm{if} &x>\frac{1}{2}.\end{array}\right..\]
+Then we have that $\lag f,f\rag=0$ but $f\neq 0$.
+\end{enumerate}
+\item If $T(x)=0$ Then we have 
+\[\|x\|=\|0\|=0.\]
+This means $x=0$ and so $T$ is injective.
+\item If $\lag \cdot, \cdot \rag'$ is an inner product on $V$, then we have that $T(x)=0$ implies 
+\[\lag x,x\rag'=\lag T(x),T(x)\rag =0\]
+and $x=0$. So $T$ is injective. Conversely, if $T$ is injective, we may check those condition for inner product one by one.
+\begin{itemize}
+\item \[\lag x+z,y\rag'=\lag T(x+z),T(y)\rag =\lag T(x)+T(z),T(y)\rag\]
+\[=\lag T(x),T(y)\rag +\lag T(z),T(y)\rag =\lag x,y\rag' +\lag z,y\rag' .\]
+\item \[\lag cx,y\rag'=\lag T(cx),T(y)\rag =\lag cT(x),T(y)\rag\]
+\[=c\lag T(x),T(y)\rag =\lag x,y\rag'.\]
+\item \[\overline{\lag x,y\rag'}=\overline{\lag T(x),T(y)\rag}\]
+\[=\lag T(y),T(x)\rag =\lag y,x\rag'.\]
+\item \[\lag x,x\rag'=\lag T(x),T(x)\rag>0\]
+if $T(x)\neq 0$. And the condition $T(x)\neq 0$ is true when $x\neq 0$ since $T$ is injective.
+\end{itemize}
+\item \begin{enumerate}
+\item Just compute 
+\[\|x+y\|^2=\|x\|^2+\lag x,y\rag +\lag y,x\rag +\|y\|^2\]
+\[=\|x\|^2+\lag x,y\rag +\overline{\lag y,x\rag }+\|y\|^2=\|x\|^2+\Re(\lag x,y\rag )+\|y\|^2\]
+and 
+\[\|x-y\|^2=\|x\|^2-\lag x,y\rag -\lag y,x\rag +\|y\|^2\]
+\[=\|x\|^2-\lag x,y\rag -\overline{\lag y,x\rag }+\|y\|^2=\|x\|^2-\Re(\lag x,y\rag )+\|y\|^2.\]
+\item We have 
+\[\|x-y\|+\|y\|\geq \|x\|\]
+and 
+\[\|x-y\|+\|x\|=\|y-x\|+\|x\|\geq \|y\|.\]
+Combining these two we get the desired inequality.
+\end{enumerate}
+\item \begin{enumerate}
+\item By Exercise 6.1.19(a), we have the right hand side would be 
+\[\frac{1}{4}(4\Re\lag x,y\rag)=\lag x,y\rag.\]
+The last equality is due to the fact $\F=\R$.
+\item Also use the Exercise 6.1.19(a). First observe that 
+\[\|x+i^ky\|^2=\|x\|^2+2\Re\lag x,i^ky\rag +\|i^ky\|^2\]
+\[=\|x\|^2+2\Re[\overline{i^k}\lag x,y\rag ]+\|y\|^2.\]
+Assuming $\lag x,y\rag$ to be $a+bi$, we have the right hand side would be
+\[\frac{1}{4}[(\sum_{k=1}^4{i^k})\|x\|^2+2\sum_{k=1}^4{i^k\Re[\overline{i^k}\lag x,y\rag ]}+(\sum_{k=1}^4{i^k})\|y\|^2]\]
+\[=\frac{1}{2}[bi+(-a)(-1)+(-b)(-i)+a]=a+bi=\lag x,y\rag.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Observe that 
+\[A_1^*=(\frac{1}{2}(A+A^*))^*=\frac{1}{2}(A^*+A)=A_1^*,\]
+\[A_2^*=(\frac{1}{2i}(A-A^*))^*=(-\frac{1}{2i}(A^*-A)=A_2^*.\]
+and 
+\[A_1+iA_2=\frac{1}{2}(A+A^*)+\frac{1}{2}(A-A^*)=\frac{1}{2}(A+A)=A.\]
+I don't think it's reasonable because $A_1$ does not consists of the real part of all entries of $A$ and $A_2$ does not consists of the imaginary part of all entries of $A$. But what's the answer do you want? Would it be reasonable to ask such a strange question?
+\item If we have $A=B_1+iB_2$ with $B_1^*=B_1$ and $B_2^*=B_2$, then we have $A^*=B_1^*-iB_2^*$. Thus we have 
+\[B_1=\frac{1}{2}(A+A^*)\]
+and 
+\[B_2=\frac{1}{2i}(A-A^*).\]
+\end{enumerate}
+\item \begin{enumerate}
+\item As definition, we may find $v_1,v_2,\ldots ,v_n\in \beta$ for $x,y,z\in V$ such that 
+\[x=\sum_{i=1}^n{a_iv_i},y=\sum_{i=1}^n{b_iv_i},z=\sum_{i=1}^n{d_iv_i}.\]
+And check those condition one by one.
+\begin{itemize}
+\item \[\lag x+z,y\rag=\lag \sum_{i=1}^n{(a_i+d_i)v_i},\sum_{i=1}^n{b_iv_i}\rag \]
+\[=\sum_{i=1}^n{(a_i+d_i)\overline{b_i}}=\sum_{i=1}^n{a_i\overline{b_i}}+\sum_{i=1}^n{d_i\overline{b_i}}\]
+\[=\lag x,y\rag+\lag z,y\rag.\]
+\item \[\lag cx,y\rag=\lag \sum_{i=1}^n{(ca_i)v_i},\sum_{i=1}^n{b_iv_i}\rag \]
+\[=\sum_{i=1}^n{(ca_i)\overline{b_i}}=c\sum_{i=1}^n{a_i\overline{b_i}}=c\lag x,y\rag .\]
+\item \[\overline{\lag x,y\rag}=\overline{\sum_{i=1}^n{a_i\overline{b_i}}}\]
+\[=\sum_{i=1}^n{\overline{a_i\overline{b_i}}}=\sum_{i=1}^n{b_i\overline{a_i}}=\lag y,x\rag .\]
+\item \[\lag x,x\rag =\sum_{i=1}^n{|a_i|^2}>0\]
+if all $a_i$'s is not zero. That is, $x$ is not zero.
+\end{itemize}
+\item If the described condition holds, for each vector 
+\[x=\sum_{i=1}^n{a_iv_i}\] 
+we have actually $a_i$ is the $i$-th entry of $x$. So the function is actually the atandard inner product. Note that this exercise give us an idea that different basis will give a different inner product.
+\end{enumerate}
+\item \begin{enumerate}
+\item We have the fact that with the standard inner product $\lag \cdot, \cdot \rag$ we have $\lag x,y\rag=y^*x$. So we have 
+\[\lag x,Ay\rag =(Ay)^*x=y^*A^*x=\lag A^*x,y\rag.\]
+\item First we have that 
+\[\lag A^*x,y\rag =\lag x,Ay\rag =\lag Bx,y\rag \]
+for all $x,y\in V$. By Theorem 6.1(e) we have $A^*x=Bx$ for all $x$. But this means that these two matrix is the same.
+\item Let $\beta=\{v_1,v_2,\ldots ,v_n\}$. So the column vectors of $Q$ are those $v_i$'s. Finally observe that $(Q^*Q)_{ij}$ is 
+\[v_i^*v_j=\lag v_i,v_j\rag =\left\{\begin{array}{ccc}1&\mathrm{if} &i=j;\\0&\mathrm{if} &i\neq j.\end{array}\right.\]
+So we have $Q^*Q=I$ and $Q^*=Q^{-1}$.
+\item Let $\alpha $ be the standard basis for $\F^n$. Thus we have $[T]_{\alpha}=A$ and $[U]_{\alpha}=A^*$. Also we have that actually $[I]_{\alpha}^{\beta}$ is the matrix $Q$ defined in the previous exercise. So we know that 
+\[[U]_{\beta}=[I]_{\alpha}^{\beta}[U]_{\alpha}[I]_{\beta}^{\alpha}=QAQ^{-1}=QAQ^*\]
+\[=(QA^*Q^*)^*=[I]_{\alpha}^{\beta}[T]_{\alpha}[I]_{\beta}^{\alpha}=[T]_{\beta}.\]
+\end{enumerate}
+\item Check the three conditions one by one.\begin{enumerate}
+\item \begin{itemize}
+\item \[\|A\|=\max_{i,j}|A_{ij}|\geq 0,\]
+and the value equals to zero if and only if all entries of $A$ are zero.
+\item \[\|aA\|=\max_{i,j}|(aA)_{ij}|=\max_{i,j}|a||A_{ij}|\]
+\[=|a|\max_{i,j}|A_{ij}|=|a|\|A\|.\]
+\item \[\|A+B\|=\max_{i,j}|(A+B)_{ij}|=\max_{i,j}|A_{ij}+B_{ij}|\]
+\[\leq \max_{i,j}|A_{ij}|+\max_{i,j}|B_{ij}|=\|A\|+\|B\|.\]
+\end{itemize}
+\item \begin{itemize}
+\item \[\|f\|=\max_{t\in [0,1]}|f(t)|\geq 0,\]
+and the value equals to zero if and only if all value of $f$ in $[0,1]$ is zero.
+\item \[\|af\|=\max_{t\in [0,1]}|(af)(t)|=\max_{t\in [0,1]}|a||f(t)|\]
+\[=|a|\max_{t\in [0,1]}|f(t)|=|a|\|f\|.\]
+\item \[\|f+g\|=\max_{t\in [0,1]}|(f+g)(t)|=\max_{t\in [0,1]}|f(t)+g(t)|\]
+\[\leq \max_{t\in [0,1]}|f(t)|+\max_{t\in [0,1]}|g(t)|=\|f\|+\|g\|.\]
+\end{itemize}
+\item \begin{itemize}
+\item \[\|f\|=\int_0^1{|f(t)|dt}\geq 0,\]
+and the value equals to zero if and only if $f=0$. This fact depend on the continuity and it would be an exercise in the Advanced Calculus coures.
+\item \[\|af\|=\int_0^1{|af(t)|dt}=\int_0^1{|a||f(t)|dt}\]
+\[=|a|\int_0^1{|f(t)|}=|a|\|f\|.\]
+\item \[\|f+g\|=\int_0^1{|f(t)+g(t)|dt}\leq\int_0^1{|f(t)|+|g(t)|dt}\]
+\[=\int_0^1{|f(t)|dt}+\int_0^1{|g(t)|dt}=\|f\|+\|g\|.\]
+\end{itemize}
+\item \begin{itemize}
+\item \[\|(a,b)\|=\max\{|a|,|b|\}\geq 0,\]
+and the value equals to zero if and only if both $a$ and $b$ are zero.
+\item \[\|c(a,b)\|=\max\{|ca|,|cb|\}=\max\{|c||a|,|c||b|\}\]
+\[=|c|\max\{|a|,|b|\}=|c|\|(a,b)\|.\]
+\item \[\|(a,b)+(c,d)\|=\max\{|a+c|,|b+d|\}\leq \max\{|a|+|c|,|b|+|d|\}\]
+\[\leq \max\{|a|,|b|\}+\max\{|c|,|d|\}=\|(a,b)\|+\|(c,d)\|.\]
+\end{itemize}
+\end{enumerate}
+\item By Exercise 6.1.20 we know that if there is an inner product such that $\|x\|^2=\lag x,x\rag $ for all $x\in \R^2$, then we have 
+\[\lag x,y\rag =\frac{1}{4}\|x+y\|^2-\frac{1}{4}\|x-y\|.\]
+Let $x=(2,0)$ and $y=(1,3)$. Thus we have 
+\[\lag x,y\rag =\frac{1}{4}\|(3,3)\|^2-\frac{1}{4}\|(1,-3)\|^2=0\]
+and 
+\[\lag 2x,y\rag =\frac{1}{4}\|(5,3)\|^2-\frac{1}{4}\|(3,-3)\|^2=\frac{1}{4}(25-9)=4.\]
+This means this function is not linear in the first component.
+\item \begin{enumerate}
+\item \[d(x,y)=\|x-y\|\geq 0.\]
+\item \[d(x,y)=\|x-y\|=\|y-x\|=d(y,x).\]
+\item \[d(x,y)=\|x-y\|=\|(x-z)+(z-y)\|\leq \|x-z\|+\|z-y\|=d(x,y)+d(z,y).\]
+\item \[d(x,x)=\|x-x\|=\|0\|=0.\]
+\item \[d(x,y)=\|x-y\|>0\]
+if $x-y$ is not zero. That is, the distance is not zero if $x\neq y$.
+\end{enumerate}
+\item The third and the fourth condition of inner product naturally hold since 
+\[\lag x,y\rag =\frac{1}{4}[\|x+y\|^2-\|x-y\|^2]=\lag y,x\rag\]
+and 
+\[\lag x,x\rag =\frac{1}{4}[\|2x\|^2-\|0\|^2]=\|x\|^2>0\]
+if $x\neq 0$. Now we prove the first two condition as Hints.
+\begin{enumerate}
+\item Consider that 
+\[\|x+2y\|^2+\|x\|^2=2\|x+y\|^2+2\|y\|^2\]
+and 
+\[\|x-2y\|^2+\|x\|^2=2\|x-y\|^2+2\|y\|^2\]
+by the parallelogram law. By Substracting these two equalities we have 
+\[\|x+2y\|^2-\|x-2y\|^2=2\|x+y\|^2-2\|x-y\|^2.\]
+And so we have 
+\[\lag x,2y\rag =\frac{1}{4}[\|x+2y\|^2-\|x-2y\|^2]\]
+\[=\frac{1}{4}[2\|x+y\|^2-2\|x-y\|^2]=2\lag x,y\rag .\]
+\item By the previous argument, we direct prove that 
+\[\lag x+u,2y\rag =2\lag x,y\rag +2\lag u,y\rag .\]
+Similarly begin by 
+\[\|x+u+2y\|^2+\|x-u\|^2=2\|x+y\|^2+2\|u+y\|^2\]
+and 
+\[\|x+u-2y\|^2+\|x-u\|^2=2\|x-y\|^2+2\|u-y\|^2\]
+by the parallelograom law. By substracting these two equalities we have 
+\[\|x+u+2y\|^2-\|x+u-2y\|^2=2\|x+y\|^2-2\|x-y\|^2+2\|u+y\|^2-2\|u-y\|^2.\]
+And so we have 
+\[\lag x+u,2y\rag =\frac{1}{4}[\|x+u+2y\|^2-\|x+u-2y\|^2]\]
+\[=\frac{1}{4}[2\|x+y\|^2-2\|x-y\|^2+2\|u+y\|^2-2\|u-y\|^2]\]
+\[=2\lag x,y\rag +2\lag u,y\rag .\]
+\item Since $n$ is a positive integer, we have 
+\[\lag nx,y\rag =\lag (n-1)x,y\rag +\lag x,y\rag \]
+\[=\lag (n-2)x,y\rag +2\lag x,y\rag =\cdots =n\lag x,y\rag \]
+by the previous argument inductively.
+\item Since $m$ is a positive integer, we have 
+\[\lag x,y\rag =\lag m(\frac{1}{m}x),y\rag =m\lag \frac{1}{m}x,y\rag \]
+by the previous argument.
+\item Let $r=\frac{p}{q}$ for some positive integers $p$ and $q$ if $r$ is positive. In this case we have 
+\[\lag rx,y\rag =\lag p(\frac{1}{q}x),y\rag =p\lag \frac{1}{q}x,y\rag \]
+\[=\frac{p}{q}\lag x,y\rag =r\lag x,y\rag .\]
+If $r$ is zero, then it's natural that 
+\[\lag 0,y\rag =\frac{1}{4}[\|y\|^2-\|y\|^2]=0=0\lag x,y\rag .\]
+Now if $r$ is negative, then we also have 
+\[\lag rx,y\rag =\lag (-r)(-x),y\rag =-r\lag -x,y\rag .\]
+But we also have 
+\[\lag -x,y\rag =-\lag x,y\rag \]
+since 
+\[\lag -x,y\rag +\lag x,y\rag \]
+\[=\frac{1}{4}[\|-x+y\|^2-\|-x-y\|^2+\|x+y\|^2-\|x-y\|^2]=0.\]
+So we know that even when $r$ is negative we have 
+\[\lag rx,y\rag =-r\lag -x,y\rag =r\lag x,y\rag .\]
+\item Now we have the distribution law. Also, the position of the two component can be interchanged without change the value of the defined function. Finally we observe that 
+\[\lag x,x\rag =\frac{1}{4}[\|x+x\|^2-\|0\|^2]=\|x\|^2\]
+for all $x\in V$. So now we have 
+\[\|x\|^2+2\lag x,y\rag +\|y\|^2=\|x+y\|^2\]
+\[\leq (\|x\|^+\|y\|)^2=\|x\|^2+2\|x\|\cdot \|y\|+\|y\|^2\]
+by the triangle inequality. Similarly we also have 
+\[\|x\|^2-2\lag x,y\rag +\|y\|^2=\|x-y\|^2\]
+\[\leq (\|x\|^+\|-y\|)^2=\|x\|^2+2\|x\|\cdot \|y\|+\|y\|^2.\]
+Thus we get the desired result 
+\[|\lag x,y\rag |\leq \|x\|\cdot \|y\|.\]
+\item Since 
+\[(c-r)\lag x,y\rag =c\lag x,y\rag -r\lag x,y\rag\]
+and 
+\[\lag (c-r)x,y\rag =\lag cx-rx,y\rag =\lag cx,y\rag -r\lag x,y\rag ,\]
+the first equality holds. And by the previous argument we have 
+\[-|c-r|\|x\|\|y\|\leq (c-r)\lag x,y\rag ,\lag (c-r)x,y\rag \leq |c-r|\|x\|\|y\|\]
+and so we get the final inequality.
+\item For every real number $c$, we could find a rational number such that $|c-r|$ is small enough\footnote{This is also an exercise for the Adavanced Calculus course.}. So by the previous argument, we have 
+\[\lag cx,y\rag =c\lag x,y\rag \]
+for all real number $c$.
+\end{enumerate}
+\item Check the conditions one by one. \begin{itemize}
+\item \[[x+z,y]=\Re\lag x+z,y\rag =\Re(\lag x,y\rag +\lag z,y\rag)\]
+\[=\Re\lag x,y\rag +\Re\lag z,y\rag =[x,y]+[z,y].\]
+\item \[[cx,y]=\Re\lag cx,y\rag \]
+\[=c\Re\lag x,y\rag =c[x,y],\]
+where $c$ is a real number.
+\item \[[x,y]=\Re\lag x,y\rag =\Re\overline{\lag x,y\rag }\]
+\[=\Re\lag y,x\rag =[y,x].\]
+\item \[[x,x]=\Re\lag x,x\rag =\lag x,x\rag >0\]
+if $x\neq 0$.
+\end{itemize}
+Finally, we have $[x,ix]=0$ since 
+\[\lag x,ix\rag =-i\lag x,x\rag \]
+is a pure imaginary number.
+\item Observe that 
+\[0=[x+iy,i(x+iy)]=[x+iy,ix-y]=[ix,iy]-[x,y].\]
+So we have an instant property 
+\[[x,y]=[ix,iy].\]
+Now check the conditions one by one. \begin{itemize}
+\item \[\lag x+z,y\rag =[x+z,y]+i[x+z,iy]\]
+\[=[x,y]+[z,y]+i[x,iy]+i[z,iy]=\lag x,y\rag +\lag z,y\rag .\]
+\item \[\lag (a+bi)x,y\rag =[(a+bi)x,y]+i[(a+bi)x,iy]\]
+\[=[ax,y]+[bix,y]+i[ax,iy]+i[bix,iy]\]
+\[=a([x,y]+i[x,iy])+bi([ix,iy]-i[ix,y])\]
+\[=a\lag x,y\rag +bi([x,y]+i[x,iy])=(a+bi)\lag x,y\rag .\]
+Here we use the proven property.
+\item \[\overline{\lag x,y\rag}=[x,y]-i[x,iy]\]
+\[=[y,x]+i[y,ix]=\lag x,y\rag .\]
+Here we use the proven property again.
+\item \[\lag x,x\rag =[x,x]+i[x,ix]=[x,x]>0\]
+if $x$ is not zero.
+\end{itemize}
+\item First we may observe that the condition for norm on real vector space is loosen than that on complex vector space. So naturally the function $\|\cdot \|$ is still a norm when we regard $V$ as a vector space over $\R$. By Exercise 6.1.27, we've already defined a real inner product $[\cdot ,\cdot ]$ on it since the parallelogram law also holds on it. And we also have 
+\[[x,ix]=\frac{1}{4}[\|x+ix\|^2-\|x-ix\|^2]=\]
+\[=\frac{1}{4}[\|x+ix\|^2-\|(-i)(x+ix)\|^2]=\frac{1}{4}[\|x+ix\|^2-|-i|\|(x+ix)\|^2]=0.\]
+So by Exercise 6.1.29 we get the desired conclusion.
+\end{enumerate}

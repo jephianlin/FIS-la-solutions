@@ -1,0 +1,73 @@
+\section{Einstein's Special Theory of Relativity}
+\begin{enumerate}
+\item \begin{description}
+\item[(b)] It comes from that $T_v(e_i)=e_i$ for $i=2,3$.
+\item[(c)] By the axiom (R4), we know that 
+\[T_v\begin{pmatrix}a\\0\\0\\d\end{pmatrix}=\begin{pmatrix}a'\\0\\0\\d'\end{pmatrix}.\]
+\item[(d)] We compute that, for $i=2,3$ and $j=1,4$,  
+\[\lag T_v^*(e_i),e_j\rag =\lag e_i,T_v(e_j)\rag =0\]
+by the fact that $T_v(e_j)\in \sp(\{e_1,e_4\})$. Hence we know that $\sp(\{e_2,e_3\})$ is $T_v^*$-invariant. 
+
+On the other hand, we compute that, for $i=2,3$ and $j=1,4$,
+\[\lag T_v^*(e_j),e_i\rag =\lag e_j,T_v(e_i)\rag =\lag e_j,e_i\rag =0.\]
+So $\sp(\{e_1,e_4\})$ is $T_v^*$-invariant.
+\end{description}
+\item We already have that 
+\[\lag T_v^*L_AT_v(w),w\rag =0\]
+if $\lag L_A(w),w\rag =0$ for $w\in \R^4$ whose fourth entry is nonnegative. Now if we have $\lag L_A(w),w\rag =0$ for some $w$ is a vector in $\R^4$ whose fourth entry is negative, then we have 
+\[0=\lag T_v^*L_AT_v(-w),-w\rag =(-1)^2\lag T_v^*L_AT_v(w),w\rag=\lag T_v^*L_AT_v(w),w\rag .\]
+\item \begin{enumerate}
+\item The set $\{w_1,w_2\}$ is linearly independent by definition. Also, we have $w_1=e_1+e_4$ and $w_2=e_1-e_4$ are both elements in $\sp(\{e_1,e_4\})$. Hence it's a basis for $\sp(\{e_1,e_4\})$. Naturally, it's orthogonal since $\lag w_1,w_2\rag =0$.
+\item For brevity, we write $W=\sp(\{e_1,e_4\})$. We have $T_v(W)\subset W$ and $T_v^*(W)\subset W$ by Theorem 6.39. Also, $W$ is $L_A$-invariant if we directly check it. Hence $W$ is $T_v^*L_AT_v$-invariant.
+\end{enumerate}
+\item We know that $B_v^*AB_v=[T_v^*L_AT_v]_{\beta}$ and $[L_A]_{\beta}$. So (a) and (b) in the Corollary is equivalent. We only prove (a) by the steps given by Hints. For brevity, we write $U=T_v^*L_AT_v$ and $C=B_v^*AB_v$.
+\begin{enumerate}
+\item We have $U(e_i)=e_i$ for $i=2,3$ by Theorem 6.39. By Theorem 6.41 we have 
+\[\left\{\begin{array}{c}U(e_1)+U(e_4)=U(e_1+e_4)=U(w_1)=aw_2=ae_1-ae_4,\\U(e_1)-U(e_4)=U(e_1-e_4)=U(w_2)=bw_1=be_1+be_2.\end{array}\right.\]
+Solving this system of equations we get that 
+\[\left\{\begin{array}{c}U(e_1)=pe_1-qe_4,\\U(e_4)=qe_1-pe_2,\end{array}\right.\]
+where $p=\frac{a+b}{2}$ and $q=\frac{a-b}{2}$. Write down the matrix representation of $U$ and get the result.
+\item Since $C$ is self-adjoint, we know that $q=-q$ and so $q=0$.
+\item Let $w=e_2+e_4$. Then we know that $\lag L_A(w),w\rag =0$. Now we calculate that 
+\[U(w)=U(e_2+e_4)=e_2-pe_4.\]
+By Theorem 6.40 we know that 
+\[\lag U(w),w\rag =\lag e_2-pe_4,e_2+e_4\rag =1-p=0.\]
+Hence we must have $p=0$.
+\end{enumerate}
+\item We only know that 
+\[T_v\begin{pmatrix}0\\0\\0\\1\end{pmatrix}=\begin{pmatrix}-vt''\\0\\0\\t''\end{pmatrix}\]
+for some $t''>0$. Compute that 
+\[\lag T_v^*L_AT_v\begin{pmatrix}0\\0\\0\\1\end{pmatrix},\begin{pmatrix}0\\0\\0\\1\end{pmatrix} = \lag L_A\begin{pmatrix}-vt''\\0\\0\\t''\end{pmatrix},\begin{pmatrix}-vt''\\0\\0\\t''\end{pmatrix}=(t'')^2(v^2-1)\]
+and 
+\[\lag T_v^*L_AT_v\begin{pmatrix}0\\0\\0\\1\end{pmatrix},\begin{pmatrix}0\\0\\0\\1\end{pmatrix} =\lag L_A\begin{pmatrix}0\\0\\0\\1\end{pmatrix},\begin{pmatrix}0\\0\\0\\1\end{pmatrix}\rag =-1\]
+by Theorem 6.41. Hence we have $(t'')^2(v^2-1)=-1$ and so $t''=\frac{1}{\sqrt{1-v^2}}$.
+\item Note that if $S_2$ is moving past $S_1$ at a velocity $v>0$ as measured on $S$, the $T_v$ is the transformation from space-time coordinates of $S_1$ to that of $S_2$. So now we have 
+\[\left\{\begin{array}{l}T_{v_1}:S\rightarrow S',\\T_{v_2}:S'\rightarrow S'',\\T_{v_3}:S\rightarrow S''.\end{array}\right.\]
+The given condition says that $T_{v_3}=T_{v_2}T_{v_3}$. This means that 
+\[B_{v_2}B_{v_1}=\begin{pmatrix}\frac{1}{\sqrt{1-v_2^2}}&0&0&\frac{-v_2}{\sqrt{1-v_2^2}}\\0&1&0&0\\0&0&1&0\\\frac{-v_2}{\sqrt{1-v_2^2}}&0&0&\frac{1}{\sqrt{1-v_2^2}}\end{pmatrix}\begin{pmatrix}\frac{1}{\sqrt{1-v_1^2}}&0&0&\frac{-v_1}{\sqrt{1-v_1^2}}\\0&1&0&0\\0&0&1&0\\\frac{-v_1}{\sqrt{1-v_1^2}}&0&0&\frac{1}{\sqrt{1-v_1^2}}\end{pmatrix}\]
+\[=\begin{pmatrix}\frac{1+v_2v_1}{\sqrt{(1-v_2^2)(1-v_1^2)}}&0&0&\frac{-v_2-v_1}{\sqrt{(1-v_2^2)(1-v_1^2)}}\\0&1&0&0\\0&0&1&0\\\frac{v_2-v_1}{\sqrt{(1-v_2^2)(1-v_1^2)}}&0&0&\frac{1+v_2v_1}{\sqrt{(1-v_2^2)(1-v_1^2)}}\end{pmatrix}=B_{v_3}.\]
+Hence we know that 
+\[\left\{\begin{array}{l}\frac{1+v_2v_1}{\sqrt{(1-v_2^2)(1-v_1^2)}}=\frac{1}{\sqrt{1-v_3^2}},\\\frac{-v_2-v_1}{\sqrt{(1-v_2^2)(1-v_1^2)}}=\frac{-v_3}{\sqrt{1-v_3^2}}. \end{array}\right.\]
+By dividing the second equality by the first equality, we get the result 
+\[v_3=\frac{v_1+v_2}{1+v_1v_2}.\]
+\item Directly compute that $(B_v)^{-1}=B_{(-v)}$. If $S'$ moves at a negative velocity $v$ relative to $S$. Then we have $S$ moves at a positive velocity $v$ relative to $S'$. Let $T_v$ be the transformation from $S$ to $S'$. Then we have $[T_v^{-1}]_{\beta}]=B_{(-v)}$ and so $[T_v]_{\beta}=B_v$.
+\item In point of view of Earth, the astronaut should travel $2\times 99/0.99=200$ years. So it will come back in the year 2200. However, let $T_v$ and $T_{-v}$ be the transformation from the space on Earth to the space of the astronaut in the tour forward and the tour backward respectly. We may calculate that 
+\[T_v\begin{pmatrix}99\\0\\0\\100\end{pmatrix}=\frac{1}{\sqrt{1-0.99^2}}\begin{pmatrix}0\\0\\0\\100-99\times 0.99\end{pmatrix}\cong \begin{pmatrix}0\\0\\0\\14.1\end{pmatrix}.\]
+Hence the astronaut spent $14.1$ years to travel to that star measured by himself. Similarly, we may compute that 
+\[T_{-v}\begin{pmatrix}99\\0\\0\\-100\end{pmatrix}=\frac{1}{\sqrt{1-0.99^2}}\begin{pmatrix}0\\0\\0\\-100+99\times 0.99\end{pmatrix}\cong \begin{pmatrix}0\\0\\0\\-14.1\end{pmatrix}.\]
+Hence he spent $14.1$ years to travel back in his mind. Combining these two, he spent $28.2$ years. Hence he would be return to Earth at age $48.2$.
+\item \begin{enumerate}
+\item The distance from earth to the star is $b$ as measured on $C$.
+\item At time $t$, the space-time coordinates of the star relative to $S'$ and $C'$ are 
+\[B_v\begin{pmatrix}b\\0\\0\\t\end{pmatrix}=\frac{1}{\sqrt{1-v^2}}\begin{pmatrix}b-vt\\0\\0\\t-bv\end{pmatrix}.\]
+\item Compute $x'+t'v$ to eliminate the parameter $t$ by 
+\[x'-t'v=\frac{1}{\sqrt{1-v^2}}b(1-v^2)=b\sqrt{1-v^2}.\]
+Hence we get the result.
+\item \begin{enumerate}
+\item The speed that the star comes to the astronaut should be 
+\[\frac{dx'}{dt'}=-v.\]
+Hence the astronaut feel that he travels with the speed $v$.
+\item In the astronaut's mind, he leave earth at $t'=0$. Hence in $S$ the earth is at $b\sqrt{1-v^2}$.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}

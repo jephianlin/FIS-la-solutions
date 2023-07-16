@@ -1,0 +1,300 @@
+\section{Unitary and Orthogonal Operators and Their Matrices}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. See Theorem 6.18.
+\item No. Each rotation operator with nonzero angle is a counterexample.
+\item No. A matrix is invertible if it's unitary. But an invertible matrix, $\begin{pmatrix}2&0\\0&1\end{pmatrix}$ for example, may not be unitary.
+\item Yes. It comes from the definition of unitarily equivalence.
+\item No. For example, the idenetity matrix $I$ is an unitary matrix but the sum $I+I$ is not unitary.
+\item Yes. It's because that $T$ is unitary if and only if $TT^*=T^*T=I$.
+\item No. The basis $\beta$ should be an orthonormal basis. For example, we have $T(a,b)=(b,a)$ is an orthogonal operator. But when we pick $\beta $ to be 
+\[\{(1,1),(1,0)\}\]
+we get that $[T]_{\beta}=\begin{pmatrix}1&1\\0&-1\end{pmatrix}$ is not orthogonal.
+\item No. Consider the matrix $\begin{pmatrix}1&1\\0&1\end{pmatrix}$. Its eigenvalues are $1$. But it's not orthogonal.
+\item No. See Theorem 6.18.
+\end{enumerate}
+\item Just follow the process of diagonalization. But remember that if the dimension of some eigenspace is more than $1$, we should choose an orthonormal basis on it.
+\begin{enumerate}
+\item \[P=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}, D=\begin{pmatrix}3&0\\0&-1\end{pmatrix}.\]
+\item \[P=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\i&-i\end{pmatrix}, D=\begin{pmatrix}-i&0\\0&i\end{pmatrix}.\]
+\item \[P=\frac{1}{\sqrt{3}}\begin{pmatrix}1&\sqrt{2}\\i+1&-\frac{i+1}{\sqrt{2}}\end{pmatrix}, D=\begin{pmatrix}8&0\\0&-1\end{pmatrix}.\]
+\item \[P=\begin{pmatrix}\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{6}}\\\frac{1}{\sqrt{3}}&0&-\frac{\sqrt{2}}{\sqrt{3}}\\\frac{1}{\sqrt{3}}&-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{6}} \end{pmatrix}, D=\begin{pmatrix}4&0&0\\0&-2&0\\0&0&-2 \end{pmatrix}.\]
+\item \[P=\begin{pmatrix}\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{6}}\\\frac{1}{\sqrt{3}}&0&-\frac{\sqrt{2}}{\sqrt{3}}\\\frac{1}{\sqrt{3}}&-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{6}} \end{pmatrix}, D=\begin{pmatrix}4&0&0\\0&1&0\\0&0&1 \end{pmatrix}.\]
+\end{enumerate}
+\item If $T$ and $U$ are unitary [orthogonal] operators, then we have 
+\[\|TU(x)\|=\|U(x)\|=\|x\|.\]
+\item Pick the standard basis $\beta $ and compute the matrix representation $[T_x]_{\beta}=\begin{pmatrix}z\end{pmatrix}$. This means that $T_z^*=T_{\overline{z}}$. So it always would be normal. However, it would be self-adjoint only when $z$ is real. And it would be unitary only when $|z|=1$.
+\item For these problem, try to diagonalize the matrix which is not diagonalized yes. And check whether it can be diagonalized by an orthonormal basis.
+\begin{enumerate}
+\item No. They have different eigenvalues.
+\item No. Their determinant is different.
+\item No. They have different eigenvalues.
+\item Yes. We have 
+\[\begin{pmatrix}0&\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\0&\frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\1&0&0\end{pmatrix}^*\begin{pmatrix}0 & 1 & 0\cr -1 & 0 & 0\cr 0 & 0 & 1\end{pmatrix}\begin{pmatrix}0&\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\0&\frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\1&0&0\end{pmatrix}=\begin{pmatrix}1 & 0 & 0\cr 0 & i & 0\cr 0 & 0 & -i\end{pmatrix}.\]
+\item No. One is symmetric but the other is not.
+\end{enumerate}
+\item If $T$ is unitary, we must have 
+\[0=\|T(f)\|^2-\|f\|^2=\int_0^1{|h|^2|f|^2dt}-\int_0^1{|f|^2dt}\]
+\[=\int_0^1{(1-|h|^2)|f|^2dt}\]
+for all $f\in V$. Pick $f=(1-|h|^2)^{\frac{1}{2}}$ and get $1-|h|^2=0$ and so $|h|=1$. Conversely, if $|h|=1$, we have 
+\[\|T(f)\|^2-\|f\|^2=\int_0^1{|h|^2|f|^2dt}-\int_0^1{|f|^2dt}\]
+\[=\int_0^1{(1-|h|^2)|f|^2dt}=0\]
+and so $T$ is unitary.
+\item By the Corollary 2 after Theorem 6.18, we may find an orthonormal basis $\beta $ such that 
+\[[T]_{\beta}=\begin{pmatrix}\lambda_1&0&\cdots &0\\0&\lambda_2& &\vdots\\ \vdots &&\ddots &0\\0&\cdots &0&\lambda_n\end{pmatrix}.\]
+Also, since the eigenvalue $\lambda_i$ has its absolute value $1$, we may find some number $\mu_i$ such that $\mu_i^2=\lambda_i$ and $|\mu_i|=1$. Denote 
+\[D=\begin{pmatrix}\mu_1&0&\cdots &0\\0&\mu_2& &\vdots\\ \vdots &&\ddots &0\\0&\cdots &0&\mu_n\end{pmatrix}\]
+to be an unitary operator. Now pick $U$ to be the matrix whose matrix representation with respect to $\beta $ is $D$. Thus $U$ is unitary and $U^2=T$.
+\item Exercise 6.4.10 says that $((T-iI)^{-1})*=T+iI$. So check that 
+\[[(T+iI)(T-iI)^{-1}]^*(T+iI)(T-iI)^{-1}\]
+\[=((T-iI)^{-1})^*(T+iI)^*(T+iI)(T-iI)^{-1}\]
+\[=(T+iI)^{-1}(T-iI)(T+iI)(T-iI)^{-1}\]
+\[=(T+iI)^{-1}(T+iI)(T-iI)(T-iI)^{-1}=I.\]
+Use Exercise 2.4.10 we get that the operator is unitary.
+\item The operator $U$ may not be unitary. For example, let $U(a,b)=(a+b,0)$ be an operator on $\C^2$. Pick the basis $\{(1,0),(0,1)\}$ and we may observe that 
+\[\|U(1,0)\|=\|U(0,1)\|=1=\|(1,0)\|=\|(0,1)\|.\]
+But it is not unitary since 
+\[\|U(1,1)\|=1\neq \|(1,1)\|=\sqrt{2}.\]
+\item Exercise 2.5.10 says that $\tr(A)=\tr(B)$ is $A$ is similar to $B$. And we know that $A$ may be diagonalized as $P^*AP=D$ by Theorem 6.19 and Theorem 6.20. Here $D$ is a diagonal matrix whose diagonal entries consist of all eigenvalues. This means 
+\[\tr(A)=\tr(D)=\sum_{i=1}^n{\lambda_i}\]
+and 
+\[\tr(A^*A)=\tr((PDP^*)^*(PDP^*))\]
+\[=\tr(PD^*DP^*)=\tr(D^*D)=\sum_{i=1}^n{|\lambda_i|^2}.\]
+\item Extend $\{(\frac{1}{3},\frac{2}{3},\frac{2}{3})\}$ to be a basis and do the Gram-Schmidt process to get an orthonormal basis. The extended basis could be 
+\[\{(\frac{1}{3},\frac{2}{3},\frac{2}{3}),(0,1,0),(0,0,1)\}\]
+and the othonormal basis would be 
+\[\{(\frac{1}{3},\frac{2}{3},\frac{2}{3}),(-\frac{2}{3\sqrt{5}},\frac{5}{3\sqrt{5}},-\frac{{2}^{2}}{3\sqrt{5}}),(-\frac{2}{\sqrt{5}},0,\frac{1}{\sqrt{5}})\}.\]
+So the matrix could be 
+\[\begin{pmatrix}\frac{1}{3}&\frac{2}{3}&\frac{2}{3}\\-\frac{2}{3\sqrt{5}}&\frac{5}{3\sqrt{5}}&-\frac{{2}^{2}}{3\sqrt{5}}\\-\frac{2}{\sqrt{5}}&0&\frac{1}{\sqrt{5}}\end{pmatrix}.\]
+\item By Theorem 6.19 and Theorem 6.20 we know that $A$ may be diagonalized as $P^*AP=D$. Here $D$ is a diagonal matrix whose diagonal entries consist of all eigenvalues. Now we have 
+\[\det(A)=\det(PDP^*)=\det(D)=\prod_{i=1}^n{\lambda_i}.\]
+\item The necessity is false. For example, the two matrices $\begin{pmatrix}1&-1\\0&0\end{pmatrix}$ and 
+\[\begin{pmatrix}1&0\\0&0\end{pmatrix}=\begin{pmatrix}1&1\\0&1\end{pmatrix}^{-1}\begin{pmatrix}1&-1\\0&0\end{pmatrix}\begin{pmatrix}1&1\\0&1\end{pmatrix}\]
+are similar. But they are not unitary since one is symmetric but the other is not.
+\item We may write $A=P^*BP$. Compute 
+\[\lag L_A(x),x\rag =\lag L_{P^*BP}(x),x\rag \]
+\[=\lag L_{P}^*L_BL_P(x),x\rag =\lag L_B(L_P(x)),L_P(x)\rag .\]
+If $A$ is positive definite, for each vector $y$ we may find some $x$ such that $L_P(x)=y$ since $P$ is invertible. Also, we have 
+\[\lag L_B(y),y\rag =\lag L_B(L_P(x)),L_P(x)\rag =\lag L_A(x),x\rag >0.\]
+If $B$ is positive definite, we may check that 
+\[\lag L_A(x),x\rag \lag L_B(L_P(x)),L_P(x)\rag >0.\]
+\item \begin{enumerate}
+\item We have 
+\[\|U_W(x)\|=\|U(x)\|=\|x\|\]
+and so $U_W$ is an unitary operator on $W$. Also, the equality above implies that $U_W$ is injection. Since $W$ is finite-dimensional, we get that $U_W$ is surjective and $U(W)=W$.
+\item For each elment $w\in W$ we have $U(y)=w$ for some $y\in W$ by the previous argument. Now let $x$ be an element in $W\pp$. We have $U(x)=w_1+w_2$ for some $w_1\in W$ and $w_2\in W\pp$ by Exercise 6.2.6. Since $U$ is unitary, we have some equalities 
+\[\|y\|^2=\|w\|^2,\]
+\[\|x\|^2=\|w_1+w_2\|^2=\|w_1\|^2+\|w_2\|^2\]
+by Exercise 6.1.10. However, we also have that $U(x+y)=2w_1+w_2$. So we have that 
+\[0=\|x+y\|^2-\|2w_1+w_2\|^2\]
+\[=\|x\|^2+\|y\|^2-4\|w_1\|^2-\|w_2\|^2=-2\|w_1\|^2.\]
+This means that $w_1=0$ and so $U(x)=w_2\in W\pp$.
+\end{enumerate}
+\item This example show the finiteness in the previous exercise is important. Let $V$ be the space of sequence defined in Exercise 6.2.23. Also use the notation $e_i$ in the same exercise. Now we define a unitary operator $U$ by 
+\[\left\{\begin{array}{llll}U(e_{2i+1})=e_{2i-1}&\mathrm{if} &i> &;\\U(e_1)=e_2&&&;\\U(e_{2i})=U(e_{2i+2})&\mathrm{if}&i>0&.\end{array}\right.\]
+It can be check that $\|U(x)\|=\|x\|$ and $U$ is surjective. So $U$ is an unitary operator. We denote $W$ to be the subspace 
+\[\sp\{e_2,e_4,e_6, \ldots\}\]
+and so we have 
+\[W\pp=\{e_1,e_3,e_5,\ldots \}.\]
+Now, $W$ is a $U$-invariant subspace by definition. However, we have $e_2\notin U(W)$ and $W\pp$ is not $U$-invariant since $U(e_1)=e_2\notin W\pp$.
+\item Let $A$ be an unitary and upper triangular matrix. For arbitrary indices $i$ and $j$ such that $i> j$. We have $A_{ij}=0$ since $A$ is upper triangular. But we also have that $A_{ji}=\overline{A_{ij}}=0$. So $A$ is a diagonal matrix.
+\item Write $A\sim B$ to say that $A$ is unitarily equivalent to $B$. Check the three conditions in the Appendix A. \begin{description}
+\item[reflexivity] Since $A=I^*AI$, we get $A\sim A$.
+\item[symmetry]  If $A\sim B$, we have $B=P^*AP$ and so $A=PBP^*=(P^*)^*BP^*$. This means that $B\sim A$.
+\item[transitivity] If $A\sim B$ and $B\sim C$, we have $B=P^*AP$ and $C=Q^*BQ$. This means that 
+\[C=Q^*BQ=Q^*P^*APQ=(PQ)^*A(PQ)\]
+and so $A\sim C$.
+\end{description}
+\item By Exercise 6.1.10 we have 
+\[\|U(v_1+v_2)\|^2=\|v_1-v_2\|^2\]
+\[=\|v_1\|^2+\|v_2\|^2=\|v_1+v_2\|^2.\]
+\item \begin{enumerate}
+\item If it's a complex inner product space, we have 
+\[\lag U(x),U(y)\rag =\sum_{k=1}^4{i^k\|U(x)+iU(y)\|^2}\]
+\[\sum_{k=1}^4{i^k\|U(x+iy)\|^2}=\sum_{k=1}^4{i^k\|x+iy\|^2}=\lag x,y\rag.\]
+If it's a real inner product space, we may also use the above equality but take the summation only over $k=2,4$.
+\item Since $U(x+y)=U(x)$ if $x\in W$ an $y\in W\pp$, we know that $R(U)=U(W)$. We get the desired result by applying the previous argument.
+\item Just extend the set 
+\[\{v_1,v_2,\ldots ,v_k\}\] to be an orthonormal basis 
+\[\gamma =\{v_1,v_2,\ldots ,v_n\}\]
+for $V$, where $n=\dim(V)$. First we know that $U(v_j)=0$ if $j>k$. So the $j$-th column of $[U]_{\gamma}$ is zero. On the other hand, if we write $A=[U]_{\gamma}$ we have 
+\[U(v_j)=\sum_{i=1}^n{U_{ij}v_i}.\]
+So the first $k$ columns is orthonormal since 
+\[0=\lag U(v_s),U(v_t)\rag =\lag \sum_{i=1}^n{U_{is}v_i},\sum_{i=1}^n{U_{it}v_i}\rag \]
+\[=\sum_{i=1}^n{U_{is}\overline{U_{it}}}= (Ae_t)^*Ae_s \]
+and 
+\[1=\lag U(v_s),U(v_s)\rag =\lag \sum_{i=1}^n{U_{is}v_i},\sum_{i=1}^n{U_{is}v_i}\rag \]
+\[=\sum_{i=1}^n{U_{is}\overline{U_{is}}}= (Ae_s)^*Ae_s .\]
+\item Since $V$ is finite-dimensional inner product space, we have $R(U)\pp\oplus R(U)=V$. And so by Exercise 6.5.20(b) we get the desired result.
+\item First, $T$ is well-defined since the set $\beta$ defined in the previous question is a basis. To show that $T=U^*$, it's sufficient to check that 
+\[\lag U(x),y\rag =\lag x,T(y)\rag \]
+for all $x$ and $y$ in $\beta$ by Exercise 6.1.9. We partition $\beta $ into two parts $X$ and $Y$, who consist of all $U(v_i)$'s and $w_i$'s. 
+\begin{itemize}
+\item If $x=U(v_i),y=U(v_j)\in X$, we have 
+\[\lag U(v_i),T(U(v_j))\rag=\lag U(v_i),v_j\rag =\lag U^2(v_i),U(v_j)\rag \]
+by Exercise 6.5.20(a).
+\item If $x=U(v_i)\in X$ and $y=w_j\in Y$, we have 
+\[\lag U(v_i),T(w_j)\rag =\lag U(v_i),0\rag \]
+\[=0=\lag U^2(v_i),w_j\rag .\]
+\item If $x=w_i\in X$ and $y=U(v_j)\in Y$, we have 
+\[\lag w_i,T(U(v_j))\rag =\lag w_i,v_j\rag =U(w_i),U(v_j)\rag .\]
+\item If $x=w_i, y=w_j\in Y$, we have 
+\[\lag w_i,T(w_j)\rag =\lag w_i,0\rag =0=\lag U(w_i),w_j\rag .\]
+\end{itemize}
+\item Take the subspace $W'$ to be $R(U)$. Thus we have $T((W')\pp)=\{0\}$ by the definition of $T$. Also, we may write an element $x$ in $R(U)$ to be 
+\[x=\sum_{i=1}^k{a_iU(v_i)}.\]
+Since the set of $U(v_i)$'s is orthonormal, we have 
+\[\|x\|^2=\sum_{i=1}^k{|a_i|^2}=\|\sum_{i=1}^k{a_iv_i}\|^2=\|T(x)\|^2.\]
+\end{enumerate}
+\item Since $A$ is unitarily equivalent to $B$, we write $B=P^*AP$ for some unitary matrix $P$. 
+\begin{enumerate}
+\item Compute 
+\[\tr(B^*B)=\tr((P^*AP)^*(P^*AP))=\tr(P^*A^*AP)=\tr(A^*A).\]
+\item We compute the trace of $A^*A$ and get 
+\[\tr(A^*A)=\sum_{i=1}^n{(A^*A)_{ii}}\]
+\[=\sum_{i=1}^n{\sum_{k=1}^n{(A^*)_{ik}A_{ki}}}=\sum_{i,j}{|A_{ij}|^2}.\]
+Use the result in the previous argument we get the conclusion.
+\item By the previous argument, they are not unitarily equivalent since 
+\[|1|^2+|2|^2+|2|^2+|i|^2=10\]
+is not equal to 
+\[|i|^2+|4|^2+|1|^2+|1|^2=19.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $f(x)=x+t$ be a translation. We may check it's a rigid motion by 
+\[\|f(x)-f(y)\|=\|(x+t)-(y+t)\|=\|x-y\|.\]
+\item Let $f,g$ be two rigid motion, we have 
+\[\|fg(x)-fg(y)\|=\|g(x)-g(y)\|=\|x-y\|.\]
+So the composition of $f$ and $g$ is again a rigid motion.
+\end{enumerate}
+\item We define $T$ to be $T(x)=f(x)-f(0)$. By the proof of Theorem 6.22, we know that $T$ is an unitary operator. Also, by Theorem 6.22 we know $f$ is surjective since it's composition of two invertible functions. Hence we may find some element $t$ such that $f(t)=2f(0)$. Now let $g(x)=x+t$. Since $T$ is linear, we have 
+\[T\circ g(x)=T(x+t)=T(x)+T(t)\]
+\[=f(x)-f(0)+f(t)-f(0)=f(x).\]
+Finally, if $f(x)=T(x+t)=U(x+v_0)$ for some unitary operator $U$ and some element $v_0$. We'll have 
+\[T(-v_0+t)=U(-v_0+v_0)=0.\]
+Since $T$ is unitary and hence injective, we know that $t=v_0$. And thus $U$ must equal to $T$. So this composition is unique.
+\item \begin{enumerate}
+\item First, the composition of two unitary operators is again an unitary operator. So $UT$ is an unitary operator. Since $\det(U)=\det(T)=-1$, we have 
+\[\det(UT)=\det(U)\det(T)=1.\]
+This means that $UT$ must be a rotation by Theorem 6.23.
+\item It's similar to the previous argumemnt. And now we have 
+\[\det(UT)=\det(TU)=\det(T)\det(U)=1\cdot (-1)=-1.\]
+So they are reflections.
+\end{enumerate}
+\item By the proof of Theorem 6.23 we know that the matrix representations of $T$ and $U$ with repect to the standard basis $\alpha $ are 
+\[[T]_{\alpha}=\begin{pmatrix}\cos 2\phi &\sin 2\phi \\\sin 2\phi &-\cos 2\phi \end{pmatrix}\]
+and 
+\[[U]_{\alpha}=\begin{pmatrix}\cos 2\psi &\sin 2\psi \\\sin 2\psi &-\cos 2\psi \end{pmatrix}.\]
+So we have 
+\[[UT]_{\alpha}=[U]_{\alpha}[T]_{\alpha}=\begin{pmatrix}\cos 2(\psi-\phi) &-\sin 2(\psi-\phi) \\\sin 2(\psi-\phi) &\cos 2(\psi-\phi) \end{pmatrix}.\]
+Hence $UT$ is a rotation by the angle $2(\psi-\phi) $.
+\item Here we have 
+\[[T]_{\alpha}=\begin{pmatrix}\cos \phi &-\sin \phi \\\sin \phi &\cos \phi \end{pmatrix}\]
+and 
+\[[U]_{\alpha}=\begin{pmatrix}\cos 2\psi &\sin 2\psi \\\sin 2\psi &-\cos 2\psi \end{pmatrix}.\]
+\begin{enumerate}
+\item Compute 
+\[[UT]_{\alpha}=[U]_{\alpha}[T]_{\alpha}=\begin{pmatrix}\cos 2(\psi-\frac{\phi}{2}) &\sin 2(\psi-\frac{\phi}{2}) \\\sin 2(\psi-\frac{\phi}{2}) &-\cos 2(\psi-\frac{\phi}{2}) \end{pmatrix}.\]
+So the angle is $\psi-\frac{\phi}{2}$.
+\item Compute 
+\[[TU]_{\alpha}=[T]_{\alpha}[U]_{\alpha}=\begin{pmatrix}\cos 2(\psi+\frac{\phi}{2}) &\sin 2(\psi+\frac{\phi}{2}) \\\sin 2(\psi+\frac{\phi}{2}) &-\cos 2(\psi+\frac{\phi}{2}) \end{pmatrix}.\]
+So the angle is $\psi+\frac{\phi}{2}$.
+\end{enumerate}
+\item \begin{enumerate}
+\item We may write 
+\[\begin{pmatrix}x&y\end{pmatrix}\begin{pmatrix}1&2\\2&1\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}.\]
+Diagonalize the matrix and get 
+\[\begin{pmatrix}x&y\end{pmatrix}P^*\begin{pmatrix}3 & 0\cr 0 & -1\end{pmatrix}P\begin{pmatrix}x\\y\end{pmatrix},\]
+where  
+\[P=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\cr 1 & -1\end{pmatrix}.\]
+So we have 
+\[\begin{pmatrix}x'\\y'\end{pmatrix}=P\begin{pmatrix}x\\y\end{pmatrix}.\]
+\item Diagonalize $\begin{pmatrix}2 & 1\cr 1 & 2\end{pmatrix}$ and get 
+\[\begin{pmatrix}x'\\y'\end{pmatrix}=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\cr 1 & -1\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}.\]
+\item Diagonalize $\begin{pmatrix}1 & -6\cr -6 & -4\end{pmatrix}$ and get 
+\[\begin{pmatrix}x'\\y'\end{pmatrix}=\frac{1}{\sqrt{13}}\begin{pmatrix}2 & 3\cr 3 & -2\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}.\]
+\item Diagonalize $\begin{pmatrix}3 & 1\cr 1 & 3\end{pmatrix}$ and get 
+\[\begin{pmatrix}x'\\y'\end{pmatrix}=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\cr 1 & -1\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}.\]
+\item Diagonalize $\begin{pmatrix}1 & -1\cr -1 & 1\end{pmatrix}$ and get 
+\[\begin{pmatrix}x'\\y'\end{pmatrix}=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\cr 1 & -1\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}.\]
+\end{enumerate}
+\item Denote $(X')^t=(x'y',z')$. Then we have 
+\[X'=PX,\]
+where $P$ is the matrix in the solution of Exercise 6.5.2(e).
+\item \begin{enumerate}
+\item We have the formula
+\[\|v_k\|u_k=v_k=w_k-\sum_{j=1}^k{\frac{\lag w_k,v_j\rag }{\|v_j\|^2}v_j}\]
+\[=w_k-\sum_{j=1}^k{\frac{\lag w_k,v_j\rag }{\|v_j\|}u_j}=w_k-\sum_{j=1}^k{\lag w_k,u_j\rag u_j}.\]
+\item It directly comes from the formula above and some computation.
+\item We have 
+\[w_1=(1,1,0),w_2=(2,0,1),w_3=(2,2,1)\]
+and 
+\[v_1=(1,1,0),v_2=(1,-1,1),v_3=(-\frac{1}{3},\frac{1}{3},\frac{2}{3})\]
+by doing the Gram-Schmidt process.
+This means that we have 
+\[\begin{pmatrix}1 & 2 & 2\cr 1 & 0 & 2\cr 0 & 1 & 1\end{pmatrix}=\begin{pmatrix}1 & 1 & -\frac{1}{3}\cr 1 & -1 & \frac{1}{3}\cr 0 & 1 & \frac{2}{3}\end{pmatrix}\begin{pmatrix}1 & 1 & 2\cr 0 & 1 & \frac{1}{3}\cr 0 & 0 & 1\end{pmatrix}.\]
+Then we may also compute 
+\[\|v_1\|=\sqrt{2},\|v_2\|=\sqrt{3},\|v_3\|=\frac{\sqrt{2}}{\sqrt{3}}.\]
+Now we have 
+\[\begin{pmatrix}1 & 2 & 2\cr 1 & 0 & 2\cr 0 & 1 & 1\end{pmatrix}=\begin{pmatrix}1 & 1 & -\frac{1}{3}\cr 1 & -1 & \frac{1}{3}\cr 0 & 1 & \frac{2}{3}\end{pmatrix}\begin{pmatrix}1 & 1 & 2\cr 0 & 1 & \frac{1}{3}\cr 0 & 0 & 1\end{pmatrix}\]
+\[=\begin{pmatrix}1 & 1 & -\frac{1}{3}\cr 1 & -1 & \frac{1}{3}\cr 0 & 1 & \frac{2}{3}\end{pmatrix}\begin{pmatrix}\sqrt{2} & 0 & 0\cr 0 & \sqrt{3} & 0\cr 0 & 0 & \frac{\sqrt{2}}{\sqrt{3}}\end{pmatrix}^{-1}\begin{pmatrix}\sqrt{2} & 0 & 0\cr 0 & \sqrt{3} & 0\cr 0 & 0 & \frac{\sqrt{2}}{\sqrt{3}}\end{pmatrix}\begin{pmatrix}1 & 1 & 2\cr 0 & 1 & \frac{1}{3}\cr 0 & 0 & 1\end{pmatrix}\]
+\[=\begin{pmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{6}}\cr \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{3}} & \frac{1}{\sqrt{6}}\cr 0 & \frac{1}{\sqrt{3}} & \frac{\sqrt{2}}{\sqrt{3}}\end{pmatrix}\begin{pmatrix}\sqrt{2} & \sqrt{2} & {2}^{\frac{3}{2}}\cr 0 & \sqrt{3} & \frac{1}{\sqrt{3}}\cr 0 & 0 & \frac{\sqrt{2}}{\sqrt{3}}\end{pmatrix}.\]
+Here the we have 
+\[Q=\begin{pmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{6}}\cr \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{3}} & \frac{1}{\sqrt{6}}\cr 0 & \frac{1}{\sqrt{3}} & \frac{\sqrt{2}}{\sqrt{3}}\end{pmatrix}\]
+and 
+\[R=\begin{pmatrix}\sqrt{2} & \sqrt{2} & {2}^{\frac{3}{2}}\cr 0 & \sqrt{3} & \frac{1}{\sqrt{3}}\cr 0 & 0 & \frac{\sqrt{2}}{\sqrt{3}}\end{pmatrix}.\]
+\item First that $Q_1$, $Q_2$ and $R_1$, $R_2$ are invertible otherwise $A$ cannot be invertible. Also, since $Q_1$, $Q_2$ is unitary, we have $Q_1^*=Q_1^{-1}$ and $Q_2^*=Q_2^{-1}$. Now we may observe that $Q_1Q_2^*=R_2R_1^{-1}$ is an unitary matrix. But $R_2R_1^{-1}$ is upper triangular since $R_2$ and the inverse of an upper triangular matrix $R_1$ are triangular matrices. So $D=R_2R_1^{-1}$ is both upper triangular and unitary. It could only be a unitary diagonal matrix.
+\item Denote $b$ by $\begin{pmatrix}1\\11\\-1\end{pmatrix}$. Now we have $A=QR=b$. Since $Q$ is unitary, we have $R=Q^*b$. Now we have 
+\[\begin{pmatrix}\sqrt{2} & \sqrt{2} & {2}^{\frac{3}{2}}\cr 0 & \sqrt{3} & \frac{1}{\sqrt{3}}\cr 0 & 0 & \frac{\sqrt{2}}{\sqrt{3}}\end{pmatrix}=R=Q^*b=\begin{pmatrix}3\cdot {2}^{\frac{3}{2}}\cr -\frac{11}{\sqrt{3}}\cr \frac{{2}^{\frac{5}{2}}}{\sqrt{3}}\end{pmatrix}.\]
+Then we may solve it to get the answer $x=3$, $y=-5$, and $z=4$.
+\end{enumerate}
+\item We may write 
+\[\beta=\{v_1,v_2,\ldots ,v_n\}\]
+and 
+\[\gamma=\{u_1,u_2,\ldots ,u_n\}.\]
+We have that $Q=[I]_{\gamma}^{\beta}$. Now if $\beta $ is orthonormal, we may compute 
+\[=u_j=\sum_{i=1}^n{Q_{ij}v_i}.\]
+Thus we know that the inner product of $u_s$ and $u_t$ would be 
+\[\lag u_s,u_t\rag =\lag \sum_{i=1}^n{Q_{is}v_i},\sum_{i=1}^n{Q_{it}v_i}\rag \]
+\[=\sum_{i=1}^n{Q_{is}\overline{Q_{it}}},\]
+the value of inner product of the $s$-th and the $t$-th columns of $Q$. So it would be $1$ if $s=t$ and it would be $0$ if $s\neq t$. Finally the converse is also true since $Q^*=[I]_{\beta}^{\gamma}$ is also an unitary matrix.
+\item \begin{enumerate}
+\item Check that 
+\[H_u(x+cy)=x+cy-2\lag x+cy,u\rag u\]
+\[=(x-2\lag x,u\rag u)+c(y-2\lag y,u\rag u)\]
+\[=H_u(x)+cH_u(y).\]
+\item Compute 
+\[H_u(x)-x=-2\lag x,u\rag u .\]
+The value would be zero if and only if $x$ is orthogonal to $u$ since $u$ is not zero.
+\item Compute 
+\[H_u(u)=u-2\lag u,u\rag u=u-2u=-u.\]
+\item We check $H_u^*=H_u$ by computing 
+\[\lag x,H_u^*(y)\rag =\lag H_u(x),y\rag =\lag x-2\lag x,u\rag u\rag \]
+\[=\lag x,y\rag -2\lag x,u\rag \cdot \lag y,u\rag \]
+and 
+\[\lag x,H_u(y)\rag =\lag x,y-2\lag y,u\rag u\rag\]
+\[=\lag x,y\rag -2\lag x,u\rag \cdot \lag y,u\rag .\]
+Also, compute
+\[H_u^2(x)=H_u(x-2\lag x,u\rag u)\]
+\[H_u(x)-2\lag x,u\rag H_u(u)\]
+\[(x-2\lag x,u\rag u)+2\lag x,u\rag u=x.\]
+Combining $H_u=H_u^*$ and $H_u^2=I$, we have $H_uH_u^*=H_u^*H_u=I$ and so $H_u$ is unitary.
+\end{enumerate}
+\item \begin{enumerate}
+\item We pick $\theta $ to be the value $\lag x,y\rag$. Thus we have 
+\[\overline{\lag x,\theta y\rag }=\overline{\lag x,\lag x,y\rag y\rag }\]
+\[=\overline{\lag y,x\rag\lag x,y\rag }=\lag x,y\rag \lag y,x\rag \]
+\[=\lag x,\lag x,y\rag y\rag =\lag x,\theta y\rag \]
+and so the value is real. Now pick $u$ to be the normalized vector $\frac{x-\theta y}{\|x-\theta y\|}$. And compute 
+\[H_u(x)=x-2\lag x,u\rag u=x-2\lag x,\frac{x-\theta y}{\|x-\theta y\|}\rag \frac{x-\theta y}{\|x-\theta y\|}\]
+\[=x-\frac{2}{\|x-\theta y\|^2}\lag x,x-\theta y\rag (x-\theta y)\]
+\[=x-\frac{2\|x\|^2-2\lag x,\theta y\rag }{\|x-\theta y\|^2}(x-\theta y)\]
+\[=x-\frac{\|x\|^2-2\lag x,y\rag +\|\theta y\|^2}{\|x-\theta y\|^2}(x-\theta y)\]
+\[=x-x+\theta y=\theta y.\]
+\item Pick $u$ to be the normalized vector $\frac{x-y}{\|x-y\|}$. Compute 
+\[H_u(x)=x-2\lag x,u\rag u=x-2\lag x,\frac{x-y}{\|x-y\|}\rag \frac{x-y}{\|x-y\|}\]
+\[=x-\frac{2}{\|x-y\|^2}\lag x,x-y\rag (x-y)\]
+\[=x-\frac{2\|x\|^2-2\lag x,y\rag }{\|x-y\|^2}(x-y)\]
+\[=x-\frac{\|x\|^2-2\lag x,y\rag +\|y\|^2}{\|x-y\|^2}(x-y)\]
+\[=x-x+y=y.\]
+\end{enumerate}
+\end{enumerate}

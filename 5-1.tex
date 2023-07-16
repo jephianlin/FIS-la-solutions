@@ -1,0 +1,203 @@
+\section{Eigenvalues and Eigenvectors}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. For example, the identity mapping $I_2$ has two eigenvalues $1$, $1$.
+\item Yes. If we have $(A-\lambda I)v=0$, we also have 
+\[(A-\lambda I)(cv)=c(A-\lambda I)v=0\]
+for all $c\in \mathbb{R}$. Note that this skill will make the statement false when the field is finite.
+\item Yes. For example, the matrix $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$ means the rotation through the angle $\frac{\pi}{2}$. And the matrix has no real eigenvalue and hence no real eigenvector.
+\item No. See definition.
+\item No. For the matrix $I_2$, the vectors $(1,0)$ and $(2,0)$ are all eigenvectors but they are parallel.
+\item No. The matrix $\begin{pmatrix}1&0\\-1&0\end{pmatrix}$ has only two eigenvalues $1$ and $-1$. But the sum $0$ is not an eigenvalue of the same matrix.
+\item No. Let $P$ be the space of all polynomial and $T$ be the identity mapping from $P$ to $P$. Thus we know $1$ is an eigenvalue of $T$.
+\item Yes. That a matrix $A$ is similar to a diagonal matrix $D$ means there is some invertible matrix $P$ such that  $P^{-1}AP=D$. Since $P$ is invertible, $P=[I]_{\alpha }^{\beta }$ for some basis $\alpha $ ,where $\beta $ is the standard basis for $\mathbb{F}^n$. So the first statement is equivalent to that $A$ is diagonalizable. And the desired result comes from Theorem 5.1.
+\item Yes. If $A$ and $B$ are similar, there is some invertible matrix $P$ such that $P^{-1}AP=B$. If $Av=\lambda v$, we have 
+\[B(P^{-1}v)=\lambda P^{-1}v.\]
+And if $Bv=\lambda v$, we have $A(Pv)=Pv$.
+\item No. It usually false. For example, the matrices $\begin{pmatrix}1&1\\0&2\end{pmatrix}$ and $\begin{pmatrix}2&0\\1&1\end{pmatrix}$ are similar since 
+\[\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}1&1\\0&2\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}=\begin{pmatrix}2&0\\1&1\end{pmatrix}.\]
+But the eigenvector $(1,0)$ of the first matrix is not a eigenvector of the second matrix.
+\item No. The vectors $(1,0)$ and $(0,1)$ are eigenvectors of the matrix $\begin{pmatrix}1&0\\-1&0\end{pmatrix}$. But the sum of them $(1,1)$ is not an eigenvector of the same matrix.
+\end{enumerate}
+\item Compute $[T]_{\beta}$ as what we did in previous chapters. If that matrix is diagonal, then $\beta $ is a basis consisting of eigenvectors.
+\begin{enumerate}
+\item No. $[T]_{\beta}=\begin{pmatrix}0&2\\-1&0\end{pmatrix}$.
+\item Yes. $[T]_{\beta}=\begin{pmatrix}-2&0\\0&-3\end{pmatrix}$.
+\item Yes. $[T]_{\beta}=\begin{pmatrix}-1&0&0\\0&1&0\\0&0&-1\end{pmatrix}$.
+\item No. $\begin{pmatrix}0 & 0 & 3\cr 0 & -2 & 0\cr -4 & 0 & 0\end{pmatrix}$.
+\item No. $[T]_{\beta}=\begin{pmatrix}-1&1&0&0\\0&-1&1&0\\0&0&-1&0\\0&0&0&-1\end{pmatrix}$.
+\item Yes. $\begin{pmatrix}-3 & 0 & 0 & 0\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$.
+\end{enumerate}
+\item Calculate the \charpoly{} of $A$ and find the zeroes of it to solve (i). Find the nonzero vector $v$ such that $(A-\lambda I)v=0$ to solve (ii). For (iii) and (iv) just follow the direction given by the textbook.
+\begin{enumerate}
+\item The \charpoly{} is ${t}^{2}-3t-4$ and the zeroes of it are $4$ and $-1$. For eigenvalue $4$, we may solve (A-4I)x=0. There are infinite solutions. Just pick one from them, say $(2,3)$. Similarly we can find the \egve{} corresponding to $-1$ is $(1,-1)$. Pick 
+\[\beta=\{(2,3),(1,-1)\}\] 
+and 
+\[Q=[I]_{\beta}^{\alpha}=\begin{pmatrix}2&1\\3&-1\end{pmatrix},\]
+where $\alpha $ is the standard basis for $\mathbb{R}^2$. Then we know that 
+\[D=Q^{-1}AQ=\begin{pmatrix}4&0\\0&-1\end{pmatrix}.\]
+\item The \charpoly{} is $-\left( t-3\right) \left( t-2\right) \left( t-1\right) $ with $3$ zeroes $1$, $2$, and $3$. The corresponding \egve s are $(1,1,-1)$, $(1,-1,0)$, and $(1,0,-1)$. The set of these three vectors are the desired basis. And we also have 
+\[Q=\begin{pmatrix}1&1&1\\1&-1&0\\-1&0&-1\end{pmatrix}\]
+and 
+\[D=Q^{-1}AQ=\begin{pmatrix}1&0&0\\0&2&0\\0&0&3\end{pmatrix}.\]
+\item The \charpoly{} is $\left( t-1\right) \left( t+1\right) $ with two zeroes $-1$ and $1$. The corresponding \egve s are $(1,-i-1)$ and $(1,-i+1)$. The set of these two vectors are the desired basis. And we also have 
+\[Q=\begin{pmatrix}1&1\\-i-1&-i+1\end{pmatrix}\]
+and 
+\[D=Q^{-1}AQ=\begin{pmatrix}-1&0\\0&1\end{pmatrix}.\]
+\item The \charpoly{} is $-{\left( t-1\right) }^{2}\,t$ with zeroes $0$, $1$, and $1$. The corresponding \egve s are $(1,4,2)$, $(1,0,1)$, and $(0,1,0)$. The set of these three vectors are the desired basis. And we also have 
+\[Q=\begin{pmatrix}1&1&0\\4&0&1\\2&1&0\end{pmatrix}\]
+and 
+\[D=Q^{-1}AQ=\begin{pmatrix}0&0&0\\0&1&0\\0&0&1\end{pmatrix}.\]
+\end{enumerate}
+\item Follow the process of the previous exercise.
+\begin{enumerate}
+\item $\beta =\{(3,5),(1,2)\}$ and $[T]_{\beta }=\begin{pmatrix}3&0\\0&4\end{pmatrix}$.
+\item $\beta =\{(2,0,-1),(1,2,0),(1,-1,-1)\}$ and $[T]_{\beta }=\begin{pmatrix}2 & 0 & 0\cr 0 & -1 & 0\cr 0 & 0 & 1\end{pmatrix}$.
+\item $\beta =\{(1,-2,-2),(2,0,-1),(0,2,1)\}$ and $[T]_{\beta }=\begin{pmatrix}2 & 0 & 0\cr 0 & -1 & 0\cr 0 & 0 & -1\end{pmatrix}$.
+\item $\beta =\{2x+3,x+2\}$ and $[T]_{\beta }=\begin{pmatrix}-3&0\\0&-2\end{pmatrix}$.
+\item $\beta =\{x-3,4x^2-13x-3,x+1\}$ and $[T]_{\beta }=\begin{pmatrix}0 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 4\end{pmatrix}$.
+\item $\beta =\{x^3-8,x^2-4,x-2,x\}$ and $[T]_{\beta }=\begin{pmatrix}1 & 0 & 0 & 0\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 3\end{pmatrix}$.
+\item $\beta =\{(1,x-1,3x^2-2,2x^3+6x-7\}$ and $[T]_{\beta }=\begin{pmatrix}-1 & 0 & 0 & 0\cr 0 & 1 & 0 & 0\cr 0 & 0 & 2 & 0\cr 0 & 0 & 0 & 3\end{pmatrix}$.
+\item $\beta =\{\begin{pmatrix}1&0\\0&-1\end{pmatrix},\begin{pmatrix}1&0\\0&1\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix}\}$ and $[T]_{\beta }=\begin{pmatrix}-1 & 0 & 0 & 0\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$.
+\item $\beta =\{\begin{pmatrix}1&0\\-1&0\end{pmatrix},\begin{pmatrix}0&1\\0&-1\end{pmatrix},\begin{pmatrix}1&0\\1&0\end{pmatrix},\begin{pmatrix}0&1\\0&1\end{pmatrix}\}$ and $[T]_{\beta }=\begin{pmatrix}-1 & 0 & 0 & 0\cr 0 & -1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$.
+\item $\beta =\{\begin{pmatrix}1&0\\0&1\end{pmatrix},\begin{pmatrix}0&1\\-1&0\end{pmatrix},\begin{pmatrix}1&0\\0&-1\end{pmatrix},\begin{pmatrix}0&1\\1&0\end{pmatrix}\}$ and $[T]_{\beta }=\begin{pmatrix}5 & 0 & 0 & 0\cr 0 & -1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$.
+\end{enumerate}
+\item By definition, that $v$ is an eigenvector of $T$ corresponding to $\lambda $ means $Tv=\lambda v$ and $v\neq 0$. Hence we get 
+\[Tv-\lambda v=(T-\lambda I)v=0\] 
+and $v\in N(T-\lambda I)$. Conversely, if $v\neq 0$ and $v\in N(T-\lambda I)$, we have $Tv=\lambda v$. It's the definition of \egve .
+\item We know that 
+\[Tv=\lambda v\]
+is equivalent to 
+\[[T]_{\beta }[v]_{\beta}=\lambda [v]_{\beta}.\]
+\item \begin{enumerate}
+\item We have that 
+\[[T]_{\beta}=[I]_{\gamma}^{\beta}[T]_{\gamma}[I]_{\beta}^{\gamma}\]
+and 
+\[([I]_{\gamma}^{\beta})^{-1}=[I]_{\beta}^{\gamma}.\]
+So we know that 
+\[\det([T]_{\beta})=\det([I]_{\gamma}^{\beta})\det([T]_{\gamma})\det([I]_{\beta}^{\gamma})=\det([T]_{\gamma}).\]
+\item It's the instant result from Theorem 2.18 and the Corollary after Theorem 4.7.
+\item Pick any ordered basis $\beta $ and we have 
+\[\det(T^{-1})=\det([T^{-1}]_{\beta})=\det(([T]_{\beta})^{-1})=\det([T]_{\beta})^{-1}=\det(T)^{-1}.\]
+The second and the third equality come from Theorem 2.18 and the Corollary after Theorem 4.7.
+\item By definition,
+\[\det(TU)=\det([TU]_{\beta})=\det([T]_{\beta}[U]_{\beta})\]
+\[=\det([T]_{\beta})\det([U]_{\beta})=\det(T)\det(U).\]
+\item We have 
+\[\det(T-\lambda I_V)=\det([T-\lambda I]_{\beta})=\det([T]_{\beta}-\lambda[I]_{\beta})=\det([T]_{\beta}-\lambda I).\]
+\end{enumerate}
+\item \begin{enumerate}
+\item By previous exercises, we have that $T$ is invertible if and only if $\det(T)\neq 0$. And the fact $\det(T)\neq 0$ is equivalent to the fact $N(T-0I)=\{0\}$, which is equivalent to that zero is not an \egva{} of $T$ by Theorem 5.4.
+\item Since $T=(T^{-1})^{-1}$, it's enough to prove only one side of the statement. If $\lambda $ an \egva{} with \egve{} $v$, we have $Tv=\lambda v$ and so $T^{-1}v=\lambda^{-1}v$. This means $\lambda^{-1}$ is an \egva{} of $T^{-1}$.
+\item \begin{description}
+\item[(a)] A matrix $M$ is invertible if and only if $0$ is not an \egva{} of $M$.
+\item[(b)] Let $M$ be an invertible matrix. We have $\lambda $ is an \egva{} of $M$ if and only if $\lambda^{-1}$ is an \egva{} of $M^{-1}$.
+\end{description}
+First, if $M$ is invertible, then there's no vector $v$ such that $Mv=0v=0$. So $0$ is not an \egva{} of $M$. If $0$ is not an \egva{} of $M$, then $v=0$ is the only vector sucht that $Mv=0$. This means that $M$ is injective and so invertible since $M$ is square. Second, it's enough to prove one side of that statement since $M=(M^{-1})^{-1}$. And if we have $Mv=\lambda v$, then we have $M^{-1}v=\lambda^{-1}v$.
+\end{enumerate}
+\item This is directly because the determinant of an upper triangular matrix is the product of it's diagonal entries.
+\item \begin{enumerate}
+\item What did the author want to ask? Just calculate it!
+\item Just calculate it and get the answer $(\lambda -t)^n$, where $n$ is the dimension of $V$.
+\item We already have that for any ordered basis $\beta $, $[\lambda I_V]_{\beta}=\lambda I$, a diagonal matrix. So it's diagonalizable. By the previous exercise we also have that the only eigenvalue is the zero of the \charpoly{}, $\lambda$.
+\end{enumerate}
+\item \begin{enumerate}
+\item It's just because 
+\[A=B^{-1}\lambda I B=\lambda I\]
+for some invertible matrix $B$.
+\item Let $M$ be the matrix mentioned in this question and $\lambda $ be that only \egva{} of $M$. We have that the basis to make $M$ diagonalizable if consisting of vectors $v_i$ such that $(M-\lambda I)v_i=0$. This means $(M-\lambda I)v=0$ for every $v$ since $\{v_i\}$ forms a basis. So $M$ must be $\lambda I$.
+\item It's easy to see that $1$ is the only \egva{} of the matrix. But since nullity of 
+\[\begin{pmatrix}1&1\\0&1\end{pmatrix}-\begin{pmatrix}1&0\\0&1\end{pmatrix}=\begin{pmatrix}0&1\\0&0\end{pmatrix}\]
+is one, we can't find a set of two vector consisting of \egve s such that the set is independent. By Theorem 5.1, the matrix is not diagonalizable.
+\end{enumerate}
+\item \begin{enumerate}
+\item Use the fact if $A=P^{-1}BP$, then 
+\[\det(A-\lambda I)=\det(P^{-1}(A-\lambda I)P)\]
+\[=\det(P^{-1}AP-\lambda P^{-1}IP)=\det(B-\lambda I).\]
+\item Use the result of the previous exercise and the fact that each matrix representation of one linear operator is pairwisely similar to each other.
+\end{enumerate}
+\item \begin{enumerate}
+\item Since the diagram is commutative, we know that 
+\[T(v)=\phi_{\beta}^{-1}(T(\phi_{\beta}(v)))=\phi_{\beta}^{-1}(\lambda \phi_{\beta}(v))=\lambda v.\]
+\item One part of this statement has been proven in the previous exercise. If $\phi_{\beta}^{-1}(y)$ is an \egve{} of $T$ corresponding to $\lambda $, we have 
+\[Ay=\phi_{\beta}(T(\phi_{\beta}^{-1}(y)))=\phi_{\beta}(\lambda \phi_{\beta}(y))=\lambda y.\]
+\end{enumerate}
+\item Use the fact 
+\[\det(A-\lambda I)=\det((A-\lambda I)^t)=\det(A^t-\lambda I).\]
+\item \begin{enumerate}
+\item If we have $T(v)=\lambda v$ for some $v$, then we also have that 
+\[T^m(v)=T^{m-1}(\lambda v)=\lambda T^{m-1}(v)=\cdots =\lambda^m v.\]
+\item You can just replace the character $T$ by the character $A$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Just as the Hint, we have 
+\[\tr(P^{-1}AP)=\tr(PP^{-1}A)=\tr(A).\]
+\item We may define the trace of a linear operator on a finite-dimensional vector space to be the trace of its matrix representation. It's well-defined due to the previous exercise.
+\end{enumerate}
+\item \begin{enumerate}
+\item If $T(A)=A^t=\lambda A$ for some $\lambda $ and some nonzero matrix $A$, say $A_{ij}\neq 0$, we have 
+\[A_{ij}=\lambda A_{ji}\]
+and 
+\[A_{ji}=\lambda A_{ij}\]
+and so 
+\[A_{ij}=\lambda^2 A_{ij}.\]
+This means that $\lambda $ can only be $1$ or $-1$. And these two values are \egva s due to the existence of symmetric matrices and skew-symmetric matrices.
+\item The set of nonzero symmetric matrices are the \egve s corresponding to \egva{} $1$, while the set of nonzero skew-symmetric matrices are the \egve s corresponding to \egva{} $-1$.
+\item It could be $\{\begin{pmatrix}1&0\\0&1\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}1&0\\0&-1\end{pmatrix}\}$.
+\item Let $E_{ij}$ be the matrix with its $ij$-entry $1$ and all other entries $0$. Then the basis could be 
+\[\{E_{ii}\}_{i=1,2,\ldots ,n}\cup \{E_{ij}+E_{ji}\}_{i>j}\cup \{E_{ij}-E_{ji}\}_{i>j}.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item If $B$ is invertible, we have $B^{-1}$ exists and $\det(B)\neq 0$. Now we know that 
+\[\det(A+cB)=\det(B)\det(B^{-1}A+cI),\]
+a nonzero polynomial of $c$. It has only finite zeroes, so we can always find some $c$ sucht that the determinant is nonzero.
+\item Since we know that 
+\[\det\begin{pmatrix}1&1\\c&1+c\end{pmatrix}=1,\]
+take $A=\begin{pmatrix}1&1\\0&1\end{pmatrix}$ and $B=\begin{pmatrix}0&0\\1&1\end{pmatrix}$.
+\end{enumerate}
+\item Say $A=P^{-1}BP$. Pick $V=\F^n$, $T=L_A$, and $\beta $ be the standard basis. We can also pick $\gamma $ such that $P=[I]_{\gamma}^{\beta}$. That is, $\gamma $ is the set of the column vectors of $P$.
+\item From the equation given in the question, it's easy that $f(0)=a_0$. And by definition, we also know that $f(t)=\det(A-tI)$ and so $f(0)=\det(A)$. So $A$ is invertible if and only if $a_0=\det(A)\neq 0$.
+\item \begin{enumerate}
+\item We should use one fact that if $B$ is a matrix with number of nonzero entries less than or equal to $k$, then we have $\det(A-tB)$ is a polynomial of $t$ with degree less than or equal to $k$. To prove this, we induct on both $k$ and the size of matrix $n$. If $k=0$, we know that $B$ is a zero matrix and $\det(A-tB)$ is constant. For $n=1$, it's easy to see that degree of $\det(A-tB)$ is equal to $1$, which will be less than or equal to $k$ if $k\geq 1$. Suppose the hypothesis holds for $n=k-1$. For the case $n=k$, we may expand the determinant along the first row. That is,
+\[\det(A-tB)=\sum_{j=1}^n{(-1)^{1+j}(A-tB)_{1j}\det(\tilde{A-tB}_{1j})}.\]
+If the first row of $B$ is all zero, then $\det(\tilde{A-tB}_{1j})$ is a polynomial with degree less than or equal to $k$ and $(A-tB)_{1j}$ contains no $t$ for all $j$. If the first row of $B$ is not all zero, then $\det(\tilde{A-tB}_{1j})$ is a polynomial with degree less than or equal to $k-1$ and each $(A-tB)_{1j}$ contains $t$ with degree at most $1$. In both case, we get that $\det(A-tB)$ is a polynomial with degree less than or equal to $k$.
+
+Now we may induct on $n$ to prove the original statement. For $n=1$, we have $f(t)=A_{11}-t$. For $n=2$, we have $f(t)=(A_{11}-t)(A_{22}-t)-A_{12}A_{21}$. Suppose the hypothesis is true for $n=k-1$. For the case $n=k$, we expand the determinant along the first row. That is, 
+\[\det(A-tI)=(A_{11}-t)\det(\tilde(A-tI)_{11})+\sum_{j=2}^k{(-1)^{i+j}\det(\tilde(A-tI)_{1j}}.\]
+By the induction hypothesis, we know that 
+\[\det(\tilde(A-tI)_{11})=(A_{22}-t)(A_{33}-t)\cdots (A_{kk}-t)+p(t),\]
+where $p(t)$ is a polynomial with degree less than or equal to $k-3$, and 
+\[(-1)^{i+j}\det(\tilde(A-tI)_{1j}\]
+is a polynomial with degree less than or equal to $k-2$. So it becomes
+\[(A_{11}-t)(A_{22}-t)\cdots (A_{nn}-t)+(A_{11}-t)p(t)+\sum_{j=2}^n{(-1)^{i+j}\det(\tilde(A-tI)_{1j}},\]
+in which the summation of the second term and the third term is a polynomial with degree less than or equal to $n-1$.
+\item By the previous exercise, we know that the coefficient of $t^{n-1}$ comes from only the first term 
+\[(A_{11}-t)(A_{22}-t)\cdots (A_{nn}-t)\]
+and it would be 
+\[(-1)^{n-1}\sum{A_{ii}}=\tr(A).\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Use the notation $x$ and $\lambda $ that in this question. In Exercise 5.1.15(a) we already have 
+\[T^m(x)=\lambda^m x.\]
+And it's also easy to see that if $Ax=\lambda_1 x$ and $Bx=\lambda_2 x$, we'll have 
+\[(A+B)x=\lambda_1+\lambda_2.\]
+So we get the desired result.
+\item Shit! It's not funny! Just change $T$ into $A$.
+\item Just calculate that 
+\[g(A)=\begin{pmatrix}14 & 10\cr 15 & 19\end{pmatrix}\]
+and 
+\[g(A)\begin{pmatrix}2\cr 3\end{pmatrix}=29\begin{pmatrix}2\cr 3\end{pmatrix}.\]
+Also check that $\lambda =4$ and $g(4)=29$.
+\end{enumerate}
+\item If $T$ is diagonalizable, there is a basis $\beta $ consisting of eigenvectors. By the previouse exercise, we know that if $T(x)=\lambda x$, 
+\[f(T)(v)=f(\lambda )v=0v=0.\]
+This means that for each $v\in \beta $, we have $f(T)(v)=0$. Since $\beta $ is a basis, $f(T)=T_0$.
+\item \begin{enumerate}
+\item The coefficient of $t^n$ comes from the first term of that equality in Exercise 5.1.21(a). So it's $(-1)^n$.
+\item A polynomial of degree $n$ has at most $n$ zeroes.
+\end{enumerate}
+\item Where is the Corollaries?
+\item By Exercise 5.1.20 and Exercise 5.1.21(b) and Theorem 5.3(b), we know the \charpoly{} must be 
+\[t^2-\tr(A)t+\det(A).\]
+And the coefficient could be $0$ or $1$. So there are $4$ possible \charpoly s. By checking that all of them are achievable, we get the answer are $4$.
+\end{enumerate}

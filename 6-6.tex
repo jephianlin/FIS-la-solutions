@@ -1,0 +1,115 @@
+\section{Orthogonal Projections and the Spectral Theorem}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. Orthogonal projection is self-adjoint by Theorem 6.24. But for general projection the statement is not true. For example, the transformation $T(a,b)=(a+b,0)$ is a projection which is not self-adjoint.
+\item Yes. See the paragraph after Definition of ``orthogonal projection''.
+\item Yes. This is the result of the Spectral Theorem.
+\item No. It's true for orthogonal projection but false for general projection. For example, the the transformation $T(a,b)=(a+b,0)$ is a projection on $W$. But we have $T(0,1)=(1,0)$ is not the point closest to $(0,1)$ since $(0,0)$ is much closer.
+\item No. An unitary operator is usually invertible. But an projection is generally not invertible. For example, the mapping $T(a,b)=(a,0)$.
+\end{enumerate}
+\item We could calculate the projection of $(1,0)$ and $(0,1)$ are  
+\[\frac{\lag (1,0),(1,2)\rag }{\|(1,2)\|^2}(1,2)=\frac{1}{5}(1,2)\]
+and 
+\[\frac{\lag (0,1),(1,2)\rag }{\|(1,2)\|^2}(1,2)=\frac{2}{5}(1,2)\]
+by Theorem 6.6. So we have 
+\[[T]_{\beta}=\frac{1}{5}\begin{pmatrix}1&2\\2&4\end{pmatrix}.\]
+
+On the other hand, we may do the same on $(1,0,0)$, $(0,1,0)$, and $(1,0,0)$ with respect to the new subspace $W=\sp(\{(1,0,1)\})$. First compute 
+\[\frac{\lag (1,0,0),(1,0,1)\rag }{\|(1,0,1)\|^2}(1,0,1)=\frac{1}{2}(1,0,1),\]
+\[\frac{\lag (0,1,0),(1,0,1)\rag }{\|(1,0,1)\|^2}(1,0,1)=0(1,0,1),\]
+and 
+\[\frac{\lag (0,0,1),(1,0,1)\rag }{\|(1,0,1)\|^2}(1,0,1)=\frac{1}{2}(1,0,1).\]
+Hence the matrix would be 
+\[[T]_{\beta}=\frac{1}{2}\begin{pmatrix}1&0&1\\0&0&0\\1&0&1\end{pmatrix}.\]
+\item The first and the third step comes from the Spectral theorem and the fact that these matrices are self-adjoint or at least normal. So we only do the first two steps. Also, we denote the matrix $E_{ij}$ to be a matrix, with suitable size, whose $ij$-entry is $1$ and all other entries are zero. Finally, it's remarkble that that the matrices $P$ and $D$ are different from the each questions. They are defined in Exercise 6.5.2. \begin{enumerate}
+\item Let $A_3=P^*E_{11}P$ and $A_{-1}=P^*E_{22}P$. Then we have $T_3=L_{A_3}$, $T_{-1}=L_{A_{-1}}$ and 
+\[L_A=3T_3-1T_{-1}.\]
+\item Let $A_{i}=P^*E_{11}P$ and $A_{i}=P^*E_{22}P$. Then we have $T_{-i}=L_{A_{-i}}$, $T_{i}=L_{A_{i}}$ and 
+\[L_A=-iT_{-i}+iT_{i}.\]
+\item Let $A_{8}=P^*E_{11}P$ and $A_{-1}=P^*E_{22}P$. Then we have $T_{8}=L_{A_{8}}$, $T_{-1}=L_{A_{-1}}$ and 
+\[L_A=8T_{8}-1T_{-1}.\]
+\item Let $A_{4}=P^*E_{11}P$ and $A_{-2}=P^*(E_{22}+E_{33})P$. Then we have $T_{4}=L_{A_{4}}$, $T_{-2}=L_{A_{-2}}$ and 
+\[L_A=4T_{4}-2T_{-2}.\]
+\item Let $A_{4}=P^*E_{11}P$ and $A_{1}=P^*(E_{22}+E_{33})P$. Then we have $T_{4}=L_{A_{4}}$, $T_{1}=L_{A_{1}}$ and 
+\[L_A=4T_{4}+1T_{1}.\]
+\end{enumerate}
+\item Since $T$ is an orthogonal projection, we have $N(T)=R(T)\pp$ and $R(T)=N(T)\pp$. Now we want to say that $N(I-T)=R(T)=W$ and $R(I-T)=N(T)=W\pp$ and so $I-T$ is the orthogonal projection on $W\pp$. If $x\in N(I-T)$, we have $x=T(x)\in R(T)$. If $T(x)\in R(T)$, we have 
+\[(I-T)T(x)=T(x)-T^2(x)=T(x)-T(x)=0.\]
+So we have the first equality. Next, if $(I-T)(x)\in R(I-T)$ we have 
+\[T(I-T)(x)=T(x)-T^2(x)=T(x)-T(x)=0.\]
+If $x\in N(T)$ we have $T(x)=0$ and so $x=(I-T)(x)\in R(I-T)$. So the second equality also holds.
+\item \begin{enumerate}
+\item Since $T$ is an orthogonal projection, we may write $V=R(T)\oplus R(T)\pp$. So for each $x\in V$ we could write $x=u+v$ such that $u\in R(T)$ and $v\in R(T)\pp$. So we have 
+\[\|T(u+v)\|=\|u\|\leq \|u+v\|=\|x\|.\]
+
+The example for which the in which the inequality does not hold is $T(a,b)=(a+b,0)$, since we have 
+\[\|T(1,1)\|=\|(2,0)\|=2> \|(1,1)\|=\sqrt{2}.\]
+
+Finally, if the equality holds for all $x\in V$, then we have $\|u\|=\|u+v\|$. Since $u$ and $v$ are orthogonal, we have 
+\[\|u+v\|^2=\|u\|^2+\|v\|^2.\]
+So the equality holds only when $v=0$. This means that $x$ is always an element in $R(T)$ and so $R(T)=V$. More precisely, $T$ is the idenetity mapping on $V$.
+\item If $T$ is a projection on $W$ along $W'$, we have $V=W\oplus W'$. So every vector $x\in V$ could be written as $x=u+v$ such that $u\in W$ and $v\in W'$. If $W'\neq W\pp$, we may find some $u\in W$ and $v\in W'$ such that they are not orthogonal. So $\lag u,v\rag $ is not zero. We may pick $t=\frac{2\|v\|^2}{2 \Re \lag u,v\rag}$ and calculate that 
+\[\|T(tu+v)\|^2=\|tu\|^2.\]
+But now we have 
+\[\|tu+v\|^2=\|tu\|^2+2\Re \lag tu,v\rag +\|v\|^2\]
+\[=\|tu\|^2-\|v\|^2<\|T(tu+v)\|^2.\]
+So $T$ must be an orthogonal projection.
+\end{enumerate}
+\item It's enough to show that $R(T)\pp=N(T)$. If $x\in R(T)\pp$, we have 
+\[\lag T(x),T(x)\rag =\lag x,T^*T(x)\rag =\lag x,T(T^*(x))\rag =0\]
+and so $T(x)=0$. If $x\in N(T)$, we have 
+\[\lag x,T(y)\rag =\lag T^*(x),y\rag =0\]
+since $T^*(x)=0$ by Theorem 6.15(c). Hence now we know that $R(T)\pp=N(T)$ and $T$ is an orthogonal projection.
+\item \begin{enumerate}
+\item It comes from Theorem 6.25(c).
+\item If 
+\[T_0=T^n=\sum_{i=1}^k{\lambda_i^nT_i}.\]
+Now pick arbitrary eigenvector $v_i$ for the eigenvalue $\lambda_i$. Then we have 
+\[0=T(v_i)=(\sum_{i=1}^k{\lambda_i^nT_i})(v_i)=\lambda_i^nv_i.\] 
+This means that $\lambda_i^n=0$ and so $\lambda_i=0$ for all $i$. Hence we know that 
+\[T=\sum_{i=1}^k{\lambda_iT_i}=T_0.\]
+\item By the Corollary 4 after the Spectral Theorem, we know that $T_i=g_i(T)$ for some polynomial $g_i$. This means that $U$ commutes with each $T_i$ if $U$ commutes with $T$. Conversely, if $U$ commutes with each $T_i$, we have 
+\[TU=(\sum_{i=1}^k{\lambda_iT_i})U=\sum_{i=1}^k{\lambda_iT_iU}\]
+\[=\sum_{i=1}^k{\lambda_iUT_i}=U(\sum_{i=1}^k{\lambda_iT_i})=UT.\]
+\item Pick 
+\[U=\sum_{i=1}^k{\lambda_i^{\frac{1}{2}}T_i},\]
+where $\lambda_i^{\frac{1}{2}}$ is an arbitrary square root of $\lambda_i$.
+\item Since $T$ is a mapping from $V$ to $V$, $T$ is invertible if and only if $N(T)=\{0\}$. And $N(T)=\{0\}$ is equivalent to that $0$ is not an eigenvalue of $T$.
+\item If every eigen value of $T$ is $1$ or $0$. Then we have $T=0T_0+1T_1=T_1$, which is a projectoin. Conversely, if $T$ is a projection on $W$ along $W'$, we may write any element in $V$ as $u+v$ such that $u\in W$ and $v\in W'$. And if $\lambda $ is an eigenvalue, we have 
+\[u=T(u+v)=\lambda(u+v)\]
+and so 
+\[(1-\lambda)u=\lambda v.\]
+Then we know that the eigenvalue could only be $1$ or $0$.
+\item It comes from the fact that 
+\[T^*=\sum_{i=1}^k{\overline{\lambda_iT_i}}.\]
+\end{enumerate}
+\item It directly comes from that $T^*=g(T)$ for some polynomial $g$.
+\item \begin{enumerate}
+\item Since $U$ is an operator on a finite-dimensional space, it's sufficient to we prove that $R(U^*U)\pp =N(U^*U)$ and $U^*U$ is a projection. If $x\in R(U^*U)\pp$, we have 
+\[\lag x,U^*U(x)\rag =\lag U(x),U(x)\rag =0\]
+and so $U^*U(x)=U^*(0)=0$. If $x\in N(U^*U)$, we have 
+\[\lag x,U^*U(y)\rag =U^*U(x),y\rag =0\]
+for all $y$. This means that $x\in R(U^*U)\pp$. Now we know that $V=R(U^*U)\oplus N(U^*U)$ and we can write element in $V$ as $p+q$ such that $p\in R(U^*U)$ and $N(U^*U)$. Check that 
+\[U^*U(p+q)=U^*U(p)=p\]
+by the definition of $U^*$ in Exercise 6.5.30(e). Hence it's an orthogonal projection.
+\item Use the notation in Exercise 6.5.20. Let 
+\[\alpha=\{v_1,v_2,\ldots ,v_k\}\]
+be an orthonormal basis for $W$. Extend it to be an orthonormal basis 
+\[\gamma=\{v_1,v_2,\ldots ,v_n\}\]
+for $V$. Now check that 
+\[UU^*U(v_i)=0=U(v_i)\]
+if $i>k$ and 
+\[UU^*U(v_i)=UU^*(U(v_i))=U(v_i)\]
+if $i\leq k$ by the definition of $U^*$ in Exercise 6.5.20(e). They meet on a basis and so they are the same.
+\end{enumerate}
+\item We use induction on the dimension $n$ of $V$. If $n=1$, $U$ and $T$ will be diagonalized simultaneously by any orthonormal basis. Suppose the statement is true for $n\leq k-1$. Consider the case $n=k$. Now pick one arbitrary eigenspace $W=E_{\lambda}$ of $T$ for some eigenvalue $\lambda$. Note that $W$ is $T$-invariant naturally and $U$-invariant since 
+\[TU(w)=UT(w)=\lambda U(w)\]
+for all $w\in W$. If $W=V$, then we may apply Theorem 6.16 to the operator $U$ and get an orthonormal basis $\beta $ consisting of eigenvectors of $U$. Those vectors will also be eigenvectors of $T$. If $W$ is a proper subspace of $V$, we may apply the induction hypothesis to $T_W$ and $U_W$, which are normal by Exercise 6.4.7 and Exercise 6.4.8, and get an orthonormal basis $\beta_1$ for $W$ consisting of eigenvectors of $T_W$ and $U_W$. So those vectors are also eigenvectors of $T$ and $U$. On the other hand, we know that $W\pp$ is also $T$- and $U$-invariant by Exercise 6.4.7. They are also normal operators by Exercise 6.4.7(d). Again, by applying the induction hypothesis we get an orthonormal basis $\beta_2$ for $W\pp$ consisting of eigenvectors of $T$ and $U$. Since $V$ is finite dimentional, we know that $\beta =\beta_1\cup \beta_2$ is an orthonormal basis for $V$ consisting of eigenvectors of $T$ and $U$.
+\item By Theorem 6.25(a), we may uniquely write element in the space as 
+\[v=x_1+x_2+\ldots +x_k\]
+such that $x_i\in W_i$. If $i\neq j$, we have 
+\[T_iT_j(v)=0=\delta_{ij}T_i(v)\]
+by the definition of $T_i$'s and Theorem 6.25(b). Similarly, if $i=j$, we have 
+\[T_iT_i(v)=x_i=\delta_{ii}T_i(v).\]
+So they are the same.
+\end{enumerate}

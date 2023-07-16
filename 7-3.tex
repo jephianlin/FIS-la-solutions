@@ -1,0 +1,79 @@
+\section{The Minimal Polynomial}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. If $p(t)$ is the polynomial of largest degree such that $p(T)=T_0$, then $q(t)=t(p(t)$ is a polynomial of larger degree with the same property $q(T)=T_0$.
+\item Yes. This is Theorem 7.12.
+\item No. The minimal polynomial divides the \charpoly{} by Theorem 7.12. For example, the identity transformation $I$ from $\R^2$ to $\R^2$ has its $\charpoly{}$ $(1-t)^2$ and its minimal polynomial $t-1$.
+\item No. The identity transformation $I$ from $\R^2$ to $\R^2$ has its $\charpoly{}$ $(1-t)^2$ but its minimal polynomial $t-1$.
+\item Yes. Since $f$ splits, it consists of those factors $(t-\lambda)^r$ for some $r\leq n$ and for some eigenvalues $\lambda $. By Theorem 7.13, the minimal polynomial $p$ also contains these factors. So $f$ divides $p^n$.
+\item No. For example, the identity transformation $I$ from $\R^2$ to $\R^2$ has its $\charpoly{}$ $(1-t)^2$ and its minimal polynomial $t-1$.
+\item No. For the matrix $\begin{pmatrix}1&1\\0&1\end{pmatrix}$, its minimal polynomial is $(t-1)^2$ but it is not diagonalizable.
+\item Yes. This is Theorem 7.15.
+\item Yes. By Theorem 7.14, the minimal polynomial contains at least $n$ zeroes. Hence the degree of the minimal polynomial of $T$ must be greater than or equal to $n$. Also, by Cayley-Hamilton Theorem, the degree is no greater than $n$. Hence the degree of the minimal polynomial of $T$ must be $n$.
+\end{enumerate}
+\item Let $A$ be the given matrix. Find the eigenvalues $\lambda_i$ of $A$. Then the minimal polynomial should be of the form $\prod_i(t-\lambda_i)^r_i$. Try all possible $r_i$'s. Another way is to compute the Jordan canonical form.
+\begin{enumerate}
+\item The eigenvalues are $1$ and $3$. So the minimal polynomial must be $(t-1)(t-3)$.
+\item The eigenvalues are $1$ and $1$. So the minimal polynomial could be $(t-1)$ or $(t-1)^2$. Since $A-I\neq O$, the minimal polynomial must be $(t-1)^2$.
+\item The Jordan canonical form is 
+\[\begin{pmatrix}2 & 0 & 0\cr 0 & 1 & 1\cr 0 & 0 & 1\end{pmatrix}.\]
+So the minimal polynomial is $(t-2)(t-1)^2$.
+\item The Jordan canonical form is 
+\[\begin{pmatrix}2 & 1 & 0\cr 0 & 2 & 0\cr 0 & 0 & 2\end{pmatrix}.\]
+So the minimal polynomial is $(t-2)^2$.
+\end{enumerate}
+\item Write down the matrix and do the same as that in the previous exercise.\begin{enumerate}
+\item The minimal polynomial is $(t-\sqrt{2})(t+\sqrt{2})$.
+\item The minimal polynomial is $(t-2)^3$.
+\item The minimal polynomial is $(t-2)^2$.
+\item The minimal polynomial is $(t+1)(t-1)$.
+\end{enumerate}
+\item Use Theorem 7.16. So those matrices in Exercises 7.3.2(a), 7.3.3(a), and 7.3.3(d) are diagonalizable.
+\item Let $f(t)=t^3-2t+t=t(t-1)^2$. Thus we have $f(T)=T_0$. So the minimal polynomial $p(t)$ must divide the polynomial $f(t)$. Since $T$ is diagonalizable, $p(t)$ could only be $t$, $(t-1)$, or $t(t-1)$. If $p(t)=t$, then $T=T_0$. If $p(t)=(t-1)$, then $T=I$. If $p(t)=t(t-1)$, then $[T]_{\beta}=\begin{pmatrix}0&0\\0&1\end{pmatrix}$ for some basis $\beta$. 
+\item Those results comes from the fact $[f(T)]_{\beta}=O$ if and only if $f(T)=T_0$.
+\item By Theorem 7.12, $p(t)$ must of that form for some $m_i\leq n_i$. Also, by Theorem 7.14, we must have $m_i\geq 1$.
+\item \begin{enumerate}
+\item Let $f(t)$ be the \charpoly{} of $T$. Recall that $\det(T)=f(0)$ by Theorem 4.4.7. So By Theorem 7.12 and Theorem 7.14 $0$ is a zero for $p(t)$ if and only if $0$ is a zero for $f(t)$. Thus $T$ is invertible if and only if $p(0)\neq 0$.
+\item Directly compute that 
+\[-\frac{1}{a_0}(T^{n-1}+a_{n-1}T^{n-2}+\cdots +a_2T+a_1I)T\]
+\[=-\frac{1}{a_0}(p(T)-a_0)=I.\]
+\end{enumerate}
+\item Use Theorem 7.13. We know that $V$ is a $T$-cyclic subspace if and only if the minimal polynomial $p(t)=(-1)^nf(t)$, where $n$ is the dimension of $V$ and $f$ is the \charpoly{} of $T$. Assume the \charpoly{} $f(t)$ is 
+\[(t-\lambda_1)^{n_1}(t-\lambda_2)^{n_2}\cdots (t-\lambda_k)^{n_k},\]
+where $n_i$ is the dimension of the eigenspace of $\lambda_i$ since $T$ is diagonalizable.
+Then the minimal polynomial must be 
+\[(t-\lambda_1)(t-\lambda_2)\cdots (t-\lambda_k).\]
+So $V$ is a $T$-cyclic subspace if and only if $n_i=1$ for all $i$.
+\item Let $p(t)$ be the minimal polynomial of $T$. Thus we have 
+\[p(T_W)(w)=p(T)(w)=0\]
+for all $w\in W$. This means that $p(T_W)$ is a zero mapping. Hence the minimal polynomial of $T_W$ divides $p(t)$.
+\item \begin{enumerate}
+\item If $y\in V$ is a solution to the equation $g(D)(y)=0$, then $g(D)(y')=(g(D)(y))'=0\in V$.
+\item We already know that 
+\[g(D)(y)=0\]
+for all $y\in V$. 
+So the minimal polynomial $p(t)$ must divide $g(t)$. If the degree of $p(t)$ is less than but not equal to the degree of $g(t)$, then the solution space of the equation $p(D)(y)=0$ must contain $V$. This will make the dimension of the solution space of $p(D)(y)=0$ greater than the degree of $p(t)$. This is a contradiction to Theorem 2.32. Hence we must have $p(t)=g(t)$.
+\item By Theorem 2.32 the dimension of $V$ is $n$, the degree of $g(t)$. So by Theorem 7.12, the \charpoly{} must be $(-1)^ng(t)$.
+\end{enumerate}
+\item Suppose, by contradiction, there is a polynomial $g(t)$ of degree $n$ such $g(D)=T_0$. Then we know that $g(D)(x^n)$ is a constant but not zero. This is a contradiction to the fact $g(D)(x^n)=T_0(x^n)=0$. So $D$ has no minimal polynomial.
+\item Let $p(t)$ be the polynomial given in the question. And let $\beta$ be a Jordan basis for $T$. We have $(T-\lambda_i)^{p_i}(v)=0$ if $v$ is a generalized eigenvector with respect to the eigenvalue $\lambda_i$. So $p(T)(\beta)=\{0\}$. Hence the minimal polynomial $q(t)$ of $T$ must divide $p(t)$ and must be of the form 
+\[(t-\lambda_1)^{r_1}(t-\lambda_2)^{r_2}\cdots (t-\lambda_k)^{r_k},\]
+where $1\leq r_i\leq p_i$. If $r_i<p_i$ for some $i$, pick the end vector $u$ of the cycle of length $p_i$ in $\beta$ corresponding to the eigenvalue $\lambda_i$. This $u$ exist by the definition of $p_i$. Thus $(T-\lambda_i)^{r_i}(u)=w\neq 0$. Since $K_{\lambda_i}$ is $(T-\lambda_j)$-invariant and $T-\lambda_j$ is injective on $K_{\lambda_i}$ for all $j\neq i$ by Theorem 7.1, we know that $q(T)(u)\neq 0$. Hence $r_i$ must be $p_i$. And so $p(t)$ must be the minimal polynomial of $T$.
+\item The answer is no. Let $T$ be the identity mapping on $\R^2$. And let $W_1$ be the $x$-axis and $W_2$ be the $y$-axis. The minimal polynomial of $T_{W_1}$ and $T_{W_2}$ are both $t-1$. But the minimal polynomial of $T$ is $(t-1)$ but not $(t-1)^2$.
+\item \begin{enumerate}
+\item Let $W$ be the $T$-cyclic subspace generated by $x$. And let $p(t)$ be the minimal polynomial of $T_W$. We know that $p(T_W)=T_0$. If $q(t)$ is a polynomial such that $q(T)(x)=0$, we know that $q(T)(T^k(x))=T^k(q(T)(x))=0$ for all $k$. So $p(t)$ must divide $q(t)$ by Theorem 7.12. Hence $p(t)$ is the unique $T$-annihilator of $x$.
+\item The $T$-annihilator of $x$ is the minimal polynomial of $T_W$ by the previous argument. Hence it divides the \charpoly{} of $T$, who divides any polynomial for which $g(T)=T_0$, by Theorem 7.12.
+\item This comes from the proof in Exercise 7.3.15(c).
+\item By the result in the previous question, the dimension of the $T$-cyclic subspace generated by $x$ is equal to the degree of the $T$-annihilator of $x$. If the dimension of the $T$-cyclic subspace generated by $x$ has dimension $1$, then $T(x)$ must be a multiple of $x$. Hence $x$ is an eigenvector. Conversely, if $x$ is an eigenvector, then $T(x)=\lambda x$ for some $\lambda$. This means the dimension of the $T$-cyclic subspace generated by $x$ is $1$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $f(t)$ be the \charpoly{} of $T$. Then we have $f(T)(x)=T_0(x)=0\in W_1$. So there must be some monic polynomial $p(t)$ of least positive degree for which $p(T)(x)\in W_1$. If $h(t)$ is a polynomial for which $h(T)(x)\in W_1$, we have 
+\[h(t)=p(t)q(t)+r(t)\]
+for some polynomial $q(t)$ anr $r(t)$ such that the degree of $r(t)$ is less than the degree of $p(t)$ by Division Algorithm. This means that 
+\[r(T)(x)=h(T)(x)-p(T)p(T)(x)\in W_1\]
+since $W_1$ is $T$-invariant. Hence the degree of $r(t)$ must be $0$. So $p(t)$ divides $h(t)$. Thus $g_1(t)=p(t)$ is the unique monice polynomial of least positive degree such that $g_1(T)(x)\in W_1$.
+\item This has been proven in the previous argument.
+\item Let $p(t)$ and $f(t)$ be the minimal and characteristic polynomials of $T$. Then we have $p(T)(x)=f(T)(x)=0\in W_1$. By the previous question, we get the desired conclusion.
+\item Observe that $g_2(T)(x)\in W_2\subset W_1$. So $g_1(t)$ divides $g_2(t)$ by the previous arguments. 
+\end{enumerate}
+\end{enumerate}

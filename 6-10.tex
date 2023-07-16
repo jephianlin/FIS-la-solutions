@@ -1,0 +1,79 @@
+\section{Conditioning and the Rayleigh Quotient}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. The system $\begin{pmatrix}k^2&0\\0&1\end{pmatrix}$ is well-conditioned but its condition number is $k$, which can be arbitrarily large.
+\item No. This is the contrapositive statement of the previous question.
+\item Yes. This is the result of Theorem 6.44.
+\item No. The norm of $A$ is a value but the Rayleigh quotient is a function.
+\item No. See the Corollary 1 after Theorem 6.43. For example, the norm of $\begin{pmatrix}0&1\\0&0\end{pmatrix}$ is $1$ but the largest eigenvalue of it is $0$.
+\end{enumerate}
+\item Let $A$ be the given matrix. Use the Corollary 1 to find the norm.
+\begin{enumerate}
+\item The norm is $\sqrt{18}$.
+\item The norm is $6$.
+\item The norm is $\frac{\sqrt{\sqrt{177}+15}}{\sqrt{6}}$.
+\end{enumerate}
+\item If $B$ is real symmetric, then we have $B^*B=B^2$. If $\lambda$ is the largest eigenvalue of $B$, then we have $\lambda^2$ is also the largest eigenvalue of $B^2$. Apply the Corollary 1 after Theorem 6.43 and get that $\|B\|=\lambda$. If $B$ is not real, the eigenvalue of $B$ may not be a real number. So they are not comparable. Hence we need the condition that $B$ is a real matrix here.
+\item \begin{enumerate}
+\item Use the previous exercise. We know that $\|A\|=84.74$ and $\|A^{-1}\|=\frac{1}{0.0588}\cong 17.01$. And the condition number is the ratio 
+\[\cond(A)=\frac{84.74}{0.0588}\cong 1443.\]
+\item We have that 
+\[\|\tilde{x}-A^{-1}b\|=\|A^{-1}(b-A\tilde{x})\|\leq \|A^{-1}\|\|b-A\tilde{x}\|=17.01\times 0.001=0.017\]
+and 
+\[\frac{\|\tilde{x}-A^{-1}b\|}{\|A^{-1}b\|}\leq \cond(A)\frac{\|\delta b\|}{\|b\|}\cong \frac{14.43}{\|b\|}\]
+by Theorem 6.44.
+\end{enumerate}
+\item Use Theorem 6.44. Thus we get 
+\[\frac{\|\delta x\|}{\|x\|}\leq \cond(A)\frac{\|\delta b\|}{\|b\|}=100\times \frac{0.1}{1}=10\]
+and 
+\[\frac{\|\delta x\|}{\|x\|}\geq \frac{1}{\cond(A)}\frac{\|\delta b\|}{\|b\|}=\frac{1}{100}\times \frac{0.1}{1}=0.001.\]
+\item Let $x=(1,-2,3)$. First compute that 
+\[R(x)=\frac{\lag Bx,x\rag}{\|x\|^2}\]
+\[=\frac{\lag (3,0,5),(1,-2,3)\rag}{14}=\frac{9}{7}.\]
+Second, compute the eigenvalues of $B$ to be $4,1,1$. Hence we have $\|B\|=4$ and $\|B^{-1}\|=1^{-1}=1$. Finally calculate the condition number to be 
+\[\cond(B)=4\times 1=4.\]
+\item Follow the proof of Theorem 6.43. We have 
+\[R(x)=\frac{\sum_{i=1}^n{\lambda_i|a_i|^2}}{\|x\|^2}\geq \frac{\lambda_n\sum_{i=1}^n{|a_i|^2}}{\|x\|^2}=\frac{\lambda_n\|x\|^2}{\|x\|^2}=\lambda_n.\]
+And the value is attainable since $R(v_n)=\lambda_n$.
+\item Let $\lambda$ be an eigenvalue of $AA^*$. If $\lambda=0$, then we have $AA^*$ is not invertible. Hence $A$ and $A^*$ are not invertible, so is $A^*A$. So $\lambda$ is an eigenvalue of $A^*A$.
+
+Suppose now that $\lambda\neq 0$. We may find some eigenvector $x$ such that $AA^*x=\lambda x$. This means that 
+\[A^*A(A^*x)=\lambda A^*x.\]
+Since $A^*x$ is not zero, $\lambda$ is an eigenvalue of $A^*A$.
+\item Since we have $A\delta x=\delta b$ and $x=A^{-1}b$, we have the inequalities 
+\[\|\delta x\|\geq \frac{\|\delta b\|}{\|A\|}\]
+and 
+\[\|x\|\leq \|A^{-1}\|\|b\|.\]
+Hence we get the inequality 
+\[\frac{\|\delta x\|}{\|x\|}\geq \frac{\|\delta b\|}{\|A\|}\frac{1}{\|A^{-1}\|\|b\|}=\frac{1}{\|A\|\cdot \|A^{-1}\|}\frac{\|\delta b\|}{\|b\|}.\]
+\item This is what we proved in the previous exercise.
+\item If $A=kB$, then we have $A^*A=k^2I$. So all the eigenvalues of $A^*A$ are $k^2$. Thus we have $\|A\|=k$ and $\|A^{-1}\|=k^{-1}$. Hence the condition number of $A$ is $k\cdot k^{-1}=1$.
+
+Conversely, if $\cond(A)=1$, we have $\lambda_1=\lambda_n$ by Theorem 6.44. This means that all the eigenvalues of $A^*A$ are the same. Denote the value of these eigenvalue by $k$. Since $A^*A$ is self-adjoint, we could find an orthonormal basis $\beta=\{v_i\}$ consisting of eigenvectors. But this means that 
+\[A^*A(v_i)=kv_i\]
+for all $i$. Since $\beta$ is a basis, we get that actually $A^*A=kI$. This means that $B=\frac{1}{\sqrt{k}}A$ is unitary of orthogonal since $B^*B=I$. Thus $A$ is a scalar multiple of $B$.
+\item \begin{enumerate}
+\item If $A$ and $B$ are unitarily equivalent. We may write $B=Q^*AQ$ for some unitary matrix $Q$. Since $Q$ is unitary, we have $\|Q(x)\|=\|x\|$. So we have 
+\[\frac{\|Bx\|}{\|x\|}=\frac{\|Q^*AQx\|}{\|x\|}=\frac{\|AQx\|}{\|Qx\|}.\]
+Since any unitary matrix is invertible, we get the equality $\|A\|=\|B\|$.
+\item Write 
+\[\beta=\{v_1,v_2,\ldots ,v_n\}\] and 
+\[x=\sum_{i=1}^n{a_iv_i}.\]
+We observe that 
+\[\|x\|^2=\lag x,x\rag=\sum_{i=1}^n{a_i^2}=\|\phi_{\beta}(x)\|^2,\]
+where $\phi_{\beta}(x)$ means the coordinates of $x$ with respect to $\beta$. So we have 
+\[\|x\|=\|\phi_{\beta}(x)\|\]
+This means that 
+\[\|T\|=\max_{x\neq 0}{\frac{\|T(x)\|}{\|x\|}}=\max_{x\neq 0}{\frac{\|\phi_{\beta}(T(x))\|}{\|\phi_{\beta}(x)\|}}\]
+\[==\max_{\phi_{\beta}(x)\neq 0}{\frac{\|[T]_{\beta}\phi_{\beta}(x)\|}{\|\phi_{\beta}(x)\|}}=\|[T]_{\beta}\|.\]
+\item We have $\|T\|\geq k$ for all integer $k$ since we have 
+\[\frac{\|T(v_k)\|}{\|v_k\|}=\frac{\|kv_k\|}{\|v_k\|}=k.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item If $\lambda_1$ is the largest eigenvalue of $A^*A$, then we know that $\sigma_i=\sqrt{\lambda_i}=\|A\|$.
+\item This comes from that the nonzero singular values of $A\da$ are 
+\[\sigma_r^{-1}\geq \sigma_{r-1}^{-1}\geq \cdots \geq \sigma_1^{-1}.\]
+\item If $A$ is invertible with the largest and the smallest eigenvalues of $A^*A$ to be $\lambda_1$ and $\lambda_n>0$, we know that $\sigma_1=\sqrt{\lambda_1}$ and $\sigma_n=\sqrt{\lambda_n}$. Hence we have 
+\[\cond(A)=\frac{\sigma_1}{\sigma_n}.\]
+\end{enumerate}
+\end{enumerate}

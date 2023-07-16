@@ -1,0 +1,47 @@
+\section{Linear Dependence and Linear Independence}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. For example, take $S=\{(1,0),(2,0),(0,1)\}$ and then $(0,1)$ is not a linear combination of the other two.
+\item Yes. It's because $1\vec{0}=\vec{0}$.
+\item No. It's independent by the remark after Definition of linearly independent.
+\item No. For example, we have $S=\{(1,0),(2,0),(0,1)\}$ but $\{(1,0),(0,1)\}$ is linearly independent.
+\item Yes. This is the contrapositive statement of Theorem 1.6.
+\item Yes. This is the definition.
+\end{enumerate}
+\item \begin{enumerate}
+\item Linearly dependent. We have $-2\left( \begin{array}{cc}1&-3\\-2&4\end{array}\right) =\left( \begin{array}{cc}-2&6\\4&-8\end{array}\right)$. So to check the linearly dependency is to find the nontrivial solution of equation $a_1x_1+a_2x_2+\cdots +a_nx_n=0$. And $x_1$ and $x_2$ are the two matrices here.
+\item Linearly independent.
+\item Linearly independent.
+\item Linearly dependent.
+\item Linearly dependent.
+\item Linearly independent.
+\item Linearly dependent.
+\item Linearly independent.
+\item Linearly independent.
+\item Linearly dependent.
+\end{enumerate}
+\item Let $M_1, M_2,\dots ,M_5$ be those matrices. We have $M_1+M_2+M_3-M_4-M_5=0$.
+\item If $a_1e_1+a_2e_2+\cdots +a_ne_n=(a_1,a_2,\dots ,a_n)=0$, then by comparing the $i$-th entry of the vector of both side we have $a_1=a_2=\cdots =a_n=0$.
+\item It's similar to exercise 1.5.4.
+\item it's similar to exercise 1.5.4.
+\item Let $E_{ij}$ be the matrix with the only nonzero $ij$-entry$=1$. Then $\{E_{11},E_{22}\}$ is the generating set.
+\item \begin{enumerate}
+\item The equation $x_1(1,1,0)+x_2(1,0,1)+x_3(0,1,1)=0$ has only nontrivial solution when $\mathbb{F}=\mathbb{R}$.
+\item When $\mathbb{F}$ has characteristic 2, we have $1+1=0$ and so $(1,1,0)+(1,0,1)+(0,1,1)=(0,0,0)$.
+\end{enumerate}
+\item It's sufficient since if $u=tv$ for some $t\in \mathbb{F}$ then we have $u-tv=0$. While it's also necessary since if $au+bv=0$ for some $a,b\in \mathbb{F}$ with at least one of the two coefficients not zero then we may assume $a\neq0$ and $u=-\frac{b}{a}v$.
+\item Pick $v_1=(1,1,0)$, $v_2=(1,0,0)$, $v_3=(0,1,0)$. And we have that none of the three is a multiple of another and they are dependent since $v_1-v_2-v_3=0$.
+\item Vector in span$(S)$ are linear combinations of $S$ and they all have different representation by the remark after Definition of linear independent. So there are $2^n$ representations and so $2^n$ vectors.
+\item Since $S_1$ is linearly dependent we have finite vectors $x_1,x_2,\ldots ,x_n$ in $S_1$ and so in $S_2$ such that $a_1x_1+a_2x_2+\cdots +a_nx_n=0$ is a nontrivial representation. But the nontrivial representation is also a nontrivial representation of $S_2$. And the Corollary is just the contrapositive statement of the Theorem 1.6.
+\item \begin{enumerate}
+\item Sufficiency: If $\{u+v,u-v\}$ is linearly independent we have $a(u+v)+b(u-v)=0$ implies $a=b=0$. Assuming that $cu+dv=0$, we can deduce that $\frac{c+d}{2}(u+v)+\frac{c-d}{2}(u-v)=0$ and hence $\frac{c+d}{2}=\frac{c-d}{2}=0$. This means $c=d=0$ if the characteristc is not two. Necessity: If $\{u,v\}$ is linearly independent we have $au+bv=0$ implies $a=b=0$. Assuming that $c(u+v)+d(u-v)=0$, we can deduce that $(c+d)u+(c-d)v=0$ and hence $c+d=c-d=0$ and $2c=2d=0$. This means $c=d=0$ if the characteristc is not two.
+\item Sufficiency: If $au+bv+cw=0$ we have $\frac{a+b-c}{2}(u+v)+\frac{a-b+c}{2}(u+w)+\frac{-a+b+c}{2}(v+w)=0$ and hence $a=b=c=0$. Necessity: If $a(u+v)+b(u+w)+c(v+w)=0$ we have $(a+b)u+(a+c)v+(b+c)w=0$ and hence $a=b=c=0$.
+\end{enumerate}
+\item Sufficiency: It's natural that ${0}$ is linearly dependent. If $v$ is a linear combination of $u_1,u_2, \ldots ,u_n$ , say $v=a_1u_1+a_2u_2+\cdots a_nu_n$, then $v-a_1u_1-a_2u_2-\cdots -a_nu_n=0$ implies $S$ is linearly dependent. Necessity: If $S$ is linearly dependent and $S\neq\{0\}$ we have some nontrivial representation $a_0u_0+a_1u_1+\cdots +a_nu_n=0$ with at least one of the coefficients is nonzero, say $a_0\neq 0$ without loss the generality. Then we can let $v=u_0=-\frac{1}{a_0}(a_1u_1+a_2u_2+\cdots +a_nu_n)$.
+\item Sufficiency: If $u_1=0$ then $S$ is linearly independent. If \[u_{k+1}\in \mathrm{span}(\{u_1,u_2,\ldots ,u_k\})\] for some $k$, say $u_{k+1}=a_1u_1+a_2u_2+\cdots +a_ku_k$, then we have $a_1u_1+a_2u_2+\cdots +a_ku_k-u_{k+1}=0$ is a nontrivial representation. Necessary: If $S$ is linearly dependent, there are some integer $k$ such that there is some nontrivial representation $a_1u_1+a_2u_2+\cdots +a_ku_k+a_{k+1}u_{k+1}=0$. Furthermore we may assume that $a_{k+1}\neq 0$ otherwise we may choose less $k$ until that $a_{k+1}\neq =0$. Hence we have $a_{k+1}=-\frac{1}{a_{k+1}}(a_1u_1+a_2u_2+\cdots +a_ku_k)$ and so $a_{k+1}\in \mathrm{span}(\{u_1,u_2,\ldots ,u_k\})$.
+\item Sufficiency: We can prove it by contrapositive statement. If $S$ is linearly dependent we can find $a_1u_1+a_2u_2+\cdots +a_nu_n=0$. But thus the finite set $\{u_1,u_2,\ldots ,u_n\}$ would be a finite subset of $S$ and it's linearly dependent. Necessary: This is the Threorem 1.6.
+\item Let $C_1,C_2, \ldots ,C_n$ be the columns of $M$. Let $a_1C_1+a_2C_2+\cdots +a_nC_n=0$ then we have $a_n=0$ by comparing the $n$-th entry. And inductively we have $a_{n-1}=0,a_{n-2}=0, \ldots , a_{1}=0$.
+\item It's similar to exercise 1.5.17.
+\item We have $a_1A_1^t+a_2A_2^t+\cdots +a_kA_k^t=0$ implies $a_1A_1+a_2A_2+\cdots +a_kA_k=0$. Then we have $a_1=a_2=\cdots =a_n=0$.
+\item If $\{f,g\}$ is linearly dependent, then we have $f=kg$. But this means $1=f(0)=kg(0)=k\times 1$ and hence $k=1$. And $e^r=f(1)=kg(1)=e^s$ means $r=s$.
+\end{enumerate}

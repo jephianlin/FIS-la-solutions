@@ -1,0 +1,135 @@
+\section{The Rank of a Matrix and Matrix Inverses}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. For example the rank of a $2\times 2$ matrix with all entries $1$ has only rank $1$.
+\item No. We have the example that the product of two nonzero matrices could be a zero matrix.
+\item Yes.
+\item Yes. This is Theorem 3.4.
+\item No. They do.
+\item Yes. This is the Corollary 2 after the Theorem 3.6.
+\item Yes. This is the argument after the definition of augmented matrix.
+\item Yes. Rank of an $m\times n$ matrix must be less than $m$ and $n$.
+\item Yes. This means $L_A$ is a surjective transformation from $\mathbb{F}^n$ to $\mathbb{F}^n$ and hence a injective transformation, where $A$ is the matrix.
+\end{enumerate}
+\item In the following questions we may do the Gaussian elimination and the number of nonzero row vectors is equal to the rank of that matrix.\begin{enumerate}
+\item The rank is $2$.
+\[\left(\begin{array}{ccc}1&1&0\\0&1&1\\1&1&0 \end{array}\right)\rightsquigarrow \left(\begin{array}{ccc}1&1&0\\0&1&1\\0&0&0 \end{array}\right)\]
+\item The rank is $3$.
+\[\left(\begin{array}{ccc}1&1&0\\2&1&1\\1&1&1 \end{array}\right)\rightsquigarrow \left(\begin{array}{ccc}1&1&0\\0&-1&1\\0&0&1 \end{array}\right)\]
+\item The rank is $2$.
+\[\left(\begin{array}{ccc}1&0&2\\1&1&4\end{array}\right)\rightsquigarrow \left(\begin{array}{ccc}1&0&2\\0&1&2\end{array}\right)\]
+\item The rank is $1$.
+\[\left(\begin{array}{ccc}1&2&1\\2&4&2\end{array}\right)\rightsquigarrow \left(\begin{array}{ccc}1&2&1\\0&0&0\end{array}\right)\]
+\item The rank is $3$.
+\[\left(\begin{array}{ccccc}1&2&3&1&1\\1&4&0&1&2\\0&2&-3&0&1\\1&0&0&0&0 \end{array}\right)\rightsquigarrow \left(\begin{array}{ccccc}1&2&3&1&1\\0&2&-3&0&1\\0&2&-3&0&1\\0&-2&-3&-1&-1 \end{array}\right)\]
+\[\rightsquigarrow \left(\begin{array}{ccccc}1&2&3&1&1\\0&2&-3&0&1\\0&0&0&0&0\\0&0&-6&-1&0 \end{array}\right)\]
+\item The rank is $3$.
+\[\left(\begin{array}{ccccc}1&2&0&1&1\\2&4&1&3&0\\3&6&2&5&1\\-4&-8&1&-3&1 \end{array}\right)\rightsquigarrow \left(\begin{array}{ccccc}1&2&0&1&1\\0&0&1&1&-2\\0&0&2&2&-2\\0&0&1&1&5 \end{array}\right)\]
+\[\rightsquigarrow \left(\begin{array}{ccccc}1&2&0&1&1\\0&0&1&1&-2\\0&0&0&0&2\\0&0&0&0&7 \end{array}\right)\rightsquigarrow \left(\begin{array}{ccccc}1&2&0&1&1\\0&0&1&1&-2\\0&0&0&0&2\\0&0&0&0&0 \end{array}\right)\]
+\item The rank is $1$.
+\[\left(\begin{array}{cccc}1&1&0&1\\2&2&0&2\\1&1&0&1\\1&1&0&1 \end{array}\right)\rightsquigarrow \left(\begin{array}{cccc}1&1&0&1\\0&0&0&0\\0&0&0&0\\0&0&0&0 \end{array}\right)\]
+\end{enumerate}
+\item It's natural that rank$(A)=0$ if $A=0$. For the converse, we know that if $A$ is not a zero matrix, we have $A_{ij}\neq 0$ and thus the $i$-th row is an independent set. So rank$(A)$ can not be zero.
+\item Just do row and column operations. \begin{enumerate}
+\item The rank is $2$.
+\[\left(\begin{array}{cccc}1&1&1&2\\2&0&-1&2\\1&1&1&2\end{array}\right)\rightsquigarrow \left(\begin{array}{cccc}1&1&1&2\\0&-2&-3&-2\\0&0&0&0\end{array}\right)\]
+\[\rightsquigarrow \left(\begin{array}{cccc}1&0&0&0\\0&1&0&0\\0&0&0&0\end{array}\right)\]
+\item The rank is $2$.
+\[\left(\begin{array}{cc}2&1\\-1&2\\2&1\end{array}\right)\rightsquigarrow \left(\begin{array}{cc}2&1\\0&\frac{5}{2}\\0&0\end{array}\right)\rightsquigarrow \left(\begin{array}{cc}1&0\\0&1\\0&0\end{array}\right)\]
+\end{enumerate}
+\item For these problems, we can do the Gaussian elimination on the augment matrix. If the matrix is full rank\footnote{This means rank$(A)=n$, where $A$ is an $n\times n$ matrix.} then we get the inverse matrix in the augmenting part.\begin{enumerate}
+\item The rank is $2$ and its inverse is $\left(\begin{array}{cc}-1&2\\1&-1\end{array}\right)$.
+\[\left(\begin{array}{cc|cc}1&2&1&0\\1&1&0&1\end{array}\right)\rightsquigarrow \left(\begin{array}{cc|cc}1&2&1&0\\0&-1&-1&1\end{array}\right)\]
+\[\rightsquigarrow \left(\begin{array}{cc|cc}1&0&-1&2\\0&-1&-1&1\end{array}\right)\rightsquigarrow \left(\begin{array}{cc|cc}1&0&-1&2\\0&1&1&-1\end{array}\right)\]
+\item The rank is $1$. So there's no inverse matrix.
+\item The rank is $2$. So there's no inverse matrix.
+\item The rank is $3$ and its inverse is $\begin{pmatrix}-\frac{1}{2} & 3 & -1\cr \frac{3}{2} & -4 & 2\cr 1 & -2 & 1\end{pmatrix}$.
+\item The rank is $3$ and its inverse is $\begin{pmatrix}\frac{1}{6} & -\frac{1}{3} & \frac{1}{2}\cr \frac{1}{2} & 0 & -\frac{1}{2}\cr -\frac{1}{6} & \frac{1}{3} & \frac{1}{2}\end{pmatrix}$.
+\item The rank is $2$. So there's no inverse matrix.
+\item The rank is $4$ and its inverse is $\begin{pmatrix}-51 & 15 & 7 & 12\cr 31 & -9 & -4 & -7\cr -10 & 3 & 1 & 2\cr -3 & 1 & 1 & 1\end{pmatrix}$.
+\item The rank is $3$. So there's no inverse matrix.
+\end{enumerate}
+\item For these problems we can write down the matrix representation of the transformation $[T]_{\alpha }^{\beta}$, where $\alpha=\{u_1,u_2,\ldots ,u_n\}$ and $\beta=\{v_1,v_2,\ldots ,v_n\}$ are the (standard) basis for the domain and the codomain of $T$. And the inverse of this matrix would be $B=[T^{-1}]_{\beta}^{\alpha}$. So $T^{-1}$ would be the linear transformation such that \[T^{-1}(v_j)=\sum_{i=1}^n{B_{ij}u_i}.\]
+\begin{enumerate}
+\item We get $[T]_{\alpha}^{\beta}=\begin{pmatrix}-1 & 2 & 2\cr 0 & -1 & 4\cr 0 & 0 & -1\end{pmatrix}$ and $[T^{-1}]_{\beta}^{\alpha}=\begin{pmatrix}-1 & -2 & -10\cr 0 & -1 & -4\cr 0 & 0 & -1\end{pmatrix}$. So we know that 
+\[T(a+bx+cx^2)=(-a-2b-10c)+(-b-4c)x+(-c)x^2.\]
+\item We get $[T]_{\alpha}^{\beta}=\begin{pmatrix}0 & 1 & 0\cr 0 & 1 & 2\cr 1 & 0 & 1\end{pmatrix}$, a matrix not invertible. So $T$ is not invertible.
+\item We get $[T]_{\alpha}^{\beta}=\begin{pmatrix}1 & 2 & 1\cr -1 & 1 & 2\cr 1 & 0 & 1\end{pmatrix}$ and $[T^{-1}]_{\beta}^{\alpha}=\begin{pmatrix}\frac{1}{6} & -\frac{1}{3} & \frac{1}{2}\cr \frac{1}{2} & 0 & -\frac{1}{2}\cr -\frac{1}{6} & \frac{1}{3} & \frac{1}{2}\end{pmatrix}$. So we know that 
+\[T(a,b,c)=(\frac{1}{6}a-\frac{1}{3}b+\frac{1}{2}c,\frac{1}{2}a-\frac{1}{2}c,-\frac{1}{6}a+\frac{1}{3}b+\frac{1}{2}c).\]
+\item We get $[T]_{\alpha}^{\beta}=\begin{pmatrix}1 & 1 & 1\cr 1 & -1 & 1\cr 1 & 0 & 0\end{pmatrix}$ and $[T^{-1}]_{\beta}^{\alpha}=\begin{pmatrix}0 & 0 & 1\cr \frac{1}{2} & -\frac{1}{2} & 0\cr \frac{1}{2} & \frac{1}{2} & -1\end{pmatrix}$. So we know that 
+\[T(a,b,c)=(c,\frac{1}{2}a-\frac{1}{2}b,\frac{1}{2}a+\frac{1}{2}b-c).\]
+\item We get $[T]_{\alpha}^{\beta}=\begin{pmatrix}1 & -1 & 1\cr 1 & 0 & 0\cr 1 & 1 & 1\end{pmatrix}$ and $[T^{-1}]_{\beta}^{\alpha}=\begin{pmatrix}0 & 1 & 0\cr -\frac{1}{2} & 0 & \frac{1}{2}\cr \frac{1}{2} & -1 & \frac{1}{2}\end{pmatrix}$. So we know that 
+\[T(a+bx+cx^2)=(b,-\frac{1}{2}a+\frac{1}{2}c,\frac{1}{2}a-b+\frac{1}{2}c).\]
+\item We get $[T]_{\alpha}^{\beta}=\begin{pmatrix}1 & 0 & 0 & 1\cr 1 & 0 & 0 & 1\cr 0 & 1 & 1 & 0\cr 0 & 1 & 1 & 0\end{pmatrix}$, a matrix not invertible. So $T$ is not invertible.
+\end{enumerate}
+\item We can do the Gaussian elimination and record what operation we've done.
+\[\left(\begin{array}{ccc}1&2&1\\1&0&1\\1&1&2\end{array}\right)\rightsquigarrow \left(\begin{array}{ccc}1&2&1\\0&-2&0\\1&1&2\end{array}\right)\]
+\[\rightsquigarrow \left(\begin{array}{ccc}1&2&1\\0&-2&0\\0&-1&1\end{array}\right)\rightsquigarrow \left(\begin{array}{ccc}1&2&1\\0&1&0\\0&-1&1\end{array}\right)\]
+\[\rightsquigarrow \left(\begin{array}{ccc}1&0&1\\0&1&0\\0&-1&1\end{array}\right)\rightsquigarrow \left(\begin{array}{ccc}1&0&1\\0&1&0\\0&0&1\end{array}\right)\]
+\[\rightsquigarrow \left(\begin{array}{ccc}1&0&0\\0&1&0\\0&0&1\end{array}\right)\]
+Let $E_1=\begin{pmatrix}1&0&0\\-1&1&0\\0&0&1\end{pmatrix}$, $E_2=\begin{pmatrix}1&0&0\\0&1&0\\-1&0&1\end{pmatrix}$, $E_3=\begin{pmatrix}1&0&0\\0&-\frac{1}{2}&0\\0&0&1\end{pmatrix}$, $E_4=\begin{pmatrix}1&-2&0\\0&1&0\\0&0&1\end{pmatrix}$, $E_5=\begin{pmatrix}1&0&0\\0&1&0\\0&1&1\end{pmatrix}$, $E_6=\begin{pmatrix}1&0&-1\\0&1&0\\0&0&1\end{pmatrix}$.
+
+Thus we have the matrix equals to $E_1^{-1}E_2^{-1}E_3^{-1}E_4^{-1}E_5^{-1}E_6^{-1}$.
+\item It's enough to show that $R(L_A)=R(L_{cA}$. But this is easy since 
+\[R(L_A)=L_A(\mathbb{F}^m)=cL_A(\mathbb{F}^m)=L_{cA}(\mathbb{F}^m)=R(L_cA).\]
+\item If $B$ is obtained from a matrix $A$ by an elementary column operation, then there exists an elementary matrix such that $B=AE$. By Theorem 3.2, $E$ is invertible, and hence rank$(B)=$rank$(A)$ by Theorem 3.4.
+\item Let $A$ be an $m\times 1$ matrix. Let $i$ be the smallest integer such that $A_{i1}\neq 0$. Now we can interchange, if it's necessary, the first and the $i$-th row. Next we can multiply the first row by scalar $\frac{1}{A_{11}}$ and we get $A_{11}=1$ now. Finally add $-A_{k1}$ times the first row to the $k$-th row. This finished the process.
+\item We may write $B_0'=\begin{pmatrix}0&\cdots &0\\\hline &&\\&B'&\\&&\end{pmatrix}$. And thus we have that 
+\[B\begin{pmatrix}x_1\\x_2\\\vdots \\x_{n+1}\end{pmatrix}=x_1\begin{pmatrix}1\\0\\\vdots \\0\end{pmatrix}+B_0'\begin{pmatrix}x_2\\\vdots \\x_{n+1}\end{pmatrix}.\]
+Let $L=$span$\{\begin{pmatrix}1\\0\\\vdots \\0\end{pmatrix}\}$ be a subspace in $\mathbb{F}^{m+1}$. So we have that $R(L_B)=L+R(B_0')$. And it's easy to observe that all element in $L$ has its first entry nonzero except $0$. But all element in $R(B_0')$ has it first entry zero. So we know that $L\cap R(B_0')=\{0\}$ and hence $R(L_B)=L\oplus R(B_0')$. By Exercise 1.6.29(b) we know that dim$(R(L_B))=$dim$(L)+$dim$(R(B_0'))=1+$dim$(R(B_0'))$. 
+
+Next we want to prove that dim$(R(B_0'))=$dim$(B')$ by showing $N(L_{B_0'})=N(L_{B'})$. We may let 
+\[B_0'x=\begin{pmatrix}0\\y_1\\\vdots \\y_m\end{pmatrix}\]
+and scrutinize the fact 
+\[B'x=\begin{pmatrix}0\\y_1\\\vdots \\y_m\end{pmatrix}\]
+is true. So $N(L_{B_0'})=N(L_{B'})$ is an easy result of above equalitiies. Finally since $L_{B_0'}$ and $L_B'$ has the same domain, by Dimension Theorem we get the desired conclusion
+\[\mathrm{rank}(B)=\mathrm{dim}(R(L_B))=1+\mathrm{dim}(R(B_0'))\]
+\[=1+\mathrm{dim}(L_{B'})=1+\mathrm{rank}(B').\]
+\item If $B'$ can be transformed into $D'$ by an elementary row operation, we could write $D'=EB'$ by some elementary matrix $E$. Let 
+\[E'=\left(\begin{array}{c|ccc}1&0&\cdots &0\\\hline 0&&&\\\vdots &&B'&\\0&&&\end{array}\right)\]
+be an larger matrix. Then we have $D=E'B$ and hence $D$ can be obtained from $B$ by an elementary row operation. For the version of column, we have $D'=B'E$. And then get the matrix $E'$ by the same way. Finally we have $D=BE'$.
+\item \begin{description}
+\item[(b)] By Theorem 3.5 and the Corollary 2 after Theorem 3.6 we have that the maximum number of linearly independent rows of $A$ is the maximum number of linearly independent columns of $A^t$ and hence equals to rank$(A^t)=$rank$(A)$.
+\item[(c)] This is an instant result of (b) and Theorem 3.5.
+\end{description}
+\item \begin{enumerate}
+\item For all $y\in R(T+U)$ we can express it as $y=T(x)+U(x)\in R(T)+R(U)$ for some $x\in V$.
+\item By Theorem 1.6.29(a) we have 
+\[\mathrm{rank}(T+U)\leq \mathrm{dim}(R(T)+R(U))\]
+\[=\mathrm{dim}(R(T))+\mathrm{dim}(R(U))-\mathrm{dim}(R(T)\cap R(U))\]
+\[\leq\mathrm{rank}(T)+\mathrm{rank}.\]
+\item We have that 
+\[\mathrm{rank}(A+B)=\mathrm{rank}(L_{A+B})=\mathrm{rank}(L_A+L_B)\]
+\[\leq \mathrm{rank}(A)+\mathrm{rank}(B).\]
+\end{enumerate}
+\item Let $P=M(A|B)$ and $Q=(MA|MB)$. We want to show that $P_{ij}=Q_{ij}$ for all $i$ and for all $j$. Assume that $A$ and $B$ has $a$ and $b$ columns respectly. For $j=1,2,\ldots ,a$, we have that  
+\[P_{ij}=\sum_{k=1}^n{M_{ik}A_{kj}}=(MA)_{ij}=Q_{ij}.\]
+For $j=a+1,a+2,\ldots ,a+b$, we have that 
+\[P_{ij}=\sum_{k=1}^n{M_{ik}B_{kj}}=(MB)_{ij}=Q_{ij}.\]
+\item Since $P$ is invertible, we know that $L_P$ is an isomorphism. So by Exercise 2.4.17 we have that 
+\[\mathrm{rank}(PA)=\mathrm{dim}(P(A(\mathbb{F}^n)))\]
+\[=\mathrm{dim}(A(\mathbb{F}^n))=A(\mathbb{F}^n)(A).\]
+\item Let $B=\begin{pmatrix}b_1\\b_2\\b_3\end{pmatrix}$ and $C=\begin{pmatrix}c_1&c_2&c_3\end{pmatrix}$. Thus we know that 
+\[BC=\begin{pmatrix}b_1c_1&b_1c_2&b_1c_3\\b_2c_1&b_2c_2&b_2c_3\\b_3c_1&b_3c_2&b_3c_3\end{pmatrix}\]
+has only at most one independent rows. So the rank of $BC$ is at most one.
+
+Conversely, if the rank of $A$ is zero, we know that $A=O$ and we can pick $B$ and $C$ such that they are all zero matrices. So assume that the rank of $A$ is $1$ and we have that the $i$-th row of $A$ forms an maximal independent set itself. This means that we can obtained the other row of $A$ by multiplying some scalar (including $0$), say $b_j$ for the $j$-the row. Then we can pick $B=\begin{pmatrix}b_1\\b_2\\b_3\end{pmatrix}$ and $C=\begin{pmatrix}A_{i1}\\A_{i2}\\A_{i3}\end{pmatrix}$. Thus we get the desired matrices.
+\item Let $A_i$ be the matrix consists of the $i$-th column of $A$. Let $B_i$ be the matrix consists of the $i$-th row of $B$. It can be check that actually 
+\[AB=\sum_{i=1}^n{A_iB_i}\]
+and $A_iB_i$ has rank at most $1$.
+\item It would be $m$. Since the range of $A$ is a subspace with dimension $m$ in $\mathbb{F}^m$, we know that $L_A(\mathbb{F}^n)=\mathbb{F^m}$. Similarly we also have that $L_B(\mathbb{F}^p)=\mathbb{F}^n$. So we know that 
+\[L_AB(\mathbb{F}^p)=L_A(L_B(\mathbb{F}^p))=\mathbb{F}^m\]
+and hence the rank of $AB$ is $m$.
+\item \begin{enumerate}
+\item Just like the skill we learned in the Exercise 1.4.2 we can solve the system of linear equation $Ax=0$ and get the solution space 
+\[\{(x_3+3x_5,-2x_3+x_5,x_3,-2x_5,x_5):x_i\in\mathbb{F}\}.\]
+And we know that $\{(1,-2,1,0,0),(3,1,0,-2,1)\}$ is a basis for the solution space. Now we can construct the desired matrix 
+\[M=\begin{pmatrix}1&3&0&0&0\\-2&1&0&0&0\\1&0&0&0&0\\0&-2&0&0&0\\0&1&0&0&0\end{pmatrix}.\]
+\item If $AB=O$, this means that every column vector of $B$ is a solution of $Ax=0$. If rank of $B$ is greater than $2$, we can find at least three independent vectors from columns of $B$. But this is is impossible since by Dimension Theorem we know that 
+\[\mathrm{dim}(\mathbb{F}^5)=\mathrm{dim}(R(L_A))+\mathrm{dim}(N(L_A))\]
+and so dim$(N(L_A))=5-3=2$.
+\end{enumerate}
+\item Let $\beta =\{e_1,e_2,\ldots ,e_m\}$ be the standard basis for $\mathbb{F}^m$. Since the rank of $A$ is $m$, we know that $L_A$ is surjective. So we can find some vector $v_i\in \mathbb{F}^n$ such that $L_A(v_i)=e_i$. So let $B$ be the matrix with column vector $v_i$. Thus $B$ is an $n\times m$ matrix and $AB=I$ since $Av_i=e_i$.
+\item We know that $B^t$ is an $m\times n$ matrix with rank $n$. By the previous exercise we have some $n\times m$ matrix $C$ such that $B^tC=I_m$. We may pick $A=C^t$. Now we have the fact that $AB=C^tB=(B^tC)^t=(I_m)^t-I_m$.
+
+\end{enumerate}

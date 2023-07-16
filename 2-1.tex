@@ -1,0 +1,142 @@
+\section{Linear Transformations, Null Spaces, and Ranges}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. That's the definition.
+\item No. Consider a map $f$ from $\mathbb{C}$ over $\mathbb{C}$ to $\mathbb{C}$ over $\mathbb{C}$ by letting $f(x+iy)=x$. Then we have $f(x_1+iy_1+x_2+iy_2)=x_1+x_2$ but $f(iy)=0\neq =if(y)=iy$.
+\item No. This is right when $T$ is a linear trasformation but not right in general. For example, 
+\begin{align*}
+T:&\mathbb{R}\rightarrow \mathbb{R}\\
+&x \mapsto x+1
+\end{align*}
+It's one-to-one but that $T(x)=0$ means $x=-1$. For the counterexample of converse statement, consider $f(x)=|x|$.
+\item Yes. We have $T(0_V)=T(0x)=0T(0_V)_W=0_W$, for arbitrary $x\in V$.
+\item No. It is dim$(V)$. For example, the transformation mapping the real line to $\{0\}$ will be.
+\item No. We can map a vector to zero.
+\item Yes. This is the Corollory after Theorem 2.6.
+\item No. If $x_2=2x_1$, then $T(x_2)$ must be $2T(x_1)=2y_1$.
+\end{enumerate}
+\item It's a linear transformation since we have 
+\[T((a_1,a_2,a_3)+(b_1,b_2,b_3))=T(a_1+b_1,a_2+b_2,a_3+b_3)=(a_1+b_1-a_2-b_2,2a_3+2b_3)\]
+\[=(a_1-a_2,2a_3)+(b_1-b_2,2b_3)=T(a_1,a_2,a_3)+T(b_1,b_2,b_3)\]
+and 
+\[T(ca_1,ca_2,ca_3)=(c(a_1-a_2),2ca_3)=cT(a_1,a_2,a_3).\]
+$N(T)=\{(a_1,a_1,0)\}$ with basis $\{(1,1,0)\}$; $R(T)=\mathbb{R}^2$ with basis $\{(1,0),(0,1)\}$. Hence $T$ is not one-to-one but onto.
+\item Similarly check this is a linear transformation. $N(T)=\{0\}$ with basis $\emptyset $; $R(T)=\{a_1(1,0,2)+a_2(1,0,-1)\}$ with basis $\{(1,0,2),(1,0,-1)\}$. Hence $T$ is one-to-one but not onto.
+\item It's a linear transformation. And $N(T)=\{ \left( \begin{array}{ccc}a_{11}&2a_{11}&-4a_{11}\\a_{21}&a_{22}&a_{23}\end{array}\right) \}$ with basis \[\{ \left( \begin{array}{ccc}1&2&-4\\0&0&0\end{array}\right) ,\left( \begin{array}{ccc}0&0&0\\1&0&0\end{array}\right) ,\left( \begin{array}{ccc}0&0&0\\0&1&0\end{array}\right) ,\left( \begin{array}{ccc}0&0&0\\0&0&1\end{array}\right) \} \]; $R(T)=\{ \left( \begin{array}{cc}s&t\\0&0\end{array}\right) \}$ with basis $\{ \left( \begin{array}{cc}1&0\\0&0\end{array}\right) ,\left( \begin{array}{cc}0&1\\0&0\end{array}\right)\}$.
+\item It's a linear transformation. And $N(T)=\{0\}$ with basis $\emptyset $; $R(T)=\{ax^3+b(x^2+1)+cx\}$ with basis $\{x^3,x^2+1,x\}$. Hence $T$ is one-to-one but not onto.
+\item $N(T)$ is the set of all matrix with trace zero. Hence its basis is $\{E_{ij}\}_{i\neq j} \cup \{E_{ii}-E_{nn}\}_{i=1,2,\ldots ,n-1}$. $R(T)=\mathbb{F}$ with basis $1$.
+\item For property 1, we have $T(0)=T(0x)=0T(x)=0$,where $x$ is an arbitrary element in $V$. For property 2, if $T$ is linear, then $T(cx+y)=T(cx)+T(y)=cT(x)+T(y)$; if $T(cx+y)=cT(x)+T(y)$, then we may take $c=1$ or $y=0$ and conclude that $T$ is linear. For property 3, just take $c=-1$ in property 3. For property 4, if $T$ is linear, then \[T(\sum_{i=1}^n{a_ix_i})=T(a_1x_1)+T(\sum_{i=1}^{n-1}{a_ix_i})=\cdots =\sum_{i=1}^n{T(a_ix_i)}=\sum_{i=1}^n{a_iT(x_i)};\]
+if the equation holds, just take $n=2$ and $a_1=1$.
+\item Just check the two condition of linear transformation.
+\item \begin{enumerate}
+\item $T(0,0)\neq (0,0)$.
+\item $T(2(0,1))=(0,4)\neq 2T(0,1)=(0,2)$.
+\item $T(2\frac{\pi}{2},0)=(0,0)\neq 2T(\frac{\pi}{2},0)=(2,0)$.
+\item $T((1,0)+(-1,0))=(0,0)\neq T(1,0)+T(0,1)=(2,0)$.
+\item $T(0,0)\neq (0,0)$.
+\end{enumerate}
+\item We may take $U(a,b)=a(1,4)+b(1,1)$. By Theorem 2.6, the mapping must be $T=U$. Hence we have $T(2,3)=(5,11)$ and $T$ is one-to-one.
+\item This is the result of Theorem 2.6 since $\{(1,1),(2,3)\}$ is a basis. And $T(8,11)=T(2(1,1)+3(2,3))=2T(1,1)+3T(2,3)=(5,-3,16)$.
+\item No. We must have $T(-2,0,-6)=-2T(1,0,3)=(2,2)\neq (2,1)$.
+\item Let $\sum_{i=0}^k{a_iv_i}=0$. Then we have $T(\sum_{i=0}^k{a_iv_i})=\sum_{i=0}^k{a_iT(v_i)}=0$ and this implies $a_i=0$ for all $i$.
+\item \begin{enumerate}
+\item The sufficiency is due to that if $T(x)=0$, $\{x\}$ can not be independent and hence $x=0$. For the necessity, we may assume $\sum{a_iT(v_i)}=0$. Thus we have $T(\sum{a_iv_i})=0$. But since $T$ is one-to-one we have $\sum{a_iv_i}=0$ and hence $a_i=0$ for all proper $i$.
+\item The sufficiency has been proven in Exercise 2.1.13. But note that $S$ may be an infinite set. And the necessity has been proven in the previous exercise.
+\item Since $T$ is one-to-one, we have $T(\beta )$ is linear independent by the previous exercise. And since $T$ is onto, we have $R(T)=W$ and hence span$(T(\beta ))=R(T)=W$.
+\end{enumerate}
+\item We actually have $T(\sum_{i=0}^n{a_ix^i})=\sum_{i=0}^n{\frac{a_i}{i+1}x^{i+1}}$. Hence by detailed check we know it's one-to-one. But it's not onto since no function have integral$=1$.
+\item Similar to the previous exercise we have $T(\sum_{i=0}^n{a_ix^i})=\sum_{i=0}^n{ia_ix^{i-1}}$. It's onto since $T(\sum_{i=0}^n{\frac{a_i}{i+1}x^{i+1}})=\sum_{i=0}^n{a_ix^i}$. But it's not one-to-one since $T(1)=T(2)=0$.
+\item \begin{enumerate}
+\item Because rank$(T)\leq $dim$(V)<$dim$(W)$ by Dimension Theorem, we have $R(T)\subsetneq W$.
+\item Because nullity$(T)=$dim$(V)-$rank$(T)\geq $dim$(V)-$dim$(W)>0$ by Dimension Theorem, we have $N(T)\neq \{0\}$.
+\end{enumerate}
+\item Let $T(x,y)=(y,0)$. Then we have $N(T)=R(T)=\{(x,0):x\in \mathbb{R}\}$.
+\item Let $T:\mathbb{R}^2\rightarrow \mathbb{R}^2$ and $T(x,y)=(y,x)$ and $U$ is the identity map from $\mathbb{R}^2\rightarrow \mathbb{R}^2$. Then we have $N(T)=N(U)=\{0\}$ and $R(T)=R(U)=\mathbb{R}^2$.
+\item To prove $A=T(V_1)$ is a subspace we can check first $T(0)=0\in A$. For $y_1,y_2\in A$, we have for some $x_1,x_2\in V_1$ such that $T(x_1)=y_1$ and $T(x_2)=y_2$. Hence we have $T(x_1+x_2)=y_1+y_2$ and $T(cx_1)=xy_1$. This means both $y_1+y_2$ and $cy_1$ are elements of $A$.
+
+To prove that $B=\{x\in V:T(x)\in W_1\}$ is a subspace we can check $T(0)=0\in W_1$ and hence $0\in B$. For $x_1,x_2\in B$, we have $T(x_1),T(x_2)\in W_1$. Hence we have $T(x_1+x_2)=T(x_1),T(x_2)\in W_1$ and $T(cx_1)=cT(x_1)\in W_1$. This means both $x_1+x_2$ and $cx_1$ are elements of $B$.
+\item \begin{enumerate}
+\item To prove $T$ is linear we can check \[T(\sigma_1+\sigma_2)(n)=\sigma_1(n+1)+\sigma_2(n+1)=T(\sigma_1)(n)+T(\sigma_2)(n)\]
+and
+\[T(c\sigma )(n)=c\sigma (n+1)=cT(\sigma)(n).\]
+And it's similar to prove that $U$ is linear.
+\item It's onto since for any $\sigma $ in $V$. We may define another sequence $\tau $ such that $\tau (0)=0$ and $\tau (n+1)=\sigma (n)$ for all $n\geq 1$. Then we have $T(\tau )=\sigma $. And it's not one-to-one since we can define a new $\sigma_0 $ with $\sigma_0 (0)=1$ and $\sigma_0 (n)=0$ for all $n\geq 2$. Thus we have $\sigma_0 \neq 0$ but $T(\sigma_0 )=0$.
+\item If $T(\sigma )(n)=\sigma (n-1)=0$ for all $n\geq 2$, we have $\sigma (n)=0$ for all $n\geq 1$. And let $\sigma_0 $ be the same sequence in the the previous exercise. We cannot find any sequence who maps to it.
+\end{enumerate}
+\item Let $T(1,0,0)=a$, $T(0,1,0)=b$, and $T(0,0,1)=c$. Then we have \[T(x,y,z)=xT(1,0,0)+yT(0,1,0)+zT(0,0,1)=ax+by+cz.\]
+
+On the other hand, we have $T(x_1,x_2,\ldots ,x_n)=a_1x_1+a_2x_2+\cdots +a_nx_n$ if $T$ is a mapping from $\mathbb{F}^n$ to $\mathbb{F}$. To prove this, just set $T(e_i)=a_i$, where $\{e_i\}$ is the standard of $\mathbb{F}^n$. 
+
+For the case that $T:\mathbb{F}^n\rightarrow \mathbb{F} $, actually we have \[T(x_1,x_2,\ldots ,x_n)=(\sum_{j=1}^n{a_{1j}x_j},\sum_{j=2}^n{a_{2j}x_j},\ldots ,\sum_{j=m}^n{a_{mj}x_j})\]. To prove this, we may set $T(e_j)=(a_{1j},a_{2j},\ldots ,a_{mj})$.
+\item With the help of the previous exercise, we have \[N(T)=\{(x,y,z):ax+by+cz=0\}.\] Hence it's a plane.
+\item \begin{enumerate}
+\item It will be $T(a,b)=(0,b)$, since $(a,b)=(0,b)+(a,0)$.
+\item It will be $T(a,b)=(0,b-a)$,since $(a,b)=(0,b-a)+(a,a)$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $W_1$ be the $xy$-plane and $W_2$ be the $z$-axis. And $(a,b,c)=(a,b,0)+(0,0,c)$ would be the unique representation of $W_1\oplus W_2$.
+\item Since $(a,b,c)=(0,0,c)+(a,b,0)$, we have $T(a,b,c)=(0,0,c)$.
+\item Since $(a,b,c)=(a-c,b,0)+(c,0,c)$, we have $T(a,b,c)=(a-c,b,0)$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Since $V=W_1\oplus W_2$, every vector $x$ have an unique representation $x=x_1+x_2$ with $x_1\in W_1$ and $x_2\in W_2$.  So, now we have \[T(x+cy)=T(x_1+x_2+cy_1+cy_2)\]
+\[=T((x_1+cy_1)+(x_2+cy_2))=x_1+cy_1=T(x)+cT(y).\]
+And hence it's linear.
+
+On the other hand, we have $x=x+0$ and hence $T(x)=x$ if $x\in W_1$. And if $x\notin W_1$, this means $x=x_1+x_2$ with $x_2\neq 0$ and hence we have $T(x)=x_1\neq x_1+x_2$.
+\item If $x_1\in W_1$ then we have $T(x_1+0)=x_1\in R(T)$; and we also have $R(T)\subset W_1$. If $x_2\in W_2$ then we have $T(x_2)=T(0+x_2)=0$ and hence $x_2\in N(T)$; and if $x\in N(T)$, we have $x=T(x)+x=0+x$ and hence $x\in W_2$.
+\item It would be $T(x)=x$ by (a).
+\item It would be $T(x)=0$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $\{v_1,v_2,\ldots ,v_k\}$ be a basis for $W$ and we can extend it to a basis $\beta =\{v_1,v_2,\ldots ,v_n\}$ of $V$. Then we may set $W'=$span$(\{v_{k+1}, v_{k+2},\ldots ,v_n\})$. Thus we have $V=W\oplus W'$ and we can define $T$ be the projection on $W$ along $W'$.
+\item The two projection in Exercise 2.1.24 would be the example.
+\end{enumerate}
+\item We have $T(0)=0\in \{0\}$, $T(x)\in R(T)$, $T(x)=0 \in N(T)$ if $x\in N(T)$ and hence they are $T$-invariant.
+\item For $x,y\in W$, we have $x+cy\in W$ since it's a subspace and $T(x),T(y)\in W$ since it's $T$-invariant and finally $T(x+cy)=T(x)+cT(y)$.
+\item Since $T(x)\in W$ for all $x$, we have $W$ is $T$-invariant. And that $T_W=I_W$ is due to Exercise 2.1.26(a).
+\item \begin{enumerate}
+\item If $x\in W$, we have $T(x)\in R(T)$ and $T(x)\in W$ since $W$ is $T$-invariant. But by the definition of direct sum, we have $T(x)\in R(T)\cap W=\{0\}$ and hence $T(x)=0$.
+\item By Dimension Theorem we have dim$(N(T))=$dim$(V)-$dim$(R(T))$. And since $V=R(T)\oplus W$, we have dim$W=$dim$(V)-$dim$(R(T))$. In addition with $W\subset N(T)$ we can say that $W=N(T)$.
+\item Take $T$ be the mapping in Exercise 2.1.21 and $W=\{0\}$. Thus $W\neq N(T)=\{(a_1,0,0,\ldots )\}$.
+\end{enumerate}
+\item We have $N(T_W)\subset W$ since $T_W$ is a mapping from $W$ to $W$. For $x\in W$ and $x\in N(T_W)$, we have $T_W(x)=T(x)=0$ and hence $x\in N(T)$. For the converse, if $x\in N(T)\cap W$, we have $x\in W$ and hence $T_W(x)=T(x)=0$. So we've proven the first statement. For the second statement, we have \[R(T_W)=\{y\in W:T_W(x)=y,x\in W\}=\{T_W(x):x\in W\}=\{T(x):x\in W\}.\]
+\item It's natural that $R(T)\supset $span$(\{T(v):v\in \beta \})$ since all $T(v)$ is in $R(T)$. And for any $y\in R(T)$ we have $y=T(x)$ for some $x$. But every $x$ is linear combination of finite many vectors in basis. That is, $x=\sum_{i=1}^k{a_iv_i}$ for some $v_i\in \beta $. So we have 
+\[y=T(\sum_{i=1}^k{a_iv_i})=\sum_{i=1}^k{a_iT(v_i)}\]
+is an element in span$(\{T(v):v\in \beta \})$.
+\item Since $\beta$ is a basis, any $x\in V$ can be written as $x=\sum_{v_i\in\beta}{a_iv_i}$ for some $a_i$'s.  Given a function $f:\beta\rightarrow W$, we may define the mapping $T$ as 
+\[T(x)=T(\sum_{v_i\in\beta}{a_iv_i})=\sum_{v_i\in\beta}a_if(v_i),\]
+where $a_i$'s depend on $x$.  One may check $T$ is a linear transformation with $T(x)=f(x)$ for $x\in\beta$, and this gives the existence.  
+
+Suppose $T'$ is another linear transformation that satisfies $T(x)=f(x)$ for $x\in\beta$.  Then by the definition of linear transformation we have $T(x)$ must be 
+\[T(\sum_{v_i\in\beta}{a_iv_i})=\sum_{v_i\in\beta}{a_iT(v_i)}=\sum_{v_i\in\beta}{a_if(v_i)},\]
+where $x=\sum_{v_i\in\beta}{a_iv_i}$ is the unique representation of $x$ with respect to the basis $\beta$. So $T'=T$, giving the uniqueness.
+\item \begin{enumerate}
+\item With the hypothesis $V=R(T)+N(T)$, it's sufficient to say that $R(T)\cap N(T)=\{0\} $. But this is easy since 
+\[\mathrm{dim}(R(T)\cap N(T))=\mathrm{dim}(R(T))+\mathrm{dim}(N(T))-\mathrm{dim}(R(T)+N(T))\]
+\[=\mathrm{dim}(R(T))+\mathrm{dim}(N(T))-\mathrm{dim}(V)=0\]
+by Dimension Theorem.
+\item Similarly we have 
+\[\mathrm{dim}(R(T)+N(T))=\mathrm{dim}(R(T))+\mathrm{dim}(N(T))-\mathrm{dim}(R(T)\cap N(T))\]
+\[=\mathrm{dim}(R(T))+\mathrm{dim}(N(T))-\mathrm{dim}(\{0\})=\mathrm{dim}(V)\]
+by Dimension Theorem. So we have $V=R(T)+N(T)$.
+\end{enumerate}
+\item \begin{enumerate}
+\item In this case we have $R(T)=V$ and $N(T)=\{(a_1,0,0,\ldots )\}$. So naturally we have $V=R(T)+N(T)$. But $V$ is a direct sum of them since $R(T)\cap N(T)=N(T)\neq \{0\}$.
+\item Take $T_1=U$ in the Exercise 2.1.21. Thus we have $R(T_1)=\{(0,a_1,a_2,\ldots )\}$ and $N(T_1)=\{(0,0,\ldots )\}$. So we have $R(T_1)\cap N(T_1)=\{0\}$ but $R(T_1)+N(T_1)=R(T_1)\neq V$.
+\end{enumerate}
+\item Let $c=\frac{a}{b} \in \mathbb{Q}$. We have that 
+\[T(x)=T(\underset{\mathrm{b\enspace times}}{\underbrace{\frac{1}{b}x+\frac{1}{b}x+\cdots +\frac{1}{b}x})}=bT(\frac{1}{b}x)\]
+and hence $T(\frac{1}{b}x)=\frac{1}{b}T(x)$. So finally we have 
+\[T(cx)=T(\frac{a}{b}x)=T(\underset{\mathrm{a\enspace times}}{\underbrace{\frac{1}{b}x+\frac{1}{b}x+\cdots +\frac{1}{b}x})}\]
+\[=aT(\frac{1}{b}x)=\frac{a}{b}T(x)=cT(x).\]
+\item It's additive since 
+\[T((x_1+iy_1)+(x_2+iy_2))=(x_1+x_2)-i(y_1+y_2)=T(x_1+iy_1)+T(x_2+iy_2).\]
+But it's not linear since $T(i)=-i\neq iT(1)=0$.
+\item It has been proven in the Hint.
+\item \begin{enumerate}
+\item It's linear since \[\eta(u+v)=(u+v)+W=(u+W)+(v+W)=\eta(u)+\eta(v)\] and \[\eta(cv)=cv+W=c(v+W)=c\eta(v)\] by the definition in Exercise 1.3.31. And for all element $v+W$ in $V/W$ we have $\eta(v)=v+W$ and hence it's onto. Finally if $\eta(v)=v+W=0+W$ we have $v-0=v\in W$. Hence $N(\eta )=W$.
+\item Since it's onto we have $R(T)=V/W$. And we also have $N(\eta )=W$. So by Dimension Theorem we have dim$(V)=$dim$(V/W)+$dim$(W)$.
+\item They are almost the same but the proof in Exercise 1.6.35 is a special case of proof in Dimension Theorem.
+\end{enumerate}
+\end{enumerate}

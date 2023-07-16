@@ -1,0 +1,128 @@
+\section{Bases and Dimension}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. The empty set is its basis.
+\item Yes. This is the result of Replacement Theorem.
+\item No. For example, the set of all polynomials has no finite basis.
+\item No. $\mathbb{R}^2$ has $\{(1,0),(1,1)\}$ and $\{(1,0),(0,1)\}$ as bases.
+\item Yes. This is the Corollary after Replacement Theorem.
+\item No. It's $n+1$.
+\item No. It's $m\times n$.
+\item Yes. This is the Replaceent Theorem.
+\item No. For $S={1,2}$, a subset of $\mathbb{R}$, then $5=1\times 1+2\times 2=3\times 1+1\times 2$.
+\item Yes. This is Theorem 1.11.
+\item Yes. It's $\{0\}$ and $V$ respectly.
+\item Yes. This is the Corollary 2 after Replacement Theorem.
+\end{enumerate}
+\item It's enough to check there are $3$ vectors and the set is linear independent.
+
+\begin{enumerate}
+\item Yes.
+\item No.
+\item Yes.
+\item Yes.
+\item No.
+\end{enumerate}
+\item \begin{enumerate}
+\item No.
+\item Yes.
+\item Yes.
+\item Yes.
+\item No.
+\end{enumerate}
+\item It's impossible since the dimension of $\mathbf{P}_3(\mathbb{R})$ is four.
+\item It's also impossible since the dimension of $\mathbb{R}^3$ is three.
+\item Let $E_{ij}$ be the matrix with the only nonzero $ij$-entry$=1$. Then the sets $\{E_{11},E_{12},E_{21},E_{22}\}$, $\{E_{11}+E_{12},E_{12},E_{21},E_{22}\}$, and $\{E_{11}+E_{21},E_{12},E_{21},E_{22}\}$ are bases of the space.
+\item We have first $\{u_1,u_2\}$ is linearly independent. And since $u_3=-4u_1$ and $u_4=-3u_1+7u_2$, we can check that $\{u_1,u_2,u_5\}$ is linearly independent and hence it's a basis.
+\item To solve this kind of questions, we can write the vectors into a matrix as below and do the Gaussian elimintaion.
+\begin{align*}
+M&=\left( \begin{array}{ccccc}2&-3&4&-5&2\\-6&9&-12&15&-6\\3&-2&7&-9&1\\2&-8&2&-2&6\\-1&1&2&1&-3\\0&-3&-18&9&12\\1&0&-2&3&-2\\2&-1&1&-9&7\end{array}\right)\\
+&\rightsquigarrow \left( \begin{array}{ccccc}0&-3&8&-11&6\\0&0&0&0&0\\0&-2&13&-18&7\\0&-8&6&-8&10\\0&1&0&4&-5\\0&1&6&-3&-4\\1&0&-2&3&-2\\0&-1&5&-15&11\end{array}\right)\\
+&\rightsquigarrow \left( \begin{array}{ccccc}0&0&26&-20&-6\\0&0&0&0&0\\0&0&1&4&-5\\0&0&54&-32&-22\\0&0&-6&-7&-1\\0&1&6&-3&4\\1&0&-2&3&-2\\0&0&11&-18&7\end{array}\right)\\
+&\rightsquigarrow \left( \begin{array}{ccccc}0&0&0&-124&124\\0&0&0&0&0\\0&0&1&4&-5\\0&0&0&-248&248\\0&0&0&31&-31\\0&1&6&-3&4\\1&0&-2&3&-2\\0&0&0&-62&62\end{array}\right)\\
+&\rightsquigarrow \left( \begin{array}{ccccc}0&0&0&-124&124\\0&0&0&0&0\\0&0&1&4&-5\\0&0&0&0&0\\0&0&0&0&0\\0&1&6&-3&4\\1&0&-2&3&-2\\0&0&0&0&0\end{array}\right)
+\end{align*}
+And the row with all entries $0$ can be omitted\footnote{Which row with all entries is important here. So actually the operation here is not the standard Gaussian elimination since we can not change the order of two row here.}. So $\{u_1,u_3,u_6,u_7\}$ would be the basis for $W$ (the answer here will not be unique).
+\item If $a_1u_1+a_2u_2+a_3u_3+a_4u_4=(a_1,a_1+a_2,a_1+a_2+a_3,a_1+a_2+a_3+a_4)=0$ we have $a_1=0$ by comparing the first entry and then $a_2=a_3=a_4=0$. For the second question we can solve $(a_1,a_2,a_3,a_4)=a_1u_1+(a_2-a_1)u_2+(a_3-a_2)u_3+(a_4-a_3)u_4$.
+\item The polynomials found by Lagrange interpolation formula would be the answer. It would have the smallest degree since the set of those polynomials of Lagrange interpolation formula is a basis.
+
+\begin{enumerate}
+\item $-4x^2-x+8$.
+\item $-3x+12$.
+\item $-x^3+2x^2+4x-5$.
+\item $2x^3-x^2-6x+15$.
+\end{enumerate}
+\item If $\{u,v\}$ is a basis then the dimension of $V$ would be two. So it's enough to check both $\{u+v,au\}$ and $\{au,bv\}$ are linearly independent. Assuming $s(u+v)+tau=(s+ta)u+sv=0$ we have $s+ta=s=0$ and hence $s=t=0$. Assuming $sau+tbv=0$ we have $sa=tb=0$ and hence $s=t=0$.
+\item If $\{u,v,w\}$ is a basis then the dimension of $V$ would be three. So it's enough to check $\{u+v+w,v+w,w\}$ is lineaerly independent. Assuming $a(u+v+w)+b(v+w)+cw=au+(a+b)v+(a+b+c)w=0$ we have $a=a+b=a+b+c=0$ and hence $a=b=c=0$.
+\item We can substract the second equation by the two times of the first equation. And then we have 
+\begin{align*}
+x_1-2x_2+x_3&=0\\
+x_2-x_3&=0
+\end{align*}
+Let $x_3=s$ and hence $x_2=s$ and $x_1=s$. We have the solution would be $\{(s,s,s)=s(1,1,1):s\in \mathbb{R}\}$. And the basis would be $\{(1,1,1)\}$.
+\item For $W_1$ we can observe that by setting $a_2=p$, $a_3=q$, $a_4=s$, and $a_5=t$ we can solve $a_1=q+s$. So $W_1=\{(q+s,p,q,s,t)=p(0,1,0,0,0)+q(1,0,1,0,0)+s(1,0,0,1,0)+t(0,0,0,0,1):p,q,s,t\in \mathbb{F}^5\}$. And \[\{(0,1,0,0,0),(1,0,1,0,0),(1,0,0,1,0),(0,0,0,0,1)\}\] is the basis. The dimension is four. And similarly for $W_2$ we may set $a_4=s$, $a_5=t$. And then we have $a_1=-t$, $a_2=a_3=a_4=s$ and \[W_2=\{(-t,s,s,s,t)=s(0,1,1,1,0)+t(-1,0,0,0,1):s,t\in \mathbb{F}^5\}\]. And hence \[\{(0,1,1,1,0),(-1,0,0,0,1)\}\] is the basis of $W_2$. The dimension is two.
+\item Just solve $A_{11}+A_{22}+\cdots +A_{nn}=0$ and hence $\{E_{ij}\}_{i\neq j}\cup \{E_{ii}-E_{nn}\}_{i=1,2,\ldots n-1}\}$ is the basis, where $\{E_{ij}\}$ is the standard basis. And the dimension would be $n^2-1$.
+\item We have $A_{ij}=0$ for all $i>j$. Hence the basis could be $\{E_{ij}\}_{i\leq j}\}$ and the dimension is $\frac{n(n+1)}{2}$.
+\item We have $A_{ii}=0$ and $A_{ij}=A_{ji}$. Hence the basis could be $\{E_{ij}-E_{ji}\}_{i<j}$ and the dimension is $\frac{n(n-1)}{2}$.
+\item Let $e_i$ be the sequence with the only nonzero $i$-th term$=1$. Then we have $\{e_i\}_{i\geq 0}$ is a basis. To prove it, we have that every sequence is linear combination of the basis since we only discuss the sequence with finite nonzero entries. Furthermore we have for every finite subset of $\{e_i\}_{i\geq 0}$ is linearly independent.
+\item If every vector has a unique representation as linear combination of the set $\beta $, this means every vector is a linear combination of $\beta $. Furthermore, if there are nontrivial representation of $0$, then we have there are two representations, say the trivial and nontrivial one, of $0$. This is a contradiction.
+\item \begin{enumerate}
+\item If $S=\emptyset $ or $S=\{0\}$, then we have $V=\{0\}$ and the empty set can generate $V$. Otherwise we can choose a nonzero vector $u_1$ in $S$, and continuing pick $u_{k+1}$ such that $u_{k+1}\notin \mathrm{span}(\{u_1,u_2,\ldots ,u_k\})$. The process would teminate before $k>n$ otherwise we can find linearly independent set with size more than $n$. If it terminates at $k=n$, then we knoew the set is the desired basis. If it terminates at $k<n$, then this means we cannot find any vector to be the vector $u_{k+1}$. So any vectors in $S$ is a linear combination of $\beta =\{u_1,u_2,\ldots ,u_k\}$ and hence $\beta $ can generate $V$ since $S$ can. But by Replacement Theorem we have $n\leq k$. This is impossible.
+\item If $S$ has less than $n$ vectors, the process must terminate at $k<n$. It's impossible.
+\end{enumerate}
+\item Sufficiency: If the vector space $V$ is finite-dimensional, say dim$=n$, and it contains an infinite linearly independent subset $\beta $, then we can pick an independent subset $\beta '$ of $\beta $ such that the size of $\beta '$ is $n+1$. Pick a basis $\alpha $ with size $n$. Since $\alpha $ is a basis, it can generate $V$. By Replacement Theorem we have $n\geq n+1$. It's a contradiction. Necessity: To find the infinite linearly independent subset, we can let $S$ be the infinite-dimensional vector space and do the process in exercise 1.6.20(a). It cannot terminate at any $k$ otherwise we find a linearly independent set generating the space and hence we find a finite basis.
+\item The condition would be that $W_1\subset W_2$. Let $\alpha $ and $\beta $ be the basis of $W_1\cap W_2$ and $W_1$. Since $W_1$ and $W_2$ finite-dimensional, we have $\alpha $ and $\beta $ are bases with finite size. First if $W_1$ is not a subset of $W_2$, we have some vector $v\in W_1\backslash W_2$. But this means that $v\notin \mathrm{span}(\beta )$ and hence $\beta \cup \{v\}$ would be a independent set with size greater than that of $\beta $. So we can conclude that dim$(W_1 \cap W_2)=$dim$(W_1)$. For the converse, if we have $W_1\subset W_2$, then we have $W_1\cap W_2=W_1$ and hence they have the same dimension.
+\item Let $\alpha $ and $\beta $ be the basis of $W_1$ and $W_2$. By the definition we have both $\alpha $ and $\beta $ are bases with finite size.
+
+\begin{enumerate}
+\item The condition is that $v\in W_1$. If $v\notin W_1=\mathrm{span}(\alpha )$, thus $\alpha \cup \{v\}$ would be a independent set with size greater than $\alpha $. By Replacement Theorem we have dim$(W_1)<$dim$(W_2)$. For the converse, if $v\in W_1=\mathrm{span}(\{v_1,v_2,\ldots ,v_k\})$, we actually have $W_2=\mathrm{span}(\{v_1,v_2,\ldots ,v_k,v\})=\mathrm{span}(\{v_1,v_2,\ldots ,v_k\})=W_1$ and hence they have the same dimension.
+\item Since we have $W_1\subset W_2$, we have in general we have dim$(W_1)<$dim$(W_2)$.
+\end{enumerate}
+\item By exercise 1.5.18 we have $\beta =\{f^{(i)}\}_{i=0,1,\ldots ,n}$ is independent since they all have different degree. And since dim$(\mathbf{P}_n(\mathbb{R}))=n+1$ we can conclude that $\beta $ is a basis and hence it generate the space $\mathbf{P}_n(\mathbb{R}))$.
+\item It would be $m+n$ since $(\alpha ,0) \cup (0, \beta )$ would be a basis of $Z$ if $\alpha $ and $\beta $ are the basis of $V$ and $W$ respectly, where $(\alpha ,0)=\{(u,0)\in Z: u\in V\}$ and $(0, \beta )=\{(0,u)\in Z: u\in W\}$.
+\item It would  be $n$ since $\{x-a,x^2-a^2,\ldots ,x^n-a^n\}$ is a basis.
+\item The dimension of $W_1\cap \mathbf{P}_n(\mathbb{F})$ and $W_2\cap \mathbf{P}_n(\mathbb{F})$ are $\lfloor \frac{n+1}{2} \rfloor $ and $\lceil \frac{n+1}{2} \rceil $ respectly since $\{x^i\}$ with $0\leq i\leq n$ is an odd number and $\{x^j\}$ with $0\leq j\leq n$ is a even number are bases of the two spaces respectly.
+\item If $\alpha $ is the basis of $V$ over $\mathbb{R}$, then we have $\alpha \cup i\alpha $ is the basis of $V$ over $\mathbb{R}$, where $i\alpha =\{iv\in V: v\in \alpha \}$.
+\item \begin{enumerate}
+\item Using the notation of the Hint, if we assume \[\sum_{i=1}^k{a_iu_i}+\sum_{i=1}^m{b_iv_i}+\sum_{i=1}^n{c_iw_i}=0\], then we have \[v=\sum_{i=1}^m{b_iv_i}=-\sum_{i=1}^k{a_iu_i}-\sum_{i=1}^n{c_iw_i}\] is contained in both $W_1$ and $W_2$ and hence in $W_1\cap W_2$. But if $v\neq 0$ and can be express as $u=\sum_{i=1}^k{a'_iu_i}$, then we have $\sum_{i=1}^m{b_iv_i}-\sum_{i=1}^k{a'_iu_i}=0$. This is contradictory to that $\{u_1,\ldots ,v_1,\ldots \}$ is a basis of $W_1$. Hence we have \[v=\sum_{i=1}^m{b_iv_i}=-\sum_{i=1}^k{a_iu_i}-\sum_{i=1}^n{c_iw_i}=0\], this means $a_i=b_j=c_l=0$ for all index $i$, $j$, and $k$. So the set $\beta =\{u_1,\ldots ,v_1,\ldots ,w_1, \ldots \}$ is linearly independent. Furthermore, for every $x+y\in W_1+W_2$ with $x\in W_1$ and $y\in W_2$ we can find the representation $x=\sum_{i=1}^k{d_iu_i}+\sum_{i=1}^m{b_iv_i}$ and $y=\sum_{i=1}^k{d'_iu_i}+\sum_{i=1}^n{c_iw_i}$. Hence we have \[x+y=\sum_{i=1}^k{(d_i+d'_i)u_i}+\sum_{i=1}^m{b_iv_i}+\sum_{i=1}^n{c_iw_i}=0\] is linear combination of $\beta $. Finally we have dim$(W_1+W_2)=k+m+n=$dim$(W_1)+$dim$(W_2)-$dim$(W_1\cap W_2)$ and hence $W_1+W_2$ is finite-dimensional.
+\item With the formula in the previous exercise we have \begin{align*}\mathrm{dim}(W_1+W_2)&=\mathrm{dim}(W_1)+\mathrm{dim}(W_2)-\mathrm{dim}(W_1\cap W_2)\\&=\mathrm{dim}(W_1)+\mathrm{dim}(W_2)\end{align*} if and only if dim$(W_1\cap W_2)=0$. And dim$(W_1\cap W_2)=0$ if and only if $W_1\cap W_2=\{0\}$. And this is the sufficient and necessary condition for $V=W_1\oplus W_2$.
+\end{enumerate}
+\item It can be check $W_1$ and $W_2$ are subspaces with dimension $3$ and $2$. We also can find out that $W_1\cap W_2=\{\left(\begin{array}{cc}0&a\\-a&0\end{array}\right) \in V:a,b\in \mathbb{F}\}$ and it has dimension $1$. By the formula of the previous exercise, we have that dimension of $W_1+W_2$ is $2+3-1=4$.
+\item \begin{enumerate}
+\item This is the conclusion of $W_1\cap W_2\subset W_2$.
+\item By the formula in 1.6.29(a) we have the left hand side\[=m+n-\mathrm{dim}(W_1\cap W_2)\leq m+n\] since dim$(W_1\cap W_2)\geq 0$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $W_1$ be the $xy$-plane with $m=2$ and $W_2$ be the $x$-axis with $n=1$. Then we have $W_1\cap W_2=W_2$ has dimension $1$.
+\item Let $W_1$ be the $xy$-plane with $m=2$ and $W_2$ be the $z$-axis with $n=1$. Then we have $W_1+W_2=\mathbb{R}^3$ has dimension $3=2+1$.
+\item Let $W_1$ be the $xy$-plane with $m=2$ and $W_2$ be the $xz$-axis with $n=2$. Then we have $W_1\cap W_2$ is the $x$-axis with dimension $1$ and $W_1+W_2$ is $\mathbb{R}^3$ with dimension $3\neq 2+2$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Since $V=W_1\oplus W_2$ means $W_1\cap W_2=\{0\}$ and a basis is linearly independent and so contains no $0$, we have $\beta _1\cap\beta_2=\emptyset$. And it a special case of exercise 1.6.29(a) that $\beta _1\cup\beta_2$ is a basis. 
+\item Let $u_i$ and $v_j$ are vectors in $\beta_1$ and $\beta_2$ respectly. If there is a nonzero vector $u\in W_1\cap W_2$, we can write $u=\sum_{i=1}^n{a_iu_i}=\sum_{j=1}^m{b_jv_j}$. But it impossible since it will cause \[\sum_{i=1}^n{a_iu_i}-\sum_{j=1}^m{b_jv_j}=0\]. On the other hand, for any $v\in V$, we can write $v=\sum_{i=1}^n{c_iu_i}+\sum_{j=1}^m{d_jv_j}\in W_1+W_2$. For any $x+y\in W_1+W_2$ with $x\in W_1$ and $y\in W_2$, we have $x=\sum_{i=1}^n{e_iu_i}$ and $y=\sum_{j=1}^m{f_jv_j}$. Thus we have $x+y=\sum_{i=1}^n{e_iu_i}+\sum_{j=1}^m{f_jv_j}\in V$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $\beta $ be the basis of $V$ and $\alpha $ be the basis of $W_1$. By Replacement Theorem we can extend $\alpha $ to be a basis $\alpha '$ of $V$ such that $\alpha \subset \alpha'$. By the previous exercise and let $W_2=$span$(\alpha' \backslash \alpha )$, we have $V=W_1\oplus W_2$.
+\item We may set $W_2$ to be the $y$-axis and $W'_2$ to be $\{t(1,1):t\in \mathbb{R}\}$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Since $\{u_1,u_2,\ldots ,u_n\}$ is a basis, the linear combination of \[\{u_{k+1},u_{k+2},\ldots ,u_n\}\] can not be in span$(\{u_1,u_2,\ldots ,u_k\})=W$. This can make sure that \[\{u_{k+1}+W, u_{k+2}+W, \ldots ,u_n+W\}\] is linearly independent by 1.3.31(b). For all $u+W\in V/W$ we can write 
+\begin{align*}
+u+W&=(a_1u_1+a_2u_2+\cdots +a_nu_n)+W\\
+&=(a_1u_1+a_2u_2+\cdots +a_ku_k)+(a_{k+1}u_{k+1}+a_{k+2}u_{k+2}+\cdots +a_nu_n)+W\\
+&=(a_{k+1}u_{k+1}+a_{k+2}u_{k+2}+\cdots +a_nu_n)+W\\
+&=a_{k+1}(u_{k+1}+W)+a_{k+2}(u_{k+2}+W)+\cdots +a_n(u_n+W)
+\end{align*}
+ and hence it's a basis.
+\item By preious argument we have dim$(V/W)=n-k=$dim$(V)-$dim$(W)$.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\end{enumerate}

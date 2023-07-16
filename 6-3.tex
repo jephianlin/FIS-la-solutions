@@ -1,0 +1,243 @@
+\section{The Adjoint of a Linear Operator}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. See Theorem 6.9.
+\item No. It just for the linear mapping $V\rightarrow \F$. For example, the value of the identity mapping from $\R^2$ to $\R^2$ is not an element in $\F$.
+\item No. The equality holds only for the case $\beta $ is an orthonormal basis. For example, let $A=\begin{pmatrix}1&1\\0&1\end{pmatrix}$ and $T=L_A$. Thus we have $T^*=L_{A^*}$. But for the basis 
+\[\beta =\{(1,1),(0,1)\},\]
+we have 
+\[[T]_{\beta}=\begin{pmatrix}2&1\\-1&0\end{pmatrix}\neq [T^*]_{\beta}=\begin{pmatrix}1&0\\1&1\end{pmatrix}.\]
+\item Yes.See Theorem 6.9.
+\item No. Choose $a=i$, $b=0$ and $T=I_{\mathbb{C}}=U$. We have $(aT)^*=\overline{a}T^*\neq aT^*$.
+\item Yes. See Theorem 6.10 and its Corollary.
+\item Yes. See Theorem 6.11.
+\end{enumerate}
+\item Follow the prove of Theorem 6.8. The vector would be 
+\[y=\sum_{i=1}^n{\overline{g(v_i)}v_i}.\]
+\begin{enumerate}
+\item The vector is $(1,-2,4)$.
+\item The vector is $(1,2)$.
+\item The vector is $210x^2-204x+33$.
+\end{enumerate}
+\item Use the definition and that skill used in the previous exercises.
+\begin{enumerate}
+\item By definition we have 
+\[\lag (a,b),T^*(x)\rag =\lag (2a+b,a-3b),(3,5)\rag =11a-12b.\]
+We may observe that $T^*(x)=(11,-12)$.
+\item By definition we have 
+\[\lag (z_1,z_2),T^*(x)\rag =\lag (2z_1+iz_2,(1-i)z_1),(3-i,1+2i)\rag \]
+\[=(5-i)z_1+(-1+3i)z_2.\]
+We may observe that $T^*(x)=(5+i,-1-3i)$.
+\item By definition we have 
+\[\lag at+b,T^*(x)\rag =\lag 3at+(a+3b),4-2t\rag \]
+\[=\int_{-1}^1{-6at^2+(-2a+6b)t+(4a+12b)dt}\]
+We may observe that $T^*(x)=6t+12$.
+\end{enumerate}
+\item \begin{description}
+\item[(b)] Compute 
+\[\lag x,(cT)^*(y)\rag =\lag cT(x),y\rag =\]
+\[\lag T(x),\overline{c}y\rag =\lag x,T^*(\overline{c}y)\rag =\lag x,\overline{c}T^*(y)\rag \]
+for all $x$ and $y$.
+\item[(c)] Compute 
+\[\lag x,(TU)^*(y)\rag =\lag TU(x),y\rag \]
+\[=\lag U(x),T^*(y)\rag =\lag x,U^*T^*(y)\rag \]
+for all $x$ and $y$.
+\item[(e)] Compute 
+\[\lag x,I^*(y)\rag =\lag I(x),y\rag \]
+\[=\lag x,y\rag =\lag x,I(y)\rag \]
+for all $x$ and $y$.
+\end{description}
+\item \begin{enumerate}
+\item Just write it down just as that in the proof of (c).
+\begin{description}
+\item[(a)] Compute 
+\[L_{(A+B)^*}=(L_{A+B}^*=(L_A+L_B)^*\]
+\[=(L_A)^*+(L_B)^*=L_{A^*}+L_{B^*}=L_{A^*+B^*}.\]
+\item[(b)] Compute 
+\[L_{(cA)^*}=(L_{cA})^*=(cL_A)^*\]
+\[=\overline{c}(L_A)^*=\overline{c}L_{A^*}=L_{\overline{c}A^*}.\]
+\item[(d)] Compute 
+\[L_{A^{**}}=(L_A)^{**}=L_A.\]
+\item[(e)] Compute 
+\[L_{I^*}=(L_I)^*=L_I.\]
+\end{description}
+\item The statement for nonsquare matrices has no difference with the Corollary but the statement (e) cannot holds since there's no nonsquare identity matrix. To this result come from that $A^*$ is the conjugate of $A^t$.
+\end{enumerate}
+\item Compute 
+\[U_1^*=(T+T^*)^*=T^*+T^{**}=T^*+T=U_1\]
+and 
+\[U_2^*=(TT^*)^*=T^{**}T^*=TT^*=U_2.\]
+\item Let $A=\begin{pmatrix}1&1\\0&0\end{pmatrix}$. Then $N(A)\neq N(A^*)$ since $(0,1)$ is an element only in the later one.
+\item If $T$ is invertible, then we have the inverse mapping $T^{-1}$. Then we have 
+\[T^*(T^{-1})^*=(T^{-1}T)^*=I^*=I.\]
+\item For each vector $v\in V$ we may write $v=v_1+v_2$ such that $v_1\in W$ and $v_2\in W\pp$. Now check 
+\[\lag x_1+x_2,T^*(y_1+y_2)\rag =\lag T(x_1+x_2),y_1+y_2\rag \]
+\[=\lag x_1,y_1+y_2\rag =\lag x_1,y_1 \rag \]
+and 
+\[\lag x_1+x_2,T(y_1+y_2)\rag =\lag x_1+x_2,y_1\rag \]
+\[=\lag x_1,y_1\rag =\lag x_1+x_2,T^*(y_1+y_2)\rag \]
+for all $x=x_1+x_2$ and $y=y_1+y_2$.
+\item The sufficiency is easy since we may just pick $y=x$. For the necessity, suppose now $\|T(x)\|=\|x\|$. By Exercise 6.1.20 we have 
+\[\lag x,y\rag =\frac{1}{4}\sum_{k=1}^4{i^k\|x+i^ky\|^2}\]
+\[=\frac{1}{4}\sum_{k=1}^4{i^k\|T(x+i^ky)\|^2}=\frac{1}{4}\sum_{k=1}^4{i^k\|T(x)+i^kT(y)\|^2}\]
+\[\lag T(x),T(y)\rag \]
+if $\F=\mathbb{C}$. However, for the case $\F=\R$ the above argument could also work if we just pick $k$ to be $2$ and $4$.
+\item We have 
+\[0=\lag T^*T(x),x\rag =\lag T(x),T(x)\rag =\|T(x)\|^2\]
+for all $x$ and hence $T(x)=0$ for all $x$. And the second statement is also true since we may write 
+\[TT^*=T^{**}T^*=T_0\]
+and get $T^*=T_0$. Since $T=T^{**}=T_0^*=T_0$.
+\item \begin{enumerate}
+\item If $x\in R(T^*)\pp$ we have 
+\[0=\lag x,T^*(y)\rag =\lag T(x),y\rag \]
+for all $y$. This means that $T(x)=0$ and so $x\in N(T)$. Conversely, if $x\in N(T)$, we have 
+\[\lag x,T^*(y)\rag =\lag T(x),y\rag =0\]
+for all $y$. This means that $x$ is an element in $R(T^*)\pp$.
+\item By Exercise 6.2.13(c) we have 
+\[N(T)\pp =(R(T^*)\pp )\pp =R(T^*)\pp .\]
+\end{enumerate}
+\item \begin{enumerate}
+\item If $x\in N(T^*T)$ we have $T^*T(x)=0$ and 
+\[0=\lag T^*T(x),x\rag =\lag T(x),T(x)\rag .\]
+This means that $T(x)=0$ and $x\in N(T)$. Conversely, if $x\in N(T)$, we have $T^*T(x)=T^*(0)=0$ and so $x\in N(T^*T)$.
+
+On the other hand, since the dimension is finite, we have 
+\[R(T^*T)=N(T^*T)\pp =N(T)\pp =R(T^*)\]
+by the previous exercise. Hence we have  
+\[\rank(T^*T)=\rank(T^*)=\rank(T)\]
+by the next argument.
+\item For arbitrary matrix $A$, denote $\overline{A}$ to be the matrix consisting of the conjugate of entris of $A$. Thus we have $A^*=\overline{A^t}$. We want to claim that $\rank(A)=\rank(A^*)$ first. Since we already have that $\rank(A)=\rank(A^t)$, it's sufficient to show that $\rank(A)=\rank(\overline{A})$. By Theorem 3.6 and its Corollaries, we may just prove that $\{v_i\}_{i\in I}$ is independent if and only if $\{\overline{v_i}\}_{i\in I}$ is independent, where $\overline{v_i}$ means the vector obtained from $v_i$ by taking conjugate to each coordinate. And it comes from the fact 
+\[\sum_{i\in I}a_iv_i=0\]
+if and only if 
+\[\sum_{i\in I}\overline{a_i}\overline{v_i}=\overline{\sum_{i\in I}a_iv_i}=0.\]
+Finally, by Theorem 6.10 we already know that $[T]_{\beta}^*=[T^*]_{\beta}$ for some basis $\beta$. This means that $\rank(T)=\rank(T^*)$. And so 
+\[\rank(TT^*)=\rank(T^{**}T^*)=\rank(T^*)=\rank(T).\]
+%We define a mapping $T_c:R(L_A)\rightarrow R(L_{\overline{A}})$ by $T_c(Ax)=\overline{Ax}$. This is an isomorphism since $\overline{A}y$ is mapped by $A\overline{y}$ and $T(Ax)=\overline{Ax}=0$ implies $Ax=0$. So we have 
+%\[\rank(A)=\rank(A^t)=\rank(\overline{A^t}).\]
+\item It comes from the fact $L_{A^*}=(L_A)^*$.
+\end{enumerate}
+\item It's linear since 
+\[T(cx_1+x_2)=\lag cx_1+x_2,y\rag z\]
+\[=c\lag x_1,y\rag z+\lag x_2,y\rag z=cT(x_1)+T(x_2).\]
+On the other hand, we have 
+\[\lag u,T^*(v)\rag =\lag \lag u,y\rag z,v\rag \]
+\[=\lag u,y\rag \lag z,v\rag =\lag u,\lag v,z\rag y\rag \]
+for all $u$ and $v$. So we have 
+\[T^*(x)=\lag x,z\rag y.\]
+\item \begin{enumerate}
+\item Let $y\in W$ be given. We may define 
+\[g_y(x) =\lag T(x),y\rag_2,\] 
+which is linear since $T$ is linear and the first component of inner product function is also linear. By Theorem 6.8 we may find an unique vector, called $T^*(y)$, such that 
+\[\lag x,T^*(y)\rag_1 =\lag T(x),y\rag_2\]
+for all $x$. This means $T^*(y)$ is always well-defined. It's unique since 
+\[\lag x,T^*(y)\rag_1 =\lag x,U(y)\rag_1\]
+for all $x$ and $y$ implies that $T^*=U$.
+
+Finally, it's also linear since 
+\[\lag x,T^*(y+cz)\rag_1 =\lag T(x),y+cz\rag_2 \]
+\[=\lag T(x),y\rag_2 +\overline{c}\lag T(x),z\rag_2 \]
+\[=\lag x,T^*(y)\rag_1 +\overline{c}\lag x,T^*(z)\rag_1 \]
+\[=\lag x,T^*(y)\rag_1 +\lag x,cT^*(z)\rag_1 =\lag x,T^*(y)+cT^*(z)\lag_1 \]
+for all $x$, $y$, and $z$.
+\item Let 
+\[\beta =\{v_1,v_2,\ldots ,v_m\}\]
+and
+\[\gamma =\{u_1,u_2,\ldots ,u_n\}.\]
+Further, assume that 
+\[T(v_j)=\sum_{i=1}^n{a_{ij}u_i}.\]
+This means that $[T]_{\beta}^{\gamma}=\{a_{ij}\}$. 
+
+On the other hand, assume that 
+\[T^*(u_j)=\sum_{i=1}^n{c_{ij}v_i}.\]
+And this means 
+\[\overline{c_{ij}}=\lag v_i,T^*(u_j)\rag_1 =\lag T(v_i),u_j\rag_2 =a_{ji}\]
+and $[T^*]_{\gamma}^{\beta}=([T]_{\beta}^{\gamma})^*$.
+\item It comes from the same reason as Exercise 6.3.13(b).
+\item See 
+\[\lag T^*(x),y\rag =\overline{\lag y,T^*(x)\rag }\]
+\[=\overline{\lag T(y),x\rag }=\lag x,T^*(y)\rag .\]
+\item If $T(x)=0$ we have $T^*T(x)=T^*(0)=0$. If $T^*T(x)=0$ we have 
+\[0=\lag x,T^*T(x)\rag =\lag T(x),T(x)\rag \]
+and henve $T(x)=0$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Compute 
+\[\lag x,(T+U)^*(y)\rag_1=\lag (T+U)(x),y\rag_2\]
+\[=\lag T(x)+U(x),y\rag_2 =\lag T(x),y\rag_2+\lag U(x),y\rag_2 \]
+\[=\lag x,T^*(y)\rag_1+\lag x,U^*(y)\rag_1=\lag x,(T^*+U^*)(y)\rag_1\]
+for all $x$ and $y$.
+\item Compute 
+\[\lag x,(cT)^*(y)\rag_1 =\lag cT(x),y\rag_2 =\]
+\[\lag T(x),\overline{c}y\rag_2 =\lag x,T^*(\overline{c}y)\rag_1 =\lag x,\overline{c}T^*(y)\rag_1 \]
+for all $x$ and $y$.
+\item Let $T$ is a mapping on $W$ and $U$ is a mapping from $V$ to $W$. Compute 
+\[\lag x,(TU)^*(y)\rag_1 =\lag TU(x),y\rag_2 \]
+\[=\lag U(x),T^*(y)\rag_2 =\lag x,U^*T^*(y)\rag_1 \]
+for all $x$ and $y$.
+
+Let $T$ is a mapping from $V$ to $W$ and $U$ is a mapping on $V$. Compute 
+\[\lag x,(TU)^*(y)\rag_1 =\lag TU(x),y\rag_2 \]
+\[=\lag U(x),T^*(y)\rag_1 =\lag x,U^*T^*(y)\rag_1 \]
+for all $x$ and $y$.
+\item Compute 
+\[\lag x,T^{**}(y)\rag_2 =\lag T^*(x),y\rag_1 \]
+\[=\lag x,T(y)\rag \]
+for all $x$ and $y$.
+\end{enumerate}
+\item If $x\in R(T^*)\pp$ we have 
+\[0=\lag x,T^*(y)\rag_1 =\lag T(x),y\rag_2 \]
+for all $y$. This means that $T(x)=0$ and so $x\in N(T)$. Conversely, if $x\in N(T)$, we have 
+\[\lag x,T^*(y)\rag_1 =\lag T(x),y\rag_2 =0\]
+for all $y$. This means that $x$ is an element in $R(T^*)\pp$.
+\item For arbitrary matrix $M$ we already have $\det(M)=\det(M^t)$. So it's sufficient to show that $\overline{\det(M)}=\det(\overline{M})$. We prove this by induction on $n$, the size of a matrix. For $n=1$, we have 
+\[\overline{\det\begin{pmatrix}a\end{pmatrix}}=\det\begin{pmatrix}\overline{a}\end{pmatrix}.\]
+For $n=2$, we have 
+\[\overline{\det\begin{pmatrix}a&b\\c&d\end{pmatrix}}=\overline{ad-bc}\]
+\[=\overline{a}\overline{d}-\overline{b}\overline{c}=\det\begin{pmatrix}\overline{a}&\overline{b}\\\overline{c}&\overline{d}\end{pmatrix}.\]
+Suppose the hypothesis is true for $n=k-1$. Consider a $k\times k$ matrix $M$. We have 
+\[\overline{\det(M)}=\overline{\sum_{j=1}^k{(-1)^{i+j}M_{ij}\cdot \det(\tilde{M}_{ij})}}\]
+\[=\sum_{j=1}^k{(-1)^{i+j}\overline{M_{ij}}\cdot \overline{\det(\tilde{M}_{ij})}}\]
+\[=\sum_{j=1}^k{(-1)^{i+j}\overline{M_{ij}}\cdot \det(\tilde{\overline{M}}_{ij})}=\det(\overline{M}).\]
+This means that 
+\[\det(A)=\det(A^t)=\det(A^*).\]
+\item Let $v_i$ be the $i$-th column of $A$. Then we have $v_i^*$ is the $i$-th row of $A^*$. And the desired result comes from the fact
+\[(A^*A)_{ij}=v_i^*v_j=\lag v_j,v_i\rag , \]
+which is zero when $i\neq j$.
+\item Follow the method after Theorem 6.12.
+\begin{enumerate}
+\item The linear function is $-2t+\frac{5}{2}$ with error $E=1$. The quadratic function is $\frac{1}{3}t^2-\frac{4}{3}t+2$ with the error $E=0$.
+\item The linear function is $\frac{5}{4}t+\frac{11}{20}$ with error $E=\frac{3}{10}$. The quadratic function is $\frac{1}{56}t^2+\frac{15}{14}+\frac{239}{280}$ with the error $E=\frac{8}{35}$.
+\item The linear function is $-\frac{9}{5}t+\frac{4}{5}$ with error $E=\frac{2}{5}$. The quadratic function is $-\frac{1}{7}t^2-\frac{9}{5}t+\frac{38}{35}$ with the error $E=\frac{4}{35}$.
+\end{enumerate}
+\item Follow the same method. We have the linear function is $2.1x-\frac{127}{20}$. So the spring constant is $2.1$.
+\item As the statement in Theorem 6.13, we may first find a vector $u$ such that $AA^*u=b$. Finally the minimal solution would be $A^*u$.
+\begin{enumerate}
+\item The minimal solution is $(2,4,-2)$.
+\item The minimal solution is $\frac{1}{7}(2,3,1)$.
+\item The minimal solution is $(1,,-\frac{1}{2},\frac{1}{2})$.
+\item The minimal solution is $\frac{1}{12}(7,1,3,-1)$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Direct calculate that 
+\[A^*A=\begin{pmatrix}\sum_{i=1}^m{t_i^2} &\sum_{i=1}^m{t_i}\\\sum_{i=1}^m{t_i} & m\end{pmatrix}\]
+and get the result by 
+\[A^*A\begin{pmatrix}c\\d\end{pmatrix}=A^*y.\]
+For the second method, we may calculate that 
+\[E=\sum_{i=1}^m{(y_i-ct_i-d)^2}\]
+and $\frac{\partial E}{\partial c}=0$ and $\frac{\partial E}{\partial d}=0$ give the normal equations.
+\item We want to claim that $\overline{y}=c\overline{t}+d$, whrer $\overline{t}$, $\overline{y}$ are defined in the question and $c$, $d$ are a solution of the normal equations. But this is an instant result by dividing the second equation by $m$.
+\end{enumerate}
+\item \begin{enumerate}
+\item Check 
+\[T(c\sigma +\tau)(k)=\sum_{i=k}^{\infty}{(c\sigma+\tau)(k)}\]
+\[=c\sum_{i=k}^{\infty}{(\sigma)(k)}+\sum_{i=k}^{\infty}{(\tau)(k)}\]
+\[=cT(\sigma)(k)+T(\tau)(k).\]
+\item For $k\leq n$ we have 
+\[T(e_n)(k)=\sum_{i=k}^{\infty}{e_n(i)}=1=\sum_{i=1}^n{e_i}(k).\]
+And for $k> n$ we have 
+\[T(e_n)(k)=\sum_{i=k}^{\infty}{e_n(i)}=0=\sum_{i=1}^n{e_i}(k).\]
+\item Suppoe that $T^*$ exist. We try to compute $T^*(e_1)$ by 
+\[1\cdot \overline{T^*(e_1)}(i)=\lag e_i,T^*(e_1)\rag =\lag \sum_{i=1}^n{e_i},e_1\rag =1.\]
+This means that $T^*(e_1)(i)=1$ for all $i$. This is impossible since $T^*(e_1)$ is not an element in $V$.
+\end{enumerate}
+\end{enumerate}

@@ -1,0 +1,252 @@
+\section{Bilinear and Quadratic Forms}
+\begin{enumerate}
+\item \begin{enumerate}
+\item No. A quadratic form is a function of one variable. But a bilinear form is a function of two variables.
+\item No. We have $4I=(2I)^tI(2I)$. But $4I$ and $2I$ has different eigenvalues.
+\item Yes. This is Theorem 6.34.
+\item No. See Example 5 of this section. The matrix $\begin{pmatrix}0&1\\1&0\end{pmatrix}$ is a counterexample when $\F=\Z_2$.
+\item Yes. Let $H_1$ and $H_2$ be two symmetric bilinear forms. We have 
+\[(H_1+H_2)(x,y)=H_1(x,y)+H_2(x,y)\]
+\[=H_1(y,x)+H_2(y,x)=(H_1+H_2)(y,x).\]
+\item No. The bilinear forms 
+\[H_1(x,y)=x^t\begin{pmatrix}1&0\\0&1\end{pmatrix}y, H_2(x,y)=x^t\begin{pmatrix}1&1\\0&1\end{pmatrix}y\]
+have matrix representations $\begin{pmatrix}1&0\\0&1\end{pmatrix}$ and $\begin{pmatrix}1&1\\0&1\end{pmatrix}$ respectly with the standard basis. But both of their \charpoly{}s are $(1-t)^2$.
+\item No. We must have $H(0,0)=0$ since $H(x,0)$ is a linear function of $x$.
+\item No. It's $n^2\neq 2n$ for $n\neq 2$ by the Corollary 1 after Theorem 6.32.
+\item Yes. Pick a nonzero element $u\in V$ arbitrarily. If $H(x,u)=0$, then we have $y=u$. Otherwise pick another nonzero element $v\in V$ such that $\{u,v\}$ is independent. Thus we have 
+\[y=H(x,v)u-H(x,u)v\neq 0.\]
+But we have 
+\[H(x,y)=H(x,v)H(x,u)-H(x,u)H(x,v)=0.\]
+\item No. It needs one more condition that $H$ is symmetric. For example, the matrix $\begin{pmatrix}0&1\\0&0\end{pmatrix}$ has its congruent matrix 
+\[Q^t\begin{pmatrix}0&1\\0&0\end{pmatrix}Q=\begin{pmatrix}a&c\\b&d\end{pmatrix}\begin{pmatrix}0&1\\0&0\end{pmatrix}\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}ac&bc\\ad&bd\end{pmatrix}.\]
+If that congruent matrix is diagonal, we should have $bc=ad=0$. If $a=b=0$ or $a=c=0$, then $Q$ is not invertible. Similarly, it cannot be $d=c=0$ or $d=b=0$. So this bilinaer form is not even diagonalizable.
+\end{enumerate}
+\item The property 1 comes from the definition of a bilinear form. The property 2 comes from that $L_x(0)=R_x(0)=0$. The property 3 comes from the computation 
+\[H(x+y,z+w)=H(x,z+w)+H(y,z+w)\]
+\[=H(x,z)+H(x,w)+H(y,z)+H(y,w).\]
+Finally, since the conditions in the definition of a bilinear form is symmetric for the first and the second component. So we get the property 4.
+\item \begin{enumerate}
+\item Check that 
+\[(H_1+H_2)(ax_1+x_2,y)=H_1(ax_1+x_2,y)+H_2(ax_1+x_2,y)\]
+\[=aH_1(x_1,y)+H_1(x_2,y)+aH_2(x_1,y)+H_2(x_2,y)\]
+\[=a(H_1+H_2)(x_1,y)+(H_1+H_2)(x_2,y)\]
+and 
+\[(H_1+H_2)(x,ay_1+y_2)=H_1(x,ay_1+y_2)+H_2(x,ay_1+y_2)\]
+\[=aH_1(x,y_1)+H_1(x,y_2)+aH_2(x,y_1)+H_2(x,y_2)\]
+\[=a(H_1+H_2)(x,y_1)+(H_1+H_2)(x,y_2).\]
+\item Check that 
+\[cH(ax_1+x_2,y)=caH(x_1,y)+cH(x_2,y)\]
+\[=acH(x_1,y)+cH(x_2,y)\]
+and 
+\[cH(x,ay_1+y_2)=caH(x,y_1)+cH(x,y_2)\]
+\[=acH(x,y_1)+cH(x,y_2).\]
+\item Pick $H_0(x,y)=0$ as the zero element and check the condition for a vector space.
+\end{enumerate}
+\item \begin{enumerate}
+\item Yes. The form $f\times g$ is bilinear and the integral operator is linear.
+\item No. If $J(x,y)\neq 0$ for some $x$ and $y$, then we have 
+\[H(cx,y)=[J(cx,y)]^2=c^2[J(x,y)]^2\neq cH(x,y).\]
+\item No. We have 
+\[H(2,1)=4\neq 2H(1,1)=6.\]
+\item Yes. The determinant function is an $n$-linear function and now $n$ is $2$.
+\item Yes. When the field if $\R$, the inner product function is a bilinear form.
+\item No. It fails when $\F=\C$. If we pick $V=\C$ and choose the standard inner product. Thus we have 
+\[H(1,i)=\lag 1,i\rag=-1\neq iH(1,1)=i.\]
+\end{enumerate}
+\item See the definition of the matrix representation. \begin{enumerate}
+\item It's a bilinear form since 
+\[H\left(\begin{pmatrix}a_1\\a_2\\a_3\end{pmatrix},\begin{pmatrix}b_1\\b_2\\b_3\end{pmatrix}\right)=\begin{pmatrix}a_1\\a_2\\a_3\end{pmatrix}^t\begin{pmatrix}1&-2&0\\1&0&0\\0&0&-1\end{pmatrix}\begin{pmatrix}b_1\\b_2\\b_3\end{pmatrix}.\]
+The matrix representation is 
+\[\begin{pmatrix}0&2&-2\\2&0&-2\\1&1&0\end{pmatrix}.\]
+\item It's a bilinear form since 
+\[H\left(\begin{pmatrix}a_1&a_2\\a_3&a_4\end{pmatrix},\begin{pmatrix}b_1&b_2\\b_3&b_4\end{pmatrix}\right)=\begin{pmatrix}a_1\\a_2\\a_3\\a_4\end{pmatrix}^t\begin{pmatrix}1&0&0&1\\0&0&0&0\\0&0&0&0\\1&0&0&1\end{pmatrix}\begin{pmatrix}b_1\\b_2\\b_3\\b_4\end{pmatrix}.\]
+The matrix above is the matrix representation with respect to the standard basis.
+\item Let 
+\[f=a_1\cos t+a_2\sin t +a_3\cos 2t+a_4\sin 2t\]
+and 
+\[g=b_1\cos t+b_2\sin t +b_3\cos 2t+b_4\sin 2t.\]
+We compute that 
+\[H(f,g)=(a_2+2a_4)(-b_1-4b_3)\]
+\[=\begin{pmatrix}a_1\\a_2\\a_3\\a_4\end{pmatrix}^t\begin{pmatrix}0&0&0&0\\-1&0&-4&0\\0&0&0&0\\-1&0&-4&0\end{pmatrix}\begin{pmatrix}b_1\\b_2\\b_3\\b_4\end{pmatrix}.\]
+Hence it's a bilinear form. And the matrix is the matrix representation.
+\end{enumerate}
+\item We have 
+\[H\left(\begin{pmatrix}a_1\\a_2\end{pmatrix},\begin{pmatrix}b_1\\b_2\end{pmatrix}\right)=\begin{pmatrix}a_1\\a_2\end{pmatrix}^t\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}b_1\\b_2\end{pmatrix}.\]
+Hence we find the matrix $A$. And the form $x^tAy$ is a bilinear form.
+\item \begin{enumerate}
+\item Check that 
+\[\widehat{T}(H)(ax_1,x_2,y)=H(T(ax_1+x_2),T(y))\]
+\[=H(aT(x_1)+T(x_2),T(y))=aH(T(x_1),T(y))+H(T(x_2),T(y))\]
+\[=a\widehat{T}(H)(x_1,y)+\widehat{T}(H)(x_2,y)\]
+and 
+\[\widehat{T}(H)(x,ay_1+y_2)=H(T(x,T(ay_1+y_2))\]
+\[=H(T(x),aT(y_1)+T(y_2))=aH(T(x),T(y_1))+H(T(x),T(y_2))\]
+\[=a\widehat{T}(H)(x,y_1)+\widehat{T}(H)(x,y_2).\]
+\item Check that 
+\[\widehat{T}(cH_1+H_2)(x,y)=(cH_1+H_2)(T(x),T(y))\]
+\[=cH_1(T(x),T(y))+H_2(T(x),T(y))\]
+\[=[c\widehat{T}(H_1)+\widehat{T}(H)](x,y).\]
+\item Suppose $T$ is injective and surjective. If $H$ is an nonzero bilinear form with $H(x_1,y_1)\neq 0$ for some $x_1,y_1\in W$ and $\widehat{T}(H)$ is the zero bilinear form, we may find $x_0,y_0\in V$ such that $T(x_0)=x_1$ and $T(y_0)=y_1$ since $T$ is surjective. Thus we'll have 
+\[0=\widehat{T}(H)(x_0,x_1)=H(x,y)\neq 0,\]
+a contradiction. This means that $\widehat{T}$ is injective. On the other hand, since $T$ is an isomorphism, the inverse of $T$ exists. Then for each $H\in \mathcal{B}(V)$, we can define 
+\[H_0(x,y):=H_0(T^{-1}(x),T^{-1}(y))\]
+such that 
+\[\widehat{T}(H_0)=H.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $\beta =\{v_i\}$. We know that $(\psi_{\beta}(H))_{ij}=H(v_i,v_j)$. So we have 
+\[(\psi_{\beta}(cH_1+H_2))_{ij}=(cH_1+H_2)(v_i,v_j)\]
+\[=cH_1(v_i,v_j)+H_2(v_i,v_j)=c(\psi_{\beta}(H_1))_{ij}+(\psi_{\beta}(H_2))_{ij}.\]
+\item The form $H'(u,v):=u^tAv$ is a bilinear form when $u,v \in \F^n$. We know that $\phi_{\beta}$ is an isomorphism from $V$ to $\F^n$. This means that 
+\[H=\widehat{\phi_{\beta}^{-1}}(H')\]
+is a bilinear form by Exercise 6.8.7.
+\item Let $\beta=\{v_i\}$. And let 
+\[x=\sum_{i=1}^n{a_iv_i},y=\sum_{i=1}^n{b_iv_i}.\]
+Thus we have 
+\[H(x,y)=H(\sum_{i=1}^n{a_iv_i},\sum_{i=1}^n{b_iv_i})\]
+\[\sum_{i,j}{a_ib_iH(v_i,v_j)}=[\phi_{\beta}(x)]^tA[\phi_{\beta}(y)].\]
+\end{enumerate}
+\item \begin{enumerate}
+\item It comes from the fact that $\dim(M_{n\times n}(\F))=n^2$.
+\item Let $E_{ij}$ be the matrix whose $ij$-entry is $1$ and other entries are zero. Then we know that $\{E_{ij}\}_{ij}$ is a basis in $M_{n\times n}(\F)$. Since $\psi_{\beta}$ is an isomorphism, the set $\psi_{\beta}^{-1}(\{E_{ij}\}_{ij})$ is a basis for $\mathcal{B}(V)$.
+\end{enumerate}
+\item The necessity comes from Exercise 6.8.8(c). For the sufficiency, we know that 
+\[(\psi_{\beta}(H))_{ij}=H(v_i,v_j)=e_i^tAe_j=A_{ij},\]
+where $v_i,v_j$ are elements in $\beta$ and $e_i,e_j$ are the elements in the standard basis in $\F^n$.
+\item Pick $\beta $ to be the standard basis and apply the Corollary 3 after Theorem 6.32. Thus we have $[\phi_{\beta}(x)]=x$.
+\item Prove the three conditions.
+\begin{description}
+\item[reflexivity] We have $A$ is congruent to $A$ since $A=I^tAI$.
+\item[symmetry] If $A$ is congruent to $B$, we have $B=Q^tAQ$ for some invertible matrix $Q$. Hence we know that $B$ is congruent to $A$ since $A=(Q^{-1})^tAQ^{-1}$.
+\item[transitivity] If $A$ is congruent to $B$ and $B$ is congruent to $C$, we have $B=Q^tAQ$ and $C=P^tBP$. Thus we know that $A$ is congruent to $C$ since $C=(QP)^tA(QP)$.
+\end{description}
+\item \begin{enumerate}
+\item If $x$ is an element in $V$, then $\phi_{\gamma}(x)$ and $\phi_{\beta}(x)$ are the $\gamma$-coordinates and the $\beta $-coordinates respectly. By the definition of $Q$, we have 
+\[\phi_{\beta}(x)=L_Q\phi_{\gamma}(x)\]
+for all $x\in V$.
+\item By the Corollary 2 after Theorem 6.32, we know that 
+\[H(x,y)=[\phi_{\gamma}(x)]^t\psi_{\gamma}(H)[\phi_{\gamma}(y)]=[\phi_{\beta}(x)]^t\psi_{\beta}(H)[\phi_{\beta}(y)].\]
+By the previous argument we know that 
+\[[\phi_{\gamma}(x)]^tQ^t\psi_{\beta}(H)Q[\phi_{\gamma}(y)]=[\phi_{\gamma}(x)]^t\psi_{\gamma}(H)[\phi_{\gamma}(y)],\]
+where $Q$ is the change of coordinate matrix changing $\gamma $-coordinates to $\beta$-coordinates. Again, by the Corrolary 2 after Theorem 6.32 we know the matrix $Q^t\psi_{\beta}(H)Q$ must be the matrix $\psi_{\gamma}(H)$. Hence they are congruent.
+\end{enumerate}
+\item Since they are congruent, we have 
+\[Q^t\psi_{\beta}(H)Q=\psi_{\gamma}(H)\]
+for some invertible matrix $Q$. But invertible matrix will preserve the rank, so we know their rank are the same.
+\item \begin{enumerate}
+\item If $A$ is a square diagonal matrix, then we have $A_{ij}=A_{ji}=0$.
+\item If $A$ is a matrix congruent to a diagonal matrix $B$, then we have $B=Q^tAQ$ and $A=(Q^{-1})^tBQ^{-1}$. This means $A$ is symmetric since 
+\[A^t=(Q^{-1})^tB^tQ^{-1}=(Q^{-1})^tBQ^{-1}=A.\]
+\item Say $\alpha$ to be the standard basis and $\beta$ to be the basis in Theorem 6.35. Let $H=\psi_{\alpha}^{-1}(A)$ be the bilinear form whose matrix representation is $A$.  Thus we know that $\psi_{\alpha}(H)=A$  and $\psi_{\beta}(H)$ are congruent. Also, by Theorem 6.35 we know that $\psi_{\beta}(H)$ is diagonal.
+\end{enumerate}
+\item If $K(x)=H(x,x)$, then we have 
+\[K(x+y)=H(x+y,x+y)=H(x,x)+2H(x,y)+H(y,y)\]
+\[=K(x)+2H(x,y)+K(y).\]
+If $\F$ is not of characteristic two, we get the formula
+\[H(x,y)=\frac{1}{2}[K(x+y)-K(x)-K(y)].\]
+\item Use the formula given in the previous exercise to find $H$. To diagonalize it, we may use the method in the paragraph after Theorem 6.35. Here the notation $\alpha$ is the standard basis in the corresponding vector spaces.
+\begin{enumerate}
+\item We have 
+\[H\left(\begin{pmatrix}a_1\\a_2\end{pmatrix},\begin{pmatrix}b_1\\b_2\end{pmatrix}\right)=\frac{1}{2}[K\begin{pmatrix}a_1+b_1\\a_2+b_2\end{pmatrix}-K\begin{pmatrix}a_1\\a_2\end{pmatrix}-K\begin{pmatrix}b_1\\b_2\end{pmatrix}]\]
+\[=-2a_1b_1+2a_1b_2+2a_2b_1+a_2b_2.\]
+Also, we have $\phi_{\alpha}=\begin{pmatrix}-2&2\\2&1\end{pmatrix}$. Hence we know that 
+\[\begin{pmatrix}1&0\\1&1\end{pmatrix}\begin{pmatrix}-2&2\\2&1\end{pmatrix}\begin{pmatrix}1&1\\0&1\end{pmatrix}=\begin{pmatrix}-2&0\\0&3\end{pmatrix}.\]
+So the basis $\beta $ could be 
+\[\{(1,0),(1,1)\}.\]
+\item We have 
+\[H\left(\begin{pmatrix}a_1\\a_2\end{pmatrix},\begin{pmatrix}b_1\\b_2\end{pmatrix}\right)=7a_1b_1-4a_1b_2-4a_2b_1+a_2b_2\]
+and 
+\[\beta=\{(1,0),(\frac{4}{7},1)\}.\]
+\item We have 
+\[H\left(\begin{pmatrix}a_1\\a_2\\a_3\end{pmatrix},\begin{pmatrix}b_1\\b_2\\b_3\end{pmatrix}\right)=3a_1b_1+3a_2b_2+3a_3b_3-a_1b_3-a_3b_1.\]
+and 
+\[\beta=\{(1,0,0),(0,1,0),(\frac{1}{3},0,1)\}.\]
+\end{enumerate}
+\item As what we did in the previous exercise, we set 
+\[K\begin{pmatrix}t_1\\t_2\\t_3\end{pmatrix}=3t_1^2+3t_2^2+3t_3^2-2t_1t_3\]
+and find 
+\[H\left(\begin{pmatrix}a_1\\a_2\\a_3\end{pmatrix},\begin{pmatrix}b_1\\b_2\\b_3\end{pmatrix}\right)=3a_1b_1+3a_2b_2+3a_3b_3-a_1b_3-a_3b_1\]
+such that $H(x,x)=K(x)$ and $H$ is a bilinear form. This means that 
+\[K\begin{pmatrix}t_1\\t_2\\t_3\end{pmatrix}=\begin{pmatrix}t_1&t_2&t_3\end{pmatrix}\begin{pmatrix}3&0&-1\\0&3&0\\-1&0&3\end{pmatrix}\begin{pmatrix}t_1\\t_2\\t_3\end{pmatrix}\]
+\[=\begin{pmatrix}t_1&t_2&t_3\end{pmatrix}\begin{pmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\cr 0 & 0 & 1\cr -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\end{pmatrix}\begin{pmatrix}4 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 3\end{pmatrix}\begin{pmatrix}\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}\cr \frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}}\cr 0 & 1 & 0\end{pmatrix}\begin{pmatrix}t_1\\t_2\\t_3\end{pmatrix}.\]
+Note that here we may diagonalize it in sence of eigenvectors. Thus we pick 
+\[\beta=\{(\frac{1}{\sqrt{2}},0,-\frac{1}{\sqrt{2}}),(\frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}}),(0,1,0).\}\]
+And take 
+\[\begin{pmatrix}t_1'\\t_2'\\t_3'\end{pmatrix}=\begin{pmatrix}\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}\cr \frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}}\cr 0 & 1 & 0\end{pmatrix}\begin{pmatrix}t_1\\t_2\\t_3\end{pmatrix}.\]
+Thus we have 
+\[3t_1^2+3t_2^2+3t_3^2-2t_1t_=\begin{pmatrix}t_1'&t_2'&t_3'\end{pmatrix}\begin{pmatrix}4 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 3\end{pmatrix}\begin{pmatrix}t_1'\\t_2'\\t_3'\end{pmatrix}\]
+\[=4(t_1')^2+2(t_2')^2+3(t_3')^2.\]
+Hence the original equality is that 
+\[4(t_1')^2+2(t_2')^2+3(t_3')^2+l.o.t=0,\]
+where $l.o.t$ means some lower order terms. Hence $\mathcal{S}$ is a ellipsoid.
+\item Here we use the noation in the proof of Theorem 6.37. Also, the equation 
+\[\sum_{i=1}^n{(\frac{1}{2}\lambda_i-\epsilon)s_i^2}<f(x)<\sum_{i=1}^n{(\frac{1}{2}\lambda_i+\epsilon)s_i^2}\]
+is helpful.
+\begin{enumerate}
+\item Since $0<\rank(A)<n$ and $A$ has no negative eigenvalues, we could find a positive eigenvalue $\lambda_i$ of $A$. Then take $x=s_iv_i$. Then we'll have that 
+\[f(x)>(\frac{1}{2}\lambda_i-\epsilon)s_i^2>0=f(0).\]
+We may pick $s_i$ arbitrarily small such that $\|x-p\|$ could be arbitrarily small. Hence $f$ has no local maximum at $p$.
+\item Since $0<\rank(A)<n$ and $A$ has no positive eigenvalues, we could find a negative eigenvalue $\lambda_i$ of $A$. Then take $x=s_iv_i$. Then we'll have that 
+\[f(x)<(\frac{1}{2}\lambda_i+\epsilon)s_i^2<0=f(0).\]
+We may pick $s_i$ arbitrarily small such that $\|x-p\|$ could be arbitrarily small. Hence $f$ has no local minimum at $p$.
+\end{enumerate}
+\item Observe that $D$ is the determinant of the Hessian matrix $A$. Here we denote $\lambda_1,\lambda_2$ to be the two eigenvalues of $A$, which exist since $A$ is real symmetric.
+\begin{enumerate}
+\item If $D>0$, we know that $\lambda_1$ and $\lambda_2$ could not be zero. Since $\frac{\partial^2f(p)}{\partial t_1^2}>0$, we have $\frac{\partial^2f(p)}{\partial t_2^2}>0$ otherwise we'll have $D\leq 0$. Hence the trace of $A$ is positive. Thus we have 
+\[\lambda_1+\lambda_2=-\tr(A)<0\]
+and 
+\[\lambda_1\lambda_2=D>0.\]
+This means that both of them are negative. Hence $p$ is a local minimum by the Second Derivative Test.
+\item If $D<0$, we know that $\lambda_1$ and $\lambda_2$ could not be zero. Since $\frac{\partial^2f(p)}{\partial t_1^2}<0$, we have $\frac{\partial^2f(p)}{\partial t_2^2}<0$ otherwise we'll have $D\geq 0$. Hence the trace of $A$ is negative. Thus we have 
+\[\lambda_1+\lambda_2=-\tr(A)>0\]
+and 
+\[\lambda_1\lambda_2=D<0.\]
+This means that both of them are positive. Hence $p$ is a local maximum by the Second Derivative Test.
+\item If $D<0$, we know that $\lambda_1$ and $\lambda_2$ could not be zero. Also, we have 
+\[\lambda_1\lambda_2=D<0.\]
+This means that they cannot be both positive or both negative. Again, by the Second Derivative Test, it's a saddle point.
+\item If $D=0$, then one of $\lambda_1$ and $\lambda_2$ should be zero. Apply the Second Derivative Test.
+\end{enumerate}
+\item As Hint, we know that 
+\[E^tA=(A^tE)^t.\]
+That is, do the same column operation on $A^t$. This means that do the same row operation on $A$.
+\item See the paragraph after Theorem 6.35.
+\begin{enumerate}
+\item Take 
+\[\begin{pmatrix}1&0\\-3&1\end{pmatrix}A\begin{pmatrix}1&-3\\0&1\end{pmatrix}=\begin{pmatrix}1&0\\0&-7\end{pmatrix}.\]
+\item Take 
+\[\begin{pmatrix}1&1\\-\frac{1}{2}&\frac{1}{2}\end{pmatrix}A\begin{pmatrix}1&-\frac{1}{2}\\1&\frac{1}{2}\end{pmatrix}=\begin{pmatrix}2&0\\0&-\frac{1}{2}\end{pmatrix}.\]
+\item Take 
+\[\begin{pmatrix}1&-\frac{1}{4}&2\\0&1&0\\0&0&1\end{pmatrix}A\begin{pmatrix}1&0&0\\-\frac{1}{4}&1&0\\2&0&1\end{pmatrix}=\begin{pmatrix}\frac{19}{4}&0&0\\0&4&0\\0&0&-1\end{pmatrix}.\]
+\end{enumerate}
+\item Since each permutation could be decomposed into several $2$-cycle, interchanging two elements, we may just prove the statement when the permutation is $2$-cycle. Let $A$ be a diagonal matrix and $B$ be the diagonal matrix obtained from $A$ by interchanging the $ii$-entry and the $jj$-entry. Take $E$ be the elementary matrix interchaning the $i$-th and the $j$-th row. Then we have $E$ is symmetric and $EAE=B$.
+\item \begin{enumerate}
+\item Compute that
+\[H(ax_1+x_2,y)=\lag ax_1+x_2,T(y)\rag \]
+\[=a\lag x_1,T(y)\rag +\lag x_2,T(y)\rag \]
+\[=aH(x_1,y)+H(x_2,y)\]
+and 
+\[H(x,ay_1+y_2)=\lag x,T(ay_1+y_2)\rag =\lag x,aT(x_1)+T(x_2)\rag \]
+\[=a\lag x,T(y_1)\rag +\lag x,T(y_2)\rag \]
+\[=aH(x,y_1)+H(x,y_2).\]
+\item Compute that 
+\[H(y,x)=\lag y,T(x)\rag \]
+\[=\lag T(x),y\rag =\lag x,T^*(y)\rag .\]
+The value equal to $H(x,y)=\lag x,T(y)\rag $ for all $x$ and $y$ if and only if $T=T^*$.
+\item By Exercise 6.4.22 the operator $T$ must be a positive semidifinite operator.
+\item It fail since 
+\[H(x,iy)=\lag x,T(iy)\rag =\lag x,iT(y)\rag \]
+\[=-i\lag x,T(y)\rag \neq iH(x,y)\]
+in genereal.
+\end{enumerate}
+\item Let $A=\psi_{\beta}(H)$ for some orthonormal basis $\beta$. And let $T$ be the operator such that $[T]_{\beta}=A$. By Exercise 6.8.5 we have 
+\[H(x,y)=[\phi_{\beta}(x)]^tA[\phi_{\beta}(y)]=[\phi_{\beta}(x)]^t[T]_{\beta}[\phi_{\beta}(y)]=[\phi_{\beta}(x)]^t[\phi_{\beta}(T(y))].\]
+Also, by Parseval's Identity in Exercise 6.2.15 we know that 
+\[\lag x,T(y)\rag =\sum_{i=1}^n{\lag x,v_i\rag\lag T(y),v_i\rag}=[\phi_{\beta}(x)]^t[\phi_{\beta}(T(y))]\]
+since $\beta$ is orthonormal.
+\item Use the Corollary 2 after Theorem 6.38. Let $p$, $q$ be the number of positive and negative eigenvalues respectly. Then we have 
+\[p+q\leq n.\]
+Hence we have 
+\[{3+n-1 \choose n}={n+2 \choose 2}=\frac{(n+2)(n+1)}{2}\]
+possibilities.
+\end{enumerate}

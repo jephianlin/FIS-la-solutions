@@ -1,0 +1,228 @@
+\section{The Jordan Canonical Form II}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. A diagonal matrix is a Jordan canonical form of itself. And the Corollary after Theorem 7.10 tolds us the Jordan canonical form is unique.
+\item Yes. This is a result of Theorem 7.11.
+\item No. The two matrices $\begin{pmatrix}1&1\\0&1\end{pmatrix}$ and $\begin{pmatrix}1&0\\0&1\end{pmatrix}$ have different Jordan canonical form. By Theorem 7.11, they cannot be similar.
+\item Yes. This is a result of Theorem 7.11.
+\item Yes. They are just two matrix representations of one transformation with different bases.
+\item No. The two matrices $\begin{pmatrix}1&1\\0&1\end{pmatrix}$ and $\begin{pmatrix}1&0\\0&1\end{pmatrix}$ have different Jordan canonical form.
+\item No. The identity mapping $I$ from $\C^2$ to $\C^2$ has two different bases 
+\[\{(1,0),(0,1)\}\]
+and 
+\[\{(1,1),(1,-1)\}.\]
+\item Yes. This is the Corollary after Theorem 7.10.
+\end{enumerate}
+\item A coloumn in a dot diagram means a cycle. Each cycle has the corresponding eigenvalue as the diagonal entries and $1$ as the upper subdiagonal entries. So we have 
+\[J_1=\begin{pmatrix}2 & 1 & 0 & 0 & 0 & 0\cr 0 & 2 & 1 & 0 & 0 & 0\cr 0 & 0 & 2 & 0 & 0 & 0\cr 0 & 0 & 0 & 2 & 1 & 0\cr 0 & 0 & 0 & 0 & 2 & 0\cr 0 & 0 & 0 & 0 & 0 & 2\end{pmatrix},\]
+\[J_2=\begin{pmatrix}4 & 1 & 0 & 0\cr 0 & 4 & 1 & 0\cr 0 & 0 & 4 & 0\cr 0 & 0 & 0 & 4\end{pmatrix},\]
+and 
+\[J_3=\begin{pmatrix}-3 & 0\cr 0 & -3\end{pmatrix}.\]
+And the Jordan canonical form $J$ of $T$ is 
+\[J=\begin{pmatrix}J_1&O&O\\O&J_2&O\\O&O&J_3\end{pmatrix},\]
+where $O$ is the zero matrix with appropriate size.
+\item \begin{enumerate}
+\item It's upper triangular. So the \charpoly{} is $(2-t)^5(3-t)^2$.
+\item Do the inverse of what we did in Ecercise 7.2.2. For $\lambda=2$, the dot diagram is 
+\[\begin{array}{cc}\bullet &\bullet \\\bullet &\bullet \\\bullet & \end{array}.\]
+For $\lambda=3$, the dot diagram is 
+\[\begin{array}{cc}\bullet &\bullet \end{array}.\]
+\item The eigenvalue $\lambda$ with it corresponding blocks are diagonal is has the property $E_{\lambda}=K_{\lambda}$.
+\item The integer $p_i$ is the length of the longest cycle in $K_{\lambda_i}$. So $p_2=3$ and $p_3=1$.
+\item By Exercise 7.1.9(b), the matrix representations of $U_2$ and $U_3$ are 
+\[\begin{pmatrix}0 & 1 & 0 & 0 & 0\cr 0 & 0 & 1 & 0 & 0\cr 0 & 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 1\cr 0 & 0 & 0 & 0 & 0\end{pmatrix}\]
+and 
+\[\begin{pmatrix}0 & 0\cr 0 & 0\end{pmatrix}.\]
+So we have $\rank(U_2)=3$, $\rank(U_2^2)=1$ and $\rank(U_3)=\rank(U_3^2)=0$. By Dimension Theorem, we have $\nul(U_2)=2$, $\nul(U_2^2)=4$ and $\nul(U_3)=\nul(U_3^2)=2$.
+\end{enumerate}
+\item Do the same thing in Exercise 7.1.2.
+\begin{enumerate}
+\item 
+\[Q=\begin{pmatrix}1 & -1 & -1\cr 2 & -1 & -2\cr 1 & 1 & 0\end{pmatrix},J=\begin{pmatrix}1 & 0 & 0\cr 0 & 2 & 1\cr 0 & 0 & 2\end{pmatrix}.\]
+\item 
+\[Q=\begin{pmatrix}1 & -1 & 1\cr 2 & 0 & 2\cr 1 & 2 & 0\end{pmatrix},J=\begin{pmatrix}1 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 2\end{pmatrix}.\]
+\item 
+\[Q=\begin{pmatrix}0 & -1 & \frac{2}{3}\cr -1 & -1 & -\frac{1}{3}\cr 1 & 3 & 0\end{pmatrix},J=\begin{pmatrix}1 & 0 & 0\cr 0 & 2 & 1\cr 0 & 0 & 2\end{pmatrix}.\]
+\item 
+\[Q=\begin{pmatrix}1 & 0 & 1 & -1\cr 1 & -1 & 0 & 1\cr 1 & -2 & 0 & 1\cr 1 & 0 & 1 & 0\end{pmatrix}J=\begin{pmatrix}0 & 1 & 0 & 0\cr 0 & 0 & 0 & 0\cr 0 & 0 & 2 & 0\cr 0 & 0 & 0 & 2\end{pmatrix}.\]
+\end{enumerate}
+\item For the following questions, pick some appropriate basis $\beta$ and get the marix representation $A=[T]_{\beta}$. If $A$ is a Jordan canonical form, then we've done. Otherwise do the same thing in the previous exercises. Similarly, we set $J=Q^{-1}AQ$ for some invertible matrix $Q$, where $J$ is the Jordan canonical form. And the Jordan canonical basis is the set of vector in $V$ corresponding those column vectors of $Q$ in $\F^n$.
+\begin{enumerate}
+\item Pick the basis $\beta $ to be 
+\[\{e^t,te^t,\frac{1}{2}t^2e^t,e^{2t}\}\]
+and get the matrix representation 
+\[A=\begin{pmatrix}1 & 1 & 0 & 0\cr 0 & 1 & 1 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 2\end{pmatrix}.\]
+\item Pick the basis $\beta $ to be 
+\[\{1,x,\frac{x^2}{2},\frac{x^3}{12}\}\]
+and get the matrix representation 
+\[A=\begin{pmatrix}0 & 0 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\cr 0 & 0 & 0 & 0\end{pmatrix}.\]
+\item Pick the basis $\beta $ to be 
+\[\{1,\frac{x^2}{2},x,\frac{x^3}{6}\}\]
+and get the matrix representation 
+\[A=\begin{pmatrix}2 & 1 & 0 & 0\cr 0 & 2 & 0 & 0\cr 0 & 0 & 2 & 1\cr 0 & 0 & 0 & 2\end{pmatrix}.\]
+\item Pick the basis $\beta $ to be 
+\[\{\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}\}\]
+and get the matrix representation 
+\[A=\begin{pmatrix}2 & 0 & 1 & 0\cr 0 & 3 & -1 & 1\cr 0 & -1 & 3 & 0\cr 0 & 0 & 0 & 2\end{pmatrix}.\]
+Thus we have 
+\[Q=\begin{pmatrix}1 & 0 & 0 & 1\cr 0 & 1 & -1 & -2\cr 0 & 1 & 0 & 2\cr 0 & 0 & 2 & 0\end{pmatrix}\]
+and 
+\[J=\begin{pmatrix}2 & 1 & 0 & 0\cr 0 & 2 & 1 & 0\cr 0 & 0 & 2 & 0\cr 0 & 0 & 0 & 4\end{pmatrix}.\]
+\item Pick the basis $\beta $ to be 
+\[\{\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}\}\]
+and get the matrix representation 
+\[A=\begin{pmatrix}0 & -1 & 1 & 0\cr 0 & 3 & -3 & 0\cr 0 & -3 & 3 & 0\cr 0 & 0 & 0 & 0\end{pmatrix}.\]
+Thus we have 
+\[Q=\begin{pmatrix}0 & 0 & 1 & 1\cr 0 & 1 & 0 & -3\cr 0 & 1 & 0 & 3\cr 1 & 0 & 0 & 0\end{pmatrix}\]
+and 
+\[J=\begin{pmatrix}0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 6\end{pmatrix}.\]
+\item Pick the basis $\beta $ to be 
+\[\{1,x,y,x^2,y^2,xy\}\]
+and get the matrix representation 
+\[A=\begin{pmatrix}0 & 1 & 1 & 0 & 0 & 0\cr 0 & 0 & 0 & 2 & 0 & 1\cr 0 & 0 & 0 & 0 & 2 & 1\cr 0 & 0 & 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 0 & 0\end{pmatrix}.\]
+Thus we have 
+\[Q=\begin{pmatrix}1 & 0 & 0 & 0 & 0 & 0\cr 0 & 1 & 0 & -1 & 0 & 0\cr 0 & 0 & 0 & 1 & 0 & 0\cr 0 & 0 & \frac{1}{2} & 0 & -\frac{1}{2} & -1\cr 0 & 0 & 0 & 0 & \frac{1}{2} & -1\cr 0 & 0 & 0 & 0 & 0 & 2\end{pmatrix}\]
+and 
+\[J=\begin{pmatrix}0 & 1 & 0 & 0 & 0 & 0\cr 0 & 0 & 1 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 0 & 0 & 0\cr 0 & 0 & 0 & 0 & 0 & 0\end{pmatrix}.\]
+\end{enumerate}
+\item The fact $\rank(M)=\rank(M^t)$ for arbitrary square matrix $M$ and the fact 
+\[(A^t-\lambda I)^r=[(A-\lambda I)^t]^r=[(A-\lambda I)^r]^t\]
+tell us 
+\[\rank((A-\lambda I)^r)=\rank((A^t-\lambda I)^r).\]
+By Theorem 7.9 we know that $A$ and $At$ have the same dot diagram and the same Jordan canonical form. So $A$ and $A^t$ are similar.
+\item \begin{enumerate}
+\item Let $\gamma'$ be the set $\{v_i\}_i=1^m$. The desired result comes from the fact 
+\[T(v_i)=\lambda v_i+v_{i+1}\]
+for $1\leq i\leq m-1$ and 
+\[T(v_m)=\lambda v_m.\]
+\item Let $\beta$ be the standard basis for $\F^n$ and $\beta'$ be the basis obtained from $\beta$ by reversing the order of the vectors in each cycle in $\beta$. Then we have $[L_J]_{\beta}=J$ and $[L_J]_{\beta'}=J^t$. So $J$ and $J^t$ are similar.
+\item Since $J$ is the Jordan canonical form of $A$, the two matrices $J$ and $A$ are similar. By the previous argument, $J$ and $J^t$ are similar. Finally, that $A$ and $J$ are similar implies that $A^t$ and $J^t$ are similar. Hence $A$ and $A^t$ are similar.
+\end{enumerate}
+\item \begin{enumerate}
+\item Let $\beta$ be the set $\{v_i\}_{i=1}^m$. Then we have the similar fact 
+\[T(cv_1)=\lambda cv_1\]
+and 
+\[T(cv_i)=\lambda cv_i+cv_{i-1}.\]
+So the matrix representation does not change and the new ordered basis is again a Jordan canonical basis for $T$.
+\item Since $(T-\lambda I)(y)=0$, the vector $T(x+y)=T(x)$ does not change. Hence $\gamma'$ is a cycle. And the new basis obtained from $\beta$ by replacing $\gamma$ by $\gamma'$ is again a union of disjoint cycles. So it i sa Jordan canonical basis for $T$.
+\item Let $x=(-1,-1,-1,-1)$ and $y=(0,1,2,0)$. Apply the previous argument and get a new Jordan canonical basis 
+\[\{\begin{pmatrix}-1\\0\\1\\-1\end{pmatrix},\begin{pmatrix}0\\1\\2\\0\end{pmatrix},\begin{pmatrix}1\\0\\0\\0\end{pmatrix},\begin{pmatrix}1\\0\\0\\1\end{pmatrix}\}.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item This is because we drawn the dot diagram in the order such that the length of cycles are decreasing.
+\item We know that $p_j$ and $r_i$ are decreasing as $i$ and $j$ become greater. So $p_j$ is number of rows who contains more than or equal to $j$ dots. Hence 
+\[p_j=\max\{i:r_i\geq j\}.\]
+Similarly, $r_i$ is the number of columns who contains more than or equal to $i$ dots. Hence 
+\[r_i=\max\{j:p+j\geq i\}.\]
+\item It comes from the fact that $p_j$ decreases.
+\item There is only one way to draw a diagram such that its $i$-th row contains exactly $r_i$ dots. Once the diagram has been determined, those $p_j$'s are determined.
+\end{enumerate}
+\item \begin{enumerate}
+\item By Theorem 7.4(c), the dimension of $K_{\lambda}$ is the multiplicity of $\lambda$. And the multiplicity of $\lambda$ is the sum of the lengths of all the blocks corresponding to $\lambda$ since a Jordan canonical form is always upper triangular.
+\item Since $E_{\lambda}\subset K_{\lambda}$, these two subspaces are the same if and only if the have the same dimension. The previous argument provide the desired result since the dimension of $E_{\lambda}$ is the number of blocks corresponding to $\lambda$. The dimensions of them are the same if and only if all the related blocks have size $1\times 1$.
+\end{enumerate}
+\item It comes from the fact that 
+\[[T^p]_{\beta}=([T]_{\beta})^p.\]
+\item Denote $D_k$ to be the diagonal consisting of those $ij$-entries such that $i-j=k$. So $D_0$ is the original diagonal. If $A$ is upper triangular matrix whose entries in $D_0$ are all zero, we have the fact that the entries of $A^p$ in $D_k$, $0\leq k< p$, are all zero. So $A$ must be nilpotent.
+\item \begin{enumerate}
+\item If $T^i(x)=0$, then $T^{i+1}(x)=T^i(T(x))=0$.
+\item Pick $\beta_{1}$ to be one arbitrary basis for $N(T^{1})$. Extend $\beta_{i}$ to be a basis for $N(T^{i+1})$. Doing this inductively, we get the described sequence.
+\item By Exercise 7.1.7(c), we know $N(T^i)\neq N(T^{i+1})$ for $i\leq p-1$. And the desired result comes from the fact that 
+\[T(\beta_{i})\subset N(T^{i-1})=\sp(\beta_{i-1})\neq \sp(\beta_{i}).\]
+\item The form of the \charpoly{} directly comes from the previous argument. And the other observation is natural if the \charpoly{} has been fixed.
+\end{enumerate}
+\item Since the \charpoly{} of $T$ splits and contains the unique zero to be $0$, $T$ has the Jordan canonical form $J$ whose diagonal entries are all zero. By Exercise 7.2.12, the matrix $J$ is nilpotent. By Exercise 7.2.11, the linear operator $T$ is also nilpotent.
+\item The matrix 
+\[A=\begin{pmatrix}0&0&0\\0&0&1\\0&-1&0\end{pmatrix}\]
+has the \charpoly{} to be $-t(t^2+1)$. Zero is the only eigenvalue of $T=L_A$. But $T$ and $A$ is not nilpotent since $A^3=-A$. By Exercise 7.2.13 and Exercise 7.2.14, a linear operator $T$ is not nilpotent if and only if the \charpoly{} of $T$ is not of the form $(-1)^nt^n$.
+\item Since the eigenvalue is zero now, observe that if $x$ is an element in $\beta$ corresponding to one dot called $p$, then $T(x)$ would be the element corresponding to the dot just above the dot $p$. So the set described in the exercise is an independent set in $R(T^i)$. By counting the dimension of $R(T^i)$ by Theorem 7.9, we know the set is a basis for $R(T^i)$.
+\item \begin{enumerate}
+\item Assume that 
+\[x=v_1+v_2+\cdots +v_k\]
+and 
+\[y=u_1+u_2+\cdots +u_k.\]
+Then $S$ is a linear operator since 
+\[S(x+cy)=\lambda_1(v_1+cu_1)+\cdots +\lambda_k(v_k+cu_k)\]
+\[=S(x)+cS(y).\]
+Observe that if $v$ is an element in $K_{\lambda}$, then $S(v)=\lambda v$. This means that if we pick a Jordan canonical basis $\beta$ of $T$ for $V$, then $[S]_{\beta}$ is diagonal.
+\item Let $\beta $ be a Jordan canonical basis for $T$. By the previous argument we have $[T]_{\beta}=J$ and $[S]_{\beta}=D$, where $J$ is the Jordan canonical form of $T$ and $D$ is the diagonal matrix given by $S$. Also, by the definition of $S$, we know that $[U]_{\beta}=J-D$ is an upper triangular matrix with each diagonal entry equal to zero. By Exercise 7.2.11 and Exercise 7.2.12 the operator $U$ is nilpotent. And the fact $U$ and $S$ commutes is due to the fact $J-D$ and $D$ commutes. The later fact comes from some direct computation.
+\end{enumerate}
+\item Actually, this exercise could be a lemma for Exercise 7.2.17. \begin{enumerate}
+\item It is nilpotent by Exercise 7.2.12 since $M$ is a upper triangular matrix with each diagonal entry equal to zero.
+\item It comes from some direct computation.
+\item Since $MD=DM$, we have 
+\[J^r=(M+D)^r=\sum_{k=0}^r{r\choose k}M^kD^{r-k}.\]
+The second equality is due to the fact that $M^k=O$ for all $k\geq p$.
+\end{enumerate}
+\item \begin{enumerate}
+\item It comes from some direct computation. Multiplying $N$ at right means moving all the columns to their right columns.
+\item Use Exercise 7.2.18(c). Now the matrix $M$ is the matrix $N$ in Exercise 7.2.19(a).
+\item If $|\lambda |<1$, then the limit tends to a zero matrix. If $\lambda=1$ amd $m=1$, then the limit tends to the identity matrix of dimension $1$. Conversely, if $|\lambda|\geq 1$ but $\lambda\neq 1$, then the diagonal entries will not converge. If $\lambda=1$ but $m>1$, the $12$-entry will diverge.
+\item Observe the fact that if $J$ is a Jordan form consisting of several Jordan blocks $J_i$, then $J^r=\oplus_iJ_i^r$. So the $\lim_{m\rightarrow \infty}J^m$ exsist if and only if $\lim_{m\rightarrow \infty}J_i^m$ exists for all $i$. On the other hand, if $A$ is a square matrix with complex entries, then it has the Jordan canonical form $J=Q^{-1}AQ$ for some $Q$. This means that $\lim_{m\rightarrow \infty}A^m$ exists if and only if $\lim_{m\rightarrow \infty}J^m$ exists. So Theorem 5.13 now comes from the result in Exercise 7.2.19(c).
+\end{enumerate}
+\item \begin{enumerate}
+\item The norm $\|A\|\geq 0$ since $|A_{ij}|\geq 0$ for all $i$ and $j$. The norm $\|A\|=0$ if and only if $|A_{ij}|=0$ for all $i$ and $j$. So $\|A\|=0$ if and only if $A=O$.
+\item Compute 
+\[\|cA\|=\max\{|cA_{ij}|\}=|c|\max\{|A_{ij}|\}=|c|\|A\|.\]
+\item It comes from the fact 
+\[|A_{ij}+B_{ij}|\leq |A_{ij}|+|B_{ij}|\]
+for all $i$ and $j$.
+\item Compute 
+\[\|AB\|=\max\{|(AB)_{ij}|\}=\max\{|\sum_{k=1}^nA_{ik}B_{kj}|\}\]
+\[\leq \max\{|\sum_{k=1}^n\|A\|\|B\||\}=n\|A\|\|B\|.\]
+\end{enumerate}
+\item \begin{enumerate}
+\item The Corollary after 5.15 implies that $A^m$ is again a transition matrix. So all its entris are no greater than $1$.
+\item Use the inequaliy in Exercise 7.2.20(d) and the previous argument. We compute
+\[\|J^m\|=\|P^{-1}A^mP\|\leq n^2\|P^{-1}\|\|A^m\|\|P\|\leq n^2\|P^{-1}\|\|P\|.\]
+Pick the fixed value $c=n^2\|P^{-1}\|\|P\|$ and get the result.
+\item By the previous argument, we know the norm $\|J^m\|$ is bounded. If $J_1$ is a block corresponding to the eigenvalue $1$ and the size of $J_1$ is greater than $1$, then the $12$-entry of $J_1^m$ is unbounded. This is a contradiction. 
+\item By the Corollary 3 after Theorem 5.16, the absolute value of eigenvalues of $A$ is no greater than $1$. So by Theorem 5.13, the limit $\lim_{m\rightarrow \infty}A^m$ exists if and only if $1$ is the only eigenvalue of $A$.
+\item Theorem 5.19 confirm that $\dim(E_1)=1$. And Exercise 7.2.21(c) implies that $K_1=E_1$. So the multiplicity of the eigenvalue $1$ is equal to $\dim(K_1)=\dim(E_1)=1$ by Theorem Theorem 7.4(c).
+\end{enumerate}
+\item Since $A$ is a matrix over complex numbers, $A$ has the Jordan canonical form $J=Q^{-1}AQ$ for some invertible matrix $Q$. So $e^A$ exists if $e^J$ exist. Observe that 
+\[\|J^m\|\leq n^{m-1}\|J\|\]
+by Exercise 7.20(d). This means the sequence in the definition of $e^J$ converge absolutely. Hence $e^J$ exists.
+\item \begin{enumerate}
+\item For brevity, we just write $\lambda$ instead of $\lambda_i$. Also denote $u_k$ to be $(A-\lambda I)^ku$. So we have $(A-\lambda I)u_k=u_{k+1}$. Let 
+\[x=e^{\lambda t}[\sum_{k=0}^{p-1}f^{(k)}(t)u_{p-1-k}]\]
+be the function vector given in this question. Observe that 
+\[(A-\lambda I)x=e^{\lambda t}[\sum_{k=0}^{p-1}f^{(k)}(t)u_{p-k}].\]
+Then compute that 
+\[x'=\lambda x+e^{\lambda t}[\sum_{k=0}^{p-1}f^{(k+1)}(t)u_{p-1-k}]\]
+\[=\lambda x+e^{\lambda t}[\sum_{k=1}^{p-1}f^{(k)}(t)u_{p-k}]\]
+\[=\lambda x+(A-\lambda I)x=Ax.\]
+\item Since $A$ is a matrix over $\C$, it has the Jordan canonical form $J=Q^{-1}AQ$ for some invertible matrix $Q$. Now the system become 
+\[x'=QJQ^{-1}x\]
+and so 
+\[Q^{-1}x'=JQ^{-1}x.\]
+Let $y=Q^{-1}x$ and so $x=Qy$. Rewrite the system to be 
+\[y'=Jy.\]
+Since the solution of $y$ is the linear combination of the solutions of each Jordan block, we may just assume that $J$ consists only one block. Thus we may solve the system one by one from the last coordinate of $y$ to the first coordinate and get 
+\[y=e^{\lambda t}\begin{pmatrix}f(t)\\f^{(1)}(t)\\\vdots \\f^{(p-1)}(t)\end{pmatrix}.\]
+On the other hand, the last column of $Q$ is the end vector $u$ of the cycle. Use the notation in the previous question, we know $Q$ has the form 
+\[Q=\begin{pmatrix} | & | & \cdots & | \\ u_{p-1} & u_{p-2} & \cdots & u_0 \\ | & | & \cdots & | \end{pmatrix}.\]
+Thus the solution must be $x=Qy$. And the solution coincide the solution given in the previous question. So the general solution is the sum of the solutions given by each end vector $u$ in different cycles.
+\end{enumerate}
+\item As the previous exercise, we write $Q^{-1}AQ=J$, where $J$ is the Jordan canonical form of $A$. Then solve $Y'=JY$. Finally the answer should be $X=QY$.
+\begin{enumerate}
+\item The coefficient matrix is 
+\[A=\begin{pmatrix}2&1&0\\0&2&-1\\0&0&3\end{pmatrix}.\]
+Compute 
+\[J=\begin{pmatrix}2&1&0\\0&2&0\\0&0&3\end{pmatrix}\]
+and 
+\[Q=\begin{pmatrix}1&0&0\\0&1&0\\-1&-1&1\end{pmatrix}.\]
+Thus we know that 
+\[Y=e^{2t}\begin{pmatrix}at+b\\a\\0\end{pmatrix}+e^{3t}\begin{pmatrix}0\\0\\c\end{pmatrix}.\]
+and so 
+the solution is 
+\[X=QY.\]
+\item The coefficient matrix is 
+\[A=\begin{pmatrix}2&1&0\\0&2&1\\0&0&2\end{pmatrix}.\]
+So $J=A$ and $Q=I$. Thus we know that 
+\[Y=e^{2t}\begin{pmatrix}at^2+bt+c\\2at+b\\2a\end{pmatrix}\]
+and so 
+the solution is 
+\[X=QY.\]
+\end{enumerate}
+\end{enumerate}

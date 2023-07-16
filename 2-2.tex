@@ -1,0 +1,76 @@
+\section{The Matrix Representation of a Linear Transformation}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Yes. This is result of Theorem 2.7.
+\item Yes. This is result of Theorem 2.6.
+\item No. It's a $n\times m $ matrix.
+\item Yes. This is Theorem 2.8.
+\item Yes. This is Theorem 2.7.
+\item No. A transformaion of $\mathcal{L}(V,W)$ can not map element in $W$ in general.
+\end{enumerate}
+\item \begin{enumerate}
+\item We have $T(1,0)=(2,3,1)=2(1,0,0)+3(0,1,0)+1(0,0,1)$ and $T(0,1)=(-1,4,0)=-1(1,0,0)+4(0,1,0)+0(0,0,1)$. Hence we get \[[T]_{\beta }^{\gamma}=\left(\begin{array}{cc}2&-1\\3&4\\1&0 \end{array}\right).\]
+\item \[[T]_{\beta }^{\gamma}=\left(\begin{array}{ccc}2&3&-1\\1&0&1 \end{array}\right).\]
+\item \[[T]_{\beta }^{\gamma}=\left(\begin{array}{ccc}2&1&-3 \end{array}\right).\]
+\item \[[T]_{\beta }^{\gamma}=\left(\begin{array}{ccc}0&2&1\\-1&4&5\\1&0&1 \end{array}\right).\]
+\item \[[T]_{\beta }^{\gamma}=\left(\begin{array}{cccc}1&0&\cdots &0\\1&0&\cdots &0\\ \vdots &\vdots &\ddots &\vdots \\1&0& \cdots &0 \end{array}\right).\]
+\item \[[T]_{\beta }^{\gamma}=\left(\begin{array}{ccc}0& &1\\ &\udots & \\ 1 & &0 \end{array}\right).\]
+\item \[[T]_{\beta }^{\gamma}=\left(\begin{array}{ccccc}1&0& \cdots &0&1 \end{array}\right).\]
+\end{enumerate}
+\item Since 
+\begin{align*}
+T(1,0)&=(1,1,2)=-\frac{1}{3}(1,1,0)+0(0,1,1)+\frac{2}{3}(2,2,3)\\
+T(0,1)&=(-1,0,1)=-1(1,1,0)+1(0,1,1)+0(2,2,3)\\
+T(1,2)&=(-1,1,4)=-\frac{7}{3}(1,1,0)+2(0,1,1)+\frac{2}{3}(2,2,3)\\
+T(2,3)&=(-1,2,7)=-\frac{11}{3}(1,1,0)+3(0,1,1)+\frac{4}{3}(2,2,3)
+\end{align*}
+we have 
+\[[T]_{\beta }^{\gamma }=\left(\begin{array}{cc}-\frac{1}{3}&-1\\0&1\\ \frac{2}{3}&0 \end{array}\right)\]
+and
+\[[T]_{\alpha }^{\gamma }=\left(\begin{array}{cc}-\frac{7}{3}&-\frac{11}{3}\\2&3\\ \frac{2}{3}&\frac{4}{3} \end{array}\right).\]
+\item Since
+\begin{align*}
+T\left(\begin{array}{cc}1&0\\0&0 \end{array}\right) &=1+0x+0x^2\\
+T\left(\begin{array}{cc}0&1\\0&0 \end{array}\right) &=1+0x+1x^2\\
+T\left(\begin{array}{cc}1&0\\0&0 \end{array}\right) &=0+0x+0x^2\\
+T\left(\begin{array}{cc}1&0\\0&0 \end{array}\right) &=0+2x+0x^2
+\end{align*}
+we have 
+\[[T]_{\beta }^{\gamma }=\left(\begin{array}{cccc}1&1&0&0\\0&0&0&2\\0&1&0&0 \end{array}\right).\]
+\item \begin{enumerate}
+\item \[[T]_{\alpha}=\left(\begin{array}{cccc}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1 \end{array}\right).\]
+\item \[[T]_{\beta }^{\alpha }=\left(\begin{array}{ccc}0&1&0\\2&2&2\\0&0&0\\0&0&2 \end{array}\right).\]
+\item \[[T]_{\beta }^{\gamma}=\left(\begin{array}{cccc}1&0&0&1 \end{array}\right).\]
+\item \[[A]_{\alpha}=\left(\begin{array}{c}1\\-2\\0\\4 \end{array}\right).\]
+\item \[[f(x)]_{\beta }=\left(\begin{array}{c}3\\-6\\1 \end{array}\right).\]
+\item \[[a]_{\gamma }=\left(\begin{array}{c}a \end{array}\right).\]
+\end{enumerate}
+\item It would be a vector space since all the condition would be true since they are true in $V$ and $W$. So just check it.
+\item If we have $([T]_{\beta }^{\gamma })_{ij}=A_{ij}$, this means 
+\[T(v_j)=\sum_{i=1}^m{A_{ij}w_i}.\]
+And hence we have 
+\[aT(v_j)=\sum_{i=1}^m{aA_{ij}w_i}.\]
+and thus $(a[T]_{\beta }^{\gamma })_{ij}=aA_{ij}$.
+\item If $\beta =\{v_1,v_2,\ldots ,v_n\}$ and $x=\sum_{i=1}^n{a_iv_i}$ and $y=\sum_{i=1}^n{b_iv_i}$, then 
+\[T(x+cy)=T(\sum_{i=1}^n{a_iv_i}+c\sum_{i=1}^n{b_iv_i})=(a_1+cb_1,a_2+cb_2,\ldots ,a_n+cb_n)=T(x)+cT(y).\]
+\item It would be linear since for $c\in \mathbb{R}$ we have
+\[T((x_1+iy_1)+c(x_2+iy_2))=(x_1+cx_2)+i(x_2+cy_2)=T(x_1+iy_1)+cT(x_2+iy_2).\]
+And the matrix would be 
+\[\left(\begin{array}{cc}1&0\\0&-1 \end{array}\right) .\]
+\item It would be 
+\[\left(\begin{array}{ccccc}1&1&0&\cdots &0\\ 0&1&1& &\vdots \\ 0&0&\ddots &\ddots &0\\ \vdots & &\ddots &\ddots &1\\ 0&\cdots &\cdots &0&1 \end{array}\right).\]
+\item  Take $\{v_1,v_2,\ldots ,v_k\}$ be a basis of $W$ and extend it to be $\beta =\{v_1,v_2,\ldots ,v_n\}$, the basis of $V$. Since $W$ is $T$-invariant, we have $T(v_j)=\sum_{i=1}^k{a_{ij}v_i}$ if $j=1,2,\ldots ,k$. This means $([T]_{\beta })_{ij}=0$ if $j=1,2,\ldots ,k$ and $i=k+1,k+2,\ldots ,n$.
+\item Let $\{v_1,v_2,\ldots ,v_k\}$ and $\{v_{k+1},v_{k+2},\ldots ,v_n\}$ be the basis of $W$ and $W'$ respectly. By Exercise 1.6.33(b), we have $\beta =\{v_1,v_2,\ldots ,v_n\}$ is a basis of $V$. And thus we have 
+\[[T]_{\beta }=\left(\begin{array}{cc}I_k&O\\O&O \end{array}\right) \]
+is a diagonal matrix.
+\item Suppose, by contradiction, that $cT=U$ for some $c$. Since $T$ is not zero mapping, there is some $x\in V$ and some nonzero vector $y\in W$ such that $T(x)=y\neq 0$. But thus we have $y=\frac{1}{c}cy=\frac{1}{c}U(x)=U(\frac{1}{c}x)\in R(U)$. This means $y\in R(T)\cap R(U)$, a contradiction.
+\item It can be checked that differentiation is a linear operator. That is, $T_i$ is an element of $\mathcal{L}(V)$ for all $i$. Now fix some $n$, and assume $\sum_{i=1}^n{a_iT_i}=0$. We have $T_i(x^n)=\frac{n!}{(n-i)!}x^{n-i}$ and thus $\{T_i(x^n)\}_{i=1,2,\ldots ,n}$ would be an independent set. Since $\sum_{i=1}^n{a_iT_i(x^n)}=0$, we have $a_i=0$ for all $i$.
+\item \begin{enumerate}
+\item We have zero map is an element in $S^0$. And for $T,U\in S^0$, we have $(T+cU)(x)=T(x)+cU(x)=0$ if $x\in S$.
+\item Let $T$ be an element of $S_2^0$. We have $T(x)=0$ if $x\in S_1\subset S_2$ and hence $T$ is an element of $S_1^0$.
+\item Since $V_1+V_2$ contains both $V_1$ and $V_2$, we have $(V_1+V_2)^0\subset V_1^0\cap V_2^0$ by the previous exercise. To prove the converse direction, we may assume that  $T\in V_1^0\cap V_2^0$. Thus we have $T(x)=0$ if $x\in V_1$ or $x\in V_2$. For $z=u+v\in V_1+V_2$ with $u\in V_1$ and $v\in V_2$, we have $T(z)=T(u)+T(v)=0+0=0$. So $T$ is an element of $(V_1+V_2)^0$ and hence we have $(V_1+V_2)^0\supset V_1^0\cap V_2^0$.
+\end{enumerate}
+\item As the process in the proof of Dimension Theorem, we may pick the same basis $\beta =\{v_1,v_2,\ldots v_n\}$ for $V$. Write $u_{k+1}=T(v_{k+1}$. It has been proven that $\{u_{k+1},u_{k+2},\ldots ,u_{n}\}$ is a basis for $R(T)$. Since dim$(V)=$dim$(W)$, we can extend to a basis $\gamma =\{u_1,u_2,\ldots ,u_n\}$ for $W$. Thus we have 
+\[[T]_{\beta }^{\gamma}=\left(\begin{array}{cc}O&O\\O&I_{n-k} \end{array}\right) \]
+is a diagonal matrix.
+\end{enumerate}
