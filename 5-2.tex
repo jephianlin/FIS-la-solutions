@@ -33,7 +33,7 @@ for all $j\neq i$, we get the desired answer.
 \item It's not diagonalizable since $\dim(E_0)$ is $1$ but not $4$.
 \item It's diagonalizable with $D=\begin{pmatrix}-1 & 0 & 0\cr 0 & 1 & 0\cr 0 & 0 & 1\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1 & 0\cr 0 & 0 & 1\cr -1 & 1 & 0\end{pmatrix}$.
 \item It's not diagonalizable since its \charpoly{} does not split.
-\item It's diagonalizable with $D=\begin{pmatrix}1 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 0\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1 & 1\cr 1 & 1 & -1\cr -1 & 0 & 0\end{pmatrix}$.
+\item It's diagonalizable with $D=\begin{pmatrix}1 & 0 & 0\cr 0 & 2 & 0\cr 0 & 0 & 0\end{pmatrix}$ and $Q=\begin{pmatrix}-1 & 0 & 0\cr 1 & 1 & -1\cr 1 & 1 & 1\end{pmatrix}$.  Note that we used the basis $\{1, x, x^2\}$.  
 \item It's diagonalizable with $D=\begin{pmatrix}1-i & 0\cr 0 & i+1\end{pmatrix}$ and $Q=\begin{pmatrix}1 & 1\cr -1 & 1\end{pmatrix}$.
 \item It's diagonalizable with $D=\begin{pmatrix}-1 & 0 & 0 & 0\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$ and $Q=\begin{pmatrix}0 & 1 & 0 & 0\cr 1 & 0 & 1 & 0\cr -1 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}$.
 \end{enumerate}
@@ -53,12 +53,13 @@ splits, where the second equality holds since it's a upper triangular matrix.
 \item The \charpoly{} of a matrix is also the same for all matrices which is similar to the original matrix.
 \end{enumerate}
 \item This is because the equality in Exercise 5.2.9(a). That is, if $[T]_{\beta }$ is an upper triangular matrix, it's diagonal entries are the set of zeroes of the \charpoly{}.
-\item \begin{enumerate}
-\item Since \egva s are the zeroes of the \charpoly{}, we may write the \charpoly{} $f(t)$ as 
-\[(\lambda_1-t)^{m_1}(\lambda_2-t)^{m_2}\cdots (\lambda_k-t)^{m_k}.\]
-Calculate the coefficient of $t^{n-1}$ and use the fact in Exercise 5.1.21(b). Thus we could get the desired conclusion.
-\item Use the equality in the previous exercise and calculate the coefficient of the constant term. Compare it to the Exercise 5.1.20.
-\end{enumerate}
+\item Recall that similar matrices have the same trace and the same determinant; see Exercises~5.1.7(a) and 5.1.16(a).  Suppose $U$ is the uper triangular matrix that $A$ is similar to.  According to Exercise 5.2.10, the diagonal entries of $U$ are $\lambda_1$, $\lambda_2$, $\ldots$, $\lambda_k$ and that each $\lambda_i$ occurse $m_i$ times.  Thus, the value of $\tr(A) = \tr(U)$ is the sum of diagonal entries of $U$, which answers part (a).  On the other hand, since $U$ is an upper triangular matrix, its determinant is the product of its diagonal entries, which gives (b).
+%% \begin{enumerate}
+%% \item Since \egva s are the zeroes of the \charpoly{}, we may write the \charpoly{} $f(t)$ as 
+%% \[(\lambda_1-t)^{m_1}(\lambda_2-t)^{m_2}\cdots (\lambda_k-t)^{m_k}.\]
+%% Calculate the coefficient of $t^{n-1}$ and use the fact in Exercise 5.1.21(b). Thus we could get the desired conclusion.
+%% \item Use the equality in the previous exercise and calculate the coefficient of the constant term. Compare it to the Exercise 5.1.20.
+%% \end{enumerate}
 \item \begin{enumerate}
 \item Let $E_{\lambda}$ be the eigenspace of $T$ corresponding to $\lambda$ and $E_{\lambda^{-1}}$ be the eigenspace of $T^{-1}$ corresponding to $\lambda^{-1}$. We want to prove the two spaces are the same. If $v\in E_{\lambda}$, we have $T(v)=\lambda v$ and so $v=\lambda T^{-1}(v)$. This means $T^{-1}(v)=\lambda^{-1}v$ and $v\in E_{\lambda^{-1}}$. Conversely, if $v\in E_{\lambda^{-1}}$, we have $T^{-1}(v)=\lambda^{-1}v$ and so $v=\lambda^{-1} T(v)$. This means $T(v)=\lambda v$ and $v\in E_{\lambda}$.
 \item By the result of the previous exercise, if $T$ is diagonalizable and invertible, the basis consisting of \egve s of $T$ will also be the basis consisting of \egve s of $T^{-1}$.
@@ -83,13 +84,29 @@ where $c_i$ is some scalar for all $i$.
 \[v=Q\begin{pmatrix}c_1e^{t}\\c_2e^{t}\\c_3e^{2t}\end{pmatrix},\]
 where $c_i$ is some scalar for all $i$.
 \end{enumerate}
-\item Following the step of the previous exercise, we may pick a matrix $Q$ whose column vectors consist of eigenvectors and $Q$ is invertible. Let $D$ be the diagonal matrix $Q^{-1}AQ$. And we also know that finally we'll have the solution $x=Qu$ for some vector $u$ whose $i$-th entry is $c_ie^{\lambda}$ if the $i$-th column of $Q$ is an \egve{} corresponding to $\lambda$. By denoting  $\bar{D}$ to be the diagonal matrix with $\bar{D}_{ii}=e^{D_{ii}}$, we may write $x=Q\bar{D}y$. where the $i$-th entry of $y$ is $c_i$. So the solution must be of the form described in the exercise. 
+\item For convenience, let the spectrum of $A$ be $\{\mu_1,\ldots, \mu_n\}$, where some of the eigenvalues might be the same, and $\{u_1, \ldots, u_n\}$ the corresponding eigenbasis.  Let $Q$ be the matrix whose columns are $u_1,\ldots, u_n$ and $D$ the diagonal matrix whose diagonal entries are $\mu_1, \ldots, \mu_n$.  Thus, $D = Q^{-1}AQ$ and the system of differential equations $\dot{x} = A x$ is equivalent to $\dot{y} = D y$, where $x = Qy$.  Since the general solution of $\dot{y} = D y$ is $y = (c_1e^{\mu_it}, \ldots, c_ne^{\mu_nt})$ for some constants $c_1, \ldots, c_n$.  We know $x = Qy$ and can be written as  
+\[
+    x(t) = e^{\mu_1t}c_1u_1 + e^{\mu_2t}c_2u_2 + \cdots + e^{\mu_nt}c_nu_n.
+\]
+Thus, we may merge the terms with the same eigenvalues and write
+\[
+    x(t) = \sum_{i=1}^k e^{\lambda_it}\left(\sum_{\mu_j = \lambda_i} c_ju_j\right).
+\]
+Since 
+\[
+    E_{\lambda_i} = \{\sum_{\mu_j = \lambda_i} c_ju_j : c_j\in\mathbb{R} \},
+\]
+the form we get for the general solution is equivalent to the one in the problem.  
 
-For the second statement, we should know first that the set 
-\[\{e^{\lambda_1t},e^{\lambda_2t},\ldots e^{\lambda_kt}\}\]
-are linearly independent in the space of real functions. Since $Q$ invertible, we know that the solution set 
-\[\{Q\bar{D}y:y\in \R^n\}\]
-is an $n$-dimensional real vector space.
+To see that the general solution is an $n$-dimensional real vector space, it is enough to check the set $\{e^{\mu_1t}u_1, \ldots, e^{\mu_nt}u_n\}$ is linearly independent.  Suppose for some $c_1, \ldots, c_n\in\mathbb{R}$ we have 
+\[
+    c_1e^{\mu_1t}u_1 + c_2e^{\mu_2t}u_2 + \cdots + c_ne^{\mu_nt}u_n = 0.
+\]
+By evaluating the equation at $t = 0$, we konw  
+\[
+    c_1u_1 + c_2u_2 + \cdots + c_nu_n = 0.
+\]
+Since $\{u_1, \ldots, u_n\}$ is an eigenbasis and is linearly independent, we have $c_1 = \cdots = c_n = 0$ and the set $\{e^{\mu_1t}u_1, \ldots, e^{\mu_nt}u_n\}$ is linearly independent.
 \item Directly calculate that 
 \[(CY)'_{ij}=(\sum_{k=1}^n{C_{ik}Y_{kj}})'\]
 \[=\sum_{k=1}^n{C_{ik}Y_{kj}'}=CY'.\]
