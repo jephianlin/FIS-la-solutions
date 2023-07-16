@@ -17,20 +17,20 @@
 and 
 \[\|x+y\|=\|(4-i,3+i,1+3i)\|=(17+10+10)^{\frac{1}{2}}=\sqrt{37}.\]
 We have the Cauchy-Schwarz inequality and the triangle inequality hold since
-\[|8+5i|=\sqrt{89}\leq \sqrt{7}\sqrt{14}=\sqrt{119}\]
+\[|8+5i|=\sqrt{89}\leq \sqrt{7}\sqrt{14}=\sqrt{98}\]
 and 
 \[\sqrt{7}+\sqrt{14}\geq \sqrt{37}.\]
-\item As definition, compute
-\[\lag f,g\rag =\int_0^1{f(t)g(t)dt}=\int{tde^t}=te^t|_0^1-\int{e^tdt}=e-(e-1)=1,\]
-\[\|f\|=\int_0^1{f^2}=\frac{1}{3},\]
-\[\|g\|=\int_0^1{g^2}=\frac{1}{2}(e^2-1),\]
-and 
-\[\|f+g\|=\|t+e^t\|=(\|f\|^2+2\lag f,g\rag +\|g\|^2)^{\frac{1}{2}}\]
-\[=\frac{1}{9}+2+\frac{1}{4}(e^4-2e^2+1)=\frac{9e^4-18e^2+85}{36}.\]
+\item By definition, we have
+\[\begin{aligned}
+    \lag f,g\rag &= \int_0^1{f(t)g(t)dt}=\int{tde^t}=te^t|_0^1-\int{e^tdt}=e-(e-1)=1, \\
+    \|f\|^2 &= \int_0^1{f^2}=\frac{1}{3} \text{ and } \|f\| = \frac{1}{\sqrt{3}}, \\
+    \|g\|^2 &= \int_0^1{g^2}=\frac{1}{2}(e^2-1) \text{ and } \|g\| = \sqrt{\frac{1}{2}(e^2-1)}, \\
+    \|f+g\| &= (\|f\|^2+2\lag f,g\rag +\|g\|^2)^{\frac{1}{2}} = \sqrt{\frac{1}{3} + 2 + \frac{1}{2}(e^2-1)} = \sqrt{\frac{1}{2}e^2 + \frac{11}{6}}.
+\end{aligned}\]
 And the two inequalities hold since
-\[1\leq\frac{1}{3}\cdot \frac{1}{2}(e^2-1)\]
+\[1^2 \leq \frac{1}{3}\cdot \frac{1}{2}(e^2-1)\]
 and 
-\[\frac{9e^4-18e^2+85}{36}\geq \frac{1}{3}+\frac{1}{2}(e^2-1).\]
+\[\sqrt{\frac{1}{2}e^2 + \frac{11}{6}} \geq \frac{1}{\sqrt{3}}+ \sqrt{\frac{1}{2}(e^2-1)}.\]
 \item \begin{enumerate}
 \item We prove the formula 
 \[\lag A,B\rag =\tr(B^*A)=\sum_{j=1}^n{(B^*A)_{jj}}=\sum_{j=1}^n{\sum_{i=1}^n{B^*_{ji}A_{ij}}}\]
@@ -47,9 +47,9 @@ and
 \item \[\lag x+z,y\rag =(x+z)Ay^*=xAY^*+zAy^*=\lag x,y\rag +\lag z,y\rag .\]
 \item \[\lag cx,y\rag =(cx)Ay^*=c(xAy^*)=c\lag x,y\rag .\]
 \item \[\overline{\lag x,y\rag }=(xAy^*)^*=yA^*x^*=yAx^*=\lag y,x\rag .\]
-One of the equality use the fact $A=A^*$.
-\item \[\lag x,x\rag =(x_1,x_2)A(x_1,x_2)^*=\|x_1\|^2+ix_1\overline{x_2}-ix_2\overline{x_1}+2\|x_2\|^2\]
-\[=\|x_1\|^2+2\mathrm{Re}(ix_1\overline{x_2})+2\|x_2\|^2\rag 0\]
+One of the equalities uses the fact $A=A^*$.
+\item \[\lag x,x\rag =(x_1,x_2)A(x_1,x_2)^* = |x_1|^2 + ix_1\overline{x_2}-ix_2\overline{x_1}+2|x_2|^2\]
+\[= |x_1|^2 + 2\Re(ix_1\overline{x_2})+2|x_2|^2 = |x_1 - ix_2|^2 + |x_2|^2 > 0\]
 if $x_1$ or $x_2$ is not $0$. Here the function $\Re(z)$ means the real part of a complex number $z$.
 \end{itemize}
 So it's an inner product function. Also compute that 
@@ -92,9 +92,9 @@ To deduce the Pythagorean Theorem in $R^2$, we may begin by a right triangle $AB
 \[\|x+y\|^2+\|x-y\|^2\]
 \[=(\|x\|^2+\lag x,y\rag +\lag y,x\rag +\|y\|^2)+(\|x\|^2-\lag x,y\rag -\lag y,x\rag +\|y\|^2)\]
 \[=2\|x\|^2+2\|y\|^2.\]
-This means that the sum of square of the four edges of a prallelogram is the sum of square of the two diagonals.
+This means that the sum of square of the four edges of a parallelogram is the sum of square of the two diagonals.
 \item Compute that 
-\[\|\sum_{i=1}^k{a_iv_i}\|^2=\lag \sum_{i=1}^k{a_iv_i}\rag \]
+\[\|\sum_{i=1}^k{a_iv_i}\|^2=\lag \sum_{i=1}^k{a_iv_i}, \sum_{i=1}^k{a_iv_i} \rag \]
 \[=\sum_{i=1}^k{\|a_iv_i\|^2}+\sum_{i,j}\lag a_iv_i,a_jv_j\rag \]
 \[=\sum_{i=1}^k{|a_i|^2\|v_i\|}.\]
 \item Check those condition.
@@ -121,7 +121,17 @@ For the necessity, we just observe the proof of Theorem 6.2(c). If the equality 
 where 
 \[c=\frac{\lag x,y\rag}{\lag y,y\rag}.\]
 And so $x=cy$.
-\item Also observe the proof of Theorem 6.2(d). The equality holds only when 
+\item Recall that one may derive the Cauchy--Schwarz inequality from the triangle inequality, and vise versa.  This is due to the connection that 
+\[
+    \|x + y\|^2 = \|x\|^2 + 2\lag x, y\rag + \|y\|^2
+\]
+and  
+\[
+    (\|x\| + \|y\|)^2 = \|x\|^2 + 2\|x\|\|y\| + \|y\|^2.
+\]
+Therefore, $|\lag x,y\rag| = \|x\|\|y\|$ if and only if $\|x + y\| = \|x\| + \|y\|$.  
+
+Alternatively, one may also observe the proof of Theorem 6.2(d). The equality holds only when 
 \[\Re\lag x,y\rag =|\lag x,y\rag |=\|x\|\cdot \|y\|.\]
 The case $y=0$ is easy. Assuming $y\neq 0$, we have $x=cy$ for some scalar $c\in F$. And thus we have
 \[\Re(c)\|y\|^2=\Re\lag cy,y\rag =|\lag cy,y\rag |=|c|\cdot \|y\|^2\]
@@ -139,7 +149,7 @@ if and only if we may pick one vector from them and all other vectors are some m
 \item \begin{enumerate}
 \item Check the condition one by one.\begin{itemize}
 \item \[\lag f+h,g\rag=\frac{1}{2\pi}\int_0^{2\pi}{(f(t)+h(t))\overline{g(t)}dt}\]
-\[=\frac{1}{2\pi}\int_0^{2\pi}{f\overline{g}dt}+\frac{1}{2\pi}\int_0^{2\pi}{(h\overline{g}dt}=\lag f,g\rag +\lag h,g\rag.\]
+\[=\frac{1}{2\pi}\int_0^{2\pi}{f\overline{g}dt}+\frac{1}{2\pi}\int_0^{2\pi}{h\overline{g}dt}=\lag f,g\rag +\lag h,g\rag.\]
 \item \[\lag cf,g\rag=\frac{1}{2\pi}\int_0^{2\pi}{cf\overline{g}dt}\]
 \[=c(\frac{1}{2\pi}\int_0^{2\pi}{f\overline{g}dt})=c\lag f,g\rag .\]
 \item \[\overline{\lag f,g\rag}=\overline{\frac{1}{2\pi}\int_0^{2\pi}{f\overline{g}dt}}=\frac{1}{2\pi}\int_0^{2\pi}{\overline{f\overline{g}}dt}\]
@@ -170,10 +180,10 @@ if $T(x)\neq 0$. And the condition $T(x)\neq 0$ is true when $x\neq 0$ since $T$
 \item \begin{enumerate}
 \item Just compute 
 \[\|x+y\|^2=\|x\|^2+\lag x,y\rag +\lag y,x\rag +\|y\|^2\]
-\[=\|x\|^2+\lag x,y\rag +\overline{\lag y,x\rag }+\|y\|^2=\|x\|^2+\Re(\lag x,y\rag )+\|y\|^2\]
+\[=\|x\|^2+\lag x,y\rag +\overline{\lag y,x\rag }+\|y\|^2=\|x\|^2+2\Re(\lag x,y\rag )+\|y\|^2\]
 and 
 \[\|x-y\|^2=\|x\|^2-\lag x,y\rag -\lag y,x\rag +\|y\|^2\]
-\[=\|x\|^2-\lag x,y\rag -\overline{\lag y,x\rag }+\|y\|^2=\|x\|^2-\Re(\lag x,y\rag )+\|y\|^2.\]
+\[=\|x\|^2-\lag x,y\rag -\overline{\lag y,x\rag }+\|y\|^2=\|x\|^2-2\Re(\lag x,y\rag )+\|y\|^2.\]
 \item We have 
 \[\|x-y\|+\|y\|\geq \|x\|\]
 and 
@@ -232,8 +242,8 @@ for all $x,y\in V$. By Theorem 6.1(e) we have $A^*x=Bx$ for all $x$. But this me
 \[v_i^*v_j=\lag v_i,v_j\rag =\left\{\begin{array}{ccc}1&\mathrm{if} &i=j;\\0&\mathrm{if} &i\neq j.\end{array}\right.\]
 So we have $Q^*Q=I$ and $Q^*=Q^{-1}$.
 \item Let $\alpha $ be the standard basis for $\F^n$. Thus we have $[T]_{\alpha}=A$ and $[U]_{\alpha}=A^*$. Also we have that actually $[I]_{\alpha}^{\beta}$ is the matrix $Q$ defined in the previous exercise. So we know that 
-\[[U]_{\beta}=[I]_{\alpha}^{\beta}[U]_{\alpha}[I]_{\beta}^{\alpha}=QAQ^{-1}=QAQ^*\]
-\[=(QA^*Q^*)^*=[I]_{\alpha}^{\beta}[T]_{\alpha}[I]_{\beta}^{\alpha}=[T]_{\beta}.\]
+\[[U]_{\beta}=[I]_{\alpha}^{\beta}[U]_{\alpha}[I]_{\beta}^{\alpha}=QA^*Q^{-1}=QA^*Q^*\]
+\[=(QAQ^*)^* = ([I]_{\alpha}^{\beta}[T]_{\alpha}[I]_{\beta}^{\alpha})^* = ([T]_{\beta})^*.\]
 \end{enumerate}
 \item Check the three conditions one by one.\begin{enumerate}
 \item \begin{itemize}
@@ -332,16 +342,18 @@ since
 \[=\frac{1}{4}[\|-x+y\|^2-\|-x-y\|^2+\|x+y\|^2-\|x-y\|^2]=0.\]
 So we know that even when $r$ is negative we have 
 \[\lag rx,y\rag =-r\lag -x,y\rag =r\lag x,y\rag .\]
-\item Now we have the distribution law. Also, the position of the two component can be interchanged without change the value of the defined function. Finally we observe that 
-\[\lag x,x\rag =\frac{1}{4}[\|x+x\|^2-\|0\|^2]=\|x\|^2\]
-for all $x\in V$. So now we have 
-\[\|x\|^2+2\lag x,y\rag +\|y\|^2=\|x+y\|^2\]
-\[\leq (\|x\|^+\|y\|)^2=\|x\|^2+2\|x\|\cdot \|y\|+\|y\|^2\]
-by the triangle inequality. Similarly we also have 
-\[\|x\|^2-2\lag x,y\rag +\|y\|^2=\|x-y\|^2\]
-\[\leq (\|x\|^+\|-y\|)^2=\|x\|^2+2\|x\|\cdot \|y\|+\|y\|^2.\]
-Thus we get the desired result 
-\[|\lag x,y\rag |\leq \|x\|\cdot \|y\|.\]
+\item By the triangle inequality of the norm, we have 
+\[\begin{aligned}
+    \|x + y\| &\leq \|x\| + \|y\| \text{ and }\\
+    \|x - y\| &\geq \|x\| - \|y\|
+\end{aligned}\]
+since $\|x - y\| + \|y\| \geq \|x\|$.  Therefore, 
+\[\begin{aligned}
+    \lag x,y \rag &= \frac{1}{4}\left[\|x + y\|^2 - \|x - y\|^2\right] \\
+     &\leq \frac{1}{4}(\|x\| + \|y\|)^2 - \frac{1}{4}(\|x\| - \|y\|)^2 \\
+     &= \|x\|\|y\|.
+\end{aligned}\]
+Replacing $y$ by $-y$ in the inequality, we get $-\lag x,y\rag \leq \|x\|\|y\|$.  Combining these two inequalities, we have the desired result.
 \item Since 
 \[(c-r)\lag x,y\rag =c\lag x,y\rag -r\lag x,y\rag\]
 and 

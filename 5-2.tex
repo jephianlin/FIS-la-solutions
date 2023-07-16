@@ -53,7 +53,7 @@ splits, where the second equality holds since it's a upper triangular matrix.
 \item The \charpoly{} of a matrix is also the same for all matrices which is similar to the original matrix.
 \end{enumerate}
 \item This is because the equality in Exercise 5.2.9(a). That is, if $[T]_{\beta }$ is an upper triangular matrix, it's diagonal entries are the set of zeroes of the \charpoly{}.
-\item Recall that similar matrices have the same trace and the same determinant; see Exercises~5.1.7(a) and 5.1.16(a).  Suppose $U$ is the uper triangular matrix that $A$ is similar to.  According to Exercise 5.2.10, the diagonal entries of $U$ are $\lambda_1$, $\lambda_2$, $\ldots$, $\lambda_k$ and that each $\lambda_i$ occurse $m_i$ times.  Thus, the value of $\tr(A) = \tr(U)$ is the sum of diagonal entries of $U$, which answers part (a).  On the other hand, since $U$ is an upper triangular matrix, its determinant is the product of its diagonal entries, which gives (b).
+\item Recall that similar matrices have the same trace and the same determinant; see Exercises~5.1.7(a) and 5.1.16(a).  Let $U$ be the upper triangular matrix that $A$ is similar to.  According to Exercise 5.2.10, the diagonal entries of $U$ are $\lambda_1$, $\lambda_2$, $\ldots$, $\lambda_k$ and that each $\lambda_i$ occurs $m_i$ times.  Thus, the value of $\tr(A) = \tr(U)$ is the sum of diagonal entries of $U$, which answers part (a).  On the other hand, since $U$ is an upper triangular matrix, its determinant is the product of its diagonal entries, which gives (b).
 %% \begin{enumerate}
 %% \item Since \egva s are the zeroes of the \charpoly{}, we may write the \charpoly{} $f(t)$ as 
 %% \[(\lambda_1-t)^{m_1}(\lambda_2-t)^{m_2}\cdots (\lambda_k-t)^{m_k}.\]
@@ -84,7 +84,7 @@ where $c_i$ is some scalar for all $i$.
 \[v=Q\begin{pmatrix}c_1e^{t}\\c_2e^{t}\\c_3e^{2t}\end{pmatrix},\]
 where $c_i$ is some scalar for all $i$.
 \end{enumerate}
-\item For convenience, let the spectrum of $A$ be $\{\mu_1,\ldots, \mu_n\}$, where some of the eigenvalues might be the same, and $\{u_1, \ldots, u_n\}$ the corresponding eigenbasis.  Let $Q$ be the matrix whose columns are $u_1,\ldots, u_n$ and $D$ the diagonal matrix whose diagonal entries are $\mu_1, \ldots, \mu_n$.  Thus, $D = Q^{-1}AQ$ and the system of differential equations $\dot{x} = A x$ is equivalent to $\dot{y} = D y$, where $x = Qy$.  Since the general solution of $\dot{y} = D y$ is $y = (c_1e^{\mu_it}, \ldots, c_ne^{\mu_nt})$ for some constants $c_1, \ldots, c_n$.  We know $x = Qy$ and can be written as  
+\item For convenience, let the spectrum of $A$ be $\{\mu_1,\ldots, \mu_n\}$, where some of the eigenvalues might be the same, and $\{u_1, \ldots, u_n\}$ the corresponding eigenbasis.  Let $Q$ be the matrix whose columns are $u_1,\ldots, u_n$ and $D$ the diagonal matrix whose diagonal entries are $\mu_1, \ldots, \mu_n$.  Thus, $D = Q^{-1}AQ$ and the system of differential equations $\dot{x} = A x$ is equivalent to $\dot{y} = D y$, where $x = Qy$.  Since the general solution of $\dot{y} = D y$ is $y = (c_1e^{\mu_1t}, \ldots, c_ne^{\mu_nt})$ for some constants $c_1, \ldots, c_n$.  We know $x = Qy$ and can be written as  
 \[
     x(t) = e^{\mu_1t}c_1u_1 + e^{\mu_2t}c_2u_2 + \cdots + e^{\mu_nt}c_nu_n.
 \]
