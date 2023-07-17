@@ -42,12 +42,12 @@ If $x\in N(T)$ we have $T(x)=0$ and so $x=(I-T)(x)\in R(I-T)$. So the second equ
 \item Since $T$ is an orthogonal projection, we may write $V=R(T)\oplus R(T)\pp$. So for each $x\in V$ we could write $x=u+v$ such that $u\in R(T)$ and $v\in R(T)\pp$. So we have 
 \[\|T(u+v)\|=\|u\|\leq \|u+v\|=\|x\|.\]
 
-The example for which the in which the inequality does not hold is $T(a,b)=(a+b,0)$, since we have 
+The example in which the inequality does not hold is $T(a,b)=(a+b,0)$, since we have 
 \[\|T(1,1)\|=\|(2,0)\|=2> \|(1,1)\|=\sqrt{2}.\]
 
 Finally, if the equality holds for all $x\in V$, then we have $\|u\|=\|u+v\|$. Since $u$ and $v$ are orthogonal, we have 
 \[\|u+v\|^2=\|u\|^2+\|v\|^2.\]
-So the equality holds only when $v=0$. This means that $x$ is always an element in $R(T)$ and so $R(T)=V$. More precisely, $T$ is the idenetity mapping on $V$.
+So the equality holds only when $v=0$. This means that $x$ is always an element in $R(T)$ and so $R(T)=V$. More precisely, $T$ is the identity mapping on $V$.
 \item If $T$ is a projection on $W$ along $W'$, we have $V=W\oplus W'$. So every vector $x\in V$ could be written as $x=u+v$ such that $u\in W$ and $v\in W'$. If $W'\neq W\pp$, we may find some $u\in W$ and $v\in W'$ such that they are not orthogonal. So $\lag u,v\rag $ is not zero. We may pick $t=\frac{2\|v\|^2}{2 \Re \lag u,v\rag}$ and calculate that 
 \[\|T(tu+v)\|^2=\|tu\|^2.\]
 But now we have 
@@ -64,8 +64,8 @@ since $T^*(x)=0$ by Theorem 6.15(c). Hence now we know that $R(T)\pp=N(T)$ and $
 \item It comes from Theorem 6.25(c).
 \item If 
 \[T_0=T^n=\sum_{i=1}^k{\lambda_i^nT_i}.\]
-Now pick arbitrary eigenvector $v_i$ for the eigenvalue $\lambda_i$. Then we have 
-\[0=T(v_i)=(\sum_{i=1}^k{\lambda_i^nT_i})(v_i)=\lambda_i^nv_i.\] 
+Now pick an arbitrary eigenvector $v_i$ for the eigenvalue $\lambda_i$. Then we have 
+\[0 = T^n(v_i) = \lambda_i^nv_i.\] 
 This means that $\lambda_i^n=0$ and so $\lambda_i=0$ for all $i$. Hence we know that 
 \[T=\sum_{i=1}^k{\lambda_iT_i}=T_0.\]
 \item By the Corollary 4 after the Spectral Theorem, we know that $T_i=g_i(T)$ for some polynomial $g_i$. This means that $U$ commutes with each $T_i$ if $U$ commutes with $T$. Conversely, if $U$ commutes with each $T_i$, we have 
@@ -75,7 +75,13 @@ This means that $\lambda_i^n=0$ and so $\lambda_i=0$ for all $i$. Hence we know 
 \[U=\sum_{i=1}^k{\lambda_i^{\frac{1}{2}}T_i},\]
 where $\lambda_i^{\frac{1}{2}}$ is an arbitrary square root of $\lambda_i$.
 \item Since $T$ is a mapping from $V$ to $V$, $T$ is invertible if and only if $N(T)=\{0\}$. And $N(T)=\{0\}$ is equivalent to that $0$ is not an eigenvalue of $T$.
-\item If every eigen value of $T$ is $1$ or $0$. Then we have $T=0T_0+1T_1=T_1$, which is a projectoin. Conversely, if $T$ is a projection on $W$ along $W'$, we may write any element in $V$ as $u+v$ such that $u\in W$ and $v\in W'$. And if $\lambda $ is an eigenvalue, we have 
+\item If every eigenvalue of $T$ is $1$ or $0$, then we have $T=0T_0+1T_1=T_1$, which is a projection. Conversely, if $T$ is a projection, then $T^2 = T$.  This means 
+\[
+    T^2 - T = (\lambda_1^2 - 1)T_1 + \cdots + (\lambda_k^2 - 1)T_k = T_0.
+\]
+Therefore, the eigenvalues are either $1$ or $0$.  
+
+Alternatively, if $T$ is a projection on $W$ along $W'$, we may write any element in $V$ as $u+v$ such that $u\in W$ and $v\in W'$. And if $\lambda $ is an eigenvalue, we have 
 \[u=T(u+v)=\lambda(u+v)\]
 and so 
 \[(1-\lambda)u=\lambda v.\]

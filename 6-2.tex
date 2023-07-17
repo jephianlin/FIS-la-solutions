@@ -25,7 +25,7 @@ And then construct
 \[=w_3-\frac{4}{2}v_1-\frac{4}{\frac{3}{2}}v_2=(\frac{1}{3},\frac{1}{3},-\frac{1}{3}).\]
 As the demand in the exercise, we normalize $v_1$, $v_2$, and $v_3$ to be 
 \[u_1=(\frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}}),\]
-\[u_2=(-\frac{1}{\sqrt{6}},\frac{4}{\sqrt{6}},\frac{1}{\sqrt{6}}),\]
+\[u_2=(-\frac{1}{\sqrt{6}},\frac{2}{\sqrt{6}},\frac{1}{\sqrt{6}}),\]
 \[u_3=(\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}}).\]
 Let $\beta =\{u_1,u_2,u_3\}$. Now we have two ways to compute the Fourier coefficients of $x$ relative to $\beta $. One is to solve the system of equations 
 \[a_1u_1+a_2u_2+a_3u_3=x\]
@@ -125,13 +125,13 @@ is because $\sp(S)$ is the smallest subspace containing $S$ and every orthogonal
 Combine these two and get the desired conclusion.
 \end{enumerate}
 \item We prove the first equality first.  If $x\in (W_1+W_2)^{\perp}$, we have $x$ is orthogonal to $u+v$ for all $u\in W_1$ and $v\in W_2$. This means that $x$ is orthogonal to $u=u+0$ for all $u$ and so $x$ is an element in $W_1^{\perp}$. Similarly, $x$ is also an element in $W_2^{\perp}$. So we have 
-\[(W_1+W_2)^{\perp}\subset W_1\pp .\]
+\[(W_1+W_2)^{\perp}\subset W_1^\perp \cap W_2^\perp.\]
 Conversely, if $x\in W_1^{\perp}\cap W_2^{\perp}$, then we have 
 \[\lag x,u\rag =\lag x,v\rag =0\]
 for all $u\in W_1$ and $v\in W_2$. This means 
 \[\lag x,u+v\rag =\lag x,u\rag +\lag x,v\rag =0\]
 for all element $u+v\in W_1+W_2$. And so 
-\[(W_1+W_2)^{\perp}\supset W_1\pp .\]
+\[(W_1+W_2)^{\perp}\supset W_1^\perp \cap W_2^\perp.\]
 
 For the second equality, we have ,by Exercise 6.2.13(c), 
 \[(W_1\cap W_2)\pp =((W_1\pp)\pp\cap (W_2\pp )\pp )\pp \]
@@ -173,9 +173,9 @@ since $f$ is a even function. This means that $f=0$ and $h=g$, an element in $W_
 \item Pick $\{\frac{1}{\sqrt{10}}(-3,1,0),\frac{1}{\sqrt{5}}(2,1,0)\}$ as a basis for $W$. Thus the orthogonal projection of $u$ is 
 \[\lag u,\frac{1}{\sqrt{10}}(-3,1,0)\rag \frac{1}{\sqrt{10}}(-3,1,0)+\lag,\frac{1}{\sqrt{35}}(1,3,5)\rag \frac{1}{\sqrt{35}}(1,3,5)\]
 \[=-\frac{1}{2}(-3,1,0)+\frac{4}{7}(1,3,5)=\frac{1}{14}(29,17,40).\]
-\item Pick $\{1,\frac{1}{\sqrt{3}}(2x-1)\}$ as a basis for $W$. Thus the orthogonal projection of $h$ is 
-\[\lag h,1\rag 1+\lag h,\frac{1}{\sqrt{3}}(2x-1)\rag \frac{1}{\sqrt{3}}(2x-1)\]
-\[=\frac{29}{6}+\frac{1}{18}(2x-1)=\frac{1}{9}(x+43).\]
+\item Note that $\{1, x\}$ is not orthogonal under the given inner product.  Let $f = 1$ and $g = -\frac{1}{2} + x$.  Then we have $\lag f,g\rag = 0$, $\|f\|^2 = 1$, and $\|g\| = \frac{1}{12}$.  Therefore, the orthogonal projection of $h$ is 
+\[\frac{\lag h,f\rag}{\|f\|^2} \cdot f + \frac{\lag h,g\rag}{\|g\|^2} \cdot g\]
+\[=\frac{29/6}{1}\cdot 1 + \frac{1/12}{1/12}\cdot(-0.5 + x) = \frac{13}{3} + x.\]
 \end{enumerate}
 \item If $v$ is the orthogonal projection of $u$, then the distance of $u$ is the length of $u-v$.
 \begin{enumerate}
@@ -184,7 +184,7 @@ since $f$ is a even function. This means that $f=0$ and $h=g$, an element in $W_
 \item The distance is 
 \[\|(2,1,3)-\frac{1}{14}(29,17,40)\|=\frac{1}{\sqrt{14}}.\]
 \item The distance is 
-\[\|(-2x^2+3x+4)-\frac{1}{9}(x+1)\|=\sqrt{\frac{30527}{1215}}.\]
+\[\|(-2x^2+3x+4) - (x + \frac{13}{3})\|=\sqrt{\frac{1}{45}}.\]
 \end{enumerate}
 \item Do this with the same method as that in Exercise 6.2.19. Let $\{u_1,u_2,u_3\}$ be the orthonormal basis given by Example 5 of this section. Then the closest second-degree polynomial approximation is the orthogonal projection 
 \[\lag e^t,u_1\rag u_1+\lag e^t,u_2\rag u_2+\lag e^t,u_3\rag u_3\]

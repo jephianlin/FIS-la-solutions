@@ -23,6 +23,7 @@ we get that $[T]_{\beta}=\begin{pmatrix}1&1\\0&-1\end{pmatrix}$ is not orthogona
 \end{enumerate}
 \item If $T$ and $U$ are unitary [orthogonal] operators, then we have 
 \[\|TU(x)\|=\|U(x)\|=\|x\|.\]
+Since the composition of surjective operators is still surjective, we have the desired result.
 \item Pick the standard basis $\beta $ and compute the matrix representation $[T_x]_{\beta}=\begin{pmatrix}z\end{pmatrix}$. This means that $T_z^*=T_{\overline{z}}$. So it always would be normal. However, it would be self-adjoint only when $z$ is real. And it would be unitary only when $|z|=1$.
 \item For these problem, try to diagonalize the matrix which is not diagonalized yes. And check whether it can be diagonalized by an orthonormal basis.
 \begin{enumerate}
@@ -36,16 +37,22 @@ we get that $[T]_{\beta}=\begin{pmatrix}1&1\\0&-1\end{pmatrix}$ is not orthogona
 \item If $T$ is unitary, we must have 
 \[0=\|T(f)\|^2-\|f\|^2=\int_0^1{|h|^2|f|^2dt}-\int_0^1{|f|^2dt}\]
 \[=\int_0^1{(1-|h|^2)|f|^2dt}\]
-for all $f\in V$. Pick $f=(1-|h|^2)^{\frac{1}{2}}$ and get $1-|h|^2=0$ and so $|h|=1$. Conversely, if $|h|=1$, we have 
+Since $h$ and $|h|$ are continuouse, if $(1 - |h|^2)$ is not identical to zero, then there must be a subinterval $[a,b]$ of $[0,1]$ where $(1 - |h|^2)$ has absolute value at least $\epsilon$.  By choosing $f$ as a continuous function that is very close to the characteristic function  
+\[
+    1_{[a,b]}(t) = \begin{cases} 1 & \text{ if } t \in [a,b], \\ 
+                               0 & \text{ otherwise}.
+                 \end{cases}
+\]
+Thus, we have $\|T(f)\|^2-\|f\|^2 \neq 0$, a contradiction.  Therefore, $|h|=1$.  Conversely, if $|h|=1$, we have 
 \[\|T(f)\|^2-\|f\|^2=\int_0^1{|h|^2|f|^2dt}-\int_0^1{|f|^2dt}\]
-\[=\int_0^1{(1-|h|^2)|f|^2dt}=0\]
-and so $T$ is unitary.
+\[=\int_0^1{(1-|h|^2)|f|^2dt} = 0.\]
+Since $|h(t)| = 1$, we have $h(t)^{-1} = \overline{h(t)}$.  Thus, $T$ is invertible with $T^{-1}(f) = \overline{h}f$, and so $T$ is unitary.
 \item By the Corollary 2 after Theorem 6.18, we may find an orthonormal basis $\beta $ such that 
 \[[T]_{\beta}=\begin{pmatrix}\lambda_1&0&\cdots &0\\0&\lambda_2& &\vdots\\ \vdots &&\ddots &0\\0&\cdots &0&\lambda_n\end{pmatrix}.\]
 Also, since the eigenvalue $\lambda_i$ has its absolute value $1$, we may find some number $\mu_i$ such that $\mu_i^2=\lambda_i$ and $|\mu_i|=1$. Denote 
 \[D=\begin{pmatrix}\mu_1&0&\cdots &0\\0&\mu_2& &\vdots\\ \vdots &&\ddots &0\\0&\cdots &0&\mu_n\end{pmatrix}\]
 to be an unitary operator. Now pick $U$ to be the matrix whose matrix representation with respect to $\beta $ is $D$. Thus $U$ is unitary and $U^2=T$.
-\item Exercise 6.4.10 says that $((T-iI)^{-1})*=T+iI$. So check that 
+\item Exercise 6.4.10 says that $((T-iI)^{-1})^* = (T+iI)^{-1}$. So check that 
 \[[(T+iI)(T-iI)^{-1}]^*(T+iI)(T-iI)^{-1}\]
 \[=((T-iI)^{-1})^*(T+iI)^*(T+iI)(T-iI)^{-1}\]
 \[=(T+iI)^{-1}(T-iI)(T+iI)(T-iI)^{-1}\]
@@ -55,14 +62,14 @@ Use Exercise 2.4.10 we get that the operator is unitary.
 \[\|U(1,0)\|=\|U(0,1)\|=1=\|(1,0)\|=\|(0,1)\|.\]
 But it is not unitary since 
 \[\|U(1,1)\|=1\neq \|(1,1)\|=\sqrt{2}.\]
-\item Exercise 2.5.10 says that $\tr(A)=\tr(B)$ is $A$ is similar to $B$. And we know that $A$ may be diagonalized as $P^*AP=D$ by Theorem 6.19 and Theorem 6.20. Here $D$ is a diagonal matrix whose diagonal entries consist of all eigenvalues. This means 
+\item Exercise 2.5.10 says that $\tr(A)=\tr(B)$ if $A$ is similar to $B$. And we know that $A$ may be diagonalized as $P^*AP=D$ by Theorem 6.19 and Theorem 6.20. Here $D$ is a diagonal matrix whose diagonal entries consist of all eigenvalues. This means 
 \[\tr(A)=\tr(D)=\sum_{i=1}^n{\lambda_i}\]
 and 
 \[\tr(A^*A)=\tr((PDP^*)^*(PDP^*))\]
 \[=\tr(PD^*DP^*)=\tr(D^*D)=\sum_{i=1}^n{|\lambda_i|^2}.\]
 \item Extend $\{(\frac{1}{3},\frac{2}{3},\frac{2}{3})\}$ to be a basis and do the Gram-Schmidt process to get an orthonormal basis. The extended basis could be 
 \[\{(\frac{1}{3},\frac{2}{3},\frac{2}{3}),(0,1,0),(0,0,1)\}\]
-and the othonormal basis would be 
+and the orthonormal basis would be 
 \[\{(\frac{1}{3},\frac{2}{3},\frac{2}{3}),(-\frac{2}{3\sqrt{5}},\frac{5}{3\sqrt{5}},-\frac{{2}^{2}}{3\sqrt{5}}),(-\frac{2}{\sqrt{5}},0,\frac{1}{\sqrt{5}})\}.\]
 So the matrix could be 
 \[\begin{pmatrix}\frac{1}{3}&\frac{2}{3}&\frac{2}{3}\\-\frac{2}{3\sqrt{5}}&\frac{5}{3\sqrt{5}}&-\frac{{2}^{2}}{3\sqrt{5}}\\-\frac{2}{\sqrt{5}}&0&\frac{1}{\sqrt{5}}\end{pmatrix}.\]
@@ -71,33 +78,33 @@ So the matrix could be
 \item The necessity is false. For example, the two matrices $\begin{pmatrix}1&-1\\0&0\end{pmatrix}$ and 
 \[\begin{pmatrix}1&0\\0&0\end{pmatrix}=\begin{pmatrix}1&1\\0&1\end{pmatrix}^{-1}\begin{pmatrix}1&-1\\0&0\end{pmatrix}\begin{pmatrix}1&1\\0&1\end{pmatrix}\]
 are similar. But they are not unitary since one is symmetric but the other is not.
-\item We may write $A=P^*BP$. Compute 
+\item We may write $A=P^*BP$ and $B = PAP^*$.  It is easy to see that $A$ is self-adjoint if and only if $B$ is self-adjoint.  Compute 
 \[\lag L_A(x),x\rag =\lag L_{P^*BP}(x),x\rag \]
 \[=\lag L_{P}^*L_BL_P(x),x\rag =\lag L_B(L_P(x)),L_P(x)\rag .\]
 If $A$ is positive definite, for each vector $y$ we may find some $x$ such that $L_P(x)=y$ since $P$ is invertible. Also, we have 
 \[\lag L_B(y),y\rag =\lag L_B(L_P(x)),L_P(x)\rag =\lag L_A(x),x\rag >0.\]
 If $B$ is positive definite, we may check that 
-\[\lag L_A(x),x\rag \lag L_B(L_P(x)),L_P(x)\rag >0.\]
+\[\lag L_A(x),x\rag = \lag L_B(L_P(x)),L_P(x)\rag >0.\]
 \item \begin{enumerate}
 \item We have 
 \[\|U_W(x)\|=\|U(x)\|=\|x\|\]
 and so $U_W$ is an unitary operator on $W$. Also, the equality above implies that $U_W$ is injection. Since $W$ is finite-dimensional, we get that $U_W$ is surjective and $U(W)=W$.
-\item For each elment $w\in W$ we have $U(y)=w$ for some $y\in W$ by the previous argument. Now let $x$ be an element in $W\pp$. We have $U(x)=w_1+w_2$ for some $w_1\in W$ and $w_2\in W\pp$ by Exercise 6.2.6. Since $U$ is unitary, we have some equalities 
-\[\|y\|^2=\|w\|^2,\]
+\item For each element $w_1\in W$ we have $U(y)=w_1$ for some $y\in W$ by the previous argument. Now let $x$ be an element in $W\pp$. We have $U(x)=w_1+w_2$ for some $w_1\in W$ and $w_2\in W\pp$ by Exercise 6.2.6. Since $U$ is unitary, we have some equalities 
+\[\|y\|^2=\|w_1\|^2,\]
 \[\|x\|^2=\|w_1+w_2\|^2=\|w_1\|^2+\|w_2\|^2\]
 by Exercise 6.1.10. However, we also have that $U(x+y)=2w_1+w_2$. So we have that 
 \[0=\|x+y\|^2-\|2w_1+w_2\|^2\]
 \[=\|x\|^2+\|y\|^2-4\|w_1\|^2-\|w_2\|^2=-2\|w_1\|^2.\]
 This means that $w_1=0$ and so $U(x)=w_2\in W\pp$.
 \end{enumerate}
-\item This example show the finiteness in the previous exercise is important. Let $V$ be the space of sequence defined in Exercise 6.2.23. Also use the notation $e_i$ in the same exercise. Now we define a unitary operator $U$ by 
-\[\left\{\begin{array}{llll}U(e_{2i+1})=e_{2i-1}&\mathrm{if} &i> &;\\U(e_1)=e_2&&&;\\U(e_{2i})=U(e_{2i+2})&\mathrm{if}&i>0&.\end{array}\right.\]
+\item This example shows the finiteness in the previous exercise is important. Let $V$ be the space of sequence defined in Exercise 6.2.23. Also use the notation $e_i$ in the same exercise. Now we define a unitary operator $U$ by 
+\[\left\{\begin{array}{llll}U(e_{2i+1})=e_{2i-1}&\mathrm{if} &i>0 &;\\U(e_1)=e_2&&&;\\U(e_{2i})=e_{2i+2}&\mathrm{if}&i>0&.\end{array}\right.\]
 It can be check that $\|U(x)\|=\|x\|$ and $U$ is surjective. So $U$ is an unitary operator. We denote $W$ to be the subspace 
 \[\sp\{e_2,e_4,e_6, \ldots\}\]
 and so we have 
 \[W\pp=\{e_1,e_3,e_5,\ldots \}.\]
 Now, $W$ is a $U$-invariant subspace by definition. However, we have $e_2\notin U(W)$ and $W\pp$ is not $U$-invariant since $U(e_1)=e_2\notin W\pp$.
-\item Let $A$ be an unitary and upper triangular matrix. For arbitrary indices $i$ and $j$ such that $i> j$. We have $A_{ij}=0$ since $A$ is upper triangular. But we also have that $A_{ji}=\overline{A_{ij}}=0$. So $A$ is a diagonal matrix.
+\item Let $A$ be an unitary and upper triangular matrix. For arbitrary indices $i$ and $j$ such that $i> j$. We have $A_{ij}=0$ since $A$ is upper triangular.  On the other hand, since $A$ is unitary, the norm of each column or each row of $A$ is $1$.  Since the first column of $A$ only has one nonzero entry $A_{11}$, we have $|A_{11}| = 1$ and the rest of entries on the first row are zero.  Following the similar argument, we have $|A_{22}| = 1$ and the rest of entries on the second row are zero, and so on.  Therefore, $A$ is a diagonal matrix.
 \item Write $A\sim B$ to say that $A$ is unitarily equivalent to $B$. Check the three conditions in the Appendix A. \begin{description}
 \item[reflexivity] Since $A=I^*AI$, we get $A\sim A$.
 \item[symmetry]  If $A\sim B$, we have $B=P^*AP$ and so $A=PBP^*=(P^*)^*BP^*$. This means that $B\sim A$.
@@ -108,6 +115,13 @@ and so $A\sim C$.
 \item By Exercise 6.1.10 we have 
 \[\|U(v_1+v_2)\|^2=\|v_1-v_2\|^2\]
 \[=\|v_1\|^2+\|v_2\|^2=\|v_1+v_2\|^2.\]
+To check that $U$ is self-adjoint, for any $v_1,u_1\in W$ and $v_2,u_2\in W^\perp$ verify  
+\[\begin{aligned}
+    \lag v_1 + v_2, U(u_1 + u_2)\rag &= \lag v_1 + v_2, u_1 - u_2\rag \\
+     &= \lag v_1, u_1\rag - \lag v_2, u_2\rag \\
+     &= \lag v_1 - v_2, u_1 + u_2\rag = \lag U(v_1 + v_2), u_1 + u_2\rag. \\
+\end{aligned}\]
+On the other hand, $U$ is a bijection since $UU$ is the identity map.
 \item \begin{enumerate}
 \item If it's a complex inner product space, we have 
 \[\lag U(x),U(y)\rag =\sum_{k=1}^4{i^k\|U(x)+iU(y)\|^2}\]
@@ -126,21 +140,33 @@ and
 \[1=\lag U(v_s),U(v_s)\rag =\lag \sum_{i=1}^n{U_{is}v_i},\sum_{i=1}^n{U_{is}v_i}\rag \]
 \[=\sum_{i=1}^n{U_{is}\overline{U_{is}}}= (Ae_s)^*Ae_s .\]
 \item Since $V$ is finite-dimensional inner product space, we have $R(U)\pp\oplus R(U)=V$. And so by Exercise 6.5.20(b) we get the desired result.
-\item First, $T$ is well-defined since the set $\beta$ defined in the previous question is a basis. To show that $T=U^*$, it's sufficient to check that 
-\[\lag U(x),y\rag =\lag x,T(y)\rag \]
-for all $x$ and $y$ in $\beta$ by Exercise 6.1.9. We partition $\beta $ into two parts $X$ and $Y$, who consist of all $U(v_i)$'s and $w_i$'s. 
-\begin{itemize}
-\item If $x=U(v_i),y=U(v_j)\in X$, we have 
-\[\lag U(v_i),T(U(v_j))\rag=\lag U(v_i),v_j\rag =\lag U^2(v_i),U(v_j)\rag \]
-by Exercise 6.5.20(a).
-\item If $x=U(v_i)\in X$ and $y=w_j\in Y$, we have 
-\[\lag U(v_i),T(w_j)\rag =\lag U(v_i),0\rag \]
-\[=0=\lag U^2(v_i),w_j\rag .\]
-\item If $x=w_i\in X$ and $y=U(v_j)\in Y$, we have 
-\[\lag w_i,T(U(v_j))\rag =\lag w_i,v_j\rag =U(w_i),U(v_j)\rag .\]
-\item If $x=w_i, y=w_j\in Y$, we have 
-\[\lag w_i,T(w_j)\rag =\lag w_i,0\rag =0=\lag U(w_i),w_j\rag .\]
-\end{itemize}
+\item Though not very sure, but I somehow believe the hint could be misleading.  Maybe we need to show  
+\[
+    \lag U(x), y\rag = \lag x, T(y)\rag
+\]
+for all $x\in\gamma$ and $y\in\beta$ instead.  
+
+Nonetheless, we will use another approach.  First, $T$ is well-defined since the set $\beta$ defined in the previous question is a basis. To show that $T=U^*$, it's sufficient to check that $[T]_\gamma = [U]_\gamma^*$ since $\gamma$ is orthonormal.  By our choice of $\gamma$ in Exercise~6.5.20(c), the first $k$ columns of $[U]_\gamma$ are $[U(v_1)]_\gamma, \ldots, [U(v_k)]_\gamma$, and the remaining columns are zeros.  Now let's verify  
+\[\begin{aligned}
+    [U]_\gamma^*[U(v_i)]_\gamma &= e_i = [v_i]_\gamma \\
+    [U]_\gamma^*[w_i]_\gamma &= 0.
+\end{aligned}\]
+Here the first line is because $\{U(v_1), \ldots, U(v_k)\}$ is orthonormal by Exercise~6.5.20(d), while the second line is because $w_i$ is orthogonal to any of $\{U(v_1), \ldots, U(v_k)\}$.  Thus, $[U]_\gamma^*$ is the matrix representation of $T$ with respect to $\gamma$.  
+%% First, $T$ is well-defined since the set $\beta$ defined in the previous question is a basis. To show that $T=U^*$, it's sufficient to check that 
+%% \[\lag U(x),y\rag =\lag x,T(y)\rag \]
+%% for all $x$ and $y$ in $\beta$ by Exercise 6.1.9. We partition $\beta $ into two parts $X$ and $Y$, who consist of all $U(v_i)$'s and $w_i$'s. 
+%% \begin{itemize}
+%% \item If $x=U(v_i),y=U(v_j)\in X$, we have 
+%% \[\lag U(v_i),T(U(v_j))\rag=\lag U(v_i),v_j\rag =\lag U^2(v_i),U(v_j)\rag \]
+%% by Exercise 6.5.20(a).
+%% \item If $x=U(v_i)\in X$ and $y=w_j\in Y$, we have 
+%% \[\lag U(v_i),T(w_j)\rag =\lag U(v_i),0\rag \]
+%% \[=0=\lag U^2(v_i),w_j\rag .\]
+%% \item If $x=w_i\in X$ and $y=U(v_j)\in Y$, we have 
+%% \[\lag w_i,T(U(v_j))\rag =\lag w_i,v_j\rag = \lag U(w_i),U(v_j)\rag .\]
+%% \item If $x=w_i, y=w_j\in Y$, we have 
+%% \[\lag w_i,T(w_j)\rag =\lag w_i,0\rag =0=\lag U(w_i),w_j\rag .\]
+%% \end{itemize}
 \item Take the subspace $W'$ to be $R(U)$. Thus we have $T((W')\pp)=\{0\}$ by the definition of $T$. Also, we may write an element $x$ in $R(U)$ to be 
 \[x=\sum_{i=1}^k{a_iU(v_i)}.\]
 Since the set of $U(v_i)$'s is orthonormal, we have 
@@ -166,7 +192,9 @@ is not equal to
 \[\|fg(x)-fg(y)\|=\|g(x)-g(y)\|=\|x-y\|.\]
 So the composition of $f$ and $g$ is again a rigid motion.
 \end{enumerate}
-\item We define $T$ to be $T(x)=f(x)-f(0)$. By the proof of Theorem 6.22, we know that $T$ is an unitary operator. Also, by Theorem 6.22 we know $f$ is surjective since it's composition of two invertible functions. Hence we may find some element $t$ such that $f(t)=2f(0)$. Now let $g(x)=x+t$. Since $T$ is linear, we have 
+\item It is a good exercise to do this problem following a similar argument in the proof of Theorem~6.22.  
+
+Here we take a shortcut and prove it by Theorem~6.22.  We define $T$ to be $T(x)=f(x)-f(0)$. By the proof of Theorem 6.22, we know that $T$ is an unitary operator. Also, by Theorem 6.22 we know $f$ is surjective since it's composition of two invertible functions. Hence we may find some element $t$ such that $f(t)=2f(0)$. Now let $g(x)=x+t$. Since $T$ is linear, we have 
 \[T\circ g(x)=T(x+t)=T(x)+T(t)\]
 \[=f(x)-f(0)+f(t)-f(0)=f(x).\]
 Finally, if $f(x)=T(x+t)=U(x+v_0)$ for some unitary operator $U$ and some element $v_0$. We'll have 
@@ -268,7 +296,7 @@ The value would be zero if and only if $x$ is orthogonal to $u$ since $u$ is not
 \item Compute 
 \[H_u(u)=u-2\lag u,u\rag u=u-2u=-u.\]
 \item We check $H_u^*=H_u$ by computing 
-\[\lag x,H_u^*(y)\rag =\lag H_u(x),y\rag =\lag x-2\lag x,u\rag u\rag \]
+\[\lag x,H_u^*(y)\rag =\lag H_u(x),y\rag =\lag x-2\lag x,u\rag u,y\rag \]
 \[=\lag x,y\rag -2\lag x,u\rag \cdot \lag y,u\rag \]
 and 
 \[\lag x,H_u(y)\rag =\lag x,y-2\lag y,u\rag u\rag\]
@@ -280,11 +308,11 @@ Also, compute
 Combining $H_u=H_u^*$ and $H_u^2=I$, we have $H_uH_u^*=H_u^*H_u=I$ and so $H_u$ is unitary.
 \end{enumerate}
 \item \begin{enumerate}
-\item We pick $\theta $ to be the value $\lag x,y\rag$. Thus we have 
-\[\overline{\lag x,\theta y\rag }=\overline{\lag x,\lag x,y\rag y\rag }\]
-\[=\overline{\lag y,x\rag\lag x,y\rag }=\lag x,y\rag \lag y,x\rag \]
-\[=\lag x,\lag x,y\rag y\rag =\lag x,\theta y\rag \]
-and so the value is real. Now pick $u$ to be the normalized vector $\frac{x-\theta y}{\|x-\theta y\|}$. And compute 
+\item Observe that  
+\[
+    \lag x, \theta y\rag = \overline{\theta}\lag x,y \rag.
+\]
+Therefore, when $\theta = \frac{\lag x,y\rag}{|\lag x,y\rag|}$, we have $\lag x, \theta y\rag$ is real. If $\lag x,y\rag = 0$, simply choose $\theta = 1$ instead.  Now pick $u$ to be the normalized vector $\frac{x-\theta y}{\|x-\theta y\|}$. And compute 
 \[H_u(x)=x-2\lag x,u\rag u=x-2\lag x,\frac{x-\theta y}{\|x-\theta y\|}\rag \frac{x-\theta y}{\|x-\theta y\|}\]
 \[=x-\frac{2}{\|x-\theta y\|^2}\lag x,x-\theta y\rag (x-\theta y)\]
 \[=x-\frac{2\|x\|^2-2\lag x,\theta y\rag }{\|x-\theta y\|^2}(x-\theta y)\]

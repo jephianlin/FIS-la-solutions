@@ -383,6 +383,10 @@ is a pure imaginary number.
 \[0=[x+iy,i(x+iy)]=[x+iy,ix-y]=[ix,iy]-[x,y].\]
 So we have an instant property 
 \[[x,y]=[ix,iy].\]
+Moreover, we also have
+\[
+    [ix, y] = [-x, iy] = -[x, iy].
+\]
 Now check the conditions one by one. \begin{itemize}
 \item \[\lag x+z,y\rag =[x+z,y]+i[x+z,iy]\]
 \[=[x,y]+[z,y]+i[x,iy]+i[z,iy]=\lag x,y\rag +\lag z,y\rag .\]
@@ -390,15 +394,20 @@ Now check the conditions one by one. \begin{itemize}
 \[=[ax,y]+[bix,y]+i[ax,iy]+i[bix,iy]\]
 \[=a([x,y]+i[x,iy])+bi([ix,iy]-i[ix,y])\]
 \[=a\lag x,y\rag +bi([x,y]+i[x,iy])=(a+bi)\lag x,y\rag .\]
-Here we use the proven property.
+Here we use the proven properties.
 \item \[\overline{\lag x,y\rag}=[x,y]-i[x,iy]\]
-\[=[y,x]+i[y,ix]=\lag x,y\rag .\]
-Here we use the proven property again.
+\[=[y,x]+i[y,ix]=\lag y,x\rag .\]
+Here we use the proven properties again.
 \item \[\lag x,x\rag =[x,x]+i[x,ix]=[x,x]>0\]
 if $x$ is not zero.
 \end{itemize}
-\item First we may observe that the condition for norm on real vector space is loosen than that on complex vector space. So naturally the function $\|\cdot \|$ is still a norm when we regard $V$ as a vector space over $\R$. By Exercise 6.1.27, we've already defined a real inner product $[\cdot ,\cdot ]$ on it since the parallelogram law also holds on it. And we also have 
-\[[x,ix]=\frac{1}{4}[\|x+ix\|^2-\|x-ix\|^2]=\]
-\[=\frac{1}{4}[\|x+ix\|^2-\|(-i)(x+ix)\|^2]=\frac{1}{4}[\|x+ix\|^2-|-i|\|(x+ix)\|^2]=0.\]
-So by Exercise 6.1.29 we get the desired conclusion.
+\item First we may observe that the condition for norm on real vector space is loosen than that on complex vector space. So naturally the function $\|\cdot \|$ is still a norm when we regard $V$ as a vector space over $\R$. By Exercise 6.1.27, we've already defined a real inner product $[\cdot ,\cdot ]$ on it since the parallelogram law also holds on it.  Since $\|\cdot\|$ is a norm over $\mathbb{C}$, we have
+\[
+    \|x - ix\| = |-i|\|ix + x\| = \|ix + x\|.
+\]
+Therefore,
+\[
+    [x,ix] = \frac{1}{4}[\|x+ix\|^2-\|x-ix\|^2] = 0.
+\]
+By Exercise 6.1.29 we get the desired conclusion.
 \end{enumerate}

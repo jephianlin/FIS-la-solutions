@@ -81,7 +81,7 @@ by the previous argument. This means that
 \[\|T(x)\pm ix\|^2=\lag T(x)\pm ix,T(x)\pm ix\rag =\]
 \[=\|T(x)\|^2\pm \lag T(x),ix\rag \pm \lag ix,T(x)\rag +\|x\|^2\]
 \[=\|T(x)\|^2\mp i\lag T(x),x\rag \pm \lag T^*(x),x\rag +\|x\|^2=\|T(x)\|^2+\|x\|^2.\]
-Also, $T\pm iI$ is injective since $\|T(x)\pm x\|=0$ if and only if $T(x)=0$ and $x=0$. Now $T-iI$ is invertible by the fact that $V$ is finite-dimensional. Finally we may calculate that 
+Also, $T\pm iI$ is injective since $\|T(x)\pm ix\|=0$ if and only if $T(x)=0$ and $x=0$. Now $T-iI$ is invertible by the fact that $V$ is finite-dimensional. Finally we may calculate that 
 \[\lag x,[(T-iI)^{-1}]^*(T+iI)(y)\rag =\lag (T-iI)^{-1}(x),(T+iI)(y)\rag \]
 \[=\lag (T-iI)^{-1}(x),(T^*+iI)(y)\rag =\lag (T-iI)^{-1}(x),(T-iI)^*(y)\rag \]
 \[=\lag (T-iI)(T-iI)^{-1}(x),y\rag =\lag x,y\rag \]
@@ -109,7 +109,7 @@ This means that
 \[\lag (T-T^*)(x),x\rag =0\]
 for all $x$. By the previous argument we get the desired conclusion $T=T^*$.
 \end{enumerate}
-\item Since the \charpoly{} splits, we may apply Schur's Theorem and get an orthonormal basis $\beta $ such that $[T]_{\beta}$ is upper triangular. Denote the basis by 
+\item This problem emphasizes that Theorem~6.16 also works for the field of real numbers as long as the characteristic polynomial splits.  All we need to do is to repeat the same argument and check if it is still valid in the new setting.  Since the \charpoly{} splits, we may apply Schur's Theorem and get an orthonormal basis $\beta $ such that $[T]_{\beta}$ is upper triangular. Denote the basis by 
 \[\beta =\{v_1,v_2,\ldots ,v_n\}.\]
 We already know that $v_1$ is an eigenvector. Pick $t$ to be the maximum integer such that $v_1,v_2,\ldots ,v_t$ are all eigenvectors with respect to eigenvalues $\lambda _i$. If $t=n$ then we've done. If not, we will find some contradiction. We say that $[T]_{\beta}=\{A_{i,j}\}$. Thus we know that 
 \[T(v_{t+1})=\sum_{i=1}^{t+1}{A_{i,t+1}v_i}.\]
@@ -203,8 +203,8 @@ So we have $(T^{-1})^*=(T^*)^{-1}=T^{-1}$.
 \item Check the condition one by one. \begin{itemize}
 \item \[\lag x+z,y\rag'=\lag T(x+z),y\rag \]
 \[=\lag T(x),y\rag +\lag T(z),y\rag =\lag x,y\rag'+\lag z,y\rag'.\]
-\item \[\lag cx,y\rag =\lag T(cx),y\rag \]
-\[=c\lag T(x),y\rag =\lag x,y\rag'.\]
+\item \[\lag cx,y\rag' =\lag T(cx),y\rag \]
+\[=c\lag T(x),y\rag = c\lag x,y\rag'.\]
 \item \[\overline{\lag x,y\rag' }=\overline{\lag T(x),y\rag }\]
 \[=\lag y,T(x)\rag =\lag T(y),x\rag =\lag y,x\rag'.\]
 \item \[\lag x,x\rag'=\lag T(x),x\rag >0\]
@@ -219,15 +219,15 @@ for all $x$ and $y$. This means that $UT$ is self-adjoint with respect to the ne
 for all $x$ and $y$. By the same argument we get the conclusion.
 \item \begin{enumerate}
 \item For brevity, denote $V_1$ and $V_2$ to be the spaces with inner products $\lag \cdot,\cdot \rag $ and $\lag \cdot,\cdot \rag'$ respectly. Define $f_y(x)=\lag x,y\rag'$ be a function from $V_1$ to $\F$. We have that $f_y(x)$ is linear for $x$ on $V_1$. By Theorem 6.8 we have $f_y(x)=\lag T(x),y\rag $ for some unique vector $T(x)$. To see $T$ is linear, we may check that 
-\[\lag T(x+z),y\rag =\lag x+z,y\rag =\lag x,y\rag+\lag z,y\rag \]
+\[\lag T(x+z),y\rag =\lag x+z,y\rag' =\lag x,y\rag' + \lag z,y\rag' \]
 \[=\lag T(x),y\rag +\lag T(z),y\rag=\lag T(x)+T(z),y\rag \]
 and 
-\[\lag T(cx),y\rag =\lag cx,y\rag =c\lag x,y\rag \]
-\[c\lag T(x),y\rag =\lag cT(x),y\rag \]
+\[\lag T(cx),y\rag = \lag cx,y\rag' = c\lag x,y\rag' \]
+\[c\lag T(x),y\rag = \lag cT(x),y\rag \]
 for all $x$, $y$, and $z$.
 \item First, the operator $T$ is self-adjoint since 
 \[\lag x,T^*(y)\rag =\lag T(x),y\rag =\lag x,y\rag'\]
-\[=\overline{\lag y,x\rag}=\overline{\lag T(y),x\rag }=\lag x,T(y)\rag\]
+\[=\overline{\lag y,x\rag'}=\overline{\lag T(y),x\rag }=\lag x,T(y)\rag\]
 for all $x$ and $y$. Then $T$ is positive definite on $V_1$ since 
 \[\lag T(x),x\rag =\lag x,x\rag'>0\]
 if $x$ is not zero. Now we know that $0$ cannot be an eigenvalue of $T$. So $T$ is invertible. Thus $T^{-1}$ is the unique operator such that 
@@ -245,8 +245,8 @@ for all $x$ and $y$. So we have $U=T_1^{-1}U^*T_1$ and so $T_1U=U^*T_1$. Pick $T
 \[\beta =\{v_1,v_2,\ldots ,v_n\}\]
 and 
 \[\gamma=\{w_1,w_2,\ldots ,w_n\}\]
-be the two described basis. Denote $A$ to be $[T]_{\beta}$. We have 
-\[T(w_1)=T(\frac{v_1}{\|v_1\|})=\frac{A_{11}}{\|v_1\|}T(v_1)=A_{11}T(v_1).\]
+be the two described bases. Denote $A$ to be $[T]_{\beta}$. We have 
+\[T(w_1)=T(\frac{v_1}{\|v_1\|})=\frac{A_{11}}{\|v_1\|}T(v_1)=A_{11}T(w_1).\]
 Let $t$ be the maximum integer such that $T(w_{t})$ is an element in 
 \[\sp\{w_1,w_2,\ldots ,w_{t}\}.\]
 If $t=\dim (V)$, then we've done. If not, we have that 
@@ -254,7 +254,7 @@ If $t=\dim (V)$, then we've done. If not, we have that
 where 
 \[L=\|v_t-\sum_{j=1}^{t}{\lag v_{t+1},w_j\rag w_j}\|.\]
 By the definition of $w_i$'s we may define 
-\[W_i=\sp\{v_1,v_2,\ldots ,v_n\}=\sp\{w_1,w_2,\ldots,w_2\}.\]
+\[W_i=\sp\{v_1,v_2,\ldots ,v_n\}=\sp\{w_1,w_2,\ldots,w_n\}.\]
 Now we have $T(w_t)\in W_t$ since 
 \[T(w_t)=\frac{1}{L}(T(v_t)-\sum_{j=1}^{t-1}{\lag v_t,w_j\rag T(w_j)})\]
 and $T(v_t)\in W_t$ and $T(w_j)\in W_j\subset W_t$ for all $j<t$. This is a contradiction to our choice of $i$. So $[T]_{\gamma}$ is an upper triangular matrix.

@@ -30,9 +30,9 @@ We have
 \[\beta =\{f_2,f_3,f_1\},\]
 \[\gamma =\{\frac{1}{\sqrt{5}}(2f_2+f_3),\frac{1}{\sqrt{5}}(2f_3-f_2),f_1\},\]
 and the singular values are $\sqrt{5},\sqrt{5},\sqrt{4}$.
-\item Pick $\alpha $ to be he standard basis. We have  
+\item Pick $\alpha $ to be the standard basis. We have  
 \[\beta =\{\frac{1}{\sqrt{3}}(1,i+1),\sqrt{\frac{2}{3}}(1,-\frac{i+1}{2})\},\]
-\[\gamma =\{\frac{1}{\sqrt{3}}(1,i+1),\sqrt{\frac{2}{3}}(1,-\frac{i+1}{2})\},\]
+\[\gamma =\{\frac{1}{\sqrt{3}}(1,i+1),\sqrt{\frac{2}{3}}(-1,\frac{i+1}{2})\},\]
 and the singular values are $2,1$.
 \end{enumerate}
 \item Do the same to $L_A$ as that in Exercise 6.7.2. But the $\alpha $ here must be the standard basis. And the matrix consisting of column vectors $\beta $ and $\gamma $ is $V$ and $U$ respectly. \begin{enumerate}
@@ -70,7 +70,7 @@ So we know that
 \item 
 \[T\da(a+b\sin x+c\cos x)=\frac{a}{2}+\frac{(2b+c)\sin x+(-b+2c)\cos x}{5}.\]
 \item 
-\[T\da(z_1,z_2)=\frac{1}{2}(-z_1+(1-i)z_2,(1+i)z_2).\]
+\[T\da(z_1,z_2)=\frac{1}{2}(-z_1+(1-i)z_2,(1+i)z_1).\]
 \end{enumerate}
 \item Use Theorem 6.29. So we compute $A\da=V\Sigma \da U^*$.
 \begin{enumerate}
@@ -175,34 +175,36 @@ Finally we have
 \item Let $A=\begin{pmatrix}1&1\\0&0\end{pmatrix}$ and $B=\begin{pmatrix}1&0\\0&0\end{pmatrix}$. By the previous argument, we have $A\da=\begin{pmatrix}\frac{1}{2}&0\\\frac{1}{2}&0\end{pmatrix}$ and $B\da =B$. Also, we have $AB=B$ and so $(AB)\da=B\da=B$.
 \end{enumerate}
 \item \begin{enumerate}
-\item Observe that if $A=U\Sigma V^*$ is a singular value decomposition of $A$, then $GA=(GU)\Sigma V^*$ is a single value decomposition of $GA$. So we have 
+\item Observe that if $A=U\Sigma V^*$ is a singular value decomposition of $A$, then $GA=(GU)\Sigma V^*$ is a singular value decomposition of $GA$. So we have 
 \[(GA)\da =V\Sigma \da (GU)^*=A\da G^*.\]
-\item Observe that if $A=U\Sigma V^*$ is a singular value decomposition of $A$, then $AH=U\Sigma V^*H^{**}=U\Sigma (H^*V)^*$ is a single value decomposition of $AH$. So we have 
+\item Observe that if $A=U\Sigma V^*$ is a singular value decomposition of $A$, then $AH=U\Sigma V^*H^{**}=U\Sigma (H^*V)^*$ is a singular value decomposition of $AH$. So we have 
 \[(AH)\da =H^*V\Sigma \da U^*=H^*A\da.\]
 \end{enumerate}
 \item \begin{enumerate}
-\item The nonzero singular values of $A$ are the positive square roots of the nonzero eigenvalues of $A^*A$. But the eigenvalues of $A^*A$ and that of $AA^*$ are the same by Exercise 6.7.9(c). Hence we know that the singular value decomposition of $A$ and that of $A^*$ are the same. 
+\item Let $A = U\Sigma V^*$ be the singular value decomposition of $A$.  It is enough to check that $A^* = V\Sigma^* U^*$ and $A^t = \overline{V}\Sigma^t\overline{U}^*$ are the singular value decompositions of $A^*$ and $A^t$, respectively.  
+%% The nonzero singular values of $A$ are the positive square roots of the nonzero eigenvalues of $A^*A$. But the eigenvalues of $A^*A$ and that of $AA^*$ are the same by Exercise 6.7.9(c). Hence we know that the singular value decomposition of $A$ and that of $A^*$ are the same. 
 
-Also, we have 
-\[(A^t)^*A^t=\overline{A}\overline{A}^*=\overline{AA^*}.\]
-Since $AA^*$ is self-adjoint, its eigenvalues are always real. We get that if $AA^*(x)=\lambda x$, then we have 
-\[(A^t)^*A^t(\overline{x})=\overline{AA^*(x)}=\overline{\lambda }\overline{x}=\lambda\overline{x},\]
-here $\overline{A}$ means the matrix consisting of the conjugate of the entries of $A$.
-Hence the singular value of $A^t$ and that of $A^*$ are all the same.
+%% Also, we have 
+%% \[(A^t)^*A^t=\overline{A}\overline{A}^*=\overline{AA^*}.\]
+%% Since $AA^*$ is self-adjoint, its eigenvalues are always real. We get that if $AA^*(x)=\lambda x$, then we have 
+%% \[(A^t)^*A^t(\overline{x})=\overline{AA^*(x)}=\overline{\lambda }\overline{x}=\lambda\overline{x},\]
+%% here $\overline{A}$ means the matrix consisting of the conjugate of the entries of $A$.
+%% Hence the singular value of $A^t$ and that of $A^*$ are all the same.
 \item Let $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have $A^*=V\Sigma ^* U^*$. So 
 \[(A^*)\da=U(\Sigma^*)\da V^*=U(\Sigma\da )^*V^*=(A\da)^*.\]
 \item Let $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have $A^t=(V^*)^t \Sigma ^t U^t$. So 
 \[(A^t)\da=(U^t)^*(\Sigma^t)\da V^t=(U^*)^t(\Sigma\da )^tV^t=(A\da)^t.\]
 \end{enumerate}
-\item Let $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have 
-\[O=A^2=U\Sigma V^*U\Sigma V,\]
-which means 
-\[\Sigma V^*U\Sigma =O\]
-since $U$ and $V$ are invertible. Now let $\{\sigma_i\}_{i=1}^r$ is the set of those singular values of $A$. Denote $D$ to be the diagonal matrix with $D_{ii}=\frac{1}{\sigma^2}$ if $i\leq r$ while $D_{ii}=1$ if $i>r$. Then we have $\Sigma D=D\Sigma =\Sigma\da$. This means that 
-\[\Sigma\da V^*U\Sigma\da =D\Sigma V^*U\Sigma D=DOD=O.\]
-Now we have 
-\[(A\da)^2=(V\Sigma\da U^*)^2=V\Sigma\da U^*V\Sigma\da U^*\]
-\[=V(\Sigma\da V^*U\Sigma\da )^*U^*=VOU^*=O.\]
+\item Since $A^2 = O$, we have $\range(A) \subseteq \ker(A)$ and $\range(A)^\perp \supseteq \ker(A)^\perp$.  Now we consider the images of $(A^\dagger)^2$ on $\range(A)$ and $\range(A)^\perp$.  By definition, $A^\dagger$ sends $\range(A)^\perp$ to the zero vector.  Also, $A^\dagger$ sends $\range(A)$ to the row space $\ker(A)^\perp \subseteq \range(A)^\perp$, which will be sent to zero by the second $A^\dagger$.  In conclusion, $(A^\dagger)^2 = O$.
+%% Let $A=U\Sigma V^*$ be a singular value decomposition of $A$. Then we have 
+%% \[O=A^2=U\Sigma V^*U\Sigma V,\]
+%% which means 
+%% \[\Sigma V^*U\Sigma =O\]
+%% since $U$ and $V$ are invertible. Now let $\{\sigma_i\}_{i=1}^r$ is the set of those singular values of $A$. Denote $D$ to be the diagonal matrix with $D_{ii}=\frac{1}{\sigma^2}$ if $i\leq r$ while $D_{ii}=1$ if $i>r$. Then we have $\Sigma D=D\Sigma =\Sigma\da$. This means that 
+%% \[\Sigma\da V^*U\Sigma\da =D\Sigma V^*U\Sigma D=DOD=O.\]
+%% Now we have 
+%% \[(A\da)^2=(V\Sigma\da U^*)^2=V\Sigma\da U^*V\Sigma\da U^*\]
+%% \[=V(\Sigma\da V^*U\Sigma\da )^*U^*=VOU^*=O.\]
 \item Here we use the notation in 6.26. \begin{enumerate}
 \item Compute 
 \[TT\da T(v_i)=TT\da(\sigma_iu_i)=T(v_i)\]
